@@ -1,0 +1,212 @@
+@font-face {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 400;
+    src: url('font/Rubik-Regular.eot');
+    src: local('open sans extralight'), local('open-sans-extralight'), url('font/Rubik-Regular.eot?#iefix') format('embedded-opentype'), url('font/Rubik-Regular.woff2') format('woff2'), url('font/Rubik-Regular.woff') format('woff'), url('font/Rubik-Regular.ttf') format('truetype'), url('font/Rubik-Regular.svg#Barlow') format('svg');
+}
+
+:root {
+    --color_1: #006600;
+    --color_1h: #009c00;
+    --color_2: #001600;
+    --color_2h: #002e00;
+    --color_3: #000800;
+    --color_back: black;
+    --color_shadow: rgba(0, 0, 0, 0.75);
+    --font: 'Rubik', sans-serif;
+}
+
+body {
+    position: relative;
+    margin: 15px 5px 0 10px;
+    padding: 0;
+    background-color: var(--color_back);
+    color: var(--color_1);
+    font-family: var(--font);
+    font-size: 16px;
+}
+
+.popup {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0px;
+    height: 0px;
+}
+
+.open_popup {
+    cursor: pointer;
+    border: 1px solid var(--color_1);
+    padding: 0 3px;
+    margin: 2px 0 0 0;
+}
+
+@keyframes curtain {
+    0% {
+        opacity: 1;
+        width: 100%;
+        height: 100%;
+    }
+    25% {
+        opacity: 1;
+        width: 100%;
+        height: 100%;
+    }
+    99% {
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+    }
+    100% {
+        width: 0px;
+        height: 0px;
+    }
+}
+
+#curtain {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0px;
+    height: 0px;
+    background-color: var(--color_back);
+    animation-name: curtain;
+    animation-duration: .3s;
+    animation-iteration-count: 1;
+    opacity: 0;
+}
+
+#hidden {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0px;
+    height: 0px;
+    background-color: var(--color_back);
+}
+
+.section {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+#canvas {
+    margin: 0 15px 10px 0;
+}
+
+.part {
+    display: flex;
+    flex-direction: column;
+    margin: 0 5px 10px 0;
+    background-color: var(--color_3);
+    height: max-content;
+}
+
+.part .part {
+    margin: 5px 5px 10px 0;
+}
+
+.part .part:last-of-type {
+    margin: 5px 0 10px 0;
+}
+
+.part .part a:not(.img) {
+    display: inline;
+    text-align: center;
+}
+
+.part>h1 {
+    margin: 0;
+    /* padding: 2px 0; */
+    text-align: center;
+    font-size: 1em;
+    width: 100%;
+    background-color: var(--color_2);
+    cursor: pointer;
+    height: 23px;
+    user-select: none;
+    -webkit-transition: all .15s;
+    transition: all .15s;
+}
+
+.part>h1:hover {
+    transform: scale(1, 1.3) translate(0, -4px);
+    z-index: 100;
+    -webkit-box-shadow: 0px 0px 16px 8px var(--color_shadow);
+    -moz-box-shadow: 0px 0px 16px 8px var(--color_shadow);
+    box-shadow: 0px 0px 16px 8px var(--color_shadow);
+    color: var(--color_1h);
+    background-color: var(--color_2h);
+}
+
+.part>.fold {
+    position: relative;
+    height: auto;
+    border: none;
+    margin: 0;
+}
+
+.part a {
+    display: inherit;
+    margin: 3px 0 0 0;
+    color: var(--color_1);
+}
+
+.part img {
+    -webkit-transition: all .15s;
+    transition: all .15s;
+}
+
+.part img:hover {
+    transform: scale(1.08);
+    /* border: 2px solid var(--color_back); */
+    z-index: 100;
+    -webkit-box-shadow: 0px 0px 16px 8px var(--color_shadow);
+    -moz-box-shadow: 0px 0px 16px 8px var(--color_shadow);
+    box-shadow: 0px 0px 16px 8px var(--color_shadow);
+}
+
+.column {
+    position: relative;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    position: relative;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.row>.column {
+    margin-right: 3px;
+}
+
+.row>a {
+    margin: 3px 3px 0 0;
+}
+
+@media screen and (max-width:620px) {
+    #whole {
+        width: 600px;
+    }
+    #mycanvas {
+        order: 0;
+    }
+    #part1 {
+        order: 1;
+    }
+    #part2 {
+        order: 2;
+    }
+    #part3 {
+        order: 3;
+    }
+}
