@@ -1023,7 +1023,7 @@
             }
             if (counter[0] > 79) {
                 counter[0] = 0;
-                LAdate = new Date(Date.now() - (9 * 3600000));
+                LAdate = new Date(new Date(Date.now()).toLocaleString("en-US", { timeZone: "America/Los_Angeles" }));
                 if (firstRound == true) {
                     firstRound = false
                 } else {
