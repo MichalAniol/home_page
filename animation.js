@@ -1,27 +1,15 @@
 (function () {
     const canvas = document.getElementById("mycanvas"),
-        ctx = canvas.getContext("2d");
-    var s = 1.1;
+        ctx = canvas.getContext("2d"),
+        s = 1.1;
 
     canvas.width = (425 * s);
     canvas.height = (240 * s);
 
-    var width = (425 * s),
-        height = (240 * s);
-    canvasSpace = document.querySelector('body'), // potrzebne do zebrania polozenia kursora
-        anim = setInterval(anim, 50),
-        snake = [],
+    var width = canvas.width,
+        height = canvas.height,
         now = Date.now(),
         wholCirc = 2 * Math.PI,
-        back = "#000800",
-        col = "#006600",
-        firstRound = true,
-        moveRound = true,
-        counter = [0, 0, 0],
-        moveMem = 0,
-        memX = 0,
-        memY = 0,
-        snMove = 0,
         pos = {
             x: 0,
             y: 0,
@@ -29,11 +17,33 @@
             m: null,
             s: null
         },
-        boswer = true,
+        counter = [0, 0, 0],
+        snake = [],
+        lock = [0, 0, 0, 0],
         LAdate = new Date(new Date(Date.now()).toLocaleString("en-US", { timeZone: "America/Los_Angeles" })),
+        canvasSpace = document.querySelector('body'); // potrzebne do zebrania polozenia kursora
+    var anim = setInterval(animation, 50),
+        back = "#000800",
+        col = "#006600",
+        firstRound = true,
+        moveRound = true,
+        moveMem = 0,
+        memX = 0,
+        memY = 0,
+        snMove = 0,
+        boswer = true,
         simple = true,
         clock = true;
 
+    window.addEventListener('visibilitychange', () => {
+        if (document.hidden) {
+            clearInterval(anim)
+            // console.log('%c anim:', 'background: #ffcc00; color: #003300', anim)
+        } else {
+            anim = setInterval(animation, 50)
+            // console.log('%c anim:', 'background: #ffcc00; color: #003300', anim)
+        }
+    })
 
     if (navigator.appVersion == "5.0 (Windows)") {
         boswer = false
@@ -123,7 +133,7 @@
     }
 
 
-    function anim() {
+    function animation() {
         var date = new Date(),
             p = {
                 yea: date.getFullYear(),
