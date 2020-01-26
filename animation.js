@@ -6,7 +6,7 @@
     canvas.width = (425 * s);
     canvas.height = (240 * s);
 
-    var width = canvas.width,
+    const width = canvas.width,
         height = canvas.height,
         now = Date.now(),
         wholCirc = 2 * Math.PI,
@@ -19,7 +19,6 @@
         },
         counter = [0, 0, 0],
         snake = [],
-        lock = [0, 0, 0, 0],
         LAdate = new Date(new Date(Date.now()).toLocaleString("en-US", { timeZone: "America/Los_Angeles" })),
         canvasSpace = document.querySelector('body'); // potrzebne do zebrania polozenia kursora
     var anim = setInterval(animation, 50),
@@ -87,7 +86,7 @@
                 cy = c.top + (height / 2) - y,
                 ss = 1.9 * s;
             if ((cx * cx) + (cy * cy) < (60 * 60 * ss) + (60 * 60 * ss)) {
-                console.log('%c if:', 'background: #ffcc00; color: #003300');
+                // console.log('%c if:', 'background: #ffcc00; color: #003300');
                 return;
             }
         }
@@ -134,7 +133,7 @@
 
 
     function animation() {
-        var date = new Date(),
+        let date = new Date(),
             p = {
                 yea: date.getFullYear(),
                 mou: date.getUTCMonth() + 1,
@@ -184,7 +183,7 @@
 
             { // stoper analogowy
                 transform(235 * s, 130 * s);
-                var time = Date.now() - now,
+                let time = Date.now() - now,
                     rot = (wholCirc * ((time % 60000) / 60000)) + Math.PI + (Math.PI / 40),
                     rot2 = Math.PI,
                     tabStr = (wholCirc) / 40;
@@ -198,8 +197,8 @@
                 ctx.fill()
                 ctx.restore();
 
-                var base = 35;
-                for (var i = 0; i < 40; i++) {
+                let base = 35;
+                for (let i = 0; i < 40; i++) {
                     ctx.beginPath();
 
                     if (firstRound == true) {
@@ -245,9 +244,9 @@
                 tabStr = (wholCirc) / 15;
                 ctx.lineWidth = 1 * s;
 
-                var balT = Math.floor(time / 4000) % 15;
-                var bal = (time - (Math.floor(time / 4000) * 4000)) / 4000;
-                for (var i = 0; i < 15; i++) {
+                let balT = Math.floor(time / 4000) % 15;
+                let bal = (time - (Math.floor(time / 4000) * 4000)) / 4000;
+                for (let i = 0; i < 15; i++) {
                     if (balT == i) {
                         if (Math.floor((time) / 60000) % 2 == 0) {
                             ctx.lineWidth = bal * s;
@@ -303,7 +302,7 @@
         }
 
         if (!clock) { // stoper cyfrowy
-            var time = Date.now() - now;
+            let time = Date.now() - now;
 
             ctx.save();
             ctx.fillStyle = back;
@@ -313,28 +312,28 @@
             ctx.fill()
             ctx.restore();
 
-            var timeH = Math.floor(time / 3600000);
+            let timeH = Math.floor(time / 3600000);
             if (timeH < 10) {
                 timeH = "0" + timeH.toString()
             } else {
                 timeH = timeH.toString()
             }
 
-            var timeM = (Math.floor(time / 60000) % 60);
+            let timeM = (Math.floor(time / 60000) % 60);
             if (timeM < 10) {
                 timeM = "0" + timeM.toString()
             } else {
                 timeM = timeM.toString()
             }
 
-            var timeS = (Math.floor(time / 1000) % 60);
+            let timeS = (Math.floor(time / 1000) % 60);
             if (timeS < 10) {
                 timeS = "0" + timeS.toString()
             } else {
                 timeS = timeS.toString()
             }
 
-            var timeP = Math.round(time / (100)).toString();
+            let timeP = Math.round(time / (100)).toString();
             timeP = timeP.substr(timeP.length - 1, 1);
 
             time = timeH + ":" + timeM + ":" + timeS + "." + timeP;
@@ -353,7 +352,7 @@
                 ctx.strokeStyle = col;
                 ctx.fillStyle = back;
 
-                var size = 15 * s,
+                let size = 15 * s,
                     broo = (3 * s) + size;
                 pu = ((counter[0] % 20) / 20) * broo,
                     boxCase = Math.floor(counter[0] / 20) % 4;
@@ -489,7 +488,7 @@
                 ctx.arc(0, 0, 18 * s, 0, wholCirc, true);
                 ctx.stroke();
 
-                var move = (p.mil / 1000) * 8 * s;
+                let move = (p.mil / 1000) * 8 * s;
 
                 if (moveMem > move) {
                     if (moveRound == true) {
@@ -554,7 +553,7 @@
             }
 
             if (clock) {
-                for (var i = 0; i < 12 * 2 * 5; i++) {
+                for (let i = 0; i < 12 * 2 * 5; i++) {
                     ctx.beginPath();
 
                     if (i % 5 == 0) {
@@ -605,7 +604,7 @@
                 ctx.font = (14 * ss) + "px Rubik";
                 ctx.fillText("a  n  i  o  ł", -30 * ss, -20 * ss); // dzień tygodnia
 
-                for (var i = 0; i < 12 * 2 * 5; i++) {
+                for (let i = 0; i < 12 * 2 * 5; i++) {
                     ctx.beginPath();
 
                     if (i % 5 == 0) {
@@ -757,7 +756,7 @@
             } else {
                 p.day = p.day.toString()
             }
-            var timeP = p.yea.toString() + "." + p.mou + "." + p.day;
+            let timeP = p.yea.toString() + "." + p.mou + "." + p.day;
 
             if (p.min < 10) {
                 p.min = "0" + p.min.toString()
@@ -811,7 +810,7 @@
             }
 
             { // sinusoida
-                var sX = 30 * s,
+                let sX = 30 * s,
                     sY = 38 * s;
                 ctx.lineWidth = 0.2 * s;
                 ctx.beginPath();
@@ -821,7 +820,7 @@
 
                 ctx.lineWidth = 0.7 * s;
                 ctx.beginPath();
-                var si;
+                let si;
                 if (pos.s != 1) {
                     si = 0
                 } else {
@@ -833,13 +832,13 @@
 
                 ctx.lineWidth = 2.7 * s;
                 ctx.beginPath();
-                var multip;
+                let multip;
                 if (pos.s != 1) {
                     multip = 1 + (pos.s / 3)
                 } else {
                     multip = 1
                 }
-                for (var i = 0; i < 100; i++) {
+                for (let i = 0; i < 100; i++) {
                     si = Math.sin(((i / 11) + (counter[1] / 5)) * multip) * 15;
                     ctx.lineTo(sX + (i * s), sY + (si * s));
                 }
@@ -859,7 +858,7 @@
                 ctx.lineTo(sX + (160 * s), sY + ((si + 5) * s));
                 ctx.stroke();
 
-                var siT;
+                let siT;
                 if (pos.s != 1) {
                     siT = pos.s.toString().substr(0, 6)
                 } else {
@@ -886,16 +885,16 @@
             }
 
             { // wąż
-                var sMov = (Math.sin((wholCirc * counter[0] / 80)) * 5);
+                let sMov = (Math.sin((wholCirc * counter[0] / 80)) * 5);
                 if (sMov < 0) {
                     sMov = -sMov
                 }
-                var sMov2 = (Math.sin((wholCirc * counter[1] / 250)) * 3) + 3,
+                let sMov2 = (Math.sin((wholCirc * counter[1] / 250)) * 3) + 3,
                     sMulti = 0.9 + (Math.sin((wholCirc * counter[2] / 82)) * 0.4),
                     sMulti2 = 1 + (Math.sin((wholCirc * counter[1] / 500)) * 0.7),
                     size = 0.5 + (sMov2 / 5) + (sMov / 10);
 
-                var snW = width - size,
+                let snW = width - size,
                     snH = height - size,
                     holeCycle = (snW * 2) + (snH * 2);
                 snMove += sMov + sMov2;
@@ -903,8 +902,8 @@
                     snMove -= holeCycle
                 }
 
-                for (var i = 0; i < snake.length; i++) {
-                    var sn = (snake[i] * sMulti * sMulti2) + snMove;
+                for (let i = 0; i < snake.length; i++) {
+                    let sn = (snake[i] * sMulti * sMulti2) + snMove;
 
                     function tooMuch() {
                         if (sn > holeCycle) {
@@ -923,7 +922,7 @@
                     tooMuch();
                     tooLitle();
 
-                    var snX, snY;
+                    let snX, snY;
                     if (sn > snW) {
                         sn -= snW;
                         snX = snW;
@@ -1002,10 +1001,10 @@
 
             ctx.font = (30 * s) + "px Rubik";
             ctx.measureText(time).lineWidth
-            var timeW = (410 * s) - ctx.measureText(time).width;
+            let timeW = (410 * s) - ctx.measureText(time).width;
             ctx.fillText(time, timeW, 80 * s);
             ctx.font = (18 * s) + "px Rubik";
-            var dayNameW = timeW - ctx.measureText(dayName).width - (7 * s);
+            let dayNameW = timeW - ctx.measureText(dayName).width - (7 * s);
             ctx.fillText(dayName, dayNameW, 77 * s);
             ctx.font = (8 * s) + "px Rubik";
             ctx.fillText("LOS ANGELES", dayNameW, 60 * s);
@@ -1018,7 +1017,7 @@
         }
 
         if (!clock) { // liczniki
-            for (var i = 0; i < counter.length; i++) {
+            for (let i = 0; i < counter.length; i++) {
                 counter[i]++
             }
             if (counter[0] > 79) {
