@@ -8,9 +8,13 @@
 </head>
 
 <body>
-    <div id="links" class="popup"></div>
+    <div id="links" class="popup">
+
+    </div>
 
     <div class="section">
+        <a id="hidden" href="secret.html" onclick="hiddenClick(this)"></a>
+
         <div id="canvas">
             <canvas id="mycanvas" style="border:0px solid black;"></canvas>
         </div>
@@ -229,7 +233,8 @@
                     <a href="https://gdansk.naszemiasto.pl"><img src="img/portals/mojemiasto.png" alt="naszemiasto" title="naszemiasto" /></a>
                     <a href="http://kpbc.umk.pl/dlibra"><img src="img/portals/bibcyf.png" alt="Kujawsko-Pomorska Digital Library" title="Kujawsko-Pomorska Digital Library" /></a>
                     <a href="http://www.nasz.gdansk.pl"><img src="img/portals/naszgdansk.png" alt="Nasz Gdańsk" title="Nasz Gdańsk" /></a>
-                    <a href="https://www.webd.pl"><img src="img/portals/rzygacz.png" alt="Rzygacz portal" title="Rzygacz portal" /></a>
+                    <!-- <a href="https://www.webd.pl"><img src="img/portals/rzygacz.png" alt="Rzygacz portal" title="Rzygacz portal" /></a> -->
+                    <a href="http://www.gdansk.policja.gov.pl/"><img src="img/portals/policjagda.png" alt="policja gdańsk" title="policja gdańsk" /></a>
                     <a href="https://kursy-walut.mybank.pl"><img src="img/portals/bankier.png" alt="kursy-walut" title="kursy-walut" /></a>
                     <a href="http://ibedeker.pl"><img src="img/portals/bedeker.png" alt="bedeker" title="bedeker" /></a>
                 </div>
@@ -331,9 +336,9 @@
                     <a href="http://tajemnice.atari8.info"><img src="img/retro/tajemniceatari8.png" alt="tajemnice.atari8" title="tajemnice.atari8" /></a>
                     <a href="http://atarionline.pl/v01/index.php?ct=nowinki&ucat=1&subaction=showfull&id=1546586580"><img src="img/retro/atari.png" alt="atarionline" title="atarionline" /></a>
                     <a href="https://archive.org/details/commodore_c64_books"><img src="img/retro/commodore_c64_books.png" alt="commodore_c64_books" title="commodore_c64_books" /></a>
-                    <a href="http://www.gb64.com/oldsite/gotw.htm"><img src="img/retro/gb64.png" alt="gb64" title="gb64" /></a>
                     <a href="https://www.retrogamer.net"><img src="img/retro/retrogamer.png" alt="retrogamer" title="retrogamer" /></a>
                     <a href="http://www.gb64.com/index.php"><img src="img/retro/gb64b.png" alt="gb64b" title="gb64b" /></a>
+                    <a href="https://stare.e-gry.net"><img src="img/retro/staregrynet.png" alt="stare gry net" title="stare gry net" /></a>
                 </div>
             </div>
         </div>
@@ -399,6 +404,7 @@
                                 </div>
                                 <div class="fold column">
                                     <a href="https://www.toptal.com/developers/css/sprite-generator"><img src="img/_programming/css/sprite.png" alt="sprite generator" title="sprite generator" /></a>
+                                    <a href="https://css.spritegen.com/"><img src="img/_programming/css/sprites.png" alt="sprites generator" title="sprites generator" /></a>
                                     <a href="https://www.giftofspeed.com/css-compressor"><img src="img/_programming/css/compressor.png" alt="compressor" title="compressor" /></a>
                                     <a href="https://csscompressor.com"><img src="img/_programming/css/compressor.png" alt="css compressor" title="css compressor" /></a>
                                 </div>
@@ -571,7 +577,10 @@
                                                 <a href=" https://localforage.github.io/localForage" class="img"><img src="img/_programming/frameworks/localforage.png" alt="localforage" title="localforage" /></a>
                                                 <a href="https://graphql.org" class="img"><img src="img/_programming/frameworks/graphql.png" alt="Graph QL" title="Graph QL" /></a>
                                             </div>
-                                            <a href="https://materializecss.com/getting-started.html" class="img"><img src="img/_programming/frameworks/materialize.png" alt="materialize" title="materialize" /></a>
+                                            <div class="row">
+                                                <a href="https://materializecss.com/getting-started.html" class="img"><img src="img/_programming/frameworks/materialize.png" alt="materialize" title="materialize" /></a>
+                                                <a href="https://parceljs.org" class="img"><img src="img/_programming/frameworks/parcel.png" alt="parcel" title="parcel" /></a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -592,6 +601,18 @@
 
                         </div>
                     </div>
+
+                    <div class="part">
+                        <h1 onclick="foldArea(this)">specials</h1>
+                        <div class="fold column">
+                            <div class="row">
+                                <div class="column">
+                                    <a href="http://www.network-science.de/ascii" class="img"><img src="img/_programming/specials/asciigenerator.png" alt="ascii generator" title="ascii generator" /></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
