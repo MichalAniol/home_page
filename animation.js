@@ -1,3 +1,5 @@
+
+
 (function () {
     const canvas = document.getElementById("mycanvas"),
         ctx = canvas.getContext("2d"),
@@ -8,8 +10,10 @@
 
     const width = canvas.width,
         height = canvas.height,
+        cA = canvas.getBoundingClientRect(),
+        boswer = navigator.appVersion == "5.0 (Windows)" ? false : true,
         now = Date.now(),
-        wholCirc = 2 * Math.PI,
+        wC = 2 * Math.PI, // whole circle: 360 degrees
         pos = {
             x: 0,
             y: 0,
@@ -19,8 +23,9 @@
         },
         counter = [0, 0, 0],
         snake = [],
-        LAdate = new Date(new Date(Date.now()).toLocaleString("en-US", { timeZone: "America/Los_Angeles" })),
-        canvasSpace = document.querySelector('body'); // potrzebne do zebrania polozenia kursora
+        lock = [0, 0, 0, 0],
+        LAdate = new Date(new Date(Date.now()).toLocaleString("en-US", { timeZone: "America/Los_Angeles" }));
+
     var anim = setInterval(animation, 50),
         back = "#000800",
         col = "#006600",
@@ -30,11 +35,11 @@
         memX = 0,
         memY = 0,
         snMove = 0,
-        boswer = true,
         simple = true,
         clock = true;
+    mouseOnClock = false;
 
-    window.addEventListener('visibilitychange', () => {
+    window.addEventListener('visibilitychange', () => { // animation visible only when visible
         if (document.hidden) {
             clearInterval(anim)
             // console.log('%c anim:', 'background: #ffcc00; color: #003300', anim)
@@ -44,10 +49,6 @@
         }
     })
 
-    if (navigator.appVersion == "5.0 (Windows)") {
-        boswer = false
-    }
-
     for (let i = 0; i < 66; i++) {
         let val = (Math.sin((Math.PI * (i / 66))) * 300) + 300;
         if (i > 33) {
@@ -56,11 +57,82 @@
         snake[i] = val;
     }
 
-    canvasSpace.addEventListener('mousemove', function (evt) {
-        whereIam(evt);
+    document.querySelector('body').addEventListener('mousemove', evt => { // where the cursor points
+        pos.x = evt.clientX;
+        pos.y = evt.clientY;
+        if (boswer) {
+            pos.n = evt.path[1].href
+        } else {
+            pos.n = evt.originalTarget.parentElement.href
+        }
+
+        let moX = Math.abs(evt.movementX),
+            moY = Math.abs(evt.movementY);
+        pos.m = Math.sqrt((moX * moX) + (moY * moY));
+
+        pos.s = pos.m;
+        if (pos.m > 20) {
+            pos.m = 20
+        }
+
+        if (clock) {
+            let cx = cA.left + (width / 2) - pos.x,
+                cy = cA.top + (height / 2) - pos.y,
+                ss = 1.9 * s;
+            if ((cx * cx) + (cy * cy) < (60 * 60 * ss) + (60 * 60 * ss)) {
+                mouseOnClock = true;
+                return;
+            } else {
+                mouseOnClock = false;
+            }
+        } else {
+            mouseOnClock = false;
+        }
+
     }, false);
-    canvas.addEventListener('click', function (evt) {
-        hide(evt);
+
+    canvas.addEventListener('click', evt => {
+        let c = cA,
+            {
+                clientX: x,
+                clientY: y
+            } = evt;
+        if (!simple && !clock) {
+            if (x > cA.left && x < cA.left + 30 && y > cA.top && y < cA.top + 30) {
+                lock[0] = 1; return
+            }
+            if (x > cA.right - 30 && x < cA.right && y > cA.top && y < cA.top + 30) {
+                lock[1] = 1; return
+            }
+            if (x > cA.left && x < cA.left + 30 && y > cA.bottom - 30 && y < cA.bottom) {
+                lock[2] = 1; return
+            }
+            if (x > cA.right - 30 && x < cA.right && y > cA.bottom - 30 && y < cA.bottom) {
+                lock[3] = 1; return
+            }
+        }
+        if (clock) {
+            let cx = cA.left + (width / 2) - x,
+                cy = cA.top + (height / 2) - y,
+                ss = 1.9 * s;
+            if ((cx * cx) + (cy * cy) < (60 * 60 * ss) + (60 * 60 * ss)) {
+                console.log('%c clock!!!', 'background: #ffcc00; color: #003300');
+                return;
+            }
+        }
+        if (x > cA.left && x < cA.right && y > cA.top && y < cA.bottom) {
+            changeView();
+            console.log('%c changeView:', 'background: #ffcc00; color: #003300', simple, clock)
+        }
+
+        if (lock[0] == 1 && lock[1] == 1 && lock[2] == 1 && lock[3] == 1) {
+            let hidden = document.getElementById("hidden");
+            hidden.style.width = "20px";
+            hidden.style.height = "20px";
+            hidden.style.top = "30px";
+            hidden.style.left = "525px";
+            hidden.style.border = "1px dashed" + col + "88";
+        }
     }, false);
 
     ctx.lineJoin = 'round';
@@ -74,63 +146,6 @@
         if (simple && !clock) { simple = false; return }
         if (simple && clock) { clock = false }
     }
-
-    function hide(evt) {
-        let c = document.getElementById("mycanvas").getBoundingClientRect();
-        let {
-            clientX: x,
-            clientY: y
-        } = evt;
-        if (clock) {
-            let cx = c.left + (width / 2) - x,
-                cy = c.top + (height / 2) - y,
-                ss = 1.9 * s;
-            if ((cx * cx) + (cy * cy) < (60 * 60 * ss) + (60 * 60 * ss)) {
-                // console.log('%c if:', 'background: #ffcc00; color: #003300');
-                return;
-            }
-        }
-        if (x > c.left && x < c.right && y > c.top && y < c.bottom) {
-            changeView();
-        }
-    }
-
-    function whereIam(evt) { // czy kursor znajduje sie na jakims obiekcie bez klikniecia
-        pos.x = evt.clientX;
-        pos.y = evt.clientY;
-        if (boswer) {
-            pos.n = evt.path[1].href
-        } else {
-            pos.n = evt.originalTarget.parentElement.href
-        }
-
-        var moX, moY;
-        if (evt.movementX > 0) {
-            moX = evt.movementX
-        } else {
-            moX = -evt.movementX
-        }
-        if (evt.movementY > 0) {
-            moY = evt.movementY
-        } else {
-            moY = -evt.movementY
-        }
-        pos.m = Math.sqrt((moX * moX) + (moY * moY));
-
-        pos.s = pos.m;
-        if (pos.m > 20) {
-            pos.m = 20
-        }
-    }
-
-    function transform(x, y) {
-        ctx.translate(x, y)
-    }
-
-    function rotate(a) {
-        ctx.rotate(a)
-    }
-
 
     function animation() {
         let date = new Date(),
@@ -155,11 +170,11 @@
 
         if (!simple) {
             { // wachadło
-                transform(315 * s, -130 * s);
-                rotate((Math.PI / 12) * (Math.sin((Math.PI * 2) * (counter[0] / 80))));
+                ctx.translate(315 * s, -130 * s);
+                ctx.rotate((Math.PI / 12) * (Math.sin((Math.PI * 2) * (counter[0] / 80))));
 
                 ctx.beginPath();
-                ctx.arc(0, 345 * s, 12 * s, 0, wholCirc, true);
+                ctx.arc(0, 345 * s, 12 * s, 0, wC, true);
                 ctx.fill();
                 ctx.rect(-1 * s, -1 * s, 2 * s, 360 * s);
                 ctx.fill();
@@ -168,13 +183,13 @@
             }
 
             { // wyciemnienie pod zegarem
-                transform(350 * s, 145 * s)
+                ctx.translate(350 * s, 145 * s)
 
                 ctx.save();
                 ctx.fillStyle = back;
                 ctx.globalAlpha = 0.7;
                 ctx.beginPath();
-                ctx.arc(0, 0, 67 * s, 0, wholCirc, true);
+                ctx.arc(0, 0, 67 * s, 0, wC, true);
                 ctx.fill()
                 ctx.restore();
 
@@ -182,18 +197,18 @@
             }
 
             { // stoper analogowy
-                transform(235 * s, 130 * s);
+                ctx.translate(235 * s, 130 * s);
                 let time = Date.now() - now,
-                    rot = (wholCirc * ((time % 60000) / 60000)) + Math.PI + (Math.PI / 40),
+                    rot = (wC * ((time % 60000) / 60000)) + Math.PI + (Math.PI / 40),
                     rot2 = Math.PI,
-                    tabStr = (wholCirc) / 40;
-                rotate(rot2);
+                    tabStr = (wC) / 40;
+                ctx.rotate(rot2);
 
                 ctx.save();
                 ctx.fillStyle = back;
                 ctx.globalAlpha = 0.7;
                 ctx.beginPath();
-                ctx.arc(0, 0, 45 * s, 0, wholCirc, true);
+                ctx.arc(0, 0, 45 * s, 0, wC, true);
                 ctx.fill()
                 ctx.restore();
 
@@ -232,16 +247,16 @@
                     }
 
                     ctx.fill();
-                    rotate(tabStr);
+                    ctx.rotate(tabStr);
                 }
                 ctx.beginPath(); // środek tarczy
                 ctx.strokeStyle = col;
                 ctx.lineWidth = 0.3 * s;
-                ctx.arc(0, 0, 17 * s, 0, wholCirc, true);
+                ctx.arc(0, 0, 17 * s, 0, wC, true);
                 ctx.stroke();
 
-                rotate(-rot2 + Math.PI - (Math.PI / 40));
-                tabStr = (wholCirc) / 15;
+                ctx.rotate(-rot2 + Math.PI - (Math.PI / 40));
+                tabStr = (wC) / 15;
                 ctx.lineWidth = 1 * s;
 
                 let balT = Math.floor(time / 4000) % 15;
@@ -251,12 +266,12 @@
                         if (Math.floor((time) / 60000) % 2 == 0) {
                             ctx.lineWidth = bal * s;
                             ctx.beginPath();
-                            ctx.arc(-2 * s, 23 * s, 3.5 * bal * s, 0, wholCirc, true);
+                            ctx.arc(-2 * s, 23 * s, 3.5 * bal * s, 0, wC, true);
                             ctx.stroke();
                         } else {
                             ctx.lineWidth = (1 - bal) * s;
                             ctx.beginPath();
-                            ctx.arc(-2 * s, 23 * s, (3.5 - (3.5 * bal)) * s, 0, wholCirc, true);
+                            ctx.arc(-2 * s, 23 * s, (3.5 - (3.5 * bal)) * s, 0, wC, true);
                             ctx.stroke();
                         }
                     }
@@ -264,22 +279,22 @@
                         if (balT > i) {
                             ctx.lineWidth = 1 * s;
                             ctx.beginPath();
-                            ctx.arc(-2 * s, 23 * s, 3.5 * s, 0, wholCirc, true);
+                            ctx.arc(-2 * s, 23 * s, 3.5 * s, 0, wC, true);
                             ctx.stroke();
                         }
                     } else {
                         if (balT < i) {
                             ctx.lineWidth = 1 * s;
                             ctx.beginPath();
-                            ctx.arc(-2 * s, 23 * s, 3.5 * s, 0, wholCirc, true);
+                            ctx.arc(-2 * s, 23 * s, 3.5 * s, 0, wC, true);
                             ctx.stroke();
                         }
                     }
-                    rotate(tabStr);
+                    ctx.rotate(tabStr);
                 }
-                rotate(rot2);
+                ctx.rotate(rot2);
 
-                rotate(rot);
+                ctx.rotate(rot);
                 ctx.strokeStyle = back;
                 ctx.lineWidth = 2 * s;
                 ctx.beginPath(); // wskazówka minutnik
@@ -288,10 +303,10 @@
                 ctx.lineTo(7 * s, 9 * s);
                 ctx.fill();
                 ctx.stroke();
-                rotate(-rot);
+                ctx.rotate(-rot);
 
 
-                rotate((wholCirc / 80 * counter[0]) + Math.PI);
+                ctx.rotate((wC / 80 * counter[0]) + Math.PI);
                 ctx.beginPath(); // wskazówka 4 sekund
                 ctx.rect(-2 * s, -15 * s, 4 * s, 55 * s);
                 ctx.fill();
@@ -455,15 +470,15 @@
             }
 
             { // kulka lewa
-                transform(325 * s, 167 * s);
-                rotate((Math.PI / 250 * counter[1]) + (Math.PI));
+                ctx.translate(325 * s, 167 * s);
+                ctx.rotate((Math.PI / 250 * counter[1]) + (Math.PI));
                 rot = (Math.PI / 20) * counter[0];
-                rotate(rot);
+                ctx.rotate(rot);
 
                 ctx.beginPath();
                 ctx.arc(0, 0, 14 * s, 0, Math.PI * 1.3, true);
                 ctx.fill();
-                rotate(-rot * 2);
+                ctx.rotate(-rot * 2);
 
                 ctx.beginPath();
                 ctx.arc(0, 0, 14 * s, 0, Math.PI * 1.3, true);
@@ -472,30 +487,26 @@
                 ctx.beginPath();
                 ctx.strokeStyle = col;
                 ctx.lineWidth = 0.5 * s;
-                ctx.arc(0, 0, 18 * s, 0, wholCirc, true);
+                ctx.arc(0, 0, 18 * s, 0, wC, true);
                 ctx.stroke();
 
                 ctx.setTransform(1, 0, 0, 1, 0, 0);
             }
 
             { // kulka prawa
-                transform(375 * s, 167 * s);
-                rotate((Math.PI / 41 * counter[2]) + (Math.PI));
+                ctx.translate(375 * s, 167 * s);
+                ctx.rotate((Math.PI / 41 * counter[2]) + (Math.PI));
 
                 ctx.beginPath();
                 ctx.strokeStyle = col;
                 ctx.lineWidth = 0.5 * s;
-                ctx.arc(0, 0, 18 * s, 0, wholCirc, true);
+                ctx.arc(0, 0, 18 * s, 0, wC, true);
                 ctx.stroke();
 
                 let move = (p.mil / 1000) * 8 * s;
 
                 if (moveMem > move) {
-                    if (moveRound == true) {
-                        moveRound = false
-                    } else {
-                        moveRound = true
-                    }
+                    moveRound = moveRound == true ? false : true;
                 }
                 moveMem = move;
                 if (moveRound == false) {
@@ -504,11 +515,11 @@
 
                 ctx.strokeStyle = back;
                 ctx.beginPath();
-                ctx.arc((8 * s) - (move * 1.8), 0, (10 * s) - move, 0, wholCirc, true);
+                ctx.arc((8 * s) - (move * 1.8), 0, (10 * s) - move, 0, wC, true);
                 ctx.fill();
                 ctx.stroke();
                 ctx.beginPath();
-                ctx.arc(-move, 0, (2 * s) + move, 0, wholCirc, true);
+                ctx.arc(-move, 0, (2 * s) + move, 0, wC, true);
                 ctx.fill();
                 ctx.stroke();
 
@@ -517,7 +528,7 @@
         }
 
         {
-            let timeB = p.hou.toString() + ":" + (p.min < 10 ? "0" : "") + p.min + ":" + (p.sec < 10 ? "0" : "") + p.sec;
+            let timeB = "" + (p.hou < 10 ? "0" : "") + p.hou + ":" + (p.min < 10 ? "0" : "") + p.min + ":" + (p.sec < 10 ? "0" : "") + p.sec;
 
             if (!clock) {
                 ctx.font = (50 * s) + "px Rubik";
@@ -533,12 +544,12 @@
             let ss;
             if (clock) {
                 ss = s * 1.9;
-                transform((width / 2), (height / 2));
+                ctx.translate((width / 2), (height / 2));
             } else {
                 ss = s;
-                transform(350 * s, 145 * s);
+                ctx.translate(350 * s, 145 * s);
             }
-            rot = wholCirc / (12 * 2 * 5);
+            rot = wC / (12 * 2 * 5);
 
             function binaryPin(x, y, on) {
                 if (on) {
@@ -571,7 +582,7 @@
                     }
 
                     ctx.fill();
-                    rotate(rot);
+                    ctx.rotate(rot);
                 }
 
                 // zegar binarny
@@ -622,7 +633,7 @@
                     }
 
                     ctx.fill();
-                    rotate(rot);
+                    ctx.rotate(rot);
                 }
             }
 
@@ -630,7 +641,7 @@
             ctx.strokeStyle = back;
             ctx.lineWidth = 1 * ss;
 
-            rot = Math.PI + ((wholCirc / 720) * ((p.hou * 60) + p.min)); // godzinnik
+            rot = Math.PI + ((wC / 720) * ((p.hou * 60) + p.min)); // godzinnik
             ctx.rotate(rot);
             ctx.beginPath();
             if (clock) {
@@ -642,7 +653,7 @@
             ctx.rotate(-rot);
             ctx.stroke();
 
-            rot = Math.PI + ((wholCirc / 3600) * ((p.min * 60) + p.sec)); // minutnik
+            rot = Math.PI + ((wC / 3600) * ((p.min * 60) + p.sec)); // minutnik
             ctx.rotate(rot);
             ctx.beginPath();
             if (clock) {
@@ -655,7 +666,7 @@
             ctx.stroke();
 
             ctx.lineWidth = .6 * ss;
-            rot = Math.PI + ((wholCirc / 60000) * ((p.sec * 1000) + p.mil)); // sekundnik
+            rot = Math.PI + ((wC / 60000) * ((p.sec * 1000) + p.mil)); // sekundnik
             ctx.rotate(rot);
             ctx.beginPath();
             if (clock) {
@@ -669,9 +680,28 @@
 
             ctx.lineWidth = .5 * ss;
             ctx.beginPath();
-            ctx.arc(0, 0, 3 * ss, 0, wholCirc, true);
+            ctx.arc(0, 0, 3 * ss, 0, wC, true);
             ctx.fill();
             ctx.stroke();
+
+            if (mouseOnClock) {
+                ctx.save();
+                ctx.fillStyle = back;
+                ctx.globalAlpha = 0.95;
+                ctx.lineWidth = 0;
+                ctx.beginPath();
+                ctx.arc(0, 0, 57 * ss, 0, wC, true);
+                ctx.fill();
+
+                ctx.restore();
+                ctx.font = (35 * s) + "px Rubik";
+                let txt = 'ADD ALARM';
+                ctx.fillText(txt, (-ctx.measureText(txt).width) / 2, (37 * s) / 2);
+
+                document.body.style.cursor = 'pointer';
+            } else {
+                document.body.style.cursor = 'default';
+            }
 
             ctx.setTransform(1, 0, 0, 1, 0, 0);
         }
@@ -793,9 +823,9 @@
                 ctx.beginPath();
                 if (memX != pos.x || memY != pos.y) {
                     ctx.lineWidth = pos.m / 2;
-                    ctx.arc(30 * s, 83 * s, (20 - (pos.m / 2)) * s, 0, wholCirc, true);
+                    ctx.arc(30 * s, 83 * s, (20 - (pos.m / 2)) * s, 0, wC, true);
                 } else {
-                    ctx.arc(30 * s, 83 * s, 16 * s, 0, wholCirc, true);
+                    ctx.arc(30 * s, 83 * s, 16 * s, 0, wC, true);
                     pos.s = 1;
                 }
                 ctx.stroke();
@@ -806,6 +836,26 @@
                 ctx.lineWidth = 1 * s;
                 ctx.strokeStyle = col;
                 ctx.fillStyle = back;
+                if (lock[0] == 1) {
+                    ctx.beginPath();
+                    ctx.rect((30 - 7) * s, (83 - 7) * s, 3 * s, 3 * s);
+                    ctx.stroke();
+                }
+                if (lock[1] == 1) {
+                    ctx.beginPath();
+                    ctx.rect((30 + 4) * s, (83 - 7) * s, 3 * s, 3 * s);
+                    ctx.stroke();
+                }
+                if (lock[2] == 1) {
+                    ctx.beginPath();
+                    ctx.rect((30 - 7) * s, (83 + 4) * s, 3 * s, 3 * s);
+                    ctx.stroke();
+                }
+                if (lock[3] == 1) {
+                    ctx.beginPath();
+                    ctx.rect((30 + 4) * s, (83 + 4) * s, 3 * s, 3 * s);
+                    ctx.stroke();
+                }
                 ctx.restore();
             }
 
@@ -885,13 +935,13 @@
             }
 
             { // wąż
-                let sMov = (Math.sin((wholCirc * counter[0] / 80)) * 5);
+                let sMov = (Math.sin((wC * counter[0] / 80)) * 5);
                 if (sMov < 0) {
                     sMov = -sMov
                 }
-                let sMov2 = (Math.sin((wholCirc * counter[1] / 250)) * 3) + 3,
-                    sMulti = 0.9 + (Math.sin((wholCirc * counter[2] / 82)) * 0.4),
-                    sMulti2 = 1 + (Math.sin((wholCirc * counter[1] / 500)) * 0.7),
+                let sMov2 = (Math.sin((wC * counter[1] / 250)) * 3) + 3,
+                    sMulti = 0.9 + (Math.sin((wC * counter[2] / 82)) * 0.4),
+                    sMulti2 = 1 + (Math.sin((wC * counter[1] / 500)) * 0.7),
                     size = 0.5 + (sMov2 / 5) + (sMov / 10);
 
                 let snW = width - size,
@@ -1038,3 +1088,18 @@
         }
     }
 })()
+
+function hiddenClick(hidden) {
+    hidden.style.width = "0";
+    hidden.style.height = "0";
+    hidden.style.top = "0";
+    hidden.style.left = "0";
+    hidden.style.border = "none";
+    lock = [0, 0, 0, 0];
+
+    let q = document.querySelector('#part_0 h1');
+    q.click();
+    console.log('%c q:', 'background: #ffcc00; color: #003300', q)
+}
+
+

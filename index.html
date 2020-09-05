@@ -1,625 +1,695 @@
 <!DOCTYPE html>
 <html lang="pl-PL">
 
-<head>
-    <meta http-equiv="Content-Type" content="text/html;  charset=utf-8">
-    <title>aniol</title>
-    <link rel='stylesheet' type='text/css' href='index.css'>
-</head>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>aniol</title>
+        <link rel='stylesheet' type='text/css' href='index.css'>
+    </head>
 
-<body>
-    <div id="links" class="popup">
+    <body>
+        <div id="links" class="popup">
 
-    </div>
-
-    <div class="section">
-        <div id="canvas">
-            <canvas id="mycanvas" style="border:0px solid black;"></canvas>
         </div>
 
-        <div>
+        <div class="section">
+            <a id="hidden" href="secret.html" onclick="hiddenClick(this)"></a>
+
+            <div id="canvas">
+                <canvas id="mycanvas" style="border:0px solid black;"></canvas>
+            </div>
+
+            <div>
+                <div class="part">
+                    <h1 onclick="foldArea(this)">MAIN</h1>
+                    <div class="fold">
+                        <div class="column">
+                            <a href="https://www.google.pl"><img src="img/main/google.png" alt="google" title="google" /></a>
+                            <a href="http://www.facebook.com"><img src="img/main/facebook.png" alt="facebook" title="facebook" /></a>
+                            <a href="https://www.youtube.com"><img src="img/main/yt.png" alt="youtube" title="youtube" /></a>
+                            <a href="https://www.yahoo.com"><img src="img/main/yahoo.png" alt="yahoo" title="yahoo" /></a>
+                            <a href="https://mail.protonmail.com/inbox"><img src="img/main/protonmail.png" alt="protonmail" title="protonmail" /></a>
+                            <div class="row">
+                                <a href="https://www.linkedin.com/m/login"><img src="img/main/linkedin.png" alt="linkedin" title="linkedin" /></a>
+                                <a href="https://duo.google.com/?web"><img src="img/main/duo.png" alt="duo" title="duo" /></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="part">
-                <h1 onclick="foldArea(this)">MAIN</h1>
+                <h1 onclick="foldArea(this)">video</h1>
                 <div class="fold">
                     <div class="column">
-                        <a href="https://www.google.pl"><img src="img/main/google.png" alt="google" title="google" /></a>
-                        <a href="http://www.facebook.com"><img src="img/main/facebook.png" alt="facebook" title="facebook" /></a>
-                        <a href="https://www.youtube.com"><img src="img/main/yt.png" alt="youtube" title="youtube" /></a>
-                        <a href="https://www.yahoo.com"><img src="img/main/yahoo.png" alt="yahoo" title="yahoo" /></a>
-                        <a href="https://mail.protonmail.com/inbox"><img src="img/main/protonmail.png" alt="protonmail" title="protonmail" /></a>
                         <div class="row">
-                            <a href="https://www.linkedin.com/m/login"><img src="img/main/linkedin.png" alt="linkedin" title="linkedin" /></a>
-                            <a href="https://duo.google.com/?web"><img src="img/main/duo.png" alt="duo" title="duo" /></a>
+                            <a href="https://www.earthcam.com"><img src="img/video/cams.png" alt="cams" title="cams" /></a>
+                            <a href="https://www.gdansk.pl/kamera/dlugi-targ"><img src="img/video/netoog.png" alt="netoog" title="netoog" /></a>
+                            <a href="https://go.tvn24.pl/programy,7"><img src="img/video/tvn.png" alt="tvn" title="tvn" /></a>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="part">
-            <h1 onclick="foldArea(this)">video</h1>
-            <div class="fold">
-                <div class="column">
-                    <div class="row">
-                        <a href="https://www.earthcam.com"><img src="img/video/cams.png" alt="cams" title="cams" /></a>
-                        <a href="https://www.gdansk.pl/kamera/dlugi-targ"><img src="img/video/netoog.png" alt="netoog" title="netoog" /></a>
-                        <a href="https://go.tvn24.pl/programy,7"><img src="img/video/tvn.png" alt="tvn" title="tvn" /></a>
-                    </div>
-                    <div class="row">
-                        <a href="https://www.cda.pl"><img src="img/video/cda.png" alt="cda" title="cda" /></a>
-                        <a href="https://fakty.tvn24.pl"><img src="img/video/fakty.png" alt="fakty" title="fakty" /></a>
-                    </div>
-                    <a href="https://gdansk.tvp.pl"><img src="img/video/tvpg.png" alt="tvpg" title="tvpg" /></a>
-                    <div class="row">
-                        <div class="column">
-                            <div class="row">
-                                <a href="https://www.tvp.info"><img src="img/video/tvp.png" alt="tvp" title="tvp" /></a>
-                                <a href="https://tv-trwam.pl"><img src="img/video/trwam.png" alt="trwam" title="trwam" /></a>
+                        <div class="row">
+                            <a href="https://www.cda.pl"><img src="img/video/cda.png" alt="cda" title="cda" /></a>
+                            <a href="https://fakty.tvn24.pl"><img src="img/video/fakty.png" alt="fakty" title="fakty" /></a>
+                        </div>
+                        <a href="https://gdansk.tvp.pl"><img src="img/video/tvpg.png" alt="tvpg" title="tvpg" /></a>
+                        <a href="https://ninateka.pl/filmy/teatr,spektakle"><img src="img/video/ninateka_logo.png" alt="ninateka" title="ninateka" /></a>
+                        <div class="row">
+                            <div class="column">
+                                <a href="https://vimeo.com"><img src="img/video/vimeo.png" alt="vimeo" title="vimeo" /></a>
+                                <a href="https://www.filmon.com/tv"><img src="img/video/filmon.png" alt="filmon" title="filmon" /></a>
                             </div>
-                            <a href="https://vimeo.com"><img src="img/video/vimeo.png" alt="vimeo" title="vimeo" /></a>
-                            <a href="https://www.filmon.com/tv"><img src="img/video/filmon.png" alt="filmon" title="filmon" /></a>
+                            <div class="column">
+                                <a href="https://teatrtv.vod.tvp.pl/"><img src="img/video/teatrtelewizji.png" alt="teatr telewizji polskiej" title="teatr telewizji polskiej" /></a>
+                                <a href="https://www.my90stv.com/#" title="90's">90's</a>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="part">
-            <h1 onclick="foldArea(this)">shopping</h1>
-            <div class="fold">
-                <div class="column">
-                    <a href="https://allegro.pl"><img src="img/shopping/allegro.png" alt="allegro" title="allegro" /></a>
-                    <a href="https://www.amazon.com"><img src="img/shopping/amazon.png" alt="amazon" title="amazon" /></a>
-                    <a href="https://www.amway.pl"><img src="img/shopping/amway.png" alt="amway" title="amway" /></a>
-                    <a href="https://www.ebay.pl"><img src="img/shopping/ebuy.png" alt="ebuy" title="ebuy" /></a>
-                    <a href="https://sprzedajemy.pl"><img src="img/shopping/sprzedajemy.png" alt="sprzedajemy" title="sprzedajemy" /></a>
-                </div>
-            </div>
-        </div>
-
-        <div class="part">
-            <h1 onclick="foldArea(this)">news</h1>
-            <div class="fold">
-                <div class="column">
-                    <a href="https://news.google.com"><img src="img/news/gnew.png" alt="google news" title="google news" /></a>
-                    <a href="https://www.press.pl/jedynki"><img src="img/news/press.png" alt="press" title="press" /></a>
-                    <a href="https://www.newsweek.pl/blog"><img src="img/news/bloginews.png" alt="blogi newsweek" title="blogi newsweek" /></a>
-                    <div class="row">
-                        <a href="http://naukawpolsce.pap.pl"><img src="img/news/pap.png" alt="pap" title="pap" /></a>
-                        <a href="https://www.polityka.pl/blogi"><img src="img/news/poliblogi.png" alt="blogi polityka" title="blogi polityka" /></a>
-                    </div>
-                    <a href="https://audycje.tokfm.pl"><img src="img/news/tokfm.png" alt="tokfm" title="tokfm" /></a>
-                </div>
-            </div>
-        </div>
-
-        <div class="part">
-            <h1 onclick="foldArea(this)">inspirations</h1>
-            <div class="fold">
-                <div class="column">
-                    <a href="https://pl.pinterest.com"><img src="img/inspirations/pinterest.png" alt="pinterest" title="pinterest" /></a>
-                    <a href="https://www.thisiscolossal.com"><img src="img/inspirations/colossal.png" alt="colossal" title="colossal" /></a>
-                    <a href="https://www.artstation.com"><img src="img/inspirations/artstation.png" alt="artstation" title="artstation" /></a>
-                    <a href="https://www.goodshomedesign.com"><img src="img/inspirations/goodhomedesign.png" alt="goodhomedesign" title="goodhomedesign" /></a>
-                    <a href="https://inhabitat.com"><img src="img/inspirations/inhabit.png" alt="inhabit" title="inhabit" /></a>
-                    <a href="https://www.geeksaresexy.net"><img src="img/inspirations/geekaresexy.png" alt="geekaresexy" title="geekaresexy" /></a>
-                </div>
-            </div>
-        </div>
-
-        <div>
-
-            <div class="part">
-                <h1 onclick="foldArea(this)">life</h1>
-                <div class="fold column">
-                    <div class="row">
-                        <a href="https://www.bankmillennium.pl"><img src="img/life/millennium.png" alt="millennium" title="millennium" /></a>
-                    </div>
-                    <div class="row">
-                        <a href="https://ebok.vectra.pl/#/login"><img src="img/life/vectra.png" alt="vectra" title="vectra" /></a>
-                        <a href="https://wniosek.mzkwejherowo.pl/ztmgdansk"><img src="img/life/ztmg.png" alt="ztmg" title="ztmg" /></a>
                     </div>
                 </div>
             </div>
 
             <div class="part">
-                <h1 onclick="foldArea(this)">time</h1>
+                <h1 onclick="foldArea(this)">shopping</h1>
+                <div class="fold">
+                    <div class="column">
+                        <a href="https://allegro.pl"><img src="img/shopping/allegro.png" alt="allegro" title="allegro" /></a>
+                        <a href="https://www.amazon.com"><img src="img/shopping/amazon.png" alt="amazon" title="amazon" /></a>
+                        <a href="https://www.amway.pl"><img src="img/shopping/amway.png" alt="amway" title="amway" /></a>
+                        <a href="https://www.ebay.pl"><img src="img/shopping/ebuy.png" alt="ebuy" title="ebuy" /></a>
+                        <a href="https://sprzedajemy.pl"><img src="img/shopping/sprzedajemy.png" alt="sprzedajemy" title="sprzedajemy" /></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="part">
+                <h1 onclick="foldArea(this)">news</h1>
+                <div class="fold">
+                    <div class="column">
+                        <a href="https://news.google.com"><img src="img/news/gnew.png" alt="google news" title="google news" /></a>
+                        <a href="https://www.press.pl/jedynki"><img src="img/news/press.png" alt="press" title="press" /></a>
+                        <a href="https://www.newsweek.pl/blog"><img src="img/news/bloginews.png" alt="blogi newsweek" title="blogi newsweek" /></a>
+                        <div class="row">
+                            <a href="http://naukawpolsce.pap.pl"><img src="img/news/pap.png" alt="pap" title="pap" /></a>
+                            <a href="https://www.polityka.pl/blogi"><img src="img/news/poliblogi.png" alt="blogi polityka" title="blogi polityka" /></a>
+                        </div>
+                        <a href="https://audycje.tokfm.pl"><img src="img/news/tokfm.png" alt="tokfm" title="tokfm" /></a>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+
+                <div class="part">
+                    <h1 onclick="foldArea(this)">life</h1>
+                    <div class="fold column">
+                        <div class="row">
+                            <a href="https://www.bankmillennium.pl"><img src="img/life/millennium.png" alt="millennium" title="millennium" /></a>
+                        </div>
+                        <div class="row">
+                            <a href="https://ebok.vectra.pl/#/login"><img src="img/life/vectra.png" alt="vectra" title="vectra" /></a>
+                            <a href="https://wniosek.mzkwejherowo.pl/ztmgdansk"><img src="img/life/ztmg.png" alt="ztmg" title="ztmg" /></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="part">
+                    <h1 onclick="foldArea(this)">time</h1>
+                    <div class="fold column">
+                        <a href="https://www.worldtimezone.com"><img src="img/time/wtz.png" alt="wtz" title="wtz" /></a>
+                        <div class="row">
+                            <a href="https://calendar.zoznam.sk/nameday-plplhor.php"><img src="img/time/calendar.png" alt="calendar" title="calendar" /></a>
+                            <a href="https://www.timeanddate.com/date/duration.html"><img src="img/time/timeanddate.png" alt="timeanddate" title="timeanddate" /></a>
+                        </div>
+                        <a href="https://www.usdebtclock.org"><img src="img/time/usdebt.png" alt="us debt clock" title="us debt clock" /></a>
+                        <div class="row">
+                            <a href="https://www.kalbi.pl/niedziele-handlowe"><img src="img/time/kalbi.png" alt="kalbi" title="kalbi" /></a>
+                            <a href="http://www.zegaratomowy.com.pl"><img src="img/time/zegaratomowy.png" alt="zegaratomowy" title="zegaratomowy" /></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="part">
+                <h1 onclick="foldArea(this)">inspirations</h1>
+                <div class="fold">
+                    <div class="row">
+                        <div class="column">
+                            <a href="https://pl.pinterest.com"><img src="img/inspirations/pinterest.png" alt="pinterest" title="pinterest" /></a>
+                            <a href="https://www.thisiscolossal.com"><img src="img/inspirations/colossal.png" alt="colossal" title="colossal" /></a>
+                            <a href="https://www.artstation.com"><img src="img/inspirations/artstation.png" alt="artstation" title="artstation" /></a>
+                            <a href="https://www.goodshomedesign.com"><img src="img/inspirations/goodhomedesign.png" alt="goodhomedesign" title="goodhomedesign" /></a>
+                            <a href="https://inhabitat.com"><img src="img/inspirations/inhabit.png" alt="inhabit" title="inhabit" /></a>
+                            <a href="https://www.geeksaresexy.net"><img src="img/inspirations/geekaresexy.png" alt="geekaresexy" title="geekaresexy" /></a>
+                        </div>
+                        <div class="column">
+                            <a href="https://dribbble.com/shots"><img src="img/inspirations/dribbble.svg" alt="dribbble" title="Discover the world’s top designers & creatives" /></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="part">
+                <h1 onclick="foldArea(this)">helpers</h1>
                 <div class="fold column">
-                    <a href="https://www.worldtimezone.com"><img src="img/time/wtz.png" alt="wtz" title="wtz" /></a>
                     <div class="row">
-                        <a href="https://calendar.zoznam.sk/nameday-plplhor.php"><img src="img/time/calendar.png" alt="calendar" title="calendar" /></a>
-                        <a href="https://www.timeanddate.com/date/duration.html"><img src="img/time/timeanddate.png" alt="timeanddate" title="timeanddate" /></a>
+                        <a href="https://www.google.com/intl/pl/chrome/demos/speech.html"><img src="img/helpers/voice.png" alt="Web Speech API" title="Web Speech API" /></a>
+                        <a href="https://www.zamzar.com"><img src="img/helpers/zama.png" alt="zamzar" title="zamzar" /></a>
+                        <a href="https://send.firefox.com"><img src="img/helpers/send.png" alt="firefox Send" title="firefox Send" /></a>
+                        <a href="https://translate.google.pl"><img src="img/helpers/translator.png" alt="translator google" title="translator google" /></a>
                     </div>
-                    <a href="https://www.usdebtclock.org"><img src="img/time/usdebt.png" alt="us debt clock" title="us debt clock" /></a>
                     <div class="row">
-                        <a href="https://www.kalbi.pl/niedziele-handlowe"><img src="img/time/kalbi.png" alt="kalbi" title="kalbi" /></a>
-                        <a href="http://www.zegaratomowy.com.pl"><img src="img/time/zegaratomowy.png" alt="zegaratomowy" title="zegaratomowy" /></a>
+                        <a href="https://zapodaj.net/" title="Darmowy Hosting Zdjęć"><div id="zapodaj">Zapodaj !</div></a>
+                        <a href="https://www.ilovepdf.com/unlock_pdf"><img src="img/helpers/ilovepdf.svg" alt="ilovepdf" title="Every tool you need to work with PDFs in one place" /></a>
                     </div>
+                    <div class="row">
+                        <a href="https://pdfcandy.com"><img src="img/helpers/convert.png" alt="convertfiles" title="convertfiles" /></a>
+                        <a href="https://www.fakenamegenerator.com"><img src="img/helpers/fake.png" alt="fakenamegenerator" title="fakenamegenerator" /></a>
+                    </div>
+                    <div class="row">
+                        <a href="https://www.mathway.com/Algebra"><img src="img/helpers/math.png" alt="mathway" title="mathway" /></a>
+                        <a href="http://cqcounter.com/whois"><img src="img/helpers/cqcounter.png" alt="cqcounter" title="cqcounter" /></a>
+                    </div>
+                    <div class="row">
+                        <a href="https://www.convertworld.com/pl"><img src="img/helpers/conwerter.png" alt="convertworld" title="convertworld" /></a>
+                        <a href="https://myactivity.google.com/myactivity"><img src="img/helpers/history.png" alt="google history" title="google history" /></a>
+                    </div>
+                    <div class="row">
+                        <a href="https://myaccount.google.com/dashboard"><img src="img/helpers/panel.png" alt="google panel" title="google panel" /></a>
+                        <a href="https://myaccount.google.com/permissions?pli=1"><img src="img/helpers/aps.png" alt="google aps" title="google aps" /></a>
+                    </div>
+                    <div class="row">
+                        <a href="https://strongpasswordgenerator.com"><img src="img/helpers/strongpasswordgenerator.png" alt="strongpasswordgenerator" title="strongpasswordgenerator" /></a>
+                        <a href="https://10minutemail.com"><img src="img/helpers/10minut.png" alt="10minutemail" title="10minutemail" /></a>
+                    </div>
+                    <a href="https://passwordsgenerator.net/"><img src="img/helpers/strongpasswordgenerator.png" alt="Password" title="Secure Password Generator" /></a>
                 </div>
             </div>
 
-        </div>
-
-        <div class="part">
-            <h1 onclick="foldArea(this)">helpers</h1>
-            <div class="fold column">
-                <div class="row">
-                    <a href="https://www.google.com/intl/pl/chrome/demos/speech.html"><img src="img/helpers/voice.png" alt="Web Speech API" title="Web Speech API" /></a>
-                    <a href="https://strongpasswordgenerator.com"><img src="img/helpers/password.png" alt="Strong Password Generator" title="Strong Password Generator" /></a>
-                    <a href="https://www.zamzar.com"><img src="img/helpers/zama.png" alt="zamzar" title="zamzar" /></a>
-                    <a href="https://send.firefox.com"><img src="img/helpers/send.png" alt="firefox Send" title="firefox Send" /></a>
-                    <a href="https://translate.google.pl"><img src="img/helpers/translator.png" alt="translator google" title="translator google" /></a>
-                </div>
-                <div class="row">
-                    <a href="https://pdfcandy.com"><img src="img/helpers/convert.png" alt="convertfiles" title="convertfiles" /></a>
-                    <a href="https://www.fakenamegenerator.com"><img src="img/helpers/fake.png" alt="fakenamegenerator" title="fakenamegenerator" /></a>
-                </div>
-                <div class="row">
-                    <a href="https://www.mathway.com/Algebra"><img src="img/helpers/math.png" alt="mathway" title="mathway" /></a>
-                    <a href="http://cqcounter.com/whois"><img src="img/helpers/cqcounter.png" alt="cqcounter" title="cqcounter" /></a>
-                </div>
-                <div class="row">
-                    <a href="https://www.convertworld.com/pl"><img src="img/helpers/conwerter.png" alt="convertworld" title="convertworld" /></a>
-                    <a href="https://myactivity.google.com/myactivity"><img src="img/helpers/history.png" alt="google history" title="google history" /></a>
-                </div>
-                <div class="row">
-                    <a href="https://myaccount.google.com/dashboard"><img src="img/helpers/panel.png" alt="google panel" title="google panel" /></a>
-                    <a href="https://myaccount.google.com/permissions?pli=1"><img src="img/helpers/aps.png" alt="google aps" title="google aps" /></a>
-                </div>
-                <div class="row">
-                    <a href="https://www.ask.com"><img src="img/helpers/ask.png" alt="ask" title="ask" /></a>
-                    <a href="https://www.qwant.com"><img src="img/helpers/qwant.png" alt="qwant" title="qwant" /></a>
-                    <a href="http://getionary.pl/index.html"><img src="img/helpers/getionary.png" alt="Getionary" title="Getionary" /></a>
-                    <a href="https://context.reverso.net/t%C5%82umaczenie"><img src="img/helpers/reverso.png" alt="Reverso Context" title="Reverso Context" /></a>
-                </div>
-                <div class="row">
-                    <a href="https://strongpasswordgenerator.com"><img src="img/helpers/strongpasswordgenerator.png" alt="strongpasswordgenerator" title="strongpasswordgenerator" /></a>
-                    <a href="https://10minutemail.com"><img src="img/helpers/10minut.png" alt="10minutemail" title="10minutemail" /></a>
-                </div>
-            </div>
-        </div>
-
-        <div class="part">
-            <h1 onclick="foldArea(this)">knowledge</h1>
-            <div class="fold">
-                <div class="column">
-                    <div class="row">
-                        <a href="https://kopalniawiedzy.pl"><img src="img/knowledge/kopalniawiedzy.png" alt="kopalniawiedzy" title="kopalniawiedzy" /></a>
-                        <a href="https://wiedzoholik.pl"><img src="img/knowledge/wiedzoholik.png" alt="wiedzoholik" title="wiedzoholik" /></a>
-                        <a href="https://rcube.pl/jak-ulozyc-kostke-rubika-3x3x3-lbl"><img src="img/knowledge/kostka.png" alt="jak-ulozyc-kostke-rubika" title="jak-ulozyc-kostke-rubika" /></a>
-                        <a href="https://www.raspberrypi.org"><img src="img/knowledge/raspberrypi.png" alt="raspberrypi" title="raspberrypi" /></a>
-                        <a href="https://gdansk.fotopolska.eu/Gdansk/d549,Srodmiescie.html"><img src="img/knowledge/fotogdansk.png" alt="fotogdansk" title="fotogdansk" /></a>
-                    </div>
-                    <div class="row">
-                        <a href="http://ciekawostkihistoryczne.pl"><img src="img/knowledge/ciekawostkihist.png" alt="ciekawostkihistoryczne" title="ciekawostkihistoryczne" /></a>
-                        <a href="https://news.astronet.pl"><img src="img/knowledge/astronew.png" alt="astronet" title="astronet" /></a>
-                        <a href="http://www.deltami.edu.pl/delta/archiwum"><img src="img/knowledge/delta.png" alt="delta magazyn" title="delta magazyn" /></a>
-                    </div>
-                    <div class="row">
-                        <a href="http://www.eioba.pl"><img src="img/knowledge/eioba.png" alt="eioba" title="eioba" /></a>
-                        <a href="https://mlodytechnik.pl"><img src="img/knowledge/mtechnik.png" alt="mtechnik" title="mtechnik" /></a>
-                        <a href="https://www.animatedknots.com/?LogoImage=LogoGrog.jpg&Website"><img src="img/knowledge/animatedknots.png" alt="animatedknots" title="animatedknots" /></a>
-                        <a href="http://lushprojects.com/circuitjs/circuitjs.html"><img src="img/knowledge/schemat.png" alt="shematy elektroniczne" title="shematy elektroniczne" /></a>
-                    </div>
-
-                    <div class="row">
-                        <div class="column">
-                            <a href="https://www.crazynauka.pl"><img src="img/knowledge/crazynauka.png" alt="crazynauka" title="crazynauka" /></a>
-                            <a href="http://www.elektroonline.pl"><img src="img/knowledge/elektroonline.png" alt="elektroonline" title="elektroonline" /></a>
-                            <a href="https://elportal.pl"><img src="img/knowledge/elportal.png" alt="elportal" title="elportal" /></a>
-                            <a href="https://exignorant.wordpress.com"><img src="img/knowledge/exbl.png" alt="exignorant" title="exignorant" /></a>
-                            <a href="https://kosmonauta.net/en"><img src="img/knowledge/kosmonauta.png" alt="kosmonauta" title="kosmonauta" /></a>
-                            <a href="http://spacelabeu.com"><img src="img/knowledge/spacelabeu.png" alt="spacelabeu" title="spacelabeu" /></a>
-                        </div>
-                        <div class="column">
-                            <a href="http://www.pazyl.pl/index.php"><img src="img/knowledge/pazyl.png" alt="pazyl" title="pazyl" /></a>
-                            <a href="http://forum.dawnygdansk.pl/index.php?redir=1"><img src="img/knowledge/dawnygdansk.png" alt="dawnygdansk" title="dawnygdansk" /></a>
-                            <a href="https://forbot.pl/blog"><img src="img/knowledge/forbot.png" alt="forbot" title="forbot" /></a>
-                            <a href="https://naukaoklimacie.pl"><img src="img/knowledge/naukaoklimacie.png" alt="naukaoklimacie" title="naukaoklimacie" /></a>
-                            <a href="https://www.elektroda.pl"><img src="img/knowledge/elektroda.png" alt="elektroda" title="elektroda" /></a>
-                            <a href="https://www.heavens-above.com/main.aspx?lat=54.3475&lng=18.6532&loc=Unspecified&alt=8&tz=CET"><img src="img/knowledge/hevensabo.png" alt="heavens-above" title="heavens-above" /></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="part">
-            <h1 onclick="foldArea(this)">portals</h1>
-            <div class="fold column">
-                <div class="row">
-                    <a href="https://gdansk.naszemiasto.pl"><img src="img/portals/mojemiasto.png" alt="naszemiasto" title="naszemiasto" /></a>
-                    <a href="http://kpbc.umk.pl/dlibra"><img src="img/portals/bibcyf.png" alt="Kujawsko-Pomorska Digital Library" title="Kujawsko-Pomorska Digital Library" /></a>
-                    <a href="http://www.nasz.gdansk.pl"><img src="img/portals/naszgdansk.png" alt="Nasz Gdańsk" title="Nasz Gdańsk" /></a>
-                    <!-- <a href="https://www.webd.pl"><img src="img/portals/rzygacz.png" alt="Rzygacz portal" title="Rzygacz portal" /></a> -->
-                    <a href="http://www.gdansk.policja.gov.pl/"><img src="img/portals/policjagda.png" alt="policja gdańsk" title="policja gdańsk" /></a>
-                    <a href="https://kursy-walut.mybank.pl"><img src="img/portals/bankier.png" alt="kursy-walut" title="kursy-walut" /></a>
-                    <a href="http://ibedeker.pl"><img src="img/portals/bedeker.png" alt="bedeker" title="bedeker" /></a>
-                </div>
-
-                <div class="row">
+            <div class="part">
+                <h1 onclick="foldArea(this)">knowledge</h1>
+                <div class="fold">
                     <div class="column">
                         <div class="row">
-                            <a href="https://www.onet.pl"><img src="img/portals/onet.png" alt="onet" title="onet" /></a>
-                            <a href="https://www.wp.pl"><img src="img/portals/wp.png" alt="wp" title="wp" /></a>
-                            <a href="https://www.pb.pl"><img src="img/portals/pulsbiznesu.png" alt="pulsbiznesu" title="pulsbiznesu" /></a>
+                            <a href="https://kopalniawiedzy.pl"><img src="img/knowledge/kopalniawiedzy.png" alt="kopalniawiedzy" title="kopalniawiedzy" /></a>
+                            <a href="https://wiedzoholik.pl"><img src="img/knowledge/wiedzoholik.png" alt="wiedzoholik" title="wiedzoholik" /></a>
+                            <a href="https://rcube.pl/jak-ulozyc-kostke-rubika-3x3x3-lbl"><img src="img/knowledge/kostka.png" alt="jak-ulozyc-kostke-rubika" title="jak-ulozyc-kostke-rubika" /></a>
+                            <a href="https://www.raspberrypi.org"><img src="img/knowledge/raspberrypi.png" alt="raspberrypi" title="raspberrypi" /></a>
+                            <a href="https://gdansk.fotopolska.eu/Gdansk/d549,Srodmiescie.html"><img src="img/knowledge/fotogdansk.png" alt="fotogdansk" title="fotogdansk" /></a>
                         </div>
                         <div class="row">
+                            <a href="http://ciekawostkihistoryczne.pl"><img src="img/knowledge/ciekawostkihist.png" alt="ciekawostkihistoryczne" title="ciekawostkihistoryczne" /></a>
+                            <a href="https://news.astronet.pl"><img src="img/knowledge/astronew.png" alt="astronet" title="astronet" /></a>
+                            <a href="http://www.deltami.edu.pl/delta/archiwum"><img src="img/knowledge/delta.png" alt="delta magazyn" title="delta magazyn" /></a>
+                        </div>
+                        <div class="row">
+                            <a href="http://www.eioba.pl"><img src="img/knowledge/eioba.png" alt="eioba" title="eioba" /></a>
+                            <a href="https://mlodytechnik.pl"><img src="img/knowledge/mtechnik.png" alt="mtechnik" title="mtechnik" /></a>
+                            <a href="https://www.animatedknots.com/?LogoImage=LogoGrog.jpg&Website"><img src="img/knowledge/animatedknots.png" alt="animatedknots" title="animatedknots" /></a>
+                            <a href="http://lushprojects.com/circuitjs/circuitjs.html"><img src="img/knowledge/schemat.png" alt="shematy elektroniczne" title="shematy elektroniczne" /></a>
+                        </div>
+
+                        <div class="row">
                             <div class="column">
-                                <a href="https://www.polityka.pl/TygodnikPolityka"><img src="img/portals/polityka.png" alt="polityka" title="polityka" /></a>
-                                <a href="https://wei.org.pl"><img src="img/portals/wei.png" alt="Warsaw Enterprise Institute" title="Warsaw Enterprise Institute" /></a>
-                                <a href="https://natemat.pl"><img src="img/portals/natemat.png" alt="natemat" title="natemat" /></a>
-                                <a href="http://obiektywizm.pl"><img src="img/portals/obiektywizm.png" alt="obiektywizm" title="obiektywizm" /></a>
+                                <a href="https://www.crazynauka.pl"><img src="img/knowledge/crazynauka.png" alt="crazynauka" title="crazynauka" /></a>
+                                <a href="http://www.elektroonline.pl"><img src="img/knowledge/elektroonline.png" alt="elektroonline" title="elektroonline" /></a>
+                                <a href="https://elportal.pl"><img src="img/knowledge/elportal.png" alt="elportal" title="elportal" /></a>
+                                <a href="https://exignorant.wordpress.com"><img src="img/knowledge/exbl.png" alt="exignorant" title="exignorant" /></a>
+                                <a href="https://kosmonauta.net/en"><img src="img/knowledge/kosmonauta.png" alt="kosmonauta" title="kosmonauta" /></a>
+                                <a href="http://spacelabeu.com"><img src="img/knowledge/spacelabeu.png" alt="spacelabeu" title="spacelabeu" /></a>
                             </div>
                             <div class="column">
-                                <a href="http://rankingi24.pl"><img src="img/portals/ranking24.png" alt="rankingi24" title="rankingi24" /></a>
-                                <a href="http://www.racjonalista.pl"><img src="img/portals/racjonalista.png" alt="racjonalista" title="racjonalista" /></a>
-                                <a href="https://www.blenderguru.com"><img src="img/portals/blenderguru.png" alt="blenderguru" title="blenderguru" /></a>
-                                <a href="https://forsal.pl"><img src="img/portals/forsa.png" alt="forsal" title="forsal" /></a>
-                            </div>
-                            <div class="column">
-                                <a href="https://www.supercook.com/#/recipes"><img src="img/portals/supercook.png" alt="supercook" title="supercook" /></a>
-                                <a href="http://www.psz.pl"><img src="img/portals/psz.png" alt="psz" title="psz" /></a>
-                                <a href="http://www.ha.art.pl/index.php"><img src="img/portals/haart.png" alt="ha!art" title="ha!art" /></a>
-                                <a href="https://sejmometr.pl"><img src="img/portals/sejmometr.png" alt="sejmometr" title="sejmometr" /></a>
+                                <a href="http://www.pazyl.pl/index.php"><img src="img/knowledge/pazyl.png" alt="pazyl" title="pazyl" /></a>
+                                <a href="http://forum.dawnygdansk.pl/index.php?redir=1"><img src="img/knowledge/dawnygdansk.png" alt="dawnygdansk" title="dawnygdansk" /></a>
+                                <a href="https://forbot.pl/blog"><img src="img/knowledge/forbot.png" alt="forbot" title="forbot" /></a>
+                                <a href="https://naukaoklimacie.pl"><img src="img/knowledge/naukaoklimacie.png" alt="naukaoklimacie" title="naukaoklimacie" /></a>
+                                <a href="https://www.elektroda.pl"><img src="img/knowledge/elektroda.png" alt="elektroda" title="elektroda" /></a>
+                                <a href="https://www.heavens-above.com/main.aspx?lat=54.3475&lng=18.6532&loc=Unspecified&alt=8&tz=CET"><img src="img/knowledge/hevensabo.png" alt="heavens-above" title="heavens-above" /></a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="part">
-            <h1 onclick="foldArea(this)">maps</h1>
-            <div class="fold">
-                <div class="column">
-                    <div class="row">
-                        <a href="https://mapy.geoportal.gov.pl/imap"><img src="img/maps/geooo.png" alt="mapy.geoportal.gov" title="mapy.geoportal.gov" /></a>
-                        <a href="https://www.wunderground.com/wundermap?lat=54.322552&lon=18.572340&zoom=10"><img src="img/maps/wu.png" alt="wunderground" title="wunderground" /></a>
-                    </div>
-                    <div class="row">
-                        <a href="https://jakdojade.pl/trojmiasto/trasa"><img src="img/maps/jakdojade.png" alt="jakdojade" title="jakdojade" /></a>
-                        <a href="http://danzig-gdansk.com"><img src="img/maps/mapa.png" alt="danzig-gdansk" title="danzig-gdansk" /></a>
-                    </div>
-                    <a href="https://www.openstreetmap.org"><img src="img/maps/osm.png" alt="openstreetmap" title="openstreetmap" /></a>
-                    <a href="https://www.e-podroznik.pl"><img src="img/maps/podroznik.png" alt="e-podroznik" title="e-podroznik" /></a>
-                    <a href="http://wikimapia.org"><img src="img/maps/wikimap.png" alt="wikimapia" title="wikimapia" /></a>
-                    <div class="row">
-                        <a href="https://www.zumi.pl"><img src="img/maps/zumi.png" alt="zumi" title="zumi" /></a>
-                        <a href="https://www.flightradar24.com"><img src="img/maps/airpl.png" alt="flightradar24" title="flightradar24" /></a>
-                    </div>
-                    <a href="https://skiplagged.com"><img src="img/maps/skiplagged.png" alt="skiplagged" title="skiplagged" /></a>
-                </div>
-            </div>
-        </div>
-
-        <div class="part">
-            <h1 onclick="foldArea(this)">programms</h1>
-            <div class="fold column">
-                <div class="row">
-                    <a href="https://download.komputerswiat.pl"><img src="img/programms/komputerswiat.png" alt="komputerswiat" title="komputerswiat" /></a>
-                    <a href="https://www.instalki.pl/programy/lista/Windows.html"><img src="img/programms/instalki.png" alt="instalki" title="instalki" /></a>
-                </div>
-                <a href="http://www.darmoweprogramy.org/programy/tworzenie_grafiki3d.php"><img src="img/programms/darmprog.png" alt="darmoweprogramy" title="darmoweprogramy" /></a>
-                <a href="http://www.oldversion.com"><img src="img/programms/oldversion.png" alt="oldversion" title="oldversion" /></a>
-                <a href="https://programy.net.pl"><img src="img/programms/programy.png" alt="programy.net" title="programy.net" /></a>
-            </div>
-        </div>
-
-        <div class="part">
-            <h1 onclick="foldArea(this)">sounds</h1>
-            <div class="fold column">
-                <a href="https://www.rainymood.com"><img src="img/sounds/rainymood.png" alt="rainymood" title="rainymood" /></a>
-                <div class="row">
-                    <a href="https://freesound.org"><img src="img/sounds/freesound.png" alt="freesound" title="freesound" /></a>
-                    <a href="https://www.noisli.com"><img src="img/sounds/nosil.png" alt="noisli" title="noisli" /></a>
-                </div>
-                <div class="row">
-                    <a href="https://www.madeon.fr/adventuremachine"><img src="img/sounds/madeon.png" alt="adventuremachine" title="adventuremachine" /></a>
-                    <a href="https://radio.garden/listen/radio7/4slrZ3I0"><img src="img/sounds/radio.png" alt="radio7" title="radio7" /></a>
-                </div>
-                <a href="https://mynoise.net/NoiseMachines/whiteNoiseGenerator.php"><img src="img/sounds/mynoise.png" alt="whiteNoiseGenerator" title="whiteNoiseGenerator" /></a>
-                <a href="https://freemusicarchive.org/music/Jason_Shaw/Audionautix_Tech_Urban_Dance/TU-Glitch"><img src="img/sounds/freemusicarchive.png" alt="freemusicarchive" title="freemusicarchive" /></a>
-            </div>
-        </div>
-
-        <div class="part">
-            <h1 onclick="foldArea(this)">retro</h1>
-            <div class="fold column">
+            <div class="part">
+                <h1 onclick="foldArea(this)">portals</h1>
                 <div class="fold column">
                     <div class="row">
-                        <a href="http://www.filety.net"><img src="img/retro/commodore.png" alt="commodore" title="commodore" /></a>
-                        <a href="http://www.c64sets.com/boxed_sets.html"><img src="img/retro/c64sets.png" alt="c64sets" title="c64sets" /></a>
+                        <a href="https://gdansk.naszemiasto.pl"><img src="img/portals/mojemiasto.png" alt="naszemiasto" title="naszemiasto" /></a>
+                        <a href="http://kpbc.umk.pl/dlibra"><img src="img/portals/bibcyf.png" alt="Kujawsko-Pomorska Digital Library" title="Kujawsko-Pomorska Digital Library" /></a>
+                        <a href="http://www.nasz.gdansk.pl"><img src="img/portals/naszgdansk.png" alt="Nasz Gdańsk" title="Nasz Gdańsk" /></a>
+                        <!-- <a href="https://www.webd.pl"><img src="img/portals/rzygacz.png" alt="Rzygacz portal" title="Rzygacz portal" /></a> -->
+                        <a href="http://www.gdansk.policja.gov.pl/"><img src="img/portals/policjagda.png" alt="policja gdańsk" title="policja gdańsk" /></a>
+                        <a href="https://kursy-walut.mybank.pl"><img src="img/portals/bankier.png" alt="kursy-walut" title="kursy-walut" /></a>
+                        <a href="http://ibedeker.pl"><img src="img/portals/bedeker.png" alt="bedeker" title="bedeker" /></a>
                     </div>
-                    <a href="http://tajemnice.atari8.info"><img src="img/retro/tajemniceatari8.png" alt="tajemnice.atari8" title="tajemnice.atari8" /></a>
-                    <a href="http://atarionline.pl/v01/index.php?ct=nowinki&ucat=1&subaction=showfull&id=1546586580"><img src="img/retro/atari.png" alt="atarionline" title="atarionline" /></a>
-                    <a href="https://archive.org/details/commodore_c64_books"><img src="img/retro/commodore_c64_books.png" alt="commodore_c64_books" title="commodore_c64_books" /></a>
-                    <a href="https://www.retrogamer.net"><img src="img/retro/retrogamer.png" alt="retrogamer" title="retrogamer" /></a>
-                    <a href="http://www.gb64.com/index.php"><img src="img/retro/gb64b.png" alt="gb64b" title="gb64b" /></a>
-                    <a href="https://stare.e-gry.net"><img src="img/retro/staregrynet.png" alt="stare gry net" title="stare gry net" /></a>
-                </div>
-            </div>
-        </div>
 
-        <div class="part">
-            <h1 onclick="foldArea(this)">games</h1>
-            <div class="fold column">
-                <a href="https://play.gl"><img src="img/games/playgl.png" alt="play" title="play" /></a>
-                <a href="https://jayisgames.com"><img src="img/games/jayisgames.png" alt="jayisgames" title="jayisgames" /></a>
-                <a href="https://pl19.the-west.pl/game.php#"><img src="img/games/thewest.png" alt="the west" title="the west" /></a>
-                <div class="row">
-                    <a href="https://www.gry.pl/gry/nowe"><img src="img/games/grypl.png" alt="gry.pl" title="gry.pl" /></a>
-                    <a href="http://asciicker.com/y0"><img src="img/games/asciicker.png" alt="asciicker" title="asciicker" /></a>
-                </div>
-                <a href="https://www.kurnik.pl"><img src="img/games/kurnik.png" alt="kurnik" title="kurnik" /></a>
-            </div>
-        </div>
-
-        <div class="part">
-            <h1 onclick="foldArea(this)">business</h1>
-            <div class="fold column">
-                <a href="http://www.sklepy24.pl"><img src="img/business/sklepy24.png" alt="sklepy24" title="sklepy24" /></a>
-                <a href="https://ekrs.ms.gov.pl/web/wyszukiwarka-krs/strona-glowna"><img src="img/business/ms.png" alt="Ministerstwo Sprawiedliwości" title="Ministerstwo Sprawiedliwości" /></a>
-                <a href="https://prod.ceidg.gov.pl/ceidg/ceidg.public.ui/Search.aspx"><img src="img/business/ceidg.png" alt="ceidg" title="ceidg" /></a>
-                <a href="https://useme.eu/pl"><img src="img/business/useme.png" alt="ceidg" title="useme" /></a>
-            </div>
-        </div>
-
-    </div>
-
-
-    <div id="programing" class="section">
-
-        <div class="part">
-            <h1 onclick="foldArea(this)">programming</h1>
-            <div class="fold row">
-
-                <div id="part8" class="section">
-                    <div class="part">
-                        <h1 onclick="foldArea(this)">CSS</h1>
-                        <div class="fold column">
+                    <div class="row">
+                        <div class="column">
+                            <div class="row">
+                                <a href="https://www.onet.pl"><img src="img/portals/onet.png" alt="onet" title="onet" /></a>
+                                <a href="https://www.wp.pl"><img src="img/portals/wp.png" alt="wp" title="wp" /></a>
+                                <a href="https://www.pb.pl"><img src="img/portals/pulsbiznesu.png" alt="pulsbiznesu" title="pulsbiznesu" /></a>
+                            </div>
                             <div class="row">
                                 <div class="column">
-                                    <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox"><img src="img/_programming/css/flex.png" alt="flexbox" title="flexbox" /></a>
-                                    <a href="https://css-tricks.com/snippets/css/complete-guide-grid"><img src="img/_programming/css/grid.png" alt="grid" title="grid" /></a>
-                                    <a href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss_cursor"><img src="img/_programming/css/cursor.png" alt="cursor" title="cursor" /></a>
+                                    <a href="https://www.polityka.pl/TygodnikPolityka"><img src="img/portals/polityka.png" alt="polityka" title="polityka" /></a>
+                                    <a href="https://wei.org.pl"><img src="img/portals/wei.png" alt="Warsaw Enterprise Institute" title="Warsaw Enterprise Institute" /></a>
+                                    <a href="https://natemat.pl"><img src="img/portals/natemat.png" alt="natemat" title="natemat" /></a>
+                                    <a href="http://obiektywizm.pl"><img src="img/portals/obiektywizm.png" alt="obiektywizm" title="obiektywizm" /></a>
                                 </div>
                                 <div class="column">
+                                    <a href="http://rankingi24.pl"><img src="img/portals/ranking24.png" alt="rankingi24" title="rankingi24" /></a>
+                                    <a href="http://www.racjonalista.pl"><img src="img/portals/racjonalista.png" alt="racjonalista" title="racjonalista" /></a>
+                                    <a href="https://www.blenderguru.com"><img src="img/portals/blenderguru.png" alt="blenderguru" title="blenderguru" /></a>
+                                    <a href="https://forsal.pl"><img src="img/portals/forsa.png" alt="forsal" title="forsal" /></a>
+                                    <a href="https://coin360.com/"><img src="img/portals/coin360.svg" alt="coin360" title="coin360" /></a>
+                                </div>
+                                <div class="column">
+                                    <a href="https://www.supercook.com/#/recipes"><img src="img/portals/supercook.png" alt="supercook" title="supercook" /></a>
+                                    <a href="http://www.psz.pl"><img src="img/portals/psz.png" alt="psz" title="psz" /></a>
+                                    <a href="http://www.ha.art.pl/index.php"><img src="img/portals/haart.png" alt="ha!art" title="ha!art" /></a>
                                     <div class="row">
-                                        <a href="http://necolas.github.io/normalize.css"><img src="img/_programming/css/normalize.png" alt="normalize" title="normalize" /></a>
-                                        <a href="https://meyerweb.com/eric/tools/css/reset"><img src="img/_programming/css/reset.png" alt="reset" title="reset" /></a>
-                                        <a href="https://www.sassmeister.com"><img src="img/_programming/css/sass.png" alt="sass meister" title="sass meister" /></a>
+                                        <a href="https://sejmometr.pl"><img src="img/portals/sejmometr.png" alt="sejmometr" title="sejmometr" /></a>
+                                        <a href="https://finviz.com/map.ashx?t=sec&st="><img src="img/portals/finviz.png" alt="finviz" title="finviz" /></a>
                                     </div>
-                                    <a href="https://htmlemail.io/inline"><img src="img/_programming/css/htmlemail.png" alt="Responsive Email CSS Inliner" title="Responsive Email CSS Inliner" /></a>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="fold column">
-                                    <a href="https://html-css-js.com/css/generator/text-shadow"><img src="img/_programming/css/textshadow.png" alt="text-shadow" title="text-shadow" /></a>
-                                    <a href="https://www.nafrontendzie.pl/struktura-arkusza-stylow-css"><img src="img/_programming/css/nafrontendzie.png" alt="struktura-arkusza-stylow-css" title="struktura-arkusza-stylow-css" /></a>
-                                    <a href="https://cubic-bezier.com/#.42,0,.58,1"><img src="img/_programming/css/bezier.png" alt="css bezier" title="css bezier" /></a>
-                                    <a href="https://animista.net/play/basic"><img src="img/_programming/css/animista.png" alt="css animista" title="css animista" /></a>
-                                </div>
-                                <div class="fold column">
-                                    <a href="https://www.toptal.com/developers/css/sprite-generator"><img src="img/_programming/css/sprite.png" alt="sprite generator" title="sprite generator" /></a>
-                                    <a href="https://css.spritegen.com/"><img src="img/_programming/css/sprites.png" alt="sprites generator" title="sprites generator" /></a>
-                                    <a href="https://www.giftofspeed.com/css-compressor"><img src="img/_programming/css/compressor.png" alt="compressor" title="compressor" /></a>
-                                    <a href="https://csscompressor.com"><img src="img/_programming/css/compressor.png" alt="css compressor" title="css compressor" /></a>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
 
-                    <div class="part">
-                        <h1 onclick="foldArea(this)">html</h1>
-                        <div class="fold column">
-                            <a href="https://gsnedders.html5.org/outliner"><img src="img/_programming/html/outliner.png" alt="outliner" title="outliner" /></a>
-                            <a href="https://caniuse.com"><img src="img/_programming/html/caniuse.png" alt="can i use" title="can i use" /></a>
-                            <a href="https://validator.w3.org"><img src="img/_programming/html/W3.png" alt="validator html" title="validator html" /></a>
-                            <a href="http://pojo.sodhanalibrary.com/string.html">HTML to JS</a>
+            <div class="part">
+                <h1 onclick="foldArea(this)">maps</h1>
+                <div class="fold">
+                    <div class="column">
+                        <div class="row">
+                            <a href="https://mapy.geoportal.gov.pl/imap"><img src="img/maps/geooo.png" alt="mapy.geoportal.gov" title="mapy.geoportal.gov" /></a>
+                            <a href="https://www.wunderground.com/wundermap?lat=54.322552&lon=18.572340&zoom=10"><img src="img/maps/wu.png" alt="wunderground" title="wunderground" /></a>
                         </div>
-                    </div>
-
-                    <div class="part">
-                        <h1 onclick="foldArea(this)">fonts</h1>
-                        <div class="fold column">
-                            <a href="https://fonts.google.com"><img src="img/_programming/fonst/fontsgoogle.png" alt="google fonts" title="google fonts" /></a>
-                            <a href="https://www.font-converter.net/en"><img src="img/_programming/fonst/font-converter.png" alt="font-converter" title="font-converter" /></a>
-                            <a href="https://poradnik.kz1.pl/index.php?page=znakihtml"><img src="img/_programming/fonst/special.png" alt="special chars" title="special chars, encje" /></a>
-                            <a href="http://rabbit.eng.miami.edu/info/htmlchars.html"><img src="img/_programming/fonst/special.png" alt="special chars" title="special chars" /></a>
+                        <div class="row">
+                            <a href="https://jakdojade.pl/trojmiasto/trasa"><img src="img/maps/jakdojade.png" alt="jakdojade" title="jakdojade" /></a>
+                            <a href="http://danzig-gdansk.com"><img src="img/maps/mapa.png" alt="danzig-gdansk" title="danzig-gdansk" /></a>
                         </div>
-                    </div>
-
-                    <div class="part">
-                        <h1 onclick="foldArea(this)">java script</h1>
-                        <div class="fold column">
-                            <a href="http://www.javascriptobfuscator.com/Javascript-Obfuscator.aspx"><img src="img/_programming/js/obfuscator.png" alt="obfuscator" title="obfuscator" /></a>
-                            <a href="https://obfuscator.io"><img src="img/_programming/js/obfuscator2.png" alt="obfuscator" title="obfuscator" /></a>
-                            <div class="row">
-                                <a href="http://jsnice.org"><img src="img/_programming/js/jsnice.png" alt="jsnice" title="jsnice" /></a>
-                                <a href="https://www.minifier.org"><img src="img/_programming/js/minifier.png" alt="minifier" title="minifier" /></a>
-                            </div>
-                            <a href="https://unminify.com"><img src="img/_programming/js/unminify.png" alt="unminify" title="unminify" /></a>
-                            <a href="http://dean.edwards.name/packer/#referrer=blog.kamilbrenk.pl"><img src="img/_programming/js/compresor.png" alt="compresor" title="compresor" /></a>
-                        </div>
-                    </div>
-
-                    <div class="part">
-                        <h1 onclick="foldArea(this)">colors</h1>
-                        <div class="fold row">
-                            <div class="fold column">
-                                <a href="https://www.w3schools.com/colors/colors_picker.asp"><img src="img/_programming/colors/colors_picker.png" alt="colors_picker" title="colors_picker" /></a>
-                                <a href="https://material.io/design/color/the-color-system.html#tools-for-picking-colors"><img src="img/_programming/colors/material.png" alt="the-color-system" title="the-color-system" /></a>
-                                <a href="http://www.kurshtml.edu.pl/html/wykaz_kolorow,kolory.html"><img src="img/_programming/colors/kurshtml.png" alt="wykaz_kolorow" title="wykaz_kolorow" /></a>
-                                <a href="http://materialuicolors.co/?utm_source=launchers"><img src="img/_programming/colors/materialuicolors.png" alt="materialuicolors" title="materialuicolors" /></a>
-                                <a href="https://colorhunt.co"><img src="img/_programming/colors/colorhunt.png" alt="colorhunt" title="colorhunt" /></a>
-                                <a href="https://color.adobe.com"><img src="img/_programming/colors/adobe.png" alt="adobe colors" title="adobe colors" /></a>
-                                <a href="http://paletton.com"><img src="img/_programming/colors/paletton.png" alt="paletton colors" title="paletton colors" /></a>
-                                <a href="https://www.colorbox.io"><img src="img/_programming/colors/colorbox.png" alt="color box" title="color box" /></a>
-                            </div>
+                        <a href="https://www.openstreetmap.org"><img src="img/maps/osm.png" alt="openstreetmap" title="openstreetmap" /></a>
+                        <div class="row">
                             <div class="column">
-                                <a href="https://meyerweb.com/eric/tools/color-blend"><img src="img/_programming/colors/meyerweb.png" alt="meyerweb colors" title="meyerweb colors" /></a>
-                                <a href="https://bl.ocks.org/espetro/bd7555f4363af4f5a81bb324eae76912"><img src="img/_programming/colors/ocks.png" alt="ocks colors" title="ocks colors" /></a>
-                                <a href="https://pl.pinterest.com/pin/682717624745517844"><img src="img/_programming/colors/pinterest.png" alt="pinterest colors" title="pinterest colors" /></a>
+                                <a href="https://www.e-podroznik.pl"><img src="img/maps/podroznik.png" alt="e-podroznik" title="e-podroznik" /></a>
+                                <a href="https://skiplagged.com"><img src="img/maps/skiplagged.png" alt="skiplagged" title="skiplagged" /></a>
                             </div>
+                            <a href="https://www.windy.com/"><img src="img/maps/windy.png" alt="windy" title="windy" /></a>
+                        </div>
+                        <a href="http://wikimapia.org"><img src="img/maps/wikimap.png" alt="wikimapia" title="wikimapia" /></a>
+                        <div class="row">
+                            <a href="https://www.zumi.pl"><img src="img/maps/zumi.png" alt="zumi" title="zumi" /></a>
+                            <a href="https://www.flightradar24.com"><img src="img/maps/airpl.png" alt="flightradar24" title="flightradar24" /></a>
                         </div>
                     </div>
+                </div>
+            </div>
+
+            <div>
+
+                <div class="part">
+                    <h1 onclick="foldArea(this)">programms</h1>
+                    <div class="fold column">
+                        <div class="row">
+                            <a href="https://download.komputerswiat.pl"><img src="img/programms/komputerswiat.png" alt="komputerswiat" title="komputerswiat" /></a>
+                            <a href="https://www.instalki.pl/programy/lista/Windows.html"><img src="img/programms/instalki.png" alt="instalki" title="instalki" /></a>
+                        </div>
+                        <a href="http://www.darmoweprogramy.org/programy/tworzenie_grafiki3d.php"><img src="img/programms/darmprog.png" alt="darmoweprogramy" title="darmoweprogramy" /></a>
+                        <a href="http://www.oldversion.com"><img src="img/programms/oldversion.png" alt="oldversion" title="oldversion" /></a>
+                        <a href="https://programy.net.pl"><img src="img/programms/programy.png" alt="programy.net" title="programy.net" /></a>
+                    </div>
+                </div>
+
+                <div class="part">
+                    <h1 onclick="foldArea(this)">search engines</h1>
+                    <div class="fold column">
+                        <div class="row">
+                            <a href="https://www.ask.com"><img src="img/helpers/ask.png" alt="ask" title="ask" /></a>
+                            <a href="https://www.qwant.com"><img src="img/helpers/qwant.png" alt="qwant" title="qwant" /></a>
+                            <a href="http://getionary.pl/index.html"><img src="img/helpers/getionary.png" alt="Getionary" title="Getionary" /></a>
+                            <a href="https://context.reverso.net/t%C5%82umaczenie"><img src="img/helpers/reverso.png" alt="Reverso Context" title="Reverso Context" /></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="part">
+                <h1 onclick="foldArea(this)">sounds</h1>
+                <div class="fold column">
+                    <a href="https://www.rainymood.com"><img src="img/sounds/rainymood.png" alt="rainymood" title="rainymood" /></a>
+                    <div class="row">
+                        <a href="https://freesound.org"><img src="img/sounds/freesound.png" alt="freesound" title="freesound" /></a>
+                        <a href="https://www.noisli.com"><img src="img/sounds/nosil.png" alt="noisli" title="noisli" /></a>
+                    </div>
+                    <div class="row">
+                        <a href="https://www.madeon.fr/adventuremachine"><img src="img/sounds/madeon.png" alt="adventuremachine" title="adventuremachine" /></a>
+                        <a href="https://radio.garden/listen/radio7/4slrZ3I0"><img src="img/sounds/radio.png" alt="radio7" title="radio7" /></a>
+                    </div>
+                    <a href="https://mynoise.net/NoiseMachines/whiteNoiseGenerator.php"><img src="img/sounds/mynoise.png" alt="whiteNoiseGenerator" title="whiteNoiseGenerator" /></a>
+                    <a href="https://freemusicarchive.org/music/Jason_Shaw/Audionautix_Tech_Urban_Dance/TU-Glitch"><img src="img/sounds/freemusicarchive.png" alt="freemusicarchive" title="freemusicarchive" /></a>
+                </div>
+            </div>
+
+            <div class="part">
+                <h1 onclick="foldArea(this)">retro</h1>
+                <div class="fold column">
+                    <div class="fold column">
+                        <a href="https://c64portal.pl/"><img src="img/retro/c64portal.png" alt="c64portal" title="c64portal" /></a>
+                        <div class="row">
+                            <a href="http://www.filety.net"><img src="img/retro/commodore.png" alt="commodore" title="commodore" /></a>
+                            <a href="http://www.c64sets.com/boxed_sets.html"><img src="img/retro/c64sets.png" alt="c64sets" title="c64sets" /></a>
+                        </div>
+                        <a href="http://tajemnice.atari8.info"><img src="img/retro/tajemniceatari8.png" alt="tajemnice.atari8" title="tajemnice.atari8" /></a>
+                        <a href="http://atarionline.pl/v01/index.php?ct=nowinki&ucat=1&subaction=showfull&id=1546586580"><img src="img/retro/atari.png" alt="atarionline" title="atarionline" /></a>
+                        <a href="https://archive.org/details/commodore_c64_books"><img src="img/retro/commodore_c64_books.png" alt="commodore_c64_books" title="commodore_c64_books" /></a>
+                        <a href="https://www.retrogamer.net"><img src="img/retro/retrogamer.png" alt="retrogamer" title="retrogamer" /></a>
+                        <a href="http://www.gb64.com/index.php"><img src="img/retro/gb64b.png" alt="gb64b" title="gb64b" /></a>
+                        <a href="https://stare.e-gry.net"><img src="img/retro/staregrynet.png" alt="stare gry net" title="stare gry net" /></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="part">
+                <h1 onclick="foldArea(this)">games</h1>
+                <div class="fold column">
+                    <a href="https://play.gl"><img src="img/games/playgl.png" alt="play" title="play" /></a>
+                    <a href="https://jayisgames.com"><img src="img/games/jayisgames.png" alt="jayisgames" title="jayisgames" /></a>
+                    <a href="https://pl19.the-west.pl/game.php#"><img src="img/games/thewest.png" alt="the west" title="the west" /></a>
+                    <div class="row">
+                        <a href="https://www.gry.pl/gry/nowe"><img src="img/games/grypl.png" alt="gry.pl" title="gry.pl" /></a>
+                        <a href="http://asciicker.com/y0"><img src="img/games/asciicker.png" alt="asciicker" title="asciicker" /></a>
+                    </div>
+                    <a href="https://www.kurnik.pl"><img src="img/games/kurnik.png" alt="kurnik" title="kurnik" /></a>
+                </div>
+            </div>
+
+            <div class="part">
+                <h1 onclick="foldArea(this)">business</h1>
+                <div class="fold column">
+                    <a href="http://www.sklepy24.pl"><img src="img/business/sklepy24.png" alt="sklepy24" title="sklepy24" /></a>
+                    <a href="https://ekrs.ms.gov.pl/web/wyszukiwarka-krs/strona-glowna"><img src="img/business/ms.png" alt="Ministerstwo Sprawiedliwości" title="Ministerstwo Sprawiedliwości" /></a>
+                    <a href="https://prod.ceidg.gov.pl/ceidg/ceidg.public.ui/Search.aspx"><img src="img/business/ceidg.png" alt="ceidg" title="ceidg" /></a>
+                    <a href="https://useme.eu/pl"><img src="img/business/useme.png" alt="ceidg" title="useme" /></a>
+                </div>
+            </div>
+
+        </div>
 
 
-                    <div class="part">
-                        <h1 onclick="foldArea(this)">other stuf</h1>
-                        <div class="fold column">
-                            <div class="row">
-                                <div class="column">
-                                    <a href="https://gtmetrix.com" class="img"><img src="img/_programming/other/gtmetrix.png" alt="gtmetrix" title="gtmetrix" /></a>
-                                    <a href="http://ranking.gemius.com/pl" class="img"><img src="img/_programming/other/ranking.png" alt="web ranking" title="web ranking" /></a>
-                                    <a href="http://json.parser.online.fr" class="img"><img src="img/_programming/other/json.png" alt="json parser" title="json parser" /></a>
-                                    <a href="https://leetcode.com" class="img"><img src="img/_programming/other/leetcode.png" alt="leetcode" title="leetcode" /></a>
-                                    <div class="row">
-                                        <a href="http://informatyka.wroc.pl/node/473" class="img"><img src="img/_programming/other/wroc.png" alt="informatyka wrocław" title="informatyka wrocław" /></a>
-                                        <!-- <a href="https://www.dailycodingproblem.com" class="img"><img src="img/_programming/other/dailycodingproblem.png" alt="daily coding problem" title="daily codingp roblem" /></a> -->
-                                        <a href="https://www.codewars.com/users/sign_in" class="img"><img src="img/_programming/other/codewars.png" alt="codewars" title="codewars" /></a>
+        <div id="programing" class="section">
+
+            <div class="part">
+                <h1 onclick="foldArea(this)">programming</h1>
+                <div class="fold row">
+
+                    <div id="part8" class="section">
+                        <div class="part">
+                            <h1 onclick="foldArea(this)">CSS</h1>
+                            <div class="fold column">
+                                <div class="row">
+                                    <div class="column">
+                                        <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox"><img src="img/_programming/css/flex.png" alt="flexbox" title="flexbox" /></a>
+                                        <a href="https://css-tricks.com/snippets/css/complete-guide-grid"><img src="img/_programming/css/grid.png" alt="grid" title="grid" /></a>
+                                        <a href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss_cursor"><img src="img/_programming/css/cursor.png" alt="cursor" title="cursor" /></a>
                                     </div>
-                                    <a href="https://xenko.com" class="img"><img src="img/_programming/other/xenko.png" alt="xenko" title="xenko" /></a>
-                                    <a href="https://codewithrockstar.com/online" class="img"><img src="img/_programming/other/rockstar.png" alt="rockstar" title="rockstar" /></a>
-                                </div>
-                                <div class="column">
-                                    <a href="https://github.com/MichalAniol" class="img"><img src="img/_programming/other/github.png" alt="github" title="github" /></a>
-                                    <a href="https://gitlab.com/dashboard/projects" class="img"><img src="img/_programming/other/gitlab.png" alt="gitlab" title="gitlab" /></a>
-                                    <a href="https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf" class="img"><img src="img/_programming/other/vscode.png" alt="visualstudio shortcuts" title="visualstudio shortcuts" /></a>
-                                    <a href="https://codesandbox.io" class="img"><img src="img/_programming/other/sandbox.png" alt="codesandbox" title="code sandbox" /></a>
-                                    <a href="https://www.netlify.com" class="img"><img src="img/_programming/other/netlify.png" alt="netlify" title="netlify" /></a>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="part">
-                        <h1 onclick="foldArea(this)">graphics</h1>
-                        <div class="fold column">
-                            <div class="row">
-                                <div class="column">
-                                    <a href="https://material.io/resources/icons/?icon=device_hub&style=twotone" class="img"><img src="img/_programming/graphics/icons.png" alt="material icons" title="material icons" /></a>
-                                    <a href="https://www.flaticon.com" class="img"><img src="img/_programming/graphics/flaticon.png" alt="flaticon" title="flaticon" /></a>
-                                    <a href="https://tinypng.com" class="img"><img src="img/_programming/graphics/tinypng.png" alt="tinypng" title="tinypng" /></a>
-                                    <a href="https://ezgif.com/maker" class="img"><img src="img/_programming/graphics/ezgif.png" alt="ezgif" title="ezgif" /></a>
-                                    <a href="https://dbdiagram.io/home"><img src="img/_programming/graphics/dbdiagram.png" alt="dbdiagram" title="dbdiagram" /></a>
-                                    <a href="https://jpg2png.com/pl"><img src="img/helpers/jpgtopng.png" alt="jpg2png" title="jpg2png" /></a>
-                                    <a href="https://svgartista.net/?referrer=animista"><img src="img/helpers/svg.png" alt="svg artista" title="svg artista" /></a>
-                                    <a href="https://www.sumopaint.com/paint"><img src="img/helpers/sumopaint.png" alt="sumo paint" title="sumo paint" /></a>
-                                </div>
-                                <div class="column">
-                                    <a href="https://loading.io" class="img"><img src="img/_programming/graphics/loader.png" alt="loading.io" title="loading.io" /></a>
-                                    <a href="https://www.figma.com" class="img"><img src="img/_programming/graphics/figma.png" alt="figma" title="figma" /></a>
-                                    <a href="https://about.draw.io" class="img"><img src="img/_programming/graphics/draw.png" alt="about.draw.io" title="about.draw.io" /></a>
-                                    <a href="https://lawsofux.com" class="img"><img src="img/_programming/graphics/lawsofux.png" alt="lawsofux" title="lawsofux" /></a>
+                                    <div class="column">
+                                        <div class="row">
+                                            <a href="http://necolas.github.io/normalize.css"><img src="img/_programming/css/normalize.png" alt="normalize" title="normalize" /></a>
+                                            <a href="https://meyerweb.com/eric/tools/css/reset"><img src="img/_programming/css/reset.png" alt="reset" title="reset" /></a>
+                                            <a href="https://www.sassmeister.com"><img src="img/_programming/css/sass.png" alt="sass meister" title="sass meister" /></a>
+                                        </div>
+                                        <a href="https://htmlemail.io/inline"><img src="img/_programming/css/htmlemail.png" alt="Responsive Email CSS Inliner" title="Responsive Email CSS Inliner" /></a>
+                                    </div>
                                 </div>
                                 <div class="row">
-                                </div>
+                                    <div class="fold column">
+                                        <a href="https://html-css-js.com/css/generator/text-shadow"><img src="img/_programming/css/textshadow.png" alt="text-shadow" title="text-shadow" /></a>
+                                        <a href="https://www.nafrontendzie.pl/struktura-arkusza-stylow-css"><img src="img/_programming/css/nafrontendzie.png" alt="struktura-arkusza-stylow-css" title="struktura-arkusza-stylow-css" /></a>
+                                        <a href="https://cubic-bezier.com/#.42,0,.58,1"><img src="img/_programming/css/bezier.png" alt="css bezier" title="css bezier" /></a>
+                                        <a href="https://animista.net/play/basic"><img src="img/_programming/css/animista.png" alt="css animista" title="css animista" /></a>
+                                        <a href="https://www.cssmatic.com/box-shadow"><img src="img/_programming/css/matic.png" alt="css matic" title="css matic" /></a>
+                                    </div>
+                                    <div class="fold column">
+                                        <a href="https://www.toptal.com/developers/css/sprite-generator"><img src="img/_programming/css/sprite.png" alt="sprite generator" title="sprite generator" /></a>
+                                        <a href="https://css.spritegen.com/"><img src="img/_programming/css/sprites.png" alt="sprites generator" title="sprites generator" /></a>
+                                        <a href="https://www.giftofspeed.com/css-compressor"><img src="img/_programming/css/compressor.png" alt="compressor" title="compressor" /></a>
+                                        <a href="https://csscompressor.com"><img src="img/_programming/css/compressor.png" alt="css compressor" title="css compressor" /></a>
+                                        <div class="row">
+                                            <a href="https://cssgradient.io/"><img src="img/_programming/css/logo-55c31c59.svg" alt="CSS Gradient" title="CSS Gradient" /></a>
+                                            <a href="https://neumorphism.io/#1f1f1f"><div id="cssNeumorphism" title="CSS Gradient"></div></a>
 
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="part">
-                        <h1 onclick="foldArea(this)">canvas</h1>
-                        <div class="fold column">
-                            <a href="https://www.w3schools.com/tags/canvas_clip.asp"><img src="img/_programming/canvas/w3schools.png" alt="w3schools" title="w3schools" /></a>
-                            <a href="https://www.html5canvastutorials.com/tutorials/html5-canvas-text-font-size"><img src="img/_programming/canvas/html5.png" alt="html5canvastutorials" title="html5canvastutorials" /></a>
-                            <a href="http://www.kurshtmlcss.pl/kurs-html/lekcja18-canvas.php"><img src="img/_programming/canvas/kurshtmlcss.png" alt="kurs html css" title="kurs html css" /></a>
-                            <a href="https://www.obliczeniowo.com.pl/index.php?id=655"><img src="img/_programming/canvas/obliczeniowo.png" alt="obliczeniowo" title="obliczeniowo" /></a>
-                            <div class="row">
-                                <a href="https://kursjs.pl/kurs/canvas/canvas-animacja.php"><img src="img/_programming/canvas/animacje.png" alt="animacje" title="animacje" /></a>
-                                <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Paths"><img src="img/_programming/canvas/paths.png" alt="paths" title="paths" /></a>
-                            </div>
-                            <div class="row">
-                                <a href="https://www.w3schools.com/tags/canvas_beziercurveto.asp"><img src="img/_programming/canvas/paths.png" alt="canvas beziercurveto" title="canvas beziercurveto" /></a>
-                                <a href="https://www.w3schools.com/tags/canvas_quadraticcurveto.asp"><img src="img/_programming/canvas/paths.png" alt="canvas quadraticcurveto" title="canvas quadraticcurveto" /></a>
-                            </div>
-                            <a href="https://developer.mozilla.org/pl/docs/Web/API/Canvas_API/Tutorial/rysowanie_ksztaltow"><img src="img/_programming/canvas/canvas.png" alt="canvas" title="canvas" /></a>
-                        </div>
-                    </div>
-
-                    <div class="part">
-                        <h1 onclick="foldArea(this)">frameworks</h1>
-                        <div class="fold column">
-                            <div class="row">
-                                <div class="column">
-                                    <a href="https://reactjs.org" class="img"><img src="img/_programming/frameworks/reactjs.png" alt="react js" title="react js" /></a>
-                                    <div class="row">
-                                        <a href="https://d3js.org"><img src="img/_programming/frameworks/d3.png" alt="d3 js" title="d3 js" /></a>
-                                        <a href="https://github.com/d3/d3/blob/master/API.md"><img src="img/_programming/frameworks/d3.png" alt="github D3" title="github D3" /></a>
-                                        <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element"><img src="img/_programming/frameworks/svg.png" alt="svg" title="svg" /></a>
-                                    </div>
-                                    <div class="row">
-                                        <a href="http://paperjs.org/examples"><img src="img/_programming/frameworks/paperjs.png" alt="paper js" title="paper js" /></a>
-                                        <a href="https://threejs.org"><img src="img/_programming/frameworks/threejs.png" alt="three js" title="three js" /></a>
-                                    </div>
-                                    <a href="https://electronjs.org" class="img"><img src="img/_programming/frameworks/electronjs.png" alt="electron js" title="electron js" /></a>
-                                    <a href="https://serverless.com" class="img"><img src="img/_programming/frameworks/serverless.png" alt="serverless" title="serverless" /></a>
-                                </div>
-                                <div class="column">
-                                    <div class="row">
-                                        <a href="https://www.npmjs.com" class="img"><img src="img/_programming/frameworks/npm.png" alt="npm" title="npm" /></a>
-                                        <a href="https://yarnpkg.com/en" class="img"><img src="img/_programming/frameworks/yarn.png" alt="yarn" title="yarn" /></a>
-                                    </div>
-                                    <div class="row">
-                                        <a href="https://angular.io" class="img"><img src="img/_programming/frameworks/angular.png" alt="angular" title="angular" /></a>
-                                        <a href="https://vuejs.org" class="img"><img src="img/_programming/frameworks/vuejs.png" alt="vue js" title="vue js" /></a>
-                                        <a href="https://www.primefaces.org/primeng/#" class="img"><img src="img/_programming/frameworks/primefaces.png" alt="primefaces" title="primefaces" /></a>
-                                    </div>
-                                    <div class="row">
-                                        <div class="column">
-                                            <div class="row">
-                                                <a href=" https://localforage.github.io/localForage" class="img"><img src="img/_programming/frameworks/localforage.png" alt="localforage" title="localforage" /></a>
-                                                <a href="https://graphql.org" class="img"><img src="img/_programming/frameworks/graphql.png" alt="Graph QL" title="Graph QL" /></a>
-                                            </div>
-                                            <div class="row">
-                                                <a href="https://materializecss.com/getting-started.html" class="img"><img src="img/_programming/frameworks/materialize.png" alt="materialize" title="materialize" /></a>
-                                                <a href="https://parceljs.org" class="img"><img src="img/_programming/frameworks/parcel.png" alt="parcel" title="parcel" /></a>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="column">
-                                    <div class="row">
-                                        <a href="https://www.apollographql.com" class="img"><img src="img/_programming/frameworks/apollographql.png" alt="apollo graph ql" title="apollo graph ql" /></a>
-                                        <a href="https://dojotoolkit.org" class="img"><img src="img/_programming/frameworks/dojotoolkit.png" alt="dojo toolkit" title="dojo toolkit" /></a>
-                                    </div>
-                                    <div class="row">
-                                        <a href="https://developers.google.com/web/tools/puppeteer" class="img"><img src="img/_programming/frameworks/puppeteer.png" alt="puppeteer" title="puppeteer" /></a>
-                                        <a href="https://popmotion.io/pose/examples/svg-morphing" class="img"><img src="img/_programming/frameworks/popmotion.png" alt="svg morphing" title="svg morphing" /></a>
-                                    </div>
-                                </div>
-                                <a href="https://h5p.org" class="img"><img src="img/_programming/frameworks/h5p.png" alt="h5p" title="h5p" /></a>
-                            </div>
-
                         </div>
-                    </div>
 
-                    <div class="part">
-                        <h1 onclick="foldArea(this)">specials</h1>
-                        <div class="fold column">
-                            <div class="row">
-                                <div class="column">
-                                    <a href="http://www.network-science.de/ascii" class="img"><img src="img/_programming/specials/asciigenerator.png" alt="ascii generator" title="ascii generator" /></a>
-                                </div>
+                        <div class="part">
+                            <h1 onclick="foldArea(this)">html</h1>
+                            <div class="fold column">
+                                <a href="https://gsnedders.html5.org/outliner"><img src="img/_programming/html/outliner.png" alt="outliner" title="outliner" /></a>
+                                <a href="https://caniuse.com"><img src="img/_programming/html/caniuse.png" alt="can i use" title="can i use" /></a>
+                                <a href="https://validator.w3.org"><img src="img/_programming/html/W3.png" alt="validator html" title="validator html" /></a>
+                                <a href="http://pojo.sodhanalibrary.com/string.html">HTML to JS</a>
+                                <a href="https://www.webtoolkitonline.com/" title="Web Toolkit Online">Toolkit</a>
+                                <a href="https://html-online.com/articles/colored-icon-characters-copy-paste/" style="font-size: 24px;" title="Colored Icon Characters">😀</a>
                             </div>
                         </div>
-                    </div>
 
+                        <div class="part">
+                            <h1 onclick="foldArea(this)">fonts</h1>
+                            <div class="fold column">
+                                <a href="https://fonts.google.com"><img src="img/_programming/fonst/fontsgoogle.png" alt="google fonts" title="google fonts" /></a>
+                                <a href="https://www.font-converter.net/en"><img src="img/_programming/fonst/font-converter.png" alt="font-converter" title="font-converter" /></a>
+                                <a href="https://poradnik.kz1.pl/index.php?page=znakihtml"><img src="img/_programming/fonst/special.png" alt="special chars" title="special chars, encje" /></a>
+                                <a href="http://rabbit.eng.miami.edu/info/htmlchars.html"><img src="img/_programming/fonst/special.png" alt="special chars" title="special chars" /></a>
+                                <a href="https://befonts.com/free-for-commercial-use"><img src="img/_programming/fonst/befonts.png" alt="befonts" title="Free for Commercial Use" /></a>
+                            </div>
+                        </div>
+
+                        <div class="part">
+                            <h1 onclick="foldArea(this)">java script</h1>
+                            <div class="fold column">
+                                <a href="http://www.javascriptobfuscator.com/Javascript-Obfuscator.aspx"><img src="img/_programming/js/obfuscator.png" alt="obfuscator" title="obfuscator" /></a>
+                                <a href="https://obfuscator.io"><img src="img/_programming/js/obfuscator2.png" alt="obfuscator" title="obfuscator" /></a>
+                                <div class="row">
+                                    <a href="http://jsnice.org"><img src="img/_programming/js/jsnice.png" alt="jsnice" title="jsnice" /></a>
+                                    <a href="https://www.minifier.org"><img src="img/_programming/js/minifier.png" alt="minifier" title="minifier" /></a>
+                                </div>
+                                <a href="https://unminify.com"><img src="img/_programming/js/unminify.png" alt="unminify" title="unminify" /></a>
+                                <a href="http://dean.edwards.name/packer/#referrer=blog.kamilbrenk.pl"><img src="img/_programming/js/compresor.png" alt="compresor" title="compresor" /></a>
+                            </div>
+                        </div>
+
+                        <div class="part">
+                            <h1 onclick="foldArea(this)">colors</h1>
+                            <div class="fold row">
+                                <div class="fold column">
+                                    <a href="https://www.w3schools.com/colors/colors_picker.asp"><img src="img/_programming/colors/colors_picker.png" alt="colors_picker" title="colors_picker" /></a>
+                                    <a href="https://material.io/design/color/the-color-system.html#tools-for-picking-colors"><img src="img/_programming/colors/material.png" alt="the-color-system" title="the-color-system" /></a>
+                                    <a href="http://www.kurshtml.edu.pl/html/wykaz_kolorow,kolory.html"><img src="img/_programming/colors/kurshtml.png" alt="wykaz_kolorow" title="wykaz_kolorow" /></a>
+                                    <a href="http://materialuicolors.co/?utm_source=launchers"><img src="img/_programming/colors/materialuicolors.png" alt="materialuicolors" title="materialuicolors" /></a>
+                                    <a href="https://colorhunt.co"><img src="img/_programming/colors/colorhunt.png" alt="colorhunt" title="colorhunt" /></a>
+                                    <a href="https://color.adobe.com"><img src="img/_programming/colors/adobe.png" alt="adobe colors" title="adobe colors" /></a>
+                                    <a href="http://paletton.com"><img src="img/_programming/colors/paletton.png" alt="paletton colors" title="paletton colors" /></a>
+                                    <a href="https://www.colorbox.io"><img src="img/_programming/colors/colorbox.png" alt="color box" title="color box" /></a>
+                                </div>
+                                <div class="column">
+                                    <a href="https://meyerweb.com/eric/tools/color-blend"><img src="img/_programming/colors/meyerweb.png" alt="meyerweb colors" title="meyerweb colors" /></a>
+                                    <a href="https://bl.ocks.org/espetro/bd7555f4363af4f5a81bb324eae76912"><img src="img/_programming/colors/ocks.png" alt="ocks colors" title="ocks colors" /></a>
+                                    <a href="https://pl.pinterest.com/pin/682717624745517844"><img src="img/_programming/colors/pinterest.png" alt="pinterest colors" title="pinterest colors" /></a>
+                                    <a href="http://www.flounder.com/csharp_color_table.htm" title="C# Color Name Table">C#</a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="part">
+                            <h1 onclick="foldArea(this)">other stuf</h1>
+                            <div class="fold column">
+                                <div class="row">
+                                    <div class="column">
+                                        <a href="https://gtmetrix.com" class="img"><img src="img/_programming/other/gtmetrix.png" alt="gtmetrix" title="gtmetrix" /></a>
+                                        <a href="http://ranking.gemius.com/pl" class="img"><img src="img/_programming/other/ranking.png" alt="web ranking" title="web ranking" /></a>
+                                        <a href="https://developers.google.com/speed/pagespeed/insights/" class="img"><img src="img/_programming/other/pagespeed.png" alt="PageSpeed Insights" title="PageSpeed Insights" /></a>
+                                        <a href="https://leetcode.com" class="img"><img src="img/_programming/other/leetcode.png" alt="leetcode" title="leetcode" /></a>
+                                        <div class="row">
+                                            <a href="http://informatyka.wroc.pl/node/473" class="img"><img src="img/_programming/other/wroc.png" alt="informatyka wrocław" title="informatyka wrocław" /></a>
+                                            <!-- <a href="https://www.dailycodingproblem.com" class="img"><img src="img/_programming/other/dailycodingproblem.png" alt="daily coding problem" title="daily codingp roblem" /></a> -->
+                                            <a href="https://www.codewars.com/users/sign_in" class="img"><img src="img/_programming/other/codewars.png" alt="codewars" title="codewars" /></a>
+                                        </div>
+                                        <a href="http://json.parser.online.fr" class="img"><img src="img/_programming/other/json.png" alt="json parser" title="json parser" /></a>
+                                    </div>
+                                    <div class="column">
+                                        <a href="https://github.com/MichalAniol" class="img"><img src="img/_programming/other/github.png" alt="github" title="github" /></a>
+                                        <a href="https://gitlab.com/dashboard/projects" class="img"><img src="img/_programming/other/gitlab.png" alt="gitlab" title="gitlab" /></a>
+                                        <a href="https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf" class="img"><img src="img/_programming/other/vscode.png" alt="visualstudio shortcuts" title="visualstudio shortcuts" /></a>
+                                        <a href="https://codesandbox.io" class="img"><img src="img/_programming/other/sandbox.png" alt="codesandbox" title="code sandbox" /></a>
+                                        <a href="https://www.netlify.com" class="img"><img src="img/_programming/other/netlify.png" alt="netlify" title="netlify" /></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="part">
+                            <h1 onclick="foldArea(this)">graphics</h1>
+                            <div class="fold column">
+                                <div class="row">
+                                    <div class="column">
+                                        <a href="https://material.io/resources/icons/?icon=device_hub&style=twotone" class="img"><img src="img/_programming/graphics/icons.png" alt="material icons" title="material icons" /></a>
+                                        <a href="https://www.flaticon.com" class="img"><img src="img/_programming/graphics/flaticon.png" alt="flaticon" title="flaticon" /></a>
+                                        <a href="https://tinypng.com" class="img"><img src="img/_programming/graphics/tinypng.png" alt="tinypng" title="tinypng" /></a>
+                                        <a href="https://ezgif.com/maker" class="img"><img src="img/_programming/graphics/ezgif.png" alt="ezgif" title="ezgif" /></a>
+                                        <a href="https://dbdiagram.io/home"><img src="img/_programming/graphics/dbdiagram.png" alt="dbdiagram" title="dbdiagram" /></a>
+                                        <div class="row">
+                                            <a href="https://svgartista.net/?referrer=animista"><img src="img/helpers/svg.png" alt="svg artista" title="svg artista" /></a>
+                                            <a href="https://jpg2png.com/pl"><img src="img/helpers/jpgtopng.png" alt="jpg2png" title="jpg2png" /></a>
+                                        </div>
+                                        <a href="https://svgsilh.com/000000/"><img src="img/_programming/graphics/svgsilh.png" alt="svgsilh" title="svgsilh" /></a>
+                                        <a href="https://www.sumopaint.com/paint"><img src="img/helpers/sumopaint.png" alt="sumo paint" title="sumo paint" /></a>
+                                    </div>
+                                    <div class="column">
+                                        <a href="https://loading.io" class="img"><img src="img/_programming/graphics/loader.png" alt="loading.io" title="loading.io" /></a>
+                                        <a href="https://www.figma.com" class="img"><img src="img/_programming/graphics/figma.png" alt="figma" title="figma" /></a>
+                                        <a href="https://about.draw.io" class="img"><img src="img/_programming/graphics/draw.png" alt="about.draw.io" title="about.draw.io" /></a>
+                                        <a href="https://lawsofux.com" class="img"><img src="img/_programming/graphics/lawsofux.png" alt="lawsofux" title="lawsofux" /></a>
+                                    </div>
+                                    <div class="row">
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="part">
+                            <h1 onclick="foldArea(this)">canvas</h1>
+                            <div class="fold column">
+                                <a href="https://www.w3schools.com/tags/canvas_clip.asp"><img src="img/_programming/canvas/w3schools.png" alt="w3schools" title="w3schools" /></a>
+                                <a href="https://www.html5canvastutorials.com/tutorials/html5-canvas-text-font-size"><img src="img/_programming/canvas/html5.png" alt="html5canvastutorials" title="html5canvastutorials" /></a>
+                                <a href="http://www.kurshtmlcss.pl/kurs-html/lekcja18-canvas.php"><img src="img/_programming/canvas/kurshtmlcss.png" alt="kurs html css" title="kurs html css" /></a>
+                                <a href="https://www.obliczeniowo.com.pl/index.php?id=655"><img src="img/_programming/canvas/obliczeniowo.png" alt="obliczeniowo" title="obliczeniowo" /></a>
+                                <div class="row">
+                                    <a href="https://kursjs.pl/kurs/canvas/canvas-animacja.php"><img src="img/_programming/canvas/animacje.png" alt="animacje" title="animacje" /></a>
+                                    <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Paths"><img src="img/_programming/canvas/paths.png" alt="paths" title="paths" /></a>
+                                </div>
+                                <div class="row">
+                                    <a href="https://www.w3schools.com/tags/canvas_beziercurveto.asp"><img src="img/_programming/canvas/paths.png" alt="canvas beziercurveto" title="canvas beziercurveto" /></a>
+                                    <a href="https://www.w3schools.com/tags/canvas_quadraticcurveto.asp"><img src="img/_programming/canvas/paths.png" alt="canvas quadraticcurveto" title="canvas quadraticcurveto" /></a>
+                                </div>
+                                <a href="https://developer.mozilla.org/pl/docs/Web/API/Canvas_API/Tutorial/rysowanie_ksztaltow"><img src="img/_programming/canvas/canvas.png" alt="canvas" title="canvas" /></a>
+                            </div>
+                        </div>
+
+                        <div class="part">
+                            <h1 onclick="foldArea(this)">frameworks</h1>
+                            <div class="fold column">
+                                <div class="row">
+                                    <div class="column">
+                                        <a href="https://reactjs.org" class="img"><img src="img/_programming/frameworks/reactjs.png" alt="react js" title="react js" /></a>
+                                        <div class="row">
+                                            <a href="https://d3js.org"><img src="img/_programming/frameworks/d3.png" alt="d3 js" title="d3 js" /></a>
+                                            <a href="https://github.com/d3/d3/blob/master/API.md"><img src="img/_programming/frameworks/d3.png" alt="github D3" title="github D3" /></a>
+                                            <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element"><img src="img/_programming/frameworks/svg.png" alt="svg" title="svg" /></a>
+                                        </div>
+                                        <div class="row">
+                                            <a href="http://paperjs.org/examples"><img src="img/_programming/frameworks/paperjs.png" alt="paper js" title="paper js" /></a>
+                                            <a href="https://threejs.org"><img src="img/_programming/frameworks/threejs.png" alt="three js" title="three js" /></a>
+                                        </div>
+                                        <a href="https://electronjs.org" class="img"><img src="img/_programming/frameworks/electronjs.png" alt="electron js" title="electron js" /></a>
+                                        <a href="https://serverless.com" class="img"><img src="img/_programming/frameworks/serverless.png" alt="serverless" title="serverless" /></a>
+                                    </div>
+                                    <div class="column">
+                                        <div class="row">
+                                            <a href="https://www.npmjs.com" class="img"><img src="img/_programming/frameworks/npm.png" alt="npm" title="npm" /></a>
+                                            <a href="https://yarnpkg.com/en" class="img"><img src="img/_programming/frameworks/yarn.png" alt="yarn" title="yarn" /></a>
+                                        </div>
+                                        <div class="row">
+                                            <a href="https://angular.io" class="img"><img src="img/_programming/frameworks/angular.png" alt="angular" title="angular" /></a>
+                                            <a href="https://vuejs.org" class="img"><img src="img/_programming/frameworks/vuejs.png" alt="vue js" title="vue js" /></a>
+                                            <a href="https://www.primefaces.org/primeng/#" class="img"><img src="img/_programming/frameworks/primefaces.png" alt="primefaces" title="primefaces" /></a>
+                                        </div>
+                                        <div class="row">
+                                            <div class="column">
+                                                <div class="row">
+                                                    <a href="https://localforage.github.io/localForage" class="img"><img src="img/_programming/frameworks/localforage.png" alt="localforage" title="localforage" /></a>
+                                                    <a href="https://graphql.org" class="img"><img src="img/_programming/frameworks/graphql.png" alt="Graph QL" title="Graph QL" /></a>
+                                                </div>
+                                                <div class="row">
+                                                    <a href="https://materializecss.com/getting-started.html" class="img"><img src="img/_programming/frameworks/materialize.png" alt="materialize" title="materialize" /></a>
+                                                    <a href="https://parceljs.org" class="img"><img src="img/_programming/frameworks/parcel.png" alt="parcel" title="parcel" /></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="column">
+                                        <div class="row">
+                                            <a href="https://www.apollographql.com" class="img"><img src="img/_programming/frameworks/apollographql.png" alt="apollo graph ql" title="apollo graph ql" /></a>
+                                            <a href="https://dojotoolkit.org" class="img"><img src="img/_programming/frameworks/dojotoolkit.png" alt="dojo toolkit" title="dojo toolkit" /></a>
+                                        </div>
+                                        <div class="row">
+                                            <a href="https://developers.google.com/web/tools/puppeteer" class="img"><img src="img/_programming/frameworks/puppeteer.png" alt="puppeteer" title="puppeteer" /></a>
+                                            <a href="https://popmotion.io/pose/examples/svg-morphing" class="img"><img src="img/_programming/frameworks/popmotion.png" alt="svg morphing" title="svg morphing" /></a>
+                                        </div>
+                                    </div>
+                                    <a href="https://h5p.org" class="img"><img src="img/_programming/frameworks/h5p.png" alt="h5p" title="h5p" /></a>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="part">
+                            <h1 onclick="foldArea(this)">specials</h1>
+                            <div class="fold column">
+                                <div class="row">
+                                    <div class="column">
+                                        <a href="http://www.network-science.de/ascii" class="img"><img src="img/_programming/specials/asciigenerator.png" alt="ascii generator" title="ascii generator" /></a>
+                                        <a href="https://textfancy.com/multiline-text-art/" class="img"><img src="img/_programming/specials/textfancy.png" alt="textfancy" title="Fancy Text Generators and Converters" /></a>
+                                        <a href="https://xenko.com" class="img"><img src="img/_programming/other/xenko.png" alt="xenko" title="xenko" /></a>
+                                        <a href="https://codewithrockstar.com/online" class="img"><img src="img/_programming/other/rockstar.png" alt="rockstar" title="rockstar" /></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="part">
+                            <h1 onclick="foldArea(this)">code notes</h1>
+                            <div class="fold column">
+                                    <div class="column">
+                                        document.getElementsByTagName('video')[0].playbackRate = 3<br>
+                                        <button class="btn-copy">copy</button>
+                                        100 thin<br>
+                                        200 extralight<br>
+                                        300 light<br>
+                                        400 regular<br>
+                                        500 medium<br>
+                                        600 semibold<br>
+                                        700 bold<br>
+                                        800 extrabold<br>
+                                        900 black
+                                    </div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div id="curtain"></div>
+        <div id="programing" class="section">
 
-    <script src="index.js"></script>
-    <script src="animation.js"></script>
-</body>
+            
+        </div>
+
+        <div id="curtain"></div>
+
+        <script src="index.js"></script>
+        <script src="animation.js"></script>
+    </body>
 
 </html>
