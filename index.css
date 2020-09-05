@@ -87,7 +87,7 @@ body {
 }
 
 .section {
-    max-width: 1170px;
+    max-width: 1220px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
@@ -117,6 +117,7 @@ body {
 .part .part a:not(.img) {
     display: inline;
     text-align: center;
+   
 }
 
 .part>h1 {
@@ -154,6 +155,7 @@ body {
     display: inherit;
     margin: 3px 0 0 0;
     color: var(--color_1);
+    text-decoration: none;
 }
 
 .part img {
@@ -209,4 +211,38 @@ body {
     #part3 {
         order: 3;
     }
+}
+
+#cssNeumorphism {
+    width: 35px;
+    height: 35px;
+    border-radius: 12px;
+    background: #1f1f1f;
+    box-shadow: inset 3px 3px 7px #1c1c1c, inset -3px -3px 7px #222222;
+}
+
+#zapodaj {
+    color: #fff;
+    border: 1px #718d1e solid;
+    background-color: #a3ca2d;
+    font-weight: 700;
+    text-align: center;
+    width: 120px;
+}
+
+.btn-copy{
+    width: 100px;
+    height: 20px;
+    background-color: var(--color_3);
+    border: 1px solid var(--color_2h);
+    color: var(--color_1);
+    cursor: pointer;
+    transition: all .3s;
+    margin-bottom: 15px;
+}
+
+.btn-copy:hover {
+    background-color: var(--color_1);
+    color: var(--color_3);
+
 }
