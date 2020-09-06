@@ -230,8 +230,8 @@ body {
 }
 
 .btn-copy {
-    width: 100px;
-    height: 20px;
+    width: 120px;
+    height: 24px;
     background-color: var(--color_3);
     border: 1px solid var(--color_2h);
     color: var(--color_1);
@@ -243,4 +243,12 @@ body {
 .btn-copy:hover {
     background-color: var(--color_1);
     color: var(--color_3);
+}
+
+.smallpseudoicon {
+    padding: 0 6px;
+    height: 20px;
+    background-color: var(--color_2h);
+    display: initial !important;
+    text-align: center;
 }

@@ -24,8 +24,10 @@ function rememberFload() {
 function remindFload() {
     let fol = localStorage.getItem('fold' + title).split(',');
     for (let i = 0; i < fol.length; i += 2) {
-        let f = document.querySelector("#" + fol[i] + " h1");
-        f.click();
+        if (fol[i] != "") {
+            let f = document.querySelector("#" + fol[i] + " h1");
+            f.click();
+        }
     }
 }
 
@@ -101,3 +103,26 @@ function start() {
 }
 
 start();
+
+
+const CopyToClipboard = (but, containerid) => {
+    if (document.selection) {
+        var range = document.body.createTextRange();
+        range.moveToElementText(document.getElementById(containerid));
+        range.select().createTextRange();
+        document.execCommand("copy");
+        range.moveToElementText(document.getElementById('end_copy'));
+        range.select().createTextRange();
+    } else if (window.getSelection) {
+        var range = document.createRange();
+        range.selectNode(document.getElementById(containerid));
+        window.getSelection().addRange(range);
+        document.execCommand("copy");
+        range.selectNode(document.getElementById('end_copy'));
+        window.getSelection().addRange(range);
+    }
+    but.innerHTML = "c o p i e d &nbsp; ! ! !";
+    setTimeout(() => {
+        but.innerHTML = "copy";
+    }, 500);
+}

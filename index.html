@@ -61,7 +61,7 @@
                             </div>
                             <div class="column">
                                 <a href="https://teatrtv.vod.tvp.pl/" title="teatr telewizji polskiej"><i class="sprite2 base-teatrtelewizji"></i></a>
-                                <a href="https://www.my90stv.com/#" title="90's">90's</a>
+                                <a href="https://www.my90stv.com/#" title="90's" class="smallpseudoicon">90's</a>
                             </div>
                         </div>
                     </div>
@@ -143,7 +143,7 @@
                             <a href="https://www.geeksaresexy.net" title="geekaresexy"><i class="sprite2 base-geekaresexy"></i></a>
                         </div>
                         <div class="column">
-                            <a href="https://dribbble.com/shots" title="Discover the world’s top designers & creatives"><i class="sprite2 base-svg"></i></a>
+                            <a href="https://dribbble.com/shots" title="Discover the world’s top designers & creatives"><img src="img/dribbble.svg" alt="dribbble" /></a>
                         </div>
                     </div>
                 </div>
@@ -160,7 +160,7 @@
                     </div>
                     <div class="row">
                         <a href="https://zapodaj.net/" title="Darmowy Hosting Zdjęć"><div id="zapodaj">Zapodaj !</div></a>
-                        <a href="https://www.ilovepdf.com/unlock_pdf"><img src="img/ilovepdf.svg" alt="ilovepdf" title="Every tool you need to work with PDFs in one place" /></a>
+                        <a href="https://www.ilovepdf.com/unlock_pdf" title="Every tool you need to work with PDFs in one place" ><img src="img/ilovepdf.svg" alt="ilovepdf" /></a>
                     </div>
                     <div class="row">
                         <a href="https://pdfcandy.com" title="convertfiles"><i class="sprite2 base-convert"></i></a>
@@ -440,7 +440,7 @@
                                         <a href="https://www.giftofspeed.com/css-compressor" title="compressor"><i class="sprite prog-compressor"></i></a>
                                         <a href="https://csscompressor.com" title="css compressor"><i class="sprite prog-compressor"></i></a>
                                         <div class="row">
-                                            <a href="https://cssgradient.io/" title="CSS Gradient"><img src="img/_programming/logo-55c31c59.svg" alt="CSS Gradient" /></a>
+                                            <a href="https://cssgradient.io/" title="CSS Gradient"><img src="img/cssgradient.svg" alt="CSS Gradient" /></a>
                                             <a href="https://neumorphism.io/#1f1f1f"><div id="cssNeumorphism" title="CSS Gradient"></div></a>
 
                                         </div>
@@ -503,7 +503,7 @@
                                     <a href="https://meyerweb.com/eric/tools/color-blend" title="meyerweb colors"><i class="sprite prog-meyerweb"></i></a>
                                     <a href="https://bl.ocks.org/espetro/bd7555f4363af4f5a81bb324eae76912" title="ocks colors"><i class="sprite prog-ocks"></i></a>
                                     <a href="https://pl.pinterest.com/pin/682717624745517844" title="pinterest colors"><i class="sprite prog-pinterest"></i></a>
-                                    <a href="http://www.flounder.com/csharp_color_table.htm" title="C# Color Name Table">C#</a>
+                                    <a href="http://www.flounder.com/csharp_color_table.htm" title="C# Color Name Table" class="smallpseudoicon">C#</a>
                                 </div>
                             </div>
                         </div>
@@ -662,8 +662,9 @@
                             <h1 onclick="foldArea(this)">code notes</h1>
                             <div class="fold column">
                                 <div class="column">
-                                    document.getElementsByTagName('video')[0].playbackRate = 3<br>
-                                    <button class="btn-copy">copy</button>
+                                    <div id="playbackRate">document.getElementsByTagName('video')[0].playbackRate = 3</div><br>
+                                    <button class="btn-copy" onclick="CopyToClipboard(this, 'playbackRate')">copy</button>
+                                    <div id="end_copy"></div>
                                     100 thin<br>
                                     200 extralight<br>
                                     300 light<br>
