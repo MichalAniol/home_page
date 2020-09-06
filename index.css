@@ -114,10 +114,10 @@ body {
     margin: 5px 0 10px 0;
 }
 
-.part .part a:not(.img) {
+/* .part .part a:not(.img) {
     display: inline;
     text-align: center;
-}
+} */
 
 .part>h1 {
     margin: 0;
