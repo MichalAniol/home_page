@@ -22,11 +22,14 @@ function rememberFload() {
 }
 
 function remindFload() {
-    let fol = localStorage.getItem('fold' + title).split(',');
-    for (let i = 0; i < fol.length; i += 2) {
-        if (fol[i] != "") {
-            let f = document.querySelector("#" + fol[i] + " h1");
-            f.click();
+    let fol = localStorage.getItem('fold' + title)
+    if (fol != null) {
+        fol = fol.split(',');
+        for (let i = 0; i < fol.length; i += 2) {
+            if (fol[i] != "") {
+                let f = document.querySelector("#" + fol[i] + " h1");
+                f.click();
+            }
         }
     }
 }
