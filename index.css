@@ -117,7 +117,6 @@ body {
 .part .part a:not(.img) {
     display: inline;
     text-align: center;
-   
 }
 
 .part>h1 {
@@ -158,12 +157,12 @@ body {
     text-decoration: none;
 }
 
-.part img {
+.part img, .part .sprite, .part .sprite2 {
     -webkit-transition: all .15s;
     transition: all .15s;
 }
 
-.part img:hover {
+.part img:hover, .part .sprite:hover, .part .sprite2:hover {
     transform: scale(1.08);
     /* border: 2px solid var(--color_back); */
     z-index: 100;
@@ -230,7 +229,7 @@ body {
     width: 120px;
 }
 
-.btn-copy{
+.btn-copy {
     width: 100px;
     height: 20px;
     background-color: var(--color_3);
@@ -244,5 +243,4 @@ body {
 .btn-copy:hover {
     background-color: var(--color_1);
     color: var(--color_3);
-
 }
