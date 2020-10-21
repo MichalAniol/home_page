@@ -2,8 +2,8 @@
     font-family: 'Rubik';
     font-style: normal;
     font-weight: 400;
-    src: url('font/Rubik-Regular.eot');
-    src: local('open sans extralight'), local('open-sans-extralight'), url('font/Rubik-Regular.eot?#iefix') format('embedded-opentype'), url('font/Rubik-Regular.woff2') format('woff2'), url('font/Rubik-Regular.woff') format('woff'), url('font/Rubik-Regular.ttf') format('truetype'), url('font/Rubik-Regular.svg#Barlow') format('svg');
+    src: url('../font/Rubik-Regular.eot');
+    src: local('open sans extralight'), local('open-sans-extralight'), url('../font/Rubik-Regular.eot?#iefix') format('embedded-opentype'), url('../font/Rubik-Regular.woff2') format('woff2'), url('../font/Rubik-Regular.woff') format('woff'), url('../font/Rubik-Regular.ttf') format('truetype'), url('../font/Rubik-Regular.svg#Barlow') format('svg');
 }
 
 :root {
