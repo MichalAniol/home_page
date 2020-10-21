@@ -252,3 +252,17 @@ body {
     display: initial !important;
     text-align: center;
 }
+
+.code_notes .fonts_sizes {
+    margin-right: 20px;
+}
+.code_notes .sites {
+    border: solid 1px var(--color_2h);
+    padding: 0 10px 4px 10px;
+}
+.code_notes a{
+    transition: all .3s;
+}
+.code_notes a:hover {
+    background-color: var(--color_2h);
+}
