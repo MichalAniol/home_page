@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>snipets</title>
+        <link rel='stylesheet' type='text/css' href='../../css/index.css'>
+        <link rel='stylesheet' type='text/css' href='snipets.css'>
+    </head>
+
+    <body>
+
+        <div class="part">
+            <h1 onclick="foldArea(this)">Klasy, atrybuty i propertisy</h1>
+            <div class="fold column">
+                <div class="text">
+                    <b>setAttribute - getAttribute</b><br>
+                    <b>setProperty - getProperty</b><br>
+                    <b>el.classList.add("class_name");</b> - dodawanie klasy<br>
+                    <b>el.classList.toggle("class_name");</b> - jeśli ustawiona jest widoczność usuwa ją, w przeciwnym wypadku dodaje<br>
+                    <b>el.classList.toggle("class_name", i &lt; 10);</b> - jeśli ustawiona jest widoczność usuwa ją, w przeciwnym wypadku dodaje<br>
+                    <b>el.classList.add("class_name");</b> - dodawanie klasy<br>
+                </div>
+            </div>
+        </div>
+
+        <div class="part">
+            <h1 onclick="foldArea(this)">Wstawianie elementów HTML</h1>
+            <div class="fold column">
+                <div class="text">
+                    <b>beforebegin</b> Wstawia element przed docelowym elementem. Działa
+                    podobnie do metody <b>before()</b>.<br>
+                    <b>afterbegin</b> Wstawia element na początku dzieci. Działa
+                    podobnie do metody <b>prepend()</b>.<br>
+                    <b>beforeend</b> Wstawia element przed docelowym elementem. Działa
+                    podobnie do metody <b>appendChild()</b>.<br>
+                    <b>afterend</b> Wstawia element przed docelowym elementem. Działa
+                    podobnie do metody <b>after()</b>.<br>
+                    <br>
+                    const el = document.<b>createElement</b>("strong");<br><br>
+                    parent.<b>insertAdjacentElement</b>("beforebegin",
+                    &#34;&lt;strong&gt;element 1&lt;/strong&gt;&#34;);<br><br>
+                    <b>appendChild()</b><br>
+                    p.<b>insertBefore</b>(newEl, div.firstElementChild); //wstawiamy go przed
+                    pierwszym elementem<br><br>
+                    element.<b>append</b>("Ten span &lt;span&gt&lt;/span&gt będzie zapisany jak
+                    tekst");
+                </div>
+            </div>
+        </div>
+
+        <div class="part">
+            <h1 onclick="foldArea(this)">Klonowanie elementów HTML</h1>
+            <div class="fold column">
+                <div class="text"> const el = document.querySelector(".to-clone");<br><br>
+                    const cloneEl1 = el.<b>cloneNode()</b>;<br>
+                    console.log(cloneEl1); //&lt;div class="to-clone">&lt;/div><br><br>
+                    const cloneEl2 = el.<b>cloneNode(true)</b>;<br>
+                    console.log(cloneEl2); //&lt;div class="to-clone">&lt;strong>Testowy&lt;/strong>&lt;/div>
+                </div>
+            </div>
+        </div>
+
+        <div class="part">
+            <h1 onclick="foldArea(this)">Usówanie elementów HTML</h1>
+            <div class="fold column">
+                <div class="text"> parent.<b>removeChild(el);</b><br>
+                    elem.<b>remove();</b><br><br>
+                    while (ul.firstChild) {<br>
+                    &#160; &#160; ul.removeChild(ul.firstChild); // lub div.firstChild.remove()<br>
+                    } // usówa wszystkich potomków<br><br>
+                    elem.<b>replaceChild</b>(newItem, oldItem); // do zstępowania elementów,
+                    aby zniknęły z pamięci html<br>
+                    span.<b>replaceWith</b>(strong);
+                </div>
+            </div>
+        </div>
+
+        <div class="part">
+            <h1 onclick="foldArea(this)">Tworzenie fragmentów HTML</h1>
+            <div class="fold column">
+                <div class="text"> const fragment = document.<b>createDocumentFragment()</b>;<br>
+
+                    for (let i = 0; i &lt; 10; i++) {<br>
+                    &#160; &#160; const p= document.createElement("p"); // tworzy
+                    fragment dokumentu<br>
+                    &#160; &#160; p.appendChild(document.createTextNode("
+                    Akapit"+(i+1)));<br>
+                    &#160; &#160; fragment.appendChild(p);
+                    }<br>
+
+                    document.body.appendChild(fragment); //wstawiamy 10 paragrafów<br>
+                </div>
+            </div>
+        </div>
+
+        <script src="../../js/index.js"></script>
+    </body>
+
+</html>
