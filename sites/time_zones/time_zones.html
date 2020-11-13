@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>time zones</title>
+    <link rel='stylesheet' type='text/css' href='../../css/index.css'>
+    <link rel='stylesheet' type='text/css' href='time_zones.css'>
+</head>
+
+<body>
+    <div class="part">
+        <h1 onclick="foldArea(this)">setInterval</h1>
+        <div class="fold column">
+            <div class="text">
+                <b>setInterval</b>(() => {<br> &nbsp; &nbsp; let a = new Date(Date.now()).toLocaleString("en-US", { timeZone: "America/Los_Angeles" }),<br> &nbsp; &nbsp; &nbsp; &nbsp; b = new Date(Date.now() - (9 * 3600000)),<br> &nbsp; &nbsp; &nbsp;
+                &nbsp; c = new Date(new Date(Date.now()).toLocaleString("en-US", { timeZone: "America/Los_Angeles" }));<br><br> &nbsp; &nbsp; console.log('%c a:', 'background: #ffcc00; color: #003300', a)<br> &nbsp; &nbsp; console.log('%c b:', 'background:
+                #ffcc00; color: #003300', b)
+                <br> &nbsp; &nbsp; console.log('%c c:', 'background: #ffcc00; color: #003300', c)<br><br> }, 3000);
+            </div>
+        </div>
+    </div>
+
+    <div class="part">
+        <h1 onclick="foldArea(this)">world time zones</h1>
+        <div class="fold column">
+            <div class="text">
+                var <b>world_timezones</b> = [<br> &nbsp; &nbsp; 'Europe/Andorra',<br> &nbsp; &nbsp; 'Asia/Dubai',<br> &nbsp; &nbsp; 'Asia/Kabul',<br> &nbsp; &nbsp; 'Europe/Tirane',<br> &nbsp; &nbsp; 'Asia/Yerevan',<br> &nbsp; &nbsp; 'Antarctica/Casey',<br>                &nbsp; &nbsp; 'Antarctica/Davis',<br> &nbsp; &nbsp; 'Antarctica/DumontDUrville',<br> &nbsp; &nbsp; 'Antarctica/Mawson',<br> &nbsp; &nbsp; 'Antarctica/Palmer',<br> &nbsp; &nbsp; 'Antarctica/Rothera',<br> &nbsp; &nbsp; 'Antarctica/Syowa',<br>                &nbsp; &nbsp; 'Antarctica/Troll',<br> &nbsp; &nbsp; 'Antarctica/Vostok',<br> &nbsp; &nbsp; 'America/Argentina/Buenos_Aires',<br> &nbsp; &nbsp; 'America/Argentina/Cordoba',<br> &nbsp; &nbsp; 'America/Argentina/Salta',<br> &nbsp; &nbsp;
+                'America/Argentina/Jujuy',
+                <br> &nbsp; &nbsp; 'America/Argentina/Tucuman',<br> &nbsp; &nbsp; 'America/Argentina/Catamarca',<br> &nbsp; &nbsp; 'America/Argentina/La_Rioja',<br> &nbsp; &nbsp; 'America/Argentina/San_Juan',<br> &nbsp; &nbsp; 'America/Argentina/Mendoza',
+                <br> &nbsp; &nbsp; 'America/Argentina/San_Luis',<br> &nbsp; &nbsp; 'America/Argentina/Rio_Gallegos',<br> &nbsp; &nbsp; 'America/Argentina/Ushuaia',<br> &nbsp; &nbsp; 'Pacific/Pago_Pago',<br> &nbsp; &nbsp; 'Europe/Vienna',<br> &nbsp; &nbsp;
+                'Australia/Lord_Howe',
+                <br> &nbsp; &nbsp; 'Antarctica/Macquarie',<br> &nbsp; &nbsp; 'Australia/Hobart',<br> &nbsp; &nbsp; 'Australia/Currie',<br> &nbsp; &nbsp; 'Australia/Melbourne',<br> &nbsp; &nbsp; 'Australia/Sydney',<br> &nbsp; &nbsp; 'Australia/Broken_Hill',
+                <br> &nbsp; &nbsp; 'Australia/Brisbane',<br> &nbsp; &nbsp; 'Australia/Lindeman',<br> &nbsp; &nbsp; 'Australia/Adelaide',<br> &nbsp; &nbsp; 'Australia/Darwin',<br> &nbsp; &nbsp; 'Australia/Perth',<br> &nbsp; &nbsp; 'Australia/Eucla',
+                <br> &nbsp; &nbsp; 'Asia/Baku',<br> &nbsp; &nbsp; 'America/Barbados',<br> &nbsp; &nbsp; 'Asia/Dhaka',<br> &nbsp; &nbsp; 'Europe/Brussels',<br> &nbsp; &nbsp; 'Europe/Sofia',<br> &nbsp; &nbsp; 'Atlantic/Bermuda',<br> &nbsp; &nbsp; 'Asia/Brunei',<br>                &nbsp; &nbsp; 'America/La_Paz',<br> &nbsp; &nbsp; 'America/Noronha',<br> &nbsp; &nbsp; 'America/Belem',<br> &nbsp; &nbsp; 'America/Fortaleza',<br> &nbsp; &nbsp; 'America/Recife',<br> &nbsp; &nbsp; 'America/Araguaina',<br> &nbsp; &nbsp;
+                'America/Maceio',
+                <br> &nbsp; &nbsp; 'America/Bahia',<br> &nbsp; &nbsp; 'America/Sao_Paulo',<br> &nbsp; &nbsp; 'America/Campo_Grande',<br> &nbsp; &nbsp; 'America/Cuiaba',<br> &nbsp; &nbsp; 'America/Santarem',<br> &nbsp; &nbsp; 'America/Porto_Velho',
+                <br> &nbsp; &nbsp; 'America/Boa_Vista',<br> &nbsp; &nbsp; 'America/Manaus',<br> &nbsp; &nbsp; 'America/Eirunepe',<br> &nbsp; &nbsp; 'America/Rio_Branco',<br> &nbsp; &nbsp; 'America/Nassau',<br> &nbsp; &nbsp; 'Asia/Thimphu',<br> &nbsp;
+                &nbsp; 'Europe/Minsk',<br> &nbsp; &nbsp; 'America/Belize',<br> &nbsp; &nbsp; 'America/St_Johns',<br> &nbsp; &nbsp; 'America/Halifax',<br> &nbsp; &nbsp; 'America/Glace_Bay',<br> &nbsp; &nbsp; 'America/Moncton',<br> &nbsp; &nbsp; 'America/Goose_Bay',
+                <br> &nbsp; &nbsp; 'America/Blanc-Sablon',<br> &nbsp; &nbsp; 'America/Toronto',<br> &nbsp; &nbsp; 'America/Nipigon',<br> &nbsp; &nbsp; 'America/Thunder_Bay',<br> &nbsp; &nbsp; 'America/Iqaluit',<br> &nbsp; &nbsp; 'America/Pangnirtung',<br>                &nbsp; &nbsp; 'America/Atikokan',<br> &nbsp; &nbsp; 'America/Winnipeg',<br> &nbsp; &nbsp; 'America/Rainy_River',<br> &nbsp; &nbsp; 'America/Resolute',<br> &nbsp; &nbsp; 'America/Rankin_Inlet',<br> &nbsp; &nbsp; 'America/Regina',<br> &nbsp;
+                &nbsp; 'America/Swift_Current',<br> &nbsp; &nbsp; 'America/Edmonton',<br> &nbsp; &nbsp; 'America/Cambridge_Bay',<br> &nbsp; &nbsp; 'America/Yellowknife',<br> &nbsp; &nbsp; 'America/Inuvik',<br> &nbsp; &nbsp; 'America/Creston',<br> &nbsp;
+                &nbsp; 'America/Dawson_Creek',<br> &nbsp; &nbsp; 'America/Fort_Nelson',<br> &nbsp; &nbsp; 'America/Vancouver',<br> &nbsp; &nbsp; 'America/Whitehorse',<br> &nbsp; &nbsp; 'America/Dawson',<br> &nbsp; &nbsp; 'Indian/Cocos',<br> &nbsp; &nbsp;
+                'Europe/Zurich',
+                <br> &nbsp; &nbsp; 'Africa/Abidjan',<br> &nbsp; &nbsp; 'Pacific/Rarotonga',<br> &nbsp; &nbsp; 'America/Santiago',<br> &nbsp; &nbsp; 'America/Punta_Arenas',<br> &nbsp; &nbsp; 'Pacific/Easter',<br> &nbsp; &nbsp; 'Asia/Shanghai',<br> &nbsp;
+                &nbsp; 'Asia/Urumqi',<br> &nbsp; &nbsp; 'America/Bogota',<br> &nbsp; &nbsp; 'America/Costa_Rica',<br> &nbsp; &nbsp; 'America/Havana',<br> &nbsp; &nbsp; 'Atlantic/Cape_Verde',<br> &nbsp; &nbsp; 'America/Curacao',<br> &nbsp; &nbsp; 'Indian/Christmas',
+                <br> &nbsp; &nbsp; 'Asia/Nicosia',<br> &nbsp; &nbsp; 'Asia/Famagusta',<br> &nbsp; &nbsp; 'Europe/Prague',<br> &nbsp; &nbsp; 'Europe/Berlin',<br> &nbsp; &nbsp; 'Europe/Copenhagen',<br> &nbsp; &nbsp; 'America/Santo_Domingo',<br> &nbsp; &nbsp;
+                'Africa/Algiers',
+                <br> &nbsp; &nbsp; 'America/Guayaquil',<br> &nbsp; &nbsp; 'Pacific/Galapagos',<br> &nbsp; &nbsp; 'Europe/Tallinn',<br> &nbsp; &nbsp; 'Africa/Cairo',<br> &nbsp; &nbsp; 'Africa/El_Aaiun',<br> &nbsp; &nbsp; 'Europe/Madrid',
+                <br> &nbsp; &nbsp; 'Africa/Ceuta',<br> &nbsp; &nbsp; 'Atlantic/Canary',<br> &nbsp; &nbsp; 'Europe/Helsinki',<br> &nbsp; &nbsp; 'Pacific/Fiji',<br> &nbsp; &nbsp; 'Atlantic/Stanley',<br> &nbsp; &nbsp; 'Pacific/Chuuk',<br> &nbsp; &nbsp; 'Pacific/Pohnpei',<br>                &nbsp; &nbsp; 'Pacific/Kosrae',<br> &nbsp; &nbsp; 'Atlantic/Faroe',<br> &nbsp; &nbsp; 'Europe/Paris',<br> &nbsp; &nbsp; 'Europe/London',<br> &nbsp; &nbsp; 'Asia/Tbilisi',<br> &nbsp; &nbsp; 'America/Cayenne',<br> &nbsp; &nbsp; 'Africa/Accra',<br>                &nbsp; &nbsp; 'Europe/Gibraltar',<br> &nbsp; &nbsp; 'America/Godthab',<br> &nbsp; &nbsp; 'America/Danmarkshavn',<br> &nbsp; &nbsp; 'America/Scoresbysund',<br> &nbsp; &nbsp; 'America/Thule',<br> &nbsp; &nbsp; 'Europe/Athens',<br> &nbsp;
+                &nbsp; 'Atlantic/South_Georgia',<br> &nbsp; &nbsp; 'America/Guatemala',<br> &nbsp; &nbsp; 'Pacific/Guam',<br> &nbsp; &nbsp; 'Africa/Bissau',<br> &nbsp; &nbsp; 'America/Guyana',<br> &nbsp; &nbsp; 'Asia/Hong_Kong',<br> &nbsp; &nbsp; 'America/Tegucigalpa',<br>                &nbsp; &nbsp; 'America/Port-au-Prince',<br> &nbsp; &nbsp; 'Europe/Budapest',<br> &nbsp; &nbsp; 'Asia/Jakarta',<br> &nbsp; &nbsp; 'Asia/Pontianak',<br> &nbsp; &nbsp; 'Asia/Makassar',<br> &nbsp; &nbsp; 'Asia/Jayapura',
+                <br> &nbsp; &nbsp; 'Europe/Dublin',<br> &nbsp; &nbsp; 'Asia/Jerusalem',<br> &nbsp; &nbsp; 'Asia/Kolkata',<br> &nbsp; &nbsp; 'Indian/Chagos',<br> &nbsp; &nbsp; 'Asia/Baghdad',<br> &nbsp; &nbsp; 'Asia/Tehran',<br> &nbsp; &nbsp; 'Atlantic/Reykjavik',<br>                &nbsp; &nbsp; 'Europe/Rome',<br> &nbsp; &nbsp; 'America/Jamaica',<br> &nbsp; &nbsp; 'Asia/Amman',<br> &nbsp; &nbsp; 'Asia/Tokyo',<br> &nbsp; &nbsp; 'Africa/Nairobi',<br> &nbsp; &nbsp; 'Asia/Bishkek',<br> &nbsp; &nbsp; 'Pacific/Tarawa',<br>                &nbsp; &nbsp; 'Pacific/Enderbury',<br> &nbsp; &nbsp; 'Pacific/Kiritimati',<br> &nbsp; &nbsp; 'Asia/Pyongyang',<br> &nbsp; &nbsp; 'Asia/Seoul',<br> &nbsp; &nbsp; 'Asia/Almaty',<br> &nbsp; &nbsp; 'Asia/Qyzylorda',<br> &nbsp; &nbsp; 'Asia/Qostanay',<br>                &nbsp; &nbsp; 'Asia/Aqtobe',<br> &nbsp; &nbsp; 'Asia/Aqtau',<br> &nbsp; &nbsp; 'Asia/Atyrau',<br> &nbsp; &nbsp; 'Asia/Oral',<br> &nbsp; &nbsp; 'Asia/Beirut',<br> &nbsp; &nbsp; 'Asia/Colombo',<br> &nbsp; &nbsp; 'Africa/Monrovia',<br> &nbsp;
+                &nbsp; 'Europe/Vilnius',<br> &nbsp; &nbsp; 'Europe/Luxembourg',<br> &nbsp; &nbsp; 'Europe/Riga',<br> &nbsp; &nbsp; 'Africa/Tripoli',<br> &nbsp; &nbsp; 'Africa/Casablanca',<br> &nbsp; &nbsp; 'Europe/Monaco',<br> &nbsp; &nbsp; 'Europe/Chisinau',<br>                &nbsp; &nbsp; 'Pacific/Majuro',<br> &nbsp; &nbsp; 'Pacific/Kwajalein',<br> &nbsp; &nbsp; 'Asia/Yangon',<br> &nbsp; &nbsp; 'Asia/Ulaanbaatar',<br> &nbsp; &nbsp; 'Asia/Hovd',<br> &nbsp; &nbsp; 'Asia/Choibalsan',<br> &nbsp; &nbsp; 'Asia/Macau',<br>                &nbsp; &nbsp; 'America/Martinique',<br> &nbsp; &nbsp; 'Europe/Malta',<br> &nbsp; &nbsp; 'Indian/Mauritius',<br> &nbsp; &nbsp; 'Indian/Maldives',<br> &nbsp; &nbsp; 'America/Mexico_City',<br> &nbsp; &nbsp; 'America/Cancun',
+                <br> &nbsp; &nbsp; 'America/Merida',<br> &nbsp; &nbsp; 'America/Monterrey',<br> &nbsp; &nbsp; 'America/Matamoros',<br> &nbsp; &nbsp; 'America/Mazatlan',<br> &nbsp; &nbsp; 'America/Chihuahua',<br> &nbsp; &nbsp; 'America/Ojinaga',<br> &nbsp;
+                &nbsp; 'America/Hermosillo',<br> &nbsp; &nbsp; 'America/Tijuana',<br> &nbsp; &nbsp; 'America/Bahia_Banderas',<br> &nbsp; &nbsp; 'Asia/Kuala_Lumpur',<br> &nbsp; &nbsp; 'Asia/Kuching',<br> &nbsp; &nbsp; 'Africa/Maputo',<br> &nbsp; &nbsp;
+                'Africa/Windhoek',
+                <br> &nbsp; &nbsp; 'Pacific/Noumea',<br> &nbsp; &nbsp; 'Pacific/Norfolk',<br> &nbsp; &nbsp; 'Africa/Lagos',<br> &nbsp; &nbsp; 'America/Managua',<br> &nbsp; &nbsp; 'Europe/Amsterdam',<br> &nbsp; &nbsp; 'Europe/Oslo',<br> &nbsp; &nbsp; 'Asia/Kathmandu',<br>                &nbsp; &nbsp; 'Pacific/Nauru',<br> &nbsp; &nbsp; 'Pacific/Niue',<br> &nbsp; &nbsp; 'Pacific/Auckland',<br> &nbsp; &nbsp; 'Pacific/Chatham',<br> &nbsp; &nbsp; 'America/Panama',<br> &nbsp; &nbsp; 'America/Lima',<br> &nbsp; &nbsp; 'Pacific/Tahiti',<br>                &nbsp; &nbsp; 'Pacific/Marquesas',<br> &nbsp; &nbsp; 'Pacific/Gambier',<br> &nbsp; &nbsp; 'Pacific/Port_Moresby',<br> &nbsp; &nbsp; 'Pacific/Bougainville',<br> &nbsp; &nbsp; 'Asia/Manila',<br> &nbsp; &nbsp; 'Asia/Karachi',<br> &nbsp; &nbsp;
+                'Europe/Warsaw',
+                <br> &nbsp; &nbsp; 'America/Miquelon',<br> &nbsp; &nbsp; 'Pacific/Pitcairn',<br> &nbsp; &nbsp; 'America/Puerto_Rico',<br> &nbsp; &nbsp; 'Asia/Gaza',<br> &nbsp; &nbsp; 'Asia/Hebron',<br> &nbsp; &nbsp; 'Europe/Lisbon',<br> &nbsp; &nbsp;
+                'Atlantic/Madeira',
+                <br> &nbsp; &nbsp; 'Atlantic/Azores',<br> &nbsp; &nbsp; 'Pacific/Palau',<br> &nbsp; &nbsp; 'America/Asuncion',<br> &nbsp; &nbsp; 'Asia/Qatar',<br> &nbsp; &nbsp; 'Indian/Reunion',<br> &nbsp; &nbsp; 'Europe/Bucharest',<br> &nbsp; &nbsp;
+                'Europe/Belgrade',
+                <br> &nbsp; &nbsp; 'Europe/Kaliningrad',<br> &nbsp; &nbsp; 'Europe/Moscow',<br> &nbsp; &nbsp; 'Europe/Simferopol',<br> &nbsp; &nbsp; 'Europe/Kirov',<br> &nbsp; &nbsp; 'Europe/Astrakhan',
+                <br> &nbsp; &nbsp; 'Europe/Volgograd',<br> &nbsp; &nbsp; 'Europe/Saratov',<br> &nbsp; &nbsp; 'Europe/Ulyanovsk',<br> &nbsp; &nbsp; 'Europe/Samara',<br> &nbsp; &nbsp; 'Asia/Yekaterinburg',<br> &nbsp; &nbsp; 'Asia/Omsk',<br> &nbsp; &nbsp;
+                'Asia/Novosibirsk',
+                <br> &nbsp; &nbsp; 'Asia/Barnaul',<br> &nbsp; &nbsp; 'Asia/Tomsk',<br> &nbsp; &nbsp; 'Asia/Novokuznetsk',<br> &nbsp; &nbsp; 'Asia/Krasnoyarsk',<br> &nbsp; &nbsp; 'Asia/Irkutsk',<br> &nbsp; &nbsp; 'Asia/Chita',<br> &nbsp; &nbsp; 'Asia/Yakutsk',<br>                &nbsp; &nbsp; 'Asia/Khandyga',<br> &nbsp; &nbsp; 'Asia/Vladivostok',<br> &nbsp; &nbsp; 'Asia/Ust-Nera',<br> &nbsp; &nbsp; 'Asia/Magadan',<br> &nbsp; &nbsp; 'Asia/Sakhalin',<br> &nbsp; &nbsp; 'Asia/Srednekolymsk',<br> &nbsp; &nbsp; 'Asia/Kamchatka',<br>                &nbsp; &nbsp; 'Asia/Anadyr',<br> &nbsp; &nbsp; 'Asia/Riyadh',<br> &nbsp; &nbsp; 'Pacific/Guadalcanal',<br> &nbsp; &nbsp; 'Indian/Mahe',<br> &nbsp; &nbsp; 'Africa/Khartoum',<br> &nbsp; &nbsp; 'Europe/Stockholm',<br> &nbsp; &nbsp; 'Asia/Singapore',<br>                &nbsp; &nbsp; 'America/Paramaribo',<br> &nbsp; &nbsp; 'Africa/Juba',<br> &nbsp; &nbsp; 'Africa/Sao_Tome',<br> &nbsp; &nbsp; 'America/El_Salvador',<br> &nbsp; &nbsp; 'Asia/Damascus',<br> &nbsp; &nbsp; 'America/Grand_Turk',
+                <br> &nbsp; &nbsp; 'Africa/Ndjamena',<br> &nbsp; &nbsp; 'Indian/Kerguelen',<br> &nbsp; &nbsp; 'Asia/Bangkok',<br> &nbsp; &nbsp; 'Asia/Dushanbe',<br> &nbsp; &nbsp; 'Pacific/Fakaofo',<br> &nbsp; &nbsp; 'Asia/Dili',<br> &nbsp; &nbsp; 'Asia/Ashgabat',<br>                &nbsp; &nbsp; 'Africa/Tunis',<br> &nbsp; &nbsp; 'Pacific/Tongatapu',<br> &nbsp; &nbsp; 'Europe/Istanbul',<br> &nbsp; &nbsp; 'America/Port_of_Spain',<br> &nbsp; &nbsp; 'Pacific/Funafuti',<br> &nbsp; &nbsp; 'Asia/Taipei',
+                <br> &nbsp; &nbsp; 'Europe/Kiev',<br> &nbsp; &nbsp; 'Europe/Uzhgorod',<br> &nbsp; &nbsp; 'Europe/Zaporozhye',<br> &nbsp; &nbsp; 'Pacific/Wake',<br> &nbsp; &nbsp; 'America/New_York',<br> &nbsp; &nbsp; 'America/Detroit',<br> &nbsp; &nbsp;
+                'America/Kentucky/Louisville',
+                <br> &nbsp; &nbsp; 'America/Kentucky/Monticello',<br> &nbsp; &nbsp; 'America/Indiana/Indianapolis',<br> &nbsp; &nbsp; 'America/Indiana/Vincennes',<br> &nbsp; &nbsp; 'America/Indiana/Winamac',<br> &nbsp; &nbsp; 'America/Indiana/Marengo',
+                <br> &nbsp; &nbsp; 'America/Indiana/Petersburg',<br> &nbsp; &nbsp; 'America/Indiana/Vevay',<br> &nbsp; &nbsp; 'America/Chicago',<br> &nbsp; &nbsp; 'America/Indiana/Tell_City',<br> &nbsp; &nbsp; 'America/Indiana/Knox',<br> &nbsp; &nbsp;
+                'America/Menominee',
+                <br> &nbsp; &nbsp; 'America/North_Dakota/Center',<br> &nbsp; &nbsp; 'America/North_Dakota/New_Salem',<br> &nbsp; &nbsp; 'America/North_Dakota/Beulah',<br> &nbsp; &nbsp; 'America/Denver',<br> &nbsp; &nbsp; 'America/Boise',
+                <br> &nbsp; &nbsp; 'America/Phoenix',<br> &nbsp; &nbsp; 'America/Los_Angeles',<br> &nbsp; &nbsp; 'America/Anchorage',<br> &nbsp; &nbsp; 'America/Juneau',<br> &nbsp; &nbsp; 'America/Sitka',<br> &nbsp; &nbsp; 'America/Metlakatla',<br> &nbsp;
+                &nbsp; 'America/Yakutat',<br> &nbsp; &nbsp; 'America/Nome',<br> &nbsp; &nbsp; 'America/Adak',<br> &nbsp; &nbsp; 'Pacific/Honolulu',<br> &nbsp; &nbsp; 'America/Montevideo',<br> &nbsp; &nbsp; 'Asia/Samarkand',<br> &nbsp; &nbsp; 'Asia/Tashkent',<br>                &nbsp; &nbsp; 'America/Caracas',<br> &nbsp; &nbsp; 'Asia/Ho_Chi_Minh',<br> &nbsp; &nbsp; 'Pacific/Efate',<br> &nbsp; &nbsp; 'Pacific/Wallis',<br> &nbsp; &nbsp; 'Pacific/Apia',<br> &nbsp; &nbsp; 'Africa/Johannesburg'<br> ]; </div>
+        </div>
+    </div>
+
+
+    <script src="../../js/index.js"></script>
+</body>
+
+</html>
