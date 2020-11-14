@@ -83,15 +83,19 @@ const CopyToClipboard = (but, containerid) => {
         range.moveToElementText(document.getElementById(containerid));
         range.select().createTextRange();
         document.execCommand("copy");
-        range.moveToElementText(document.getElementById('end_copy'));
-        range.select().createTextRange();
+        setTimeout(() => {
+            range.moveToElementText(document.getElementById('end_copy'));
+            range.select().createTextRange();
+        }, 30);
     } else if (window.getSelection) {
         var range = document.createRange();
         range.selectNode(document.getElementById(containerid));
         window.getSelection().addRange(range);
         document.execCommand("copy");
-        range.selectNode(document.getElementById('end_copy'));
-        window.getSelection().addRange(range);
+        setTimeout(() => {
+            range.selectNode(document.getElementById('end_copy'));
+            window.getSelection().addRange(range);
+        }, 30);
     }
     but.innerHTML = "c o p i e d &nbsp; ! ! !";
     setTimeout(() => {
