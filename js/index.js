@@ -13,8 +13,8 @@ function remindFload() {
     if (fol != null) {
         fol = fol.split(',');
         for (let i = 0; i < fol.length; i += 2) {
-            if (fol[i] != "") {
-                let f = document.querySelector("#" + fol[i] + " h1");
+            if (fol[i] != '') {
+                let f = document.querySelector('#' + fol[i] + ' h1');
                 f.click();
             }
         }
@@ -28,15 +28,15 @@ function foldArea(item) {
 
     if (h > 2) {
         fold.push([id, h]);
-        area.style.height = h + "px";
+        area.style.height = h + 'px';
         setTimeout(() => {
-            area.style.height = "0px";
+            area.style.height = '0px';
             area.style.borderBottom = '2px solid var(--color_1)';
             area.style.overflow = 'hidden';
         }, 20);
     } else {
         oldH = fold.find(i => i[0] == id);
-        area.style.height = oldH[1] + "px";
+        area.style.height = oldH[1] + 'px';
         area.style.borderBottom = '0px solid var(--color_1)';
         setTimeout(() => { area.style.overflow = '' }, 600);
         let ind = fold.findIndex(i => i[0] == id);
@@ -46,20 +46,21 @@ function foldArea(item) {
 }
 
 function start() {
-    let parts = document.querySelectorAll(".part");
+    let parts = document.querySelectorAll('.part');
     for (let i = 0; i < parts.length; i++) {
-        parts[i].id = "part_" + i;
+        parts[i].id = 'part_' + i;
     }
 
-    let as = document.querySelectorAll("a");
+    let as = document.querySelectorAll('a');
     for (let a of as) {
-        a.target = "_blank";
+        a.target = '_blank';
+        a.rel = 'noopener noreferrer';
     }
 
-    let progA = document.querySelectorAll("#programing .part .part a");
+    let progA = document.querySelectorAll('#programing .part .part a');
     for (let i = 0; i < progA.length; i++) {
-        if (progA[i].childNodes[0].nodeName == "IMG") {
-            progA[i].classList.add("img");
+        if (progA[i].childNodes[0].nodeName == 'IMG') {
+            progA[i].classList.add('img');
         }
     }
 
@@ -82,7 +83,7 @@ const CopyToClipboard = (but, containerid) => {
         var range = document.body.createTextRange();
         range.moveToElementText(document.getElementById(containerid));
         range.select().createTextRange();
-        document.execCommand("copy");
+        document.execCommand('copy');
         setTimeout(() => {
             range.moveToElementText(document.getElementById('end_copy'));
             range.select().createTextRange();
@@ -91,15 +92,15 @@ const CopyToClipboard = (but, containerid) => {
         var range = document.createRange();
         range.selectNode(document.getElementById(containerid));
         window.getSelection().addRange(range);
-        document.execCommand("copy");
+        document.execCommand('copy');
         setTimeout(() => {
             range.selectNode(document.getElementById('end_copy'));
             window.getSelection().addRange(range);
         }, 30);
     }
-    but.innerHTML = "c o p i e d &nbsp; ! ! !";
+    but.innerHTML = 'c o p i e d &nbsp; ! ! !';
     setTimeout(() => {
-        but.innerHTML = "copy";
+        but.innerHTML = 'copy';
     }, 500);
 }
 
