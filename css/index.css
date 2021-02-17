@@ -284,3 +284,7 @@ body {
 .js a {
     margin: 0 auto;
 }
+
+#playbackRate {
+    font-size: 15px;
+}

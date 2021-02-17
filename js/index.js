@@ -55,6 +55,7 @@ function start() {
     for (let a of as) {
         a.target = '_blank';
         a.rel = 'noopener noreferrer';
+        if (!a.alt) a.alt = a.title;
     }
 
     let progA = document.querySelectorAll('#programing .part .part a');
