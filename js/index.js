@@ -74,6 +74,34 @@ function start() {
             f.style.setProperty('transition', 'all .6s');
         }
     }, 100);
+
+    let basic = [];
+    for (let i = 0; i < 17; i++) {
+        let elem = document.querySelector('#part_' + i)
+        basic.push(elem);
+    }
+
+    document.addEventListener('keydown', e => {
+
+        let fol = localStorage.getItem('fold' + title)
+        if (fol != null) {
+            fol = fol.split(',');
+        } else { fol == [] }
+
+        if (e.key == 'p') {
+            for (let item of basic) {
+                let h1 = item.querySelector('h1');
+                if (!fol.some(e => e == item.id)) h1.click();
+            }
+        }
+
+        if (e.key == 'o') {
+            for (let item of basic) {
+                let h1 = item.querySelector('h1');
+                if (fol.some(e => e == item.id)) h1.click();
+            }
+        }
+    })
 }
 
 start();
