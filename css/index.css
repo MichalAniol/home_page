@@ -19,7 +19,7 @@
 
 body {
     position: relative;
-    margin: 15px 5px 0 10px;
+    margin: 15px 50px 0 55px;
     padding: 0;
     background-color: var(--color_back);
     color: var(--color_1);
@@ -87,7 +87,7 @@ body {
 }
 
 .section {
-    max-width: 1220px;
+    /* max-width: 1750px; */
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
@@ -104,6 +104,7 @@ body {
     margin: 0 5px 10px 0;
     background-color: var(--color_3);
     height: max-content;
+    min-width: 100px;
 }
 
 .part .part {
@@ -122,6 +123,7 @@ body {
 
 .part>h1 {
     margin: 0;
+    padding: 0;
     /* padding: 2px 0; */
     text-align: center;
     font-size: 1em;
