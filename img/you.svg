@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="84" height="24" viewBox="0 0 84 24" fill="none">
+    <path fill="url(#t0apv)" d="M34.588 3.429c4.727 0 8.572 3.844 8.572 8.571s-3.845 8.571-8.572 8.571c-4.727 0-8.571-3.844-8.571-8.571s3.845-8.571 8.571-8.571Zm0-3.429c-6.626 0-12 5.374-12 12 0 6.629 5.374 12 12 12 6.627 0 12-5.374 12-12s-5.373-12-12-12Z"></path>
+    <path fill="url(#74mdj)" d="M71.977 1.393A.683.683 0 0 0 71.3.708h-2.037a.68.68 0 0 0-.647.497V11.89h-.03c0 4.404-3.541 7.986-7.895 7.986-4.354 0-7.896-3.582-7.896-7.986V1.331a.68.68 0 0 0-.67-.625h-2.037a.683.683 0 0 0-.676.684v10.724h.006c.12 6.195 5.121 11.18 11.273 11.18 6.152 0 11.153-4.985 11.273-11.18H72"></path>
+    <path fill="url(#ezm6w)" d="M12.989 11.967c5.304-.804 9.4-5.323 9.6-10.842a.513.513 0 0 0-.403-.42h-2.478a.684.684 0 0 0-.525.664v-.091c-.291 4.129-3.719 7.4-7.89 7.4-4.176 0-7.603-3.276-7.89-7.41a.682.682 0 0 0-.514-.562H.366a.503.503 0 0 0-.366.48c.226 5.494 4.311 9.981 9.597 10.78v10.768a.68.68 0 0 0 .667.56H12.3a.683.683 0 0 0 .678-.683"></path>
+    <rect width="8.471" height="22.588" x="74.118" y=".706" fill="#fff" rx="4.235" style="--darkreader-inline-fill: #e8e6e3;" data-darkreader-inline-fill=""></rect>
+    <path fill="#AEAEB2" d="M80.47 20.47v-1.98c0-1.12-.494-1.67-1.153-1.67-.641 0-1.018.526-1.04 1.047h-.042c-.097-.478-.387-.856-.901-.856-.631 0-1.099.526-1.099 1.587v1.873h4.236Zm-.64-.886h-1.241v-.977c0-.547.29-.886.668-.886.337 0 .573.267.573.91v.953Zm-1.793 0h-1.169v-.896c0-.52.238-.79.565-.79.372 0 .604.348.604.81v.876ZM80.47 15.93v-3.202h-.642v2.315H78.67v-2.131h-.643v2.13h-1.15v-2.295h-.643v3.182h4.236ZM76.879 11.938v-1.513h3.592v-.879h-3.593V8.034h-.643v3.904h.644ZM80.47 7.125l-1.044-.404V4.88l1.045-.406V3.53l-4.236 1.725v1.094l4.236 1.723v-.946Zm-1.66-.643-1.706-.662v-.038l1.706-.662v1.362Z" style="--darkreader-inline-fill: #b6b0a6;" data-darkreader-inline-fill=""></path>
+    <rect width="8.471" height="22.588" x="74.118" y=".706" stroke="#15156E" rx="4.235" style="--darkreader-inline-stroke: #92b2ea;" data-darkreader-inline-stroke=""></rect>
+    <defs>
+        <linearGradient id="t0apv" x1="34.588" x2="34.588" y1="0" y2="24" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#FB00FF" style="--darkreader-inline-stopcolor: #c900cc;" data-darkreader-inline-stopcolor=""></stop>
+            <stop offset="1" stop-color="#FC0" style="--darkreader-inline-stopcolor: #cca300;" data-darkreader-inline-stopcolor=""></stop>
+        </linearGradient>
+        <linearGradient id="74mdj" x1="60.706" x2="60.706" y1=".706" y2="23.294" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#00D77C" style="--darkreader-inline-stopcolor: #00ac63;" data-darkreader-inline-stopcolor=""></stop>
+            <stop offset="1" stop-color="#43DDEB" style="--darkreader-inline-stopcolor: #11939f;" data-darkreader-inline-stopcolor=""></stop>
+        </linearGradient>
+        <linearGradient id="ezm6w" x1="11.294" x2="11.294" y1=".706" y2="23.294" gradientUnits="userSpaceOnUse">
+            <stop offset=".063" stop-color="#007AFF" style="--darkreader-inline-stopcolor: #0062cc;" data-darkreader-inline-stopcolor=""></stop>
+            <stop offset=".885" stop-color="#8D41E5" style="--darkreader-inline-stopcolor: #55169f;" data-darkreader-inline-stopcolor=""></stop>
+        </linearGradient>
+    </defs>
+</svg>
