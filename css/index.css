@@ -264,6 +264,18 @@ body {
     height: 26px;
 }
 
+.sans {
+    font-family: 'Open Sans';
+    font-size: 20px;
+    letter-spacing: 1px;
+    height: 26px;
+}
+
+.polls {
+    background: linear-gradient(90deg, rgba(192, 0, 255, 1) 0%, rgba(255, 0, 0, 1) 44%, rgba(241, 255, 0, 1) 100%);
+    color: #fff !important;
+}
+
 .lorem-ipsum {
     font-family: 'Georgia';
     background-color: #313131;
