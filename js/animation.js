@@ -1,6 +1,4 @@
-
-
-(function () {
+(function() {
     const canvas = document.getElementById("mycanvas"),
         ctx = canvas.getContext("2d"),
         s = 1.1;
@@ -23,8 +21,9 @@
         },
         counter = [0, 0, 0],
         snake = [],
-        lock = [0, 0, 0, 0],
-        LAdate = new Date(new Date(Date.now()).toLocaleString("en-US", { timeZone: "America/Los_Angeles" }));
+        lock = [0, 0, 0, 0];
+
+    let LAdate = new Date(new Date(Date.now()).toLocaleString("en-US", { timeZone: "America/Los_Angeles" }));
 
     var anim = setInterval(animation, 50),
         back = "#000800",
@@ -42,10 +41,8 @@
     window.addEventListener('visibilitychange', () => { // animation visible only when visible
         if (document.hidden) {
             clearInterval(anim)
-            // console.log('%c anim:', 'background: #ffcc00; color: #003300', anim)
         } else {
             anim = setInterval(animation, 50)
-            // console.log('%c anim:', 'background: #ffcc00; color: #003300', anim)
         }
     })
 
@@ -99,16 +96,20 @@
             } = evt;
         if (!simple && !clock) {
             if (x > cA.left && x < cA.left + 30 && y > cA.top && y < cA.top + 30) {
-                lock[0] = 1; return
+                lock[0] = 1;
+                return
             }
             if (x > cA.right - 30 && x < cA.right && y > cA.top && y < cA.top + 30) {
-                lock[1] = 1; return
+                lock[1] = 1;
+                return
             }
             if (x > cA.left && x < cA.left + 30 && y > cA.bottom - 30 && y < cA.bottom) {
-                lock[2] = 1; return
+                lock[2] = 1;
+                return
             }
             if (x > cA.right - 30 && x < cA.right && y > cA.bottom - 30 && y < cA.bottom) {
-                lock[3] = 1; return
+                lock[3] = 1;
+                return
             }
         }
         if (clock) {
@@ -116,13 +117,11 @@
                 cy = cA.top + (height / 2) - y,
                 ss = 1.9 * s;
             if ((cx * cx) + (cy * cy) < (60 * 60 * ss) + (60 * 60 * ss)) {
-                console.log('%c clock!!!', 'background: #ffcc00; color: #003300');
                 return;
             }
         }
         if (x > cA.left && x < cA.right && y > cA.top && y < cA.bottom) {
             changeView();
-            console.log('%c changeView:', 'background: #ffcc00; color: #003300', simple, clock)
         }
 
         if (lock[0] == 1 && lock[1] == 1 && lock[2] == 1 && lock[3] == 1) {
@@ -142,7 +141,11 @@
     ctx.lineWidth = 0;
 
     function changeView() {
-        if (!simple && !clock) { simple = true; clock = true; return }
+        if (!simple && !clock) {
+            simple = true;
+            clock = true;
+            return
+        }
         if (simple && !clock) { simple = false; return }
         if (simple && clock) { clock = false }
     }
@@ -1099,7 +1102,4 @@ function hiddenClick(hidden) {
 
     let q = document.querySelector('#part_0 h1');
     q.click();
-    console.log('%c q:', 'background: #ffcc00; color: #003300', q)
 }
-
-
