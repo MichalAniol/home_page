@@ -21,7 +21,7 @@ const load = name => {
         console.error(err)
     }
 
-    console.log(' loaded: ' + name);
+    // console.log(' loaded: ' + name);
 
     return data;
 }
@@ -38,7 +38,7 @@ const loadSvg = name => {
         console.error(err)
     }
 
-    console.log(' loaded svg: ' + name);
+    // console.log(' loaded svg: ' + name);
 
     return data;
 }
