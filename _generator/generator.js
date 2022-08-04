@@ -84,6 +84,7 @@ const start = () => {
         'base/retro',
         'base/games',
         'base/business',
+        'base/chill',
 
         'programingSection',
 
