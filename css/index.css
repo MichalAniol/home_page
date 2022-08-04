@@ -161,6 +161,7 @@ body {
 }
 
 .part img,
+.part svg,
 .part .base,
 .part .prog,
 .part a div,
@@ -321,6 +322,7 @@ body {
 }
 
 .part img:hover,
+.part svg:hover,
 .part .base:hover,
 .part .prog:hover,
 .part a div:hover,
@@ -331,4 +333,10 @@ body {
     -webkit-box-shadow: 0px 0px 16px 8px var(--color_shadow);
     -moz-box-shadow: 0px 0px 16px 8px var(--color_shadow);
     box-shadow: 0px 0px 16px 8px var(--color_shadow);
+}
+
+svg {
+    position: relative;
+    left: 0;
+    top: 0;
 }
