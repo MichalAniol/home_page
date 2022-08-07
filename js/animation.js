@@ -11,7 +11,7 @@
         cA = canvas.getBoundingClientRect(),
         boswer = navigator.appVersion == "5.0 (Windows)" ? false : true,
         now = Date.now(),
-        wC = 2 * Math.PI, // whole circle: 360 degrees
+        wC = 2 * Math.PI, /** whole circle: 360 degrees */
         pos = {
             x: 0,
             y: 0,
@@ -38,7 +38,7 @@
         clock = true;
     mouseOnClock = false;
 
-    window.addEventListener('visibilitychange', () => { // animation visible only when visible
+    window.addEventListener('visibilitychange', () => { /** animation visible only when visible */
         if (document.hidden) {
             clearInterval(anim)
         } else {
@@ -54,13 +54,13 @@
         snake[i] = val;
     }
 
-    document.querySelector('body').addEventListener('mousemove', evt => { // where the cursor points
+    document.querySelector('body').addEventListener('mousemove', evt => { /** where the cursor points */
         pos.x = evt.clientX;
         pos.y = evt.clientY;
         if (boswer) {
-            pos.n = evt.path[1].href
+            pos.n = evt.path[1].href;
         } else {
-            pos.n = evt.originalTarget.parentElement.href
+            pos.n = evt.originalTarget.parentElement.href;
         }
 
         let moX = Math.abs(evt.movementX),
@@ -69,7 +69,7 @@
 
         pos.s = pos.m;
         if (pos.m > 20) {
-            pos.m = 20
+            pos.m = 20;
         }
 
         if (clock) {
@@ -97,19 +97,19 @@
         if (!simple && !clock) {
             if (x > cA.left && x < cA.left + 30 && y > cA.top && y < cA.top + 30) {
                 lock[0] = 1;
-                return
+                return;
             }
             if (x > cA.right - 30 && x < cA.right && y > cA.top && y < cA.top + 30) {
                 lock[1] = 1;
-                return
+                return;
             }
             if (x > cA.left && x < cA.left + 30 && y > cA.bottom - 30 && y < cA.bottom) {
                 lock[2] = 1;
-                return
+                return;
             }
             if (x > cA.right - 30 && x < cA.right && y > cA.bottom - 30 && y < cA.bottom) {
                 lock[3] = 1;
-                return
+                return;
             }
         }
         if (clock) {
@@ -144,10 +144,10 @@
         if (!simple && !clock) {
             simple = true;
             clock = true;
-            return
+            return;
         }
-        if (simple && !clock) { simple = false; return }
-        if (simple && clock) { clock = false }
+        if (simple && !clock) { simple = false; return; }
+        if (simple && clock) { clock = false; }
     }
 
     function animation() {
@@ -162,9 +162,9 @@
                 mil: date.getMilliseconds()
             }
 
-        { // czyszczenie ekranu
+        { /** czyszczenie ekranu */
             ctx.beginPath();
-            ctx.fillStyle = back; //"#111111";
+            ctx.fillStyle = back; /** "#111111"; */
             ctx.rect(0, 0, width, height);
             ctx.fill();
         }
@@ -172,7 +172,7 @@
         ctx.fillStyle = col;
 
         if (!simple) {
-            { // wachadło
+            { /** wachadło */
                 ctx.translate(315 * s, -130 * s);
                 ctx.rotate((Math.PI / 12) * (Math.sin((Math.PI * 2) * (counter[0] / 80))));
 
@@ -185,7 +185,7 @@
                 ctx.setTransform(1, 0, 0, 1, 0, 0);
             }
 
-            { // wyciemnienie pod zegarem
+            { /** wyciemnienie pod zegarem */
                 ctx.translate(350 * s, 145 * s)
 
                 ctx.save();
@@ -199,7 +199,7 @@
                 ctx.setTransform(1, 0, 0, 1, 0, 0);
             }
 
-            { // stoper analogowy
+            { /** stoper analogowy */
                 ctx.translate(235 * s, 130 * s);
                 let time = Date.now() - now,
                     rot = (wC * ((time % 60000) / 60000)) + Math.PI + (Math.PI / 40),
@@ -212,7 +212,7 @@
                 ctx.globalAlpha = 0.7;
                 ctx.beginPath();
                 ctx.arc(0, 0, 45 * s, 0, wC, true);
-                ctx.fill()
+                ctx.fill();
                 ctx.restore();
 
                 let base = 35;
@@ -252,7 +252,7 @@
                     ctx.fill();
                     ctx.rotate(tabStr);
                 }
-                ctx.beginPath(); // środek tarczy
+                ctx.beginPath(); /** środek tarczy */
                 ctx.strokeStyle = col;
                 ctx.lineWidth = 0.3 * s;
                 ctx.arc(0, 0, 17 * s, 0, wC, true);
@@ -300,7 +300,7 @@
                 ctx.rotate(rot);
                 ctx.strokeStyle = back;
                 ctx.lineWidth = 2 * s;
-                ctx.beginPath(); // wskazówka minutnik
+                ctx.beginPath(); /** wskazówka minutnik */
                 ctx.moveTo(0, 23 * s);
                 ctx.lineTo(-7 * s, 9 * s);
                 ctx.lineTo(7 * s, 9 * s);
@@ -310,7 +310,7 @@
 
 
                 ctx.rotate((wC / 80 * counter[0]) + Math.PI);
-                ctx.beginPath(); // wskazówka 4 sekund
+                ctx.beginPath(); /** wskazówka 4 sekund */
                 ctx.rect(-2 * s, -15 * s, 4 * s, 55 * s);
                 ctx.fill();
                 ctx.stroke();
@@ -319,7 +319,7 @@
             }
         }
 
-        if (!clock) { // stoper cyfrowy
+        if (!clock) { /** stoper cyfrowy */
             let time = Date.now() - now;
 
             ctx.save();
@@ -327,28 +327,28 @@
             ctx.globalAlpha = 0.7;
             ctx.beginPath();
             ctx.rect(210 * s, 10 * s, 208 * s, 35 * s);
-            ctx.fill()
+            ctx.fill();
             ctx.restore();
 
             let timeH = Math.floor(time / 3600000);
             if (timeH < 10) {
-                timeH = "0" + timeH.toString()
+                timeH = "0" + timeH.toString();
             } else {
-                timeH = timeH.toString()
+                timeH = timeH.toString();
             }
 
             let timeM = (Math.floor(time / 60000) % 60);
             if (timeM < 10) {
-                timeM = "0" + timeM.toString()
+                timeM = "0" + timeM.toString();
             } else {
-                timeM = timeM.toString()
+                timeM = timeM.toString();
             }
 
             let timeS = (Math.floor(time / 1000) % 60);
             if (timeS < 10) {
-                timeS = "0" + timeS.toString()
+                timeS = "0" + timeS.toString();
             } else {
-                timeS = timeS.toString()
+                timeS = timeS.toString();
             }
 
             let timeP = Math.round(time / (100)).toString();
@@ -362,7 +362,7 @@
         }
 
         if (!simple) {
-            { // kwadraciki
+            { /** kwadraciki */
                 trX = 130 - 14, trY = 80 - 14;
                 ctx.translate(trX * s, trY * s);
 
@@ -371,8 +371,8 @@
                 ctx.fillStyle = back;
 
                 let size = 15 * s,
-                    broo = (3 * s) + size;
-                pu = ((counter[0] % 20) / 20) * broo,
+                    broo = (3 * s) + size,
+                    pu = ((counter[0] % 20) / 20) * broo,
                     boxCase = Math.floor(counter[0] / 20) % 4;
 
                 switch (boxCase) {
@@ -472,7 +472,7 @@
                 ctx.setTransform(1, 0, 0, 1, 0, 0);
             }
 
-            { // kulka lewa
+            { /** kulka lewa */
                 ctx.translate(325 * s, 167 * s);
                 ctx.rotate((Math.PI / 250 * counter[1]) + (Math.PI));
                 rot = (Math.PI / 20) * counter[0];
@@ -496,7 +496,7 @@
                 ctx.setTransform(1, 0, 0, 1, 0, 0);
             }
 
-            { // kulka prawa
+            { /** kulka prawa */
                 ctx.translate(375 * s, 167 * s);
                 ctx.rotate((Math.PI / 41 * counter[2]) + (Math.PI));
 
@@ -513,7 +513,7 @@
                 }
                 moveMem = move;
                 if (moveRound == false) {
-                    move = (8 * s) - move
+                    move = (8 * s) - move;
                 }
 
                 ctx.strokeStyle = back;
@@ -535,7 +535,7 @@
 
             if (!clock) {
                 ctx.font = (50 * s) + "px Rubik";
-                ctx.fillText(timeB, 10 * s, 229 * s); // zegar cyfrowy
+                ctx.fillText(timeB, 10 * s, 229 * s); /** zegar cyfrowy */
             } else {
                 ctx.font = (40 * s) + "px Rubik";
                 ctx.fillText(timeB, ((width / 2) - 99) * s, 180 * s);
@@ -543,7 +543,7 @@
         }
 
 
-        { // zegar tarcza
+        { /** zegar tarcza */
             let ss;
             if (clock) {
                 ss = s * 1.9;
@@ -552,7 +552,7 @@
                 ss = s;
                 ctx.translate(350 * s, 145 * s);
             }
-            rot = wC / (12 * 2 * 5);
+            let rot = wC / (12 * 2 * 5);
 
             function binaryPin(x, y, on) {
                 if (on) {
@@ -573,24 +573,24 @@
                     if (i % 5 == 0) {
                         if (i % 10 == 0) {
                             if (i % 30 == 0) {
-                                ctx.rect(-1.5 * ss, 53 * ss, 3 * ss, 13 * ss)
+                                ctx.rect(-1.5 * ss, 53 * ss, 3 * ss, 13 * ss);
                             } else {
-                                ctx.rect(-1 * ss, 55 * ss, 2 * ss, 8 * ss)
+                                ctx.rect(-1 * ss, 55 * ss, 2 * ss, 8 * ss);
                             }
                         } else {
-                            ctx.rect(-0.5 * ss, 55 * ss, 1 * ss, 7) * ss
+                            ctx.rect(-0.5 * ss, 55 * ss, 1 * ss, 7) * ss;
                         }
                     } else {
-                        ctx.rect(-0.2 * ss, 55 * ss, .4 * ss, 4 * ss)
+                        ctx.rect(-0.2 * ss, 55 * ss, .4 * ss, 4 * ss);
                     }
 
                     ctx.fill();
                     ctx.rotate(rot);
                 }
 
-                // zegar binarny
+                /** zegar binarny */
                 ctx.strokeStyle = col;
-                let binY = -35; // godziny
+                let binY = -35; /** godziny */
                 binaryPin(-31, binY, (p.hou & 32) >> 5);
                 binaryPin(-20, binY, (p.hou & 16) >> 4);
                 binaryPin(-9, binY, (p.hou & 8) >> 3);
@@ -616,7 +616,7 @@
 
             } else {
                 ctx.font = (14 * ss) + "px Rubik";
-                ctx.fillText("a  n  i  o  ł", -30 * ss, -20 * ss); // dzień tygodnia
+                ctx.fillText("a  n  i  o  ł", -30 * ss, -20 * ss); /** dzień tygodnia */
 
                 for (let i = 0; i < 12 * 2 * 5; i++) {
                     ctx.beginPath();
@@ -624,15 +624,15 @@
                     if (i % 5 == 0) {
                         if (i % 10 == 0) {
                             if (i % 30 == 0) {
-                                ctx.rect(-2.5 * ss, 53 * ss, 5 * ss, 13 * ss)
+                                ctx.rect(-2.5 * ss, 53 * ss, 5 * ss, 13 * ss);
                             } else {
-                                ctx.rect(-2 * ss, 55 * ss, 4 * ss, 8 * ss)
+                                ctx.rect(-2 * ss, 55 * ss, 4 * ss, 8 * ss);
                             }
                         } else {
-                            ctx.rect(-0.5 * ss, 55 * ss, 1 * ss, 7) * ss
+                            ctx.rect(-0.5 * ss, 55 * ss, 1 * ss, 7) * ss;
                         }
                     } else {
-                        ctx.rect(-0.5 * ss, 55 * ss, 1 * ss, 4 * ss)
+                        ctx.rect(-0.5 * ss, 55 * ss, 1 * ss, 4 * ss);
                     }
 
                     ctx.fill();
@@ -640,11 +640,11 @@
                 }
             }
 
-            // wskazówki
+            /** wskazówki */
             ctx.strokeStyle = back;
             ctx.lineWidth = 1 * ss;
 
-            rot = Math.PI + ((wC / 720) * ((p.hou * 60) + p.min)); // godzinnik
+            rot = Math.PI + ((wC / 720) * ((p.hou * 60) + p.min)); /** godzinnik */
             ctx.rotate(rot);
             ctx.beginPath();
             if (clock) {
@@ -656,7 +656,7 @@
             ctx.rotate(-rot);
             ctx.stroke();
 
-            rot = Math.PI + ((wC / 3600) * ((p.min * 60) + p.sec)); // minutnik
+            rot = Math.PI + ((wC / 3600) * ((p.min * 60) + p.sec)); /** minutnik */
             ctx.rotate(rot);
             ctx.beginPath();
             if (clock) {
@@ -669,7 +669,7 @@
             ctx.stroke();
 
             ctx.lineWidth = .6 * ss;
-            rot = Math.PI + ((wC / 60000) * ((p.sec * 1000) + p.mil)); // sekundnik
+            rot = Math.PI + ((wC / 60000) * ((p.sec * 1000) + p.mil)); /** sekundnik */
             ctx.rotate(rot);
             ctx.beginPath();
             if (clock) {
@@ -709,7 +709,7 @@
             ctx.setTransform(1, 0, 0, 1, 0, 0);
         }
 
-        if (!clock) { // napisy
+        if (!clock) { /** napisy */
             let dayName;
             switch (date.getDay()) {
                 case 0:
@@ -735,7 +735,7 @@
                     break;
             }
             ctx.font = (40 * s) + "px Rubik";
-            ctx.fillText(dayName, 10 * s, 185 * s); // dzień tygodnia
+            ctx.fillText(dayName, 10 * s, 185 * s); /** dzień tygodnia */
 
             let mouName;
             switch (p.mou) {
@@ -777,39 +777,39 @@
                     break;
             }
             ctx.font = (20 * s) + "px Rubik";
-            ctx.fillText(mouName, 10 * s, 125 * s); // mieśiąc
+            ctx.fillText(mouName, 10 * s, 125 * s); /** mieśiąc */
 
             if (p.mou < 10) {
-                p.mou = "0" + p.mou.toString()
+                p.mou = "0" + p.mou.toString();
             } else {
-                p.mou = p.mou.toString()
+                p.mou = p.mou.toString();
             }
             if (p.day < 10) {
-                p.day = "0" + p.day.toString()
+                p.day = "0" + p.day.toString();
             } else {
-                p.day = p.day.toString()
+                p.day = p.day.toString();
             }
             let timeP = p.yea.toString() + "." + p.mou + "." + p.day;
 
             if (p.min < 10) {
-                p.min = "0" + p.min.toString()
+                p.min = "0" + p.min.toString();
             } else {
-                p.min = p.min.toString()
+                p.min = p.min.toString();
             }
             if (p.sec < 10) {
-                p.sec = "0" + p.sec.toString()
+                p.sec = "0" + p.sec.toString();
             } else {
-                p.sec = p.sec.toString()
+                p.sec = p.sec.toString();
             }
             ctx.font = (26 * s) + "px Rubik";
-            ctx.fillText(timeP, 10 * s, 150 * s); // data
+            ctx.fillText(timeP, 10 * s, 150 * s); /** data */
         }
 
         if (!simple) {
-            { // celownik
+            { /** celownik */
                 ctx.font = (16 * s) + "px Rubik";
-                ctx.fillText(pos.x, 65 * s, 84 * s); // koordynaty X
-                ctx.fillText(pos.y, 65 * s, 104 * s); // koordynaty Y
+                ctx.fillText(pos.x, 65 * s, 84 * s); /** koordynaty X */
+                ctx.fillText(pos.y, 65 * s, 104 * s); /** koordynaty Y */
                 ctx.lineWidth = 0.7 * s;
                 ctx.strokeStyle = col;
 
@@ -862,7 +862,7 @@
                 ctx.restore();
             }
 
-            { // sinusoida
+            { /** sinusoida */
                 let sX = 30 * s,
                     sY = 38 * s;
                 ctx.lineWidth = 0.2 * s;
@@ -875,9 +875,9 @@
                 ctx.beginPath();
                 let si;
                 if (pos.s != 1) {
-                    si = 0
+                    si = 0;
                 } else {
-                    si = Math.sin((counter[1] / 5) * pos.s) * 15
+                    si = Math.sin((counter[1] / 5) * pos.s) * 15;
                 }
                 ctx.lineTo(sX - (20 * s), sY + (si * s));
                 ctx.lineTo(sX, sY + (si * s));
@@ -887,9 +887,9 @@
                 ctx.beginPath();
                 let multip;
                 if (pos.s != 1) {
-                    multip = 1 + (pos.s / 3)
+                    multip = 1 + (pos.s / 3);
                 } else {
-                    multip = 1
+                    multip = 1;
                 }
                 for (let i = 0; i < 100; i++) {
                     si = Math.sin(((i / 11) + (counter[1] / 5)) * multip) * 15;
@@ -901,9 +901,9 @@
                 ctx.beginPath();
                 if (pos.s != 1) {
                     si = 0;
-                    ctx.lineTo(sX + (100 * s), sY + (si * s))
+                    ctx.lineTo(sX + (100 * s), sY + (si * s));
                 } else {
-                    si = Math.sin(((99 / 11) + (counter[1] / 5)) * pos.s) * 15
+                    si = Math.sin(((99 / 11) + (counter[1] / 5)) * pos.s) * 15;
                 }
                 ctx.lineTo(sX + (100 * s), sY + (si * s));
                 ctx.lineTo(sX + 115, sY + (si * s));
@@ -913,16 +913,16 @@
 
                 let siT;
                 if (pos.s != 1) {
-                    siT = pos.s.toString().substr(0, 6)
+                    siT = pos.s.toString().substr(0, 6);
                 } else {
-                    siT = (Math.ceil(-si * 100) / 100).toString()
+                    siT = (Math.ceil(-si * 100) / 100).toString();
                 }
                 ctx.font = (12 * s) + "px Rubik";
                 ctx.fillText(siT, sX + (122 * s), sY + ((si + 5) * s));
             }
 
-            { // adres obiektu wskazywanego
-                if (pos.n != undefined) { // 
+            { /** adres obiektu wskazywanego */
+                if (pos.n != undefined) {
                     ctx.font = (16 * s) + "px Rubik";
 
                     ctx.save();
@@ -952,7 +952,7 @@
                     holeCycle = (snW * 2) + (snH * 2);
                 snMove += sMov + sMov2;
                 if (snMove > holeCycle) {
-                    snMove -= holeCycle
+                    snMove -= holeCycle;
                 }
 
                 for (let i = 0; i < snake.length; i++) {
@@ -1002,13 +1002,13 @@
             }
         }
 
-        if (!clock) { // czas w LA
+        if (!clock) { /** czas w LA */
             ctx.save();
             ctx.fillStyle = back;
             ctx.globalAlpha = 0.7;
             ctx.beginPath();
             ctx.rect(214 * s, 46 * s, 192 * s, 33 * s);
-            ctx.fill()
+            ctx.fill();
             ctx.restore();
 
             switch (LAdate.getDay()) {
@@ -1041,14 +1041,14 @@
             }
 
             if (p.hou < 10) {
-                p.hou = "0" + p.hou.toString()
+                p.hou = "0" + p.hou.toString();
             } else {
-                p.hou = p.hou.toString()
+                p.hou = p.hou.toString();
             }
             if (p.min < 10) {
-                p.min = "0" + p.min.toString()
+                p.min = "0" + p.min.toString();
             } else {
-                p.min = p.min.toString()
+                p.min = p.min.toString();
             }
             time = p.hou.toString() + ":" + p.min;
 
@@ -1064,29 +1064,29 @@
 
             ctx.strokeStyle = col;
             ctx.lineWidth = 1;
-            ctx.beginPath(); // wskazówka minutnik
+            ctx.beginPath(); /** wskazówka minutnik */
             ctx.rect(dayNameW - (3 * s), 48 * s, (415 * s) - dayNameW, 29 * s);
             ctx.stroke();
         }
 
-        if (!clock) { // liczniki
+        if (!clock) { /** liczniki */
             for (let i = 0; i < counter.length; i++) {
-                counter[i]++
+                counter[i]++;
             }
             if (counter[0] > 79) {
                 counter[0] = 0;
                 LAdate = new Date(new Date(Date.now()).toLocaleString("en-US", { timeZone: "America/Los_Angeles" }));
                 if (firstRound == true) {
-                    firstRound = false
+                    firstRound = false;
                 } else {
-                    firstRound = true
+                    firstRound = true;
                 }
             }
             if (counter[1] > 500) {
-                counter[1] = 0
+                counter[1] = 0;
             }
             if (counter[2] > 574) {
-                counter[2] = 0
+                counter[2] = 0;
             }
         }
     }
