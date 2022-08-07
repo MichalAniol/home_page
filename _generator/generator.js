@@ -1,7 +1,7 @@
 const oof = require('./operationsOnFiles');
 
 const start = () => {
-    const CHANGE_PATHS_IMAGES_AT_CSS_CLASS = false;
+    const CHANGE_PATHS_IMAGES_AT_CSS_CLASS = true;
 
     let combinedHtml = '';
 
@@ -77,10 +77,8 @@ const start = () => {
                         let isProg = nameSplitted[nameSplitted.length - 2] === 'prog';
                         let cssFile = isProg ? 'prog' : 'base';
                         let cssImage = '<i class="' + cssFile + ' ' + cssFile + '-' + name + '"></i>'
-                            // console.log('%c name:', 'background: #ffcc00; color: #003300', name, isProg, cssFile)
 
-                        let res = leftLine + cssImage + rightLine;
-                        // console.log('%c res:', 'background: #ffcc00; color: #003300', res)
+                        line = leftLine + cssImage + rightLine;
                     }
                 }
             }
