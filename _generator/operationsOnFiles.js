@@ -55,7 +55,7 @@ const loadCss = name => {
         console.error(err)
     }
 
-    console.log(' loaded css: ' + name);
+    // console.log(' loaded css: ' + name);
 
     return data;
 }
@@ -72,7 +72,7 @@ const loadJs = name => {
         console.error(err)
     }
 
-    console.log(' loaded js: ' + name);
+    // console.log(' loaded js: ' + name);
 
     return data;
 }

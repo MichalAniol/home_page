@@ -27,7 +27,7 @@ const start = () => {
         return res;
     }
 
-    const minify = (code, replaceSvg = true, spaceForCss = false) => {
+    const minify = (code, replaceSvg = true) => {
         let splitted = code.toString().split('\n');
         let res = '';
 
@@ -83,17 +83,17 @@ const start = () => {
                 }
             }
 
-            res += line + (spaceForCss ? ' ' : '');
+            res += line;
         }
 
         return res;
     }
 
     const htmlList = [
-        'head-1.html',
+        ['head-1.html', false],
         'index.css',
         // 'icons.css',
-        'head-2.html',
+        ['head-2.html', false],
 
         'base/main.html',
         'base/video.html',
@@ -139,8 +139,12 @@ const start = () => {
     ]
 
     const loadFile = name => {
+        if (Array.isArray(name)) {
+            return minify(oof.load(name[0]), name[1]);
+        }
+
         if (name.indexOf('.css') > -1) {
-            return '<style>' + minify(oof.loadCss(name), false, true) + '</style>';
+            return '<style>' + minify(oof.loadCss(name), false) + '</style>';
         }
 
         if (name.indexOf('.js') > -1) {
