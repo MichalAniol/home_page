@@ -1,6 +1,8 @@
 const oof = require('./operationsOnFiles');
 
 const start = () => {
+    const CHANGE_PATHS_IMAGES_AT_CSS_CLASS = false;
+
     let combinedHtml = '';
 
     const svgMinify = code => {
@@ -25,7 +27,7 @@ const start = () => {
         return res;
     }
 
-    const minify = code => {
+    const minify = (code, replaceSvg = true, spaceForCss = false) => {
         let splitted = code.toString().split('\n');
         let res = '';
 
@@ -41,75 +43,118 @@ const start = () => {
 
             let line = s.replace('\r', '').substring(lineStart, 10000000);
 
-            let svgOccurs = line.indexOf('.svg');
-            if (svgOccurs > -1) {
-                let img = line.indexOf('<img');
-                let restOfLine = line.substring(img);
-                let endImg = restOfLine.indexOf('/>');
+            if (replaceSvg) {
+                let svgOccurs = line.indexOf('.svg');
+                if (svgOccurs > -1) {
+                    let img = line.indexOf('<img');
+                    let restOfLine = line.substring(img);
+                    let endImg = restOfLine.indexOf('/>');
 
-                let leftLine = line.substring(0, img);
-                let rightLine = line.substring(img + endImg + 2, 10000000);
+                    let leftLine = line.substring(0, img);
+                    let rightLine = line.substring(img + endImg + 2, 10000000);
 
-                let srcSplitted = restOfLine.split('"');
-                let src = srcSplitted[1].substring(2, 10000000);
+                    let srcSplitted = restOfLine.split('"');
+                    let src = srcSplitted[1].substring(2, 10000000);
 
-                let svg = svgMinify(oof.loadSvg(src));
+                    let svg = svgMinify(oof.loadSvg(src));
 
-                line = leftLine + svg + rightLine;
+                    line = leftLine + svg + rightLine;
+                }
+
+                if (CHANGE_PATHS_IMAGES_AT_CSS_CLASS) {
+                    let pngOccurs = line.indexOf('.png');
+                    if (pngOccurs > -1) {
+                        let img = line.indexOf('<img');
+                        let restOfLine = line.substring(img);
+                        let endImg = restOfLine.indexOf('/>');
+
+                        let leftLine = line.substring(0, img);
+                        let rightLine = line.substring(img + endImg + 2, 10000000);
+
+                        let srcSplitted = restOfLine.split('"');
+                        let nameSplitted = srcSplitted[1].split('/');
+                        let name = nameSplitted[nameSplitted.length - 1].replace('.png', '');
+                        let isProg = nameSplitted[nameSplitted.length - 2] === 'prog';
+                        let cssFile = isProg ? 'prog' : 'base';
+                        let cssImage = '<i class="' + cssFile + ' ' + cssFile + '-' + name + '"></i>'
+                            // console.log('%c name:', 'background: #ffcc00; color: #003300', name, isProg, cssFile)
+
+                        let res = leftLine + cssImage + rightLine;
+                        // console.log('%c res:', 'background: #ffcc00; color: #003300', res)
+                    }
+                }
             }
 
-            res += line
+            res += line + (spaceForCss ? ' ' : '');
         }
 
         return res;
     }
 
     const htmlList = [
-        'head',
+        'head-1.html',
+        'index.css',
+        // 'icons.css',
+        'head-2.html',
 
-        'base/main',
-        'base/video',
-        'base/shopping',
-        'base/news',
-        'base/life',
-        'base/time',
-        'base/inspirations',
-        'base/helpers',
-        'base/knowledge',
-        'base/portals',
-        'base/maps',
-        'base/programmes',
-        'base/searchEngines',
-        'base/sounds',
-        'base/retro',
-        'base/games',
-        'base/business',
-        'base/chill',
+        'base/main.html',
+        'base/video.html',
+        'base/shopping.html',
+        'base/news.html',
+        'base/life.html',
+        'base/time.html',
+        'base/inspirations.html',
+        'base/helpers.html',
+        'base/knowledge.html',
+        'base/portals.html',
+        'base/maps.html',
+        'base/programmes.html',
+        'base/searchEngines.html',
+        'base/sounds.html',
+        'base/retro.html',
+        'base/games.html',
+        'base/business.html',
 
-        'programingSection',
+        'programingSection.html',
 
-        'programming/work',
-        'programming/css',
-        'programming/html',
-        'programming/fonts',
-        'programming/javaScript',
-        'programming/colors',
-        'programming/otherStuff',
-        'programming/graphics',
-        'programming/canvas',
-        'programming/frameworks',
-        'programming/mobileApps',
-        'programming/specials',
-        'programming/materials',
-        'programming/codeNotes',
-        'programming/waitingRoom',
+        'programming/work.html',
+        'programming/css.html',
+        'programming/html.html',
+        'programming/fonts.html',
+        'programming/javaScript.html',
+        'programming/colors.html',
+        'programming/otherStuff.html',
+        'programming/graphics.html',
+        'programming/canvas.html',
+        'programming/csharp.html',
+        'programming/frameworks.html',
+        'programming/mobileApps.html',
+        'programming/specials.html',
+        'programming/materials.html',
+        'programming/portals.html',
+        'programming/codeNotes.html',
+        'programming/waitingRoom.html',
 
-        'end',
+        'end-1.html',
+        // 'animation.js',
+        'end-2.html',
     ]
 
-    htmlList.forEach(e => combinedHtml += minify(oof.load(e + '.html')));
+    const loadFile = name => {
+        if (name.indexOf('.css') > -1) {
+            return '<style>' + minify(oof.loadCss(name), false, true) + '</style>';
+        }
 
-    console.log('---------------------------------');
+        if (name.indexOf('.js') > -1) {
+            return '<script>' + minify(oof.loadJs(name), false) + '</script>';
+        }
+
+        return minify(oof.load(name))
+    }
+
+    htmlList.forEach(e => combinedHtml += loadFile(e));
+
+    console.log('>> done <<');
     oof.save('index', combinedHtml);
 }
 

@@ -2,8 +2,8 @@
     font-family: 'Rubik';
     font-style: normal;
     font-weight: 400;
-    src: url('../font/Rubik-Regular.eot');
-    src: local('open sans extralight'), local('open-sans-extralight'), url('../font/Rubik-Regular.eot?#iefix') format('embedded-opentype'), url('../font/Rubik-Regular.woff2') format('woff2'), url('../font/Rubik-Regular.woff') format('woff'), url('../font/Rubik-Regular.ttf') format('truetype'), url('../font/Rubik-Regular.svg#Barlow') format('svg');
+    src: url('./font/Rubik-Regular.eot');
+    src: local('open sans extralight'), local('open-sans-extralight'), url('./font/Rubik-Regular.eot?#iefix') format('embedded-opentype'), url('./font/Rubik-Regular.woff2') format('woff2'), url('./font/Rubik-Regular.woff') format('woff'), url('./font/Rubik-Regular.ttf') format('truetype'), url('./font/Rubik-Regular.svg#Barlow') format('svg');
 }
 
 :root {
@@ -339,4 +339,47 @@ svg {
     position: relative;
     left: 0;
     top: 0;
+}
+
+.tanstackquery {
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    font-size: 24px;
+    font-weight: 700;
+    background-image: -webkit-linear-gradient(45deg, rgb(159, 14, 14), rgb(195, 126, 8) 80%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-fill-color: transparent;
+    line-height: 24px;
+    position: relative;
+    top: -3px;
+}
+
+.turfjs {
+    background-color: rgb(37, 163, 90);
+    color: #fff;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 6.4px;
+    line-height: 24px;
+    text-align: center;
+    padding: 0 0 0 5px;
+}
+
+.appium {
+    background-color: var(--color_2h);
+    color: rgb(147, 198, 111);
+    font-family: "GothamBold", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 24px;
+    padding: 0 5px;
+}
+
+.paperjs {
+    border-bottom-color: rgb(0, 123, 184);
+    color: rgb(39, 183, 255);
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 36px;
 }

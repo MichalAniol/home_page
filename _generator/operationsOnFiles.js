@@ -43,6 +43,40 @@ const loadSvg = name => {
     return data;
 }
 
+const loadCss = name => {
+    const filePath = path_out + '/css/' + name;
+    let data = null;
+
+    try {
+        if (fs.existsSync(filePath)) {
+            data = fs.readFileSync(filePath);
+        }
+    } catch (err) {
+        console.error(err)
+    }
+
+    console.log(' loaded css: ' + name);
+
+    return data;
+}
+
+const loadJs = name => {
+    const filePath = path_out + '/js/' + name;
+    let data = null;
+
+    try {
+        if (fs.existsSync(filePath)) {
+            data = fs.readFileSync(filePath);
+        }
+    } catch (err) {
+        console.error(err)
+    }
+
+    console.log(' loaded js: ' + name);
+
+    return data;
+}
+
 const loadByPat = path => {
     let data = null;
 
@@ -89,7 +123,7 @@ const save = (name, data) => {
     filePath = path_out + '/' + name + '.html';
     fs.writeFileSync(filePath, data);
 
-    console.log(' saved file: ' + filePath);
+    // console.log(' saved file: ' + filePath);
 }
 
-module.exports = { load, loadSvg, readAllFiles, save }
+module.exports = { load, loadSvg, loadCss, loadJs, readAllFiles, save }
