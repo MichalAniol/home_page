@@ -44,7 +44,7 @@ const loadSvg = name => {
 }
 
 const loadCss = name => {
-    const filePath = path_out + '/css/' + name;
+    const filePath = path_out + '/' + name;
     let data = null;
 
     try {
