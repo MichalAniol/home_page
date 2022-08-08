@@ -92,8 +92,7 @@ const start = () => {
     const htmlList = [
         ['head-1.html', false],
         'index.css',
-        // 'icons.css',
-        ['head-2.html', false],
+        'icons.css', ['head-2.html', false],
 
         'base/main.html',
         'base/video.html',
