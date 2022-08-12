@@ -29,6 +29,7 @@ const search = (function() {
     const escape = e => {
         if (e.key == 'Escape') {
             finderHide();
+            curtainHide();
             searcher.blur();
         }
     }
