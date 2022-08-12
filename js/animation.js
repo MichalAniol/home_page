@@ -11,7 +11,8 @@
         cA = canvas.getBoundingClientRect(),
         boswer = navigator.appVersion == "5.0 (Windows)" ? false : true,
         now = Date.now(),
-        wC = 2 * Math.PI, /** whole circle: 360 degrees */
+        wC = 2 * Math.PI,
+        /** whole circle: 360 degrees */
         pos = {
             x: 0,
             y: 0,
@@ -60,7 +61,9 @@
         if (boswer) {
             pos.n = evt.path[1].href;
         } else {
-            pos.n = evt.originalTarget.parentElement.href;
+            if (evt.target.id !== 'searcher') {
+                pos.n = evt.originalTarget.parentElement.href;
+            }
         }
 
         let moX = Math.abs(evt.movementX),
