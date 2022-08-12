@@ -153,7 +153,8 @@ body {
     margin: 0;
 }
 
-.part a {
+.part a,
+#finder a {
     display: inherit;
     margin: 3px 0 0 0;
     color: var(--color_1);
@@ -165,7 +166,14 @@ body {
 .part .base,
 .part .prog,
 .part a div,
-.part .smallpseudoicon {
+.part a,
+.part .smallpseudoicon #finder img,
+#finder svg,
+#finder .base,
+#finder .prog,
+#finder a div,
+#finder a,
+#finder .smallpseudoicon {
     -webkit-transition: all .15s;
     transition: all .15s;
 }
@@ -326,7 +334,14 @@ body {
 .part .base:hover,
 .part .prog:hover,
 .part a div:hover,
-.part .smallpseudoicon:hover {
+.part a:hover,
+.part .smallpseudoicon:hover #finder img:hover,
+#finder svg:hover,
+#finder .base:hover,
+#finder .prog:hover,
+#finder a div:hover,
+#finder a:hover,
+#finder .smallpseudoicon:hover {
     transform: scale(1.08);
     /* border: 2px solid var(--color_back); */
     z-index: 100;
@@ -382,4 +397,66 @@ svg {
     font-size: 30px;
     font-weight: 400;
     line-height: 36px;
+}
+
+.text {
+    font-size: 22px;
+    margin: 0 10px 0 0;
+    color: var(--color_1h);
+}
+
+.searcher {
+    z-index: 1000;
+}
+
+input {
+    background-color: var(--color_2h);
+    border: var(--color_1) solid 2px;
+    margin: 0 0 5px 0;
+    text-align: left;
+    padding: 0 15px;
+    color: var(--color_1h);
+    font-size: 1.1em;
+    width: 150px;
+    font-family: var(--font);
+    height: 24px;
+}
+
+#finder {
+    position: absolute;
+    left: 280px;
+    top: 0;
+    border: var(--color_1h) solid 2px;
+    border-radius: 12px;
+    background-color: var(--color_back);
+    padding: 12px;
+    min-width: 300px;
+    /* min-height: 50px; */
+    max-height: 400px;
+    z-index: 1000;
+}
+
+.found-sites {
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+#close-finder {
+    position: absolute;
+    right: 12px;
+    top: 2px;
+    font-size: 30px;
+    cursor: pointer;
+    color: var(--color_1h);
+}
+
+#finder-output {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 370px;
+}
+
+#finder-output a {
+    margin: 5px;
 }

@@ -81,27 +81,27 @@ function start() {
         basic.push(elem);
     }
 
-    document.addEventListener('keydown', e => {
+    // document.addEventListener('keydown', e => {
 
-        let fol = localStorage.getItem('fold' + title)
-        if (fol != null) {
-            fol = fol.split(',');
-        } else { fol == [] }
+    //     let fol = localStorage.getItem('fold' + title)
+    //     if (fol != null) {
+    //         fol = fol.split(',');
+    //     } else { fol == [] }
 
-        if (e.key == 'p') {
-            for (let item of basic) {
-                let h1 = item.querySelector('h1');
-                if (!fol.some(e => e == item.id)) h1.click();
-            }
-        }
+    //     if (e.key == 'p') {
+    //         for (let item of basic) {
+    //             let h1 = item.querySelector('h1');
+    //             if (!fol.some(e => e == item.id)) h1.click();
+    //         }
+    //     }
 
-        if (e.key == 'o') {
-            for (let item of basic) {
-                let h1 = item.querySelector('h1');
-                if (fol.some(e => e == item.id)) h1.click();
-            }
-        }
-    })
+    //     if (e.key == 'o') {
+    //         for (let item of basic) {
+    //             let h1 = item.querySelector('h1');
+    //             if (fol.some(e => e == item.id)) h1.click();
+    //         }
+    //     }
+    // })
 }
 
 start();

@@ -4,6 +4,21 @@
     <div class="section">
         <a id="hidden" href="secret.html" onclick="hiddenClick(this)"></a>
 
-        <div id="canvas">
-            <canvas id="mycanvas" style="border:0px solid black;"></canvas>
+        <div class="column">
+            <div class="row searcher">
+                <div class="text">search:</div>
+                <input id="searcher" onInput="search.onkeypress(event)" onfocus="search.onfocus()" onfocusout="search.onfocusout()" />
+            </div>
+
+            <div id="finder">
+                <div class="text found-sites" id="search-message">
+
+                </div>
+                <div id="close-finder">X</div>
+                <div id="finder-output"></div>
+            </div>
+
+            <div id="canvas">
+                <canvas id="mycanvas" style="border:0px solid black;"></canvas>
+            </div>
         </div>
