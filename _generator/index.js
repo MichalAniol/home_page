@@ -16,12 +16,6 @@ browserSync.init({
 const watchHtml = () => {
     watch([
         '../*.html',
-        '../*.css',
-        '../favicon.ico',
-        '../img/*svg',
-        '../img/base/*.png',
-        '../img/prog/*.png',
-        '../img/update/*.png'
     ], () => {
         const now = new Date(Date.now());
         const getZero = num => num < 10 ? '0' + num : num;
@@ -39,6 +33,12 @@ const watchChanges = () => {
         'splittedHtml/*.html',
         'splittedHtml/base/*.html',
         'splittedHtml/programming/*.html',
+        '../*.css',
+        '../favicon.ico',
+        '../img/*svg',
+        '../img/base/*.png',
+        '../img/prog/*.png',
+        '../img/update/*.png'
     ], () => {
         connector.start();
         watchChanges();
