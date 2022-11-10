@@ -155,7 +155,7 @@ const start = () => {
 
     htmlList.forEach(e => combinedHtml += loadFile(e));
 
-    console.log('>> done <<');
+    // console.log('>> done <<');
     oof.save('index', combinedHtml);
 }
 
