@@ -1,7 +1,7 @@
 const oof = require('./operationsOnFiles');
 
 const start = () => {
-    const CHANGE_PATHS_IMAGES_AT_CSS_CLASS = true;
+    const CHANGE_PATHS_IMAGES_AT_CSS_CLASS = false;
 
     let combinedHtml = '';
 
@@ -126,6 +126,9 @@ const start = () => {
         'programming/csharp.html',
         'programming/frameworks.html',
         'programming/mobileApps.html',
+        'programming/engines.html',
+        'programming/crypto.html',
+        'programming/ai.html',
         'programming/specials.html',
         'programming/materials.html',
         'programming/portals.html',

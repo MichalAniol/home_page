@@ -167,12 +167,15 @@ body {
 .part .prog,
 .part a div,
 .part a,
-.part .smallpseudoicon #finder img,
+.part smallinfo,
+.part .smallpseudoicon,
+#finder img,
 #finder svg,
 #finder .base,
 #finder .prog,
 #finder a div,
 #finder a,
+#finder smallinfo,
 #finder .smallpseudoicon {
     -webkit-transition: all .15s;
     transition: all .15s;
@@ -261,6 +264,15 @@ body {
     transition: all .15s;
 }
 
+.smallinfo {
+    padding: 2px;
+    background-color: var(--color_2h);
+    width: max-content;
+    font-size: 12px;
+    -webkit-transition: all .15s;
+    transition: all .15s;
+}
+
 .consolas {
     font-family: Consolas;
     letter-spacing: 5px;
@@ -329,18 +341,25 @@ body {
     margin-left: 8px !important;
 }
 
+.ml4 {
+    margin-left: 4px !important;
+}
+
 .part img:hover,
 .part svg:hover,
 .part .base:hover,
 .part .prog:hover,
 .part a div:hover,
 .part a:hover,
-.part .smallpseudoicon:hover #finder img:hover,
+.part smallinfo:hover,
+.part .smallpseudoicon:hover,
+#finder img:hover,
 #finder svg:hover,
 #finder .base:hover,
 #finder .prog:hover,
 #finder a div:hover,
 #finder a:hover,
+#finder smallinfo:hover,
 #finder .smallpseudoicon:hover {
     transform: scale(1.08);
     /* border: 2px solid var(--color_back); */
@@ -348,6 +367,16 @@ body {
     -webkit-box-shadow: 0px 0px 16px 8px var(--color_shadow);
     -moz-box-shadow: 0px 0px 16px 8px var(--color_shadow);
     box-shadow: 0px 0px 16px 8px var(--color_shadow);
+}
+
+.part .static svg:hover,
+.part .static div:hover,
+#finder .static svg:hover,
+#finder .static div:hover {
+    transform: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
 }
 
 svg {
@@ -397,6 +426,13 @@ svg {
     font-size: 30px;
     font-weight: 400;
     line-height: 36px;
+}
+
+.rainbow-text {
+    background: linear-gradient(90deg, #0029ff 0, #ff008a);
+    color: #fff;
+    padding: 2px 4px;
+    font-weight: 600;
 }
 
 .text {
