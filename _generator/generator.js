@@ -121,13 +121,14 @@ const start = () => {
         'programming/javaScript.html',
         'programming/colors.html',
         'programming/otherStuff.html',
+        'programming/websiteAnalyst.html',
         'programming/graphics.html',
         'programming/canvas.html',
         'programming/csharp.html',
         'programming/frameworks.html',
         'programming/mobileApps.html',
-        'programming/engines.html',
         'programming/crypto.html',
+        'programming/engines.html',
         'programming/ai.html',
         'programming/specials.html',
         'programming/materials.html',
@@ -158,7 +159,6 @@ const start = () => {
 
     htmlList.forEach(e => combinedHtml += loadFile(e));
 
-    // console.log('>> done <<');
     oof.save('index', combinedHtml);
 }
 
