@@ -6,11 +6,12 @@ const browserSync = require('browser-sync').create();
 
 const app = express();
 const PORT = 5000;
+const PROXY_PORT = 3000;
 
 app.use(express.static('../'));
 
 browserSync.init({
-    proxy: 'http://localhost:5000/',
+    proxy: 'http://localhost:' + PORT + '/',
 });
 
 const watchHtml = () => {
@@ -48,4 +49,5 @@ watchChanges();
 
 const server = app.listen(PORT, () => {
     console.log('Listening on: http://localhost:' + PORT + '/');
+    console.log('Listening on: http://localhost:' + PROXY_PORT + '/');
 });
