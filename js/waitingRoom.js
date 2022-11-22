@@ -16,6 +16,12 @@ const waitingRoomFoo = () => {
     }, {
         name: 'GraphQL',
         href: 'https://cezarywalenciuk.pl/blog/programing/odczytywanie-graphql-api-klient-w-aspnet-core',
+    }, {
+        name: 'Graph Drawing',
+        href: 'https://cs.brown.edu/people/rtamassi/gdhandbook/',
+    }, {
+        name: 'cs.brown.edu',
+        href: 'https://cs.brown.edu/research/pubs/theses/phd/',
     }, ]
 
     for (const site of newSites) {
