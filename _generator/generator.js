@@ -98,6 +98,7 @@ const start = () => {
         'base/video.html',
         'base/shopping.html',
         'base/news.html',
+        'base/babskie.html',
         'base/life.html',
         'base/time.html',
         'base/inspirations.html',
