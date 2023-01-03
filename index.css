@@ -278,6 +278,16 @@ body {
     letter-spacing: 5px;
 }
 
+.chatGPT {
+    font-family: 'Söhne', 'ui-sans-serif', 'system-ui', '-apple-system', 'Segoe UI', Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, Helvetica Neue, Arial, Apple 'Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 32px;
+    color: rgb(142, 142, 154);
+    padding: 0 8px;
+    background-color: rgb(21, 21, 21);
+}
+
 .times {
     font-family: 'Times New Roman';
     font-size: 20px;
