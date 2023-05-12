@@ -11,10 +11,17 @@ minify js/searcher.js > js/searcher.min.js
 css-minify --dir "./" --output "./"
 
 ```
----
-### CSS minify:
 ```
-npm install css-minify -g
-
-css-minify --dir "./" --output "./"
+minify index.js > index.min.js
+```
+---
+##### to convert typescript files install:
+```
+npm install -g typescript
+```
+then run:
+```
+Ctrl+Shift+B:
+tsc: build - tsconfig.json
+tsc: watch - tsconfig.json
 ```
