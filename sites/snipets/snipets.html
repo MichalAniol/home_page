@@ -10,7 +10,7 @@
 <body>
 
     <div class="part">
-        <h1 onclick="foldArea(this)">Klasy, atrybuty i propertisy</h1>
+        <h1>Klasy, atrybuty i propertisy</h1>
         <div class="fold column">
             <div class="text">
                 <b>setAttribute - getAttribute</b><br>
@@ -26,7 +26,7 @@
     </div>
 
     <div class="part">
-        <h1 onclick="foldArea(this)">Wstawianie elementów HTML</h1>
+        <h1>Wstawianie elementów HTML</h1>
         <div class="fold column">
             <div class="text">
                 <b>beforebegin</b> Wstawia element przed docelowym elementem. Działa podobnie do metody
@@ -45,7 +45,7 @@
     </div>
 
     <div class="part">
-        <h1 onclick="foldArea(this)">Klonowanie elementów HTML</h1>
+        <h1>Klonowanie elementów HTML</h1>
         <div class="fold column">
             <div class="text"> const el = document.querySelector(".to-clone");<br><br> const cloneEl1 = el.
                 <b>cloneNode()</b>;<br> console.log(cloneEl1); //&lt;div class="to-clone">&lt;/div><br><br> const cloneEl2 = el.<b>cloneNode(true)</b>;<br> console.log(cloneEl2); //&lt;div class="to-clone">&lt;strong>Testowy&lt;/strong>&lt;/div>
@@ -54,7 +54,7 @@
     </div>
 
     <div class="part">
-        <h1 onclick="foldArea(this)">Usówanie elementów HTML</h1>
+        <h1>Usówanie elementów HTML</h1>
         <div class="fold column">
             <div class="text"> parent.<b>removeChild(el);</b><br> elem.
                 <b>remove();</b><br><br> while (ul.firstChild) {<br> &#160; &#160; ul.removeChild(ul.firstChild); // lub div.firstChild.remove()
@@ -66,7 +66,7 @@
     </div>
 
     <div class="part">
-        <h1 onclick="foldArea(this)">Tworzenie fragmentów HTML</h1>
+        <h1>Tworzenie fragmentów HTML</h1>
         <div class="fold column">
             <div class="text"> const fragment = document.<b>createDocumentFragment()</b>;<br> for (let i = 0; i &lt; 10; i++) {<br> &#160; &#160; const p= document.createElement("p"); // tworzy fragment dokumentu<br> &#160; &#160; p.appendChild(document.createTextNode("
                 Akapit"+(i+1)));

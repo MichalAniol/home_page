@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "AMD",
+    "noImplicitAny": true,
+    "removeComments": true,
+    "preserveConstEnums": false,
+    "sourceMap": false,
+    "downlevelIteration": false,
+    "outFile": "index.js"
+  },
+  "files": [
+    "ts/1_waitingRoom.ts",
+    "ts/2_index.ts",
+    "ts/3_animation.ts",
+    "ts/4_searcher.ts",
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

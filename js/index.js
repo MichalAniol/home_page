@@ -109,6 +109,7 @@ start();
 
 const CopyToClipboard = (but, containerid) => {
     if (document.selection) {
+        console.log('%c document:', 'background: #ffcc00; color: #003300')
         var range = document.body.createTextRange();
         range.moveToElementText(document.getElementById(containerid));
         range.select().createTextRange();
@@ -118,6 +119,7 @@ const CopyToClipboard = (but, containerid) => {
             range.select().createTextRange();
         }, 30);
     } else if (window.getSelection) {
+        console.log('%c window:', 'background: #ffcc00; color: #003300')
         var range = document.createRange();
         range.selectNode(document.getElementById(containerid));
         window.getSelection().addRange(range);
@@ -150,5 +152,5 @@ const CopyToClipboard = (but, containerid) => {
         'padding: 10px 0 15px 0'
     ].join(';');
 
-    console.log('%c👉 𝐇𝐎𝐌𝐄 𝐏𝐀𝐆𝐄 👈\nautor: Michal Aniol 😎', styles);
+    console.log('%c👉 𝐇𝐎𝐌𝐄 𝐏𝐀𝐆𝐄 👈\nautor: Michal Aniol 😎11', styles);
 }
