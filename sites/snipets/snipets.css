@@ -1,3 +1,22 @@
+@font-face {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./font/Rubik-Regular.eot');
+    src: local('open sans extralight'), local('open-sans-extralight'), url('./font/Rubik-Regular.eot?#iefix') format('embedded-opentype'), url('./font/Rubik-Regular.woff2') format('woff2'), url('./font/Rubik-Regular.woff') format('woff'), url('./font/Rubik-Regular.ttf') format('truetype'), url('./font/Rubik-Regular.svg#Barlow') format('svg');
+}
+
+:root {
+    --color_1: #006600;
+    --color_1h: #009c00;
+    --color_2: #001600;
+    --color_2h: #002e00;
+    --color_3: #000800;
+    --color_back: black;
+    --color_shadow: rgba(0, 0, 0, 0.75);
+    --font: 'Rubik', sans-serif;
+}
+
 body {
     margin: 10px 50px;
     padding: 0;
