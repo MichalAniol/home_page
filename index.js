@@ -656,10 +656,9 @@ const SunCalc = (function () {
     const DAY = 24 * HOUR;
     const MOON_PHASES = DAY * 29.5306;
     const SPREAD = 40;
-    const BODY_BORDER_HORIZONTAL = 50;
-    const BODY_BORDER_VERTICAL = 15;
+    const BODY_BORDER = 40;
     const TOLERANCE = .4;
-    const ORIGIN_SCALE = .8;
+    const ORIGIN_SCALE = .85;
     let scale = ORIGIN_SCALE;
     const worldCanvas = document.getElementById("worldCanvas");
     const worldContext = worldCanvas.getContext("2d");
@@ -871,7 +870,7 @@ const SunCalc = (function () {
             drawMoon(now);
         };
         if (scale === ORIGIN_SCALE) {
-            scale = window.innerWidth / (SPREAD + world.width + SPREAD + BODY_BORDER_HORIZONTAL);
+            scale = window.innerWidth / (SPREAD + world.width + SPREAD + BODY_BORDER);
             celestialAnimationElem.style.height = (world.height * scale) + 20 + 'px';
             redraw();
         }
