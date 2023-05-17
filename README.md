@@ -25,3 +25,7 @@ Ctrl+Shift+B:
 tsc: build - tsconfig.json
 tsc: watch - tsconfig.json
 ```
+##### minify settings:
+https://www.npmjs.com/package/minify
+https://github.com/kangax/html-minifier
+https://github.com/terser/terser
