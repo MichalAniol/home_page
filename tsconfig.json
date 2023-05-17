@@ -12,8 +12,10 @@
   "files": [
     "ts/1_waitingRoom.ts",
     "ts/2_index.ts",
-    "ts/3_animation.ts",
-    "ts/4_searcher.ts",
+    "ts/7_worldData.ts",
+    "ts/8_moonData.ts",
+    "ts/9_animation.ts",
+    "ts/10_searcher.ts",
   ],
   "exclude": [
     "node_modules"
