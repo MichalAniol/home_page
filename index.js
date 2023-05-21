@@ -1,6 +1,7 @@
 const waitingRoomFoo = () => {
     const waitingRoom = document.getElementById('waiting-room');
-    const newSites = [{
+    const newSites = [
+        {
             name: 'kroniki myrtany',
             href: 'https://kronikimyrtany.pl/pl',
         }, {
@@ -21,13 +22,30 @@ const waitingRoomFoo = () => {
         }, {
             name: 'cs.brown.edu',
             href: 'https://cs.brown.edu/research/pubs/theses/phd/',
-        },];
-    for (const site of newSites) {
+        }, {
+            name: 'kent on hoppas',
+            href: 'https://kentonhoppas.com/',
+        }, {
+            name: 'CERT-Polska',
+            href: 'https://github.com/CERT-Polska',
+        },
+    ];
+    let column;
+    const setNewColumn = () => {
+        column = document.createElement('div');
+        column.className = 'waiting-room-colum';
+        waitingRoom.appendChild(column);
+    };
+    setNewColumn();
+    for (let i = 0; i < newSites.length; ++i) {
+        if (i % 5 === 10)
+            setNewColumn();
         const a = document.createElement('a');
+        const site = newSites[i];
         a.href = site.href;
         a.innerHTML = site.name;
         a.className = 'smallpseudoicon';
-        waitingRoom.appendChild(a);
+        column.appendChild(a);
     }
 };
 waitingRoomFoo();
