@@ -858,8 +858,8 @@ const SunCalc = (function () {
         solarNoonElem.innerHTML = getTime(solarNoon);
         sunsetElem.innerHTML = getTime(sunset);
         const { rise: moonRise, set: moonSet } = SunCalc.getMoonTimes(now, position.latitude, position.longitude, false);
-        moonRiseElem.innerHTML = getTime(moonRise);
-        moonSetElem.innerHTML = getTime(moonSet);
+        moonRiseElem.innerHTML = moonRise ? getTime(moonRise) : '---';
+        moonSetElem.innerHTML = moonSet ? getTime(moonSet) : '---';
     };
     init();
     celestialAnimationElem.addEventListener('click', () => {

@@ -141,7 +141,6 @@ const start = () => {
         'programming/waitingRoom.html',
 
         'end-1.html',
-        // 'animation.js',
         'end-2.html',
     ]
 
