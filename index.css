@@ -581,3 +581,21 @@ input {
 #finder-output a {
     margin: 5px;
 }
+
+.ml5 {
+    margin-left: 5px;
+}
+.ml12 {
+    margin-left: 12px;
+}
+
+#waiting-room {
+    display: flex;
+    flex-direction: row;
+}
+
+.waiting-room-colum {
+    margin-right: 3px;
+    display: flex;
+    flex-direction: column;
+}

@@ -91,30 +91,30 @@ const start = () => {
 
     const htmlList = [
         ['head-1.html', false],
-        // 'index.css',
-        'index.min.css',
+        'index.css',
+        // 'index.min.css',
         // 'icons.css', 
         'icons.min.css', 
         ['head-2.html', false],
 
-        'base/main.html',
-        'base/video.html',
+        'base/searchers.html',
         'base/shopping.html',
-        'base/news.html',
+        'base/contacts.html',
+        'base/portals1.html',
         'base/babskie.html',
-        'base/life.html',
-        'base/time.html',
+        'base/video.html',
         'base/inspirations.html',
         'base/helpers.html',
-        'base/knowledge.html',
-        'base/portals.html',
-        'base/maps.html',
-        'base/programmes.html',
-        'base/searchEngines.html',
+        'base/time.html',
         'base/sounds.html',
+        'base/knowledge.html',
+        'base/portals2.html',
+        'base/maps.html',
         'base/retro.html',
         'base/games.html',
         'base/business.html',
+        'base/portalsEng.html',
+        'base/programmes.html',
 
         'programingSection.html',
 
@@ -141,7 +141,6 @@ const start = () => {
         'programming/waitingRoom.html',
 
         'end-1.html',
-        // 'animation.js',
         'end-2.html',
     ]
 
