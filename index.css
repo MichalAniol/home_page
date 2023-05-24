@@ -140,7 +140,6 @@ body {
 .sunData {
     margin-bottom: 3px;
     width: min-content;
-    visibility: hidden;
 }
 
 .celestialIcon {
