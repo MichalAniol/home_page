@@ -35,6 +35,9 @@ const waitingRoomFoo = () => {
         },{
             name: 'weather icons',
             href: 'https://erikflowers.github.io/weather-icons/',
+        },{
+            name: 'goal kicker',
+            href: 'https://goalkicker.com/',
         },
     ]
     

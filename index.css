@@ -26,6 +26,7 @@ body {
     color: var(--color_1);
     font-family: var(--font);
     font-size: 16px;
+    color: #032703;
 }
 
 .popup {
@@ -124,11 +125,6 @@ body {
     flex-direction: row;
 }
 
-.columnCelestial {
-    display: flex;
-    flex-direction: column;
-}
-
 .celestialData {
     margin-bottom: 3px;
 }
@@ -141,18 +137,10 @@ body {
     top: 0;
 }
 
-.moonTimes {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    align-items: flex-start;
-    transform-origin: 0 0;
-    top: 0;
-}
-
 .sunData {
     margin-bottom: 3px;
     width: min-content;
+    visibility: hidden;
 }
 
 .celestialIcon {
@@ -164,6 +152,12 @@ body {
     font-size: 20px;
     margin: 5px 7px 0 7px;
     text-shadow: 0px 0px 4px #000;
+}
+
+#moonRiseBox, #moonSetBox {
+    position: absolute;
+    left: 0;
+    top: 0;
 }
 
 
