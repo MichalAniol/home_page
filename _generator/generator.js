@@ -130,6 +130,7 @@ const start = () => {
         'programming/canvas.html',
         'programming/csharp.html',
         'programming/frameworks.html',
+        'programming/libraries.html',
         'programming/mobileApps.html',
         'programming/crypto.html',
         'programming/engines.html',
