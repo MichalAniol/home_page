@@ -38,6 +38,9 @@ const waitingRoomFoo = () => {
         },{
             name: 'goal kicker',
             href: 'https://goalkicker.com/',
+        },{
+            name: 'zaprogramuj zycie',
+            href: 'https://zaprogramujzycie.pl/',
         },
     ]
     
