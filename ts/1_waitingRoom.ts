@@ -32,6 +32,9 @@ const waitingRoomFoo = () => {
         },{
             name: 'rangeengine',
             href: 'https://rangeengine.tech/',
+        },{
+            name: 'weather icons',
+            href: 'https://erikflowers.github.io/weather-icons/',
         },
     ]
     
