@@ -28,6 +28,18 @@ const waitingRoomFoo = () => {
         }, {
             name: 'CERT-Polska',
             href: 'https://github.com/CERT-Polska',
+        }, {
+            name: 'rangeengine',
+            href: 'https://rangeengine.tech/',
+        }, {
+            name: 'weather icons',
+            href: 'https://erikflowers.github.io/weather-icons/',
+        }, {
+            name: 'goal kicker',
+            href: 'https://goalkicker.com/',
+        }, {
+            name: 'zaprogramuj zycie',
+            href: 'https://zaprogramujzycie.pl/',
         },
     ];
     let column;
@@ -38,7 +50,7 @@ const waitingRoomFoo = () => {
     };
     setNewColumn();
     for (let i = 0; i < newSites.length; ++i) {
-        if (i % 5 === 10)
+        if (i % 10 === 0)
             setNewColumn();
         const a = document.createElement('a');
         const site = newSites[i];
@@ -698,7 +710,9 @@ const SunCalc = (function () {
     const solarNoonElem = document.getElementById('solarNoon');
     const sunsetElem = document.getElementById('sunset');
     const moonRiseElem = document.getElementById('moonRise');
+    const moonRiseBoxElem = document.getElementById('moonRiseBox');
     const moonSetElem = document.getElementById('moonSet');
+    const moonSetBoxElem = document.getElementById('moonSetBox');
     const timerElem = document.getElementById('timer');
     const updateNow = () => now = new Date();
     const getTime = (date) => {
@@ -710,8 +724,8 @@ const SunCalc = (function () {
     };
     const hexColors = {
         earth: {
-            day: '#073a07',
-            night: '#062106',
+            day: '#094e09',
+            night: '#032703',
         },
         ocean: {
             day: '#072d07',
@@ -775,8 +789,6 @@ const SunCalc = (function () {
         });
         const sunTimesElem = document.getElementById('sunTimes');
         sunTimesElem.style.left = ((world.width + SPREAD + SPREAD) * scale) + 'px';
-        const moonTimesElem = document.getElementById('moonTimes');
-        moonTimesElem.style.left = '0px';
     };
     const worldHeight = world.rowsLength.length;
     const worldCenterHeight = worldHeight / 2;
@@ -876,6 +888,28 @@ const SunCalc = (function () {
         solarNoonElem.innerHTML = getTime(solarNoon);
         sunsetElem.innerHTML = getTime(sunset);
         const { rise: moonRise, set: moonSet } = SunCalc.getMoonTimes(now, position.latitude, position.longitude, false);
+        if (!!moonRise && !!moonRise) {
+            if (moonRise.getTime() < moonSet.getTime()) {
+                moonRiseBoxElem.style.top = '0';
+                moonSetBoxElem.style.top = '30px';
+            }
+            else {
+                moonRiseBoxElem.style.top = '30px';
+                moonSetBoxElem.style.top = '0';
+            }
+        }
+        if (!!moonRise && !moonRise) {
+            moonRiseBoxElem.style.top = '0';
+            moonSetBoxElem.style.visibility = 'hidden';
+        }
+        if (!moonRise && !!moonRise) {
+            moonRiseBoxElem.style.visibility = 'hidden';
+            moonSetBoxElem.style.top = '0';
+        }
+        if (!moonRise && !!moonRise) {
+            moonRiseBoxElem.style.visibility = 'hidden';
+            moonSetBoxElem.style.visibility = 'hidden';
+        }
         moonRiseElem.innerHTML = moonRise ? getTime(moonRise) : '---';
         moonSetElem.innerHTML = moonSet ? getTime(moonSet) : '---';
     };

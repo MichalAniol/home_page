@@ -373,9 +373,12 @@ type ColorsT = {
     const sunsetElem = document.getElementById('sunset')
 
     const moonRiseElem = document.getElementById('moonRise')
+    const moonRiseBoxElem = document.getElementById('moonRiseBox')
     const moonSetElem = document.getElementById('moonSet')
+    const moonSetBoxElem = document.getElementById('moonSetBox')
 
     const timerElem = document.getElementById('timer')
+
 
     // helpers
     const updateNow = () => now = new Date()
@@ -391,8 +394,8 @@ type ColorsT = {
 
     const hexColors = {
         earth: {
-            day: '#073a07',
-            night: '#062106',
+            day: '#094e09',
+            night: '#032703',
         },
         ocean: {
             day: '#072d07',
@@ -468,8 +471,7 @@ type ColorsT = {
         const sunTimesElem = document.getElementById('sunTimes')
         sunTimesElem.style.left = ((world.width + SPREAD + SPREAD) * scale) + 'px'
 
-        const moonTimesElem = document.getElementById('moonTimes')
-        moonTimesElem.style.left = '0px'
+
     }
 
     const worldHeight = world.rowsLength.length
@@ -587,6 +589,29 @@ type ColorsT = {
         sunsetElem.innerHTML = getTime(sunset)
 
         const { rise: moonRise, set: moonSet } = SunCalc.getMoonTimes(now, position.latitude, position.longitude, false)
+
+        if (!!moonRise && !!moonRise) {
+            if (moonRise.getTime() < moonSet.getTime()) {
+                moonRiseBoxElem.style.top = '0'
+                moonSetBoxElem.style.top = '30px'
+            } else {
+                moonRiseBoxElem.style.top = '30px'
+                moonSetBoxElem.style.top = '0'
+            }
+        }
+        if (!!moonRise && !moonRise) {
+            moonRiseBoxElem.style.top = '0'
+            moonSetBoxElem.style.visibility = 'hidden'
+        }
+        if (!moonRise && !!moonRise) {
+            moonRiseBoxElem.style.visibility = 'hidden'
+            moonSetBoxElem.style.top = '0'
+        }
+        if (!moonRise && !!moonRise) {
+            moonRiseBoxElem.style.visibility = 'hidden'
+            moonSetBoxElem.style.visibility = 'hidden'
+        }
+
         moonRiseElem.innerHTML = moonRise ? getTime(moonRise) : '---'
         moonSetElem.innerHTML = moonSet ? getTime(moonSet) : '---'
     }
