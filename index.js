@@ -871,7 +871,6 @@ const SunCalc = (function () {
                 const move = (x % MOON_MAX_INDEX) * 4;
                 const bitArea = MOON_CELL << move;
                 let value = ((row[Math.floor(x / MOON_MAX_INDEX)] & bitArea) >>> move) * 15;
-                console.log('%c value:', 'background: #ffcc00; color: #003300', value, move);
                 let light;
                 if (shadowLeftSide) {
                     light = moonWidth - shadowLength < x;
@@ -922,7 +921,6 @@ const SunCalc = (function () {
     };
     init();
     celestialAnimationElem.addEventListener('click', () => {
-        console.log('%c scale:', 'background: #ffcc00; color: #003300', scale);
         const redraw = () => {
             init();
             drawWorld();
