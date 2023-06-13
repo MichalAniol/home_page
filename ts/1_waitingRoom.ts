@@ -29,8 +29,21 @@ const waitingRoomFoo = () => {
         },{
             name: 'CERT-Polska',
             href: 'https://github.com/CERT-Polska',
+        },{
+            name: 'rangeengine',
+            href: 'https://rangeengine.tech/',
+        },{
+            name: 'weather icons',
+            href: 'https://erikflowers.github.io/weather-icons/',
+        },{
+            name: 'goal kicker',
+            href: 'https://goalkicker.com/',
+        },{
+            name: 'zaprogramuj zycie',
+            href: 'https://zaprogramujzycie.pl/',
         },
     ]
+    
 
     let column: HTMLDivElement
     const setNewColumn = () => {
@@ -41,7 +54,7 @@ const waitingRoomFoo = () => {
     setNewColumn()
 
     for (let i = 0; i < newSites.length; ++i) {
-        if (i % 5 === 10) setNewColumn()
+        if (i % 10 === 0) setNewColumn()
 
         const a = document.createElement('a')
 

@@ -345,6 +345,10 @@ type ColorsT = {
     const ORIGIN_SCALE = .85
     let scale = ORIGIN_SCALE
 
+    const CELL_WORLD_LENGTH = 30
+    const MOON_MAX_INDEX = 7
+    const MOON_CELL = 15
+
     const worldCanvas = <HTMLCanvasElement>document.getElementById("worldCanvas")
     const worldContext: CanvasRenderingContext2D = worldCanvas.getContext("2d")
 
@@ -373,9 +377,12 @@ type ColorsT = {
     const sunsetElem = document.getElementById('sunset')
 
     const moonRiseElem = document.getElementById('moonRise')
+    const moonRiseBoxElem = document.getElementById('moonRiseBox')
     const moonSetElem = document.getElementById('moonSet')
+    const moonSetBoxElem = document.getElementById('moonSetBox')
 
     const timerElem = document.getElementById('timer')
+
 
     // helpers
     const updateNow = () => now = new Date()
@@ -391,8 +398,8 @@ type ColorsT = {
 
     const hexColors = {
         earth: {
-            day: '#073a07',
-            night: '#062106',
+            day: '#094e09',
+            night: '#032703',
         },
         ocean: {
             day: '#072d07',
@@ -467,9 +474,6 @@ type ColorsT = {
 
         const sunTimesElem = document.getElementById('sunTimes')
         sunTimesElem.style.left = ((world.width + SPREAD + SPREAD) * scale) + 'px'
-
-        const moonTimesElem = document.getElementById('moonTimes')
-        moonTimesElem.style.left = '0px'
     }
 
     const worldHeight = world.rowsLength.length
@@ -510,9 +514,9 @@ type ColorsT = {
             for (let x = 0; x < worldWidth; ++x) {
                 const longitude = ((x - worldCenterWidth) / worldWidth) * 360
                 const altitude = SunCalc.getPosition(now, latitude, longitude)
-                let data = world.data[y][x]
+                let data = world.data[y][Math.floor(x / CELL_WORLD_LENGTH)] & 1 << x % CELL_WORLD_LENGTH
 
-                const { r, g, b } = getColor(altitude, data === 1)
+                const { r, g, b } = getColor(altitude, data > 0)
 
                 const pos = ((y * world.width) + x + rowStart) * 4
                 worldImageData.data[pos] = r
@@ -559,13 +563,16 @@ type ColorsT = {
             const moonWidth = moon.rowsLength[y]
             const shadowLength = moonWidth * shadow
             for (let x = 0; x < moonWidth; ++x) {
-                let value = moon.data[y][x]
+                const row = moon.data[y]
+                const move = (x % MOON_MAX_INDEX) * 4
+                const bitArea = MOON_CELL << move
+                let value = ((row[Math.floor(x / MOON_MAX_INDEX)] & bitArea) >>> move) * 15
 
                 let light: boolean
                 if (shadowLeftSide) {
-                    light = x < shadowLength
+                    light = moonWidth - shadowLength < x
                 } else {
-                    light = x > shadowLength
+                    light = moonWidth - shadowLength > x
                 }
                 const color = getColor(value, light)
 
@@ -587,6 +594,29 @@ type ColorsT = {
         sunsetElem.innerHTML = getTime(sunset)
 
         const { rise: moonRise, set: moonSet } = SunCalc.getMoonTimes(now, position.latitude, position.longitude, false)
+
+        if (!!moonRise && !!moonRise) {
+            if (moonRise.getTime() < moonSet.getTime()) {
+                moonRiseBoxElem.style.top = '0'
+                moonSetBoxElem.style.top = (30 * scale) + 'px'
+            } else {
+                moonRiseBoxElem.style.top = (30 * scale) + 'px'
+                moonSetBoxElem.style.top = '0'
+            }
+        }
+        if (!!moonRise && !moonRise) {
+            moonRiseBoxElem.style.top = '0'
+            moonSetBoxElem.style.visibility = 'hidden'
+        }
+        if (!moonRise && !!moonRise) {
+            moonRiseBoxElem.style.visibility = 'hidden'
+            moonSetBoxElem.style.top = '0'
+        }
+        if (!moonRise && !!moonRise) {
+            moonRiseBoxElem.style.visibility = 'hidden'
+            moonSetBoxElem.style.visibility = 'hidden'
+        }
+
         moonRiseElem.innerHTML = moonRise ? getTime(moonRise) : '---'
         moonSetElem.innerHTML = moonSet ? getTime(moonSet) : '---'
     }
@@ -595,11 +625,11 @@ type ColorsT = {
     init()
 
     celestialAnimationElem.addEventListener('click', () => {
-        console.log('%c scale:', 'background: #ffcc00; color: #003300', scale)
         const redraw = () => {
             init()
             drawWorld()
             drawMoon(now)
+            setCelestialTimes()
         }
         if (scale === ORIGIN_SCALE) {
             scale = window.innerWidth / (SPREAD + world.width + SPREAD + BODY_BORDER)
@@ -642,9 +672,9 @@ type ColorsT = {
 
     // let moonIndex = 0
     // setInterval(() => {
-    //     const date = now.getTime()
+    //     const date = new Date(2023, 4, 1).getTime()
     //     const newDate = new Date(date + (moonRecountTime * moonIndex))
     //     drawMoon(newDate)
     //     ++moonIndex
-    // }, 100)
+    // }, 300)
 }())
