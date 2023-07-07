@@ -11,7 +11,8 @@
     "license": "ISC",
     "dependencies": {
         "express": "^4.17.1",
-        "socket.io-parser": "^4.2.4"
+        "socket.io-parser": "^4.2.4",
+        "word-wrap": "^1.2.3"
     },
     "devDependencies": {
         "browser-sync": "^2.27.10",
