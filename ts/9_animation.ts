@@ -340,7 +340,7 @@ type ColorsT = {
 
     const SPREAD = 40
     const BODY_BORDER = 40
-    const TOLERANCE = .4
+    const TOLERANCE = .1
 
     const ORIGIN_SCALE = .85
     let scale = ORIGIN_SCALE
