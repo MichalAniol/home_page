@@ -40,6 +40,14 @@ const waitingRoomFoo = () => {
         }, {
             name: 'zaprogramuj zycie',
             href: 'https://zaprogramujzycie.pl/',
+        }, {
+            name: 'anysummary',
+            href: 'https://www.anysummary.app/',
+            title: 'do streszczania długich tekstów',
+        }, {
+            name: 'alpha womp',
+            href: 'https://alpha.womp.com',
+            title: 'do robienia grafiki 3d',
         },
     ];
     let column;
@@ -56,6 +64,7 @@ const waitingRoomFoo = () => {
         const site = newSites[i];
         a.href = site.href;
         a.innerHTML = site.name;
+        a.title = site.title ? site.title : '';
         a.className = 'smallpseudoicon';
         column.appendChild(a);
     }
