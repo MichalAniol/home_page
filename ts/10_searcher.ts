@@ -1,4 +1,6 @@
 const search = (function () {
+    const MIN_LETTERS = 2
+
     const searcher = document.getElementById('searcher') as HTMLInputElement
     const finder = document.getElementById('finder')
     const searchMessage = document.getElementById('search-message')
@@ -25,6 +27,14 @@ const search = (function () {
     } as const
     type MessageTypeT = keyof typeof messageType
 
+    let finderElems: HTMLElement[] = [];
+    let finderList: LinksDataT[] = [];
+
+    const clearFinder = () => {
+        finderElems.forEach(e => e.remove());
+        finderElems = [];
+        finderList = [];
+    }
 
     for (let a of allLinks) {
         if (a.id === 'hidden') continue;
@@ -64,6 +74,8 @@ const search = (function () {
             finder.style.opacity = '0'
             setTimeOut(() => finder.style.display = 'none', 350)
             document.removeEventListener('keydown', escape)
+            searcher.value = ''
+            clearFinder()
         }
     }
 
@@ -87,7 +99,7 @@ const search = (function () {
         switch (type) {
             case messageType.start:
                 {
-                    message.innerHTML = 'enter at least 3 letters'
+                    message.innerHTML = `enter at least ${MIN_LETTERS} letters`
                     break
                 };
             case messageType.found:
@@ -105,22 +117,17 @@ const search = (function () {
         // lastMessageType = type;
     }
 
-    let finderElems: HTMLElement[] = [];
-    let finderList: LinksDataT[] = [];
-
     const onkeypress = (event: any) => {
         let value = event.target.value.toLowerCase();
+        clearFinder()
 
-        finderElems.forEach(e => e.remove());
-        finderElems = [];
-        finderList = [];
         if (!!finder) {
             finder.style.width = ''
             finder.style.maxHeight = '400px'
         }
         if (!!finderOutput) finderOutput.style.maxHeight = '370px'
 
-        if (value.length < 3) {
+        if (value.length < MIN_LETTERS) {
             setMessage(messageType.start);
             curtainHide();
             return;

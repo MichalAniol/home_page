@@ -687,7 +687,7 @@ const SunCalc = (function () {
     const MOON_PHASES = DAY * 29.5306;
     const SPREAD = 40;
     const BODY_BORDER = 40;
-    const TOLERANCE = .4;
+    const TOLERANCE = .1;
     const ORIGIN_SCALE = .85;
     let scale = ORIGIN_SCALE;
     const CELL_WORLD_LENGTH = 30;
@@ -962,6 +962,7 @@ const SunCalc = (function () {
     setTimerTicking();
 }());
 const search = (function () {
+    const MIN_LETTERS = 2;
     const searcher = document.getElementById('searcher');
     const finder = document.getElementById('finder');
     const searchMessage = document.getElementById('search-message');
@@ -976,6 +977,13 @@ const search = (function () {
         start: 'start',
         found: 'found',
         noFound: 'noFound',
+    };
+    let finderElems = [];
+    let finderList = [];
+    const clearFinder = () => {
+        finderElems.forEach(e => e.remove());
+        finderElems = [];
+        finderList = [];
     };
     for (let a of allLinks) {
         if (a.id === 'hidden')
@@ -1011,6 +1019,8 @@ const search = (function () {
             finder.style.opacity = '0';
             setTimeOut(() => finder.style.display = 'none', 350);
             document.removeEventListener('keydown', escape);
+            searcher.value = '';
+            clearFinder();
         }
     };
     const curtainShow = () => {
@@ -1031,7 +1041,7 @@ const search = (function () {
         switch (type) {
             case messageType.start:
                 {
-                    message.innerHTML = 'enter at least 3 letters';
+                    message.innerHTML = `enter at least ${MIN_LETTERS} letters`;
                     break;
                 }
                 ;
@@ -1049,20 +1059,16 @@ const search = (function () {
                 ;
         }
     };
-    let finderElems = [];
-    let finderList = [];
     const onkeypress = (event) => {
         let value = event.target.value.toLowerCase();
-        finderElems.forEach(e => e.remove());
-        finderElems = [];
-        finderList = [];
+        clearFinder();
         if (!!finder) {
             finder.style.width = '';
             finder.style.maxHeight = '400px';
         }
         if (!!finderOutput)
             finderOutput.style.maxHeight = '370px';
-        if (value.length < 3) {
+        if (value.length < MIN_LETTERS) {
             setMessage(messageType.start);
             curtainHide();
             return;
