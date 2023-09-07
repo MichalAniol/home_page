@@ -49,6 +49,10 @@ const waitingRoomFoo = () => {
             name: 'alpha womp',
             href: 'https://alpha.womp.com',
             title: 'do robienia grafiki 3d',
+        },{
+            name: 'plasticity',
+            href: 'https://www.plasticity.xyz/#pricing',
+            title: 'do robienia grafiki 3d',
         },
     ]
 
