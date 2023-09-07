@@ -53,6 +53,10 @@ const waitingRoomFoo = () => {
             name: 'plasticity',
             href: 'https://www.plasticity.xyz/#pricing',
             title: 'do robienia grafiki 3d',
+        },{
+            name: 'qubes-os',
+            href: 'https://www.qubes-os.org/intro/',
+            title: 'system do bezpiecznego otwierania aplikacji',
         },
     ]
 
