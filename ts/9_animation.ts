@@ -326,11 +326,22 @@ type DayNightT = {
     night: RgbT
 }
 type ColorsT = {
-    earth: DayNightT,
-    ocean: DayNightT
+    earth?: DayNightT,
+    ocean?: DayNightT,
+    altEarth?: DayNightT,
+    altOcean?: DayNightT,
 }
 
+
 (function () {
+    const colorsNames = {
+        earth: 'earth',
+        ocean: 'ocean',
+        altEarth: 'altEarth',
+        altOcean: 'altOcean',
+    } as const
+    type AquaTerraT = keyof typeof colorsNames
+
     // hard data
     const SECOND = 1000
     const MINUTE = 60 * SECOND
@@ -340,7 +351,8 @@ type ColorsT = {
 
     const SPREAD = 40
     const BODY_BORDER = 40
-    const TOLERANCE = .1
+    const SHADOW_TOLERANCE = .1
+    const LONGITUDE_CORRECTION = .03
 
     const ORIGIN_SCALE = .85
     let scale = ORIGIN_SCALE
@@ -348,6 +360,25 @@ type ColorsT = {
     const CELL_WORLD_LENGTH = 30
     const MOON_MAX_INDEX = 7
     const MOON_CELL = 15
+
+    const HEX_COLORS = {
+        earth: {
+            day: '#094e09',
+            night: '#032703',
+        },
+        ocean: {
+            day: '#072d07',
+            night: '#061b06',
+        },
+        altEarth: {
+            day: '#094B09', //'#084708',
+            night: '#032503', //'#032303',
+        },
+        altOcean: {
+            day: '#072C07', //'#062906',
+            night: '#051A05', //'#051905',
+        },
+    }
 
     const worldCanvas = <HTMLCanvasElement>document.getElementById("worldCanvas")
     const worldContext: CanvasRenderingContext2D = worldCanvas.getContext("2d")
@@ -396,17 +427,6 @@ type ColorsT = {
         return `${h}:${m}:${s}`
     }
 
-    const hexColors = {
-        earth: {
-            day: '#094e09',
-            night: '#032703',
-        },
-        ocean: {
-            day: '#072d07',
-            night: '#061b06',
-        },
-    }
-    type AquaTerraT = keyof typeof hexColors
 
     const countColors = () => {
         const hexToNumber = (hex: string) => {
@@ -416,16 +436,15 @@ type ColorsT = {
             return { r, g, b }
         }
 
-        return {
-            earth: {
-                day: hexToNumber(hexColors.earth.day),
-                night: hexToNumber(hexColors.earth.night)
-            },
-            ocean: {
-                day: hexToNumber(hexColors.ocean.day),
-                night: hexToNumber(hexColors.ocean.night)
-            }
-        }
+        const getHexToNumber = (kind: AquaTerraT) => ({
+            day: hexToNumber(HEX_COLORS[kind].day),
+            night: hexToNumber(HEX_COLORS[kind].night)
+        } as DayNightT)
+
+        const result: ColorsT = {}
+        const keys = Object.keys(HEX_COLORS)
+        keys.forEach((key: AquaTerraT) => result[key] = getHexToNumber(key))
+        return result
     }
 
     //
@@ -479,13 +498,13 @@ type ColorsT = {
     const worldHeight = world.rowsLength.length
     const worldCenterHeight = worldHeight / 2
     const drawWorld = () => {
-        const getColor = (altitude: number, earth: boolean) => {
+        const getColor = (altitude: number, earth: boolean, longitude: number) => {
             const countColor = (aquaTerra: AquaTerraT, altitude: number) => {
                 if (altitude > 0) {
-                    if (altitude < TOLERANCE) {
+                    if (altitude < SHADOW_TOLERANCE) {
                         const day = colors[aquaTerra].day
                         const night = colors[aquaTerra].night
-                        const ratio = altitude / TOLERANCE
+                        const ratio = altitude / SHADOW_TOLERANCE
 
                         const getGradient = (day: number, night: number) => Math.round(((day - night) * ratio) + night)
                         const r = getGradient(day.r, night.r)
@@ -499,10 +518,12 @@ type ColorsT = {
                 else return colors[aquaTerra].night
             }
 
+            const colorAlt = longitude - (Math.floor(longitude / 20) * 20) > 10
+
             if (earth) {
-                return countColor('earth', altitude)
+                return countColor(colorAlt ? colorsNames.earth : colorsNames.altEarth, altitude)
             }
-            return countColor('ocean', altitude)
+            return countColor(colorAlt ? colorsNames.ocean : colorsNames.altOcean, altitude)
         }
 
         for (let y = 0; y < worldHeight; ++y) {
@@ -512,11 +533,12 @@ type ColorsT = {
             const worldWidth = world.rowsLength[y]
             const worldCenterWidth = worldWidth / 2
             for (let x = 0; x < worldWidth; ++x) {
-                const longitude = ((x - worldCenterWidth) / worldWidth) * 360
+                const posCorrection = world.width * LONGITUDE_CORRECTION
+                const longitude = ((x - worldCenterWidth + posCorrection) / worldWidth) * 360
                 const altitude = SunCalc.getPosition(now, latitude, longitude)
                 let data = world.data[y][Math.floor(x / CELL_WORLD_LENGTH)] & 1 << x % CELL_WORLD_LENGTH
 
-                const { r, g, b } = getColor(altitude, data > 0)
+                const { r, g, b } = getColor(altitude, data > 0, longitude)
 
                 const pos = ((y * world.width) + x + rowStart) * 4
                 worldImageData.data[pos] = r
@@ -526,12 +548,22 @@ type ColorsT = {
             }
         }
 
+        // for (let y = 0; y < worldHeight; ++y) { // VERTICAL LINE
+        //     const posCorrection = world.width * LONGITUDE_CORRECTION
+
+        //     const pos = Math.round((y * world.width) + (world.width / 2) - posCorrection) * 4
+        //     worldImageData.data[pos] = 255
+        //     worldImageData.data[pos + 1] = 0
+        //     worldImageData.data[pos + 2] = 0
+        //     worldImageData.data[pos + 3] = 255
+        // }
+
         worldContext.putImageData(worldImageData, 0, 0)
     }
 
     const moonHeight = moon.rowsLength.length
     const drawMoon = (now: Date) => {
-        moonContext.fillStyle = hexColors.earth.day
+        moonContext.fillStyle = HEX_COLORS.earth.day
         const radius = 56
         moonContext.arc(radius, radius, radius, 0, 2 * Math.PI)
         moonContext.fill()
