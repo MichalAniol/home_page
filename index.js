@@ -689,6 +689,12 @@ const SunCalc = (function () {
     };
 }());
 (function () {
+    const colorsNames = {
+        earth: 'earth',
+        ocean: 'ocean',
+        altEarth: 'altEarth',
+        altOcean: 'altOcean',
+    };
     const SECOND = 1000;
     const MINUTE = 60 * SECOND;
     const HOUR = 60 * MINUTE;
@@ -696,12 +702,31 @@ const SunCalc = (function () {
     const MOON_PHASES = DAY * 29.5306;
     const SPREAD = 40;
     const BODY_BORDER = 40;
-    const TOLERANCE = .1;
+    const SHADOW_TOLERANCE = .1;
+    const LONGITUDE_CORRECTION = .03;
     const ORIGIN_SCALE = .85;
     let scale = ORIGIN_SCALE;
     const CELL_WORLD_LENGTH = 30;
     const MOON_MAX_INDEX = 7;
     const MOON_CELL = 15;
+    const HEX_COLORS = {
+        earth: {
+            day: '#094e09',
+            night: '#032703',
+        },
+        ocean: {
+            day: '#072d07',
+            night: '#061b06',
+        },
+        altEarth: {
+            day: '#094B09',
+            night: '#032503',
+        },
+        altOcean: {
+            day: '#072C07',
+            night: '#051A05',
+        },
+    };
     const worldCanvas = document.getElementById("worldCanvas");
     const worldContext = worldCanvas.getContext("2d");
     const moonCanvas = document.getElementById("moonCanvas");
@@ -734,16 +759,6 @@ const SunCalc = (function () {
         const s = getWithZero(date.getSeconds());
         return `${h}:${m}:${s}`;
     };
-    const hexColors = {
-        earth: {
-            day: '#094e09',
-            night: '#032703',
-        },
-        ocean: {
-            day: '#072d07',
-            night: '#061b06',
-        },
-    };
     const countColors = () => {
         const hexToNumber = (hex) => {
             const r = parseInt(hex.substring(1, 3), 16);
@@ -751,16 +766,14 @@ const SunCalc = (function () {
             const b = parseInt(hex.substring(5, 7), 16);
             return { r, g, b };
         };
-        return {
-            earth: {
-                day: hexToNumber(hexColors.earth.day),
-                night: hexToNumber(hexColors.earth.night)
-            },
-            ocean: {
-                day: hexToNumber(hexColors.ocean.day),
-                night: hexToNumber(hexColors.ocean.night)
-            }
-        };
+        const getHexToNumber = (kind) => ({
+            day: hexToNumber(HEX_COLORS[kind].day),
+            night: hexToNumber(HEX_COLORS[kind].night)
+        });
+        const result = {};
+        const keys = Object.keys(HEX_COLORS);
+        keys.forEach((key) => result[key] = getHexToNumber(key));
+        return result;
     };
     const init = () => {
         celestialAnimationElem.style.width = ((SPREAD + world.width + SPREAD) * scale) + 'px';
@@ -805,13 +818,13 @@ const SunCalc = (function () {
     const worldHeight = world.rowsLength.length;
     const worldCenterHeight = worldHeight / 2;
     const drawWorld = () => {
-        const getColor = (altitude, earth) => {
+        const getColor = (altitude, earth, longitude) => {
             const countColor = (aquaTerra, altitude) => {
                 if (altitude > 0) {
-                    if (altitude < TOLERANCE) {
+                    if (altitude < SHADOW_TOLERANCE) {
                         const day = colors[aquaTerra].day;
                         const night = colors[aquaTerra].night;
-                        const ratio = altitude / TOLERANCE;
+                        const ratio = altitude / SHADOW_TOLERANCE;
                         const getGradient = (day, night) => Math.round(((day - night) * ratio) + night);
                         const r = getGradient(day.r, night.r);
                         const g = getGradient(day.g, night.g);
@@ -823,10 +836,11 @@ const SunCalc = (function () {
                 else
                     return colors[aquaTerra].night;
             };
+            const colorAlt = longitude - (Math.floor(longitude / 20) * 20) > 10;
             if (earth) {
-                return countColor('earth', altitude);
+                return countColor(colorAlt ? colorsNames.earth : colorsNames.altEarth, altitude);
             }
-            return countColor('ocean', altitude);
+            return countColor(colorAlt ? colorsNames.ocean : colorsNames.altOcean, altitude);
         };
         for (let y = 0; y < worldHeight; ++y) {
             const rowStart = world.rowsStart[y];
@@ -834,10 +848,11 @@ const SunCalc = (function () {
             const worldWidth = world.rowsLength[y];
             const worldCenterWidth = worldWidth / 2;
             for (let x = 0; x < worldWidth; ++x) {
-                const longitude = ((x - worldCenterWidth) / worldWidth) * 360;
+                const posCorrection = world.width * LONGITUDE_CORRECTION;
+                const longitude = ((x - worldCenterWidth + posCorrection) / worldWidth) * 360;
                 const altitude = SunCalc.getPosition(now, latitude, longitude);
                 let data = world.data[y][Math.floor(x / CELL_WORLD_LENGTH)] & 1 << x % CELL_WORLD_LENGTH;
-                const { r, g, b } = getColor(altitude, data > 0);
+                const { r, g, b } = getColor(altitude, data > 0, longitude);
                 const pos = ((y * world.width) + x + rowStart) * 4;
                 worldImageData.data[pos] = r;
                 worldImageData.data[pos + 1] = g;
@@ -849,7 +864,7 @@ const SunCalc = (function () {
     };
     const moonHeight = moon.rowsLength.length;
     const drawMoon = (now) => {
-        moonContext.fillStyle = hexColors.earth.day;
+        moonContext.fillStyle = HEX_COLORS.earth.day;
         const radius = 56;
         moonContext.arc(radius, radius, radius, 0, 2 * Math.PI);
         moonContext.fill();
