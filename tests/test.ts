@@ -1,6 +1,6 @@
 const puppeteer = require('puppeteer');
 
-const START_FROM = 40
+const START_FROM = 534
 const now = new Date().getTime()
 
 const getTime = () => {
@@ -18,13 +18,25 @@ const exceptions: string[] = [
     'http://192.168.0.21/admin/', // ok, chwilowo odłączony
     'https://www.javatpoint.com/javascript-tutorial', // ok, cookies blokuje zamknięcie
     'https://ninateka.pl/', // ok, cookies blokuje zamknięcie
+    'https://xerocho.github.io/svgomg/',
+    'https://andreasbm.github.io/web-skills/',
+
+    'https://kpbc.ukw.edu.pl/dlibra/publication/14721/edition/24338?language=pl',
+    'https://poradnik.kz1.pl/index.php?page=znakihtml1',
+    'http://www.javascriptobfuscator.com/Javascript-Obfuscator.aspx',
+    'https://lelinhtinh.github.io/de4js/',
+    ' https://formsubmit.co/',
+    'https://docs.egret.com/dragonbones/en',
+    'https://docs.egret.com/dragonbones/en/docs/dbPro/introduction/introduction',
+    'https://docs.egret.com/dragonbones/en/docs/api/dragonBones.Animation',
+    'https://zerologin.co/',
 ];
 
 (async () => {
     const browser = await puppeteer.launch({
         headless: false,
         args: [
-            // '--window-size=1600,1400',
+            '--window-size=800,600',
             '--no-sandbox',
         ],
     })
