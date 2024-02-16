@@ -8,7 +8,7 @@
         "g": "node ./_html-generator/index.js",
         "test": "node test/test.js"
     },
-    "dependencies": {
+    "devDependencies": {
         "browser-sync": "^3.0.2",
         "cheerio": "^1.0.0-rc.12",
         "dotenv": "^16.3.1",
