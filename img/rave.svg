@@ -1,4 +1,4 @@
-<svg width="65" height="26" viewBox="0 0 26.6069 10" xmlns="http://www.w3.org/2000/svg">
+<svg width="65" height="26" viewBox="0 0 26.6069 10">
     <rect fill="#ddd" x="-1" y="-1" mask="url(#mask)" width="120%" height="120%" ></rect>
     <mask id="mask">
         <rect x="-1" y="-1" width="120%" height="120%" fill="white"  ></rect>
