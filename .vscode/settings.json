@@ -16,6 +16,7 @@
         "rangeengine",
         "sdist",
         "smallpseudoicon",
-        "womp"
+        "womp",
+        "uglifyjs"
     ]
 }

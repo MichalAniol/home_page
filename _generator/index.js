@@ -5,13 +5,21 @@ const path = require('path');
 const browserSync = require('browser-sync').create();
 
 const app = express();
-const PORT = 5000;
-const PROXY_PORT = 3000;
+const PORT = 5020;
+const PROXY_PORT = 5010;
 
-app.use(express.static('../'));
+// app.use(express.static('../'));
 
 browserSync.init({
-    proxy: 'http://localhost:' + PORT + '/',
+    // proxy: 'http://localhost:' + PORT + '/',
+    server: {
+        baseDir: "../",
+    },
+    ui: {
+        port: PROXY_PORT
+    },
+    port: PORT,
+    open: false
 });
 
 const watchHtml = () => {

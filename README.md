@@ -1,15 +1,12 @@
 ## Page:
 https://michalaniol.github.io/home_page/
 
----
+```npm install uglify-js -g```
 code for make:
 ```
-minify index.js > index.min.js
+uglifyjs index.js --output index.min.js
 css-minify --dir "./" --output "./"
 
-```
-```
-minify index.js > index.min.js
 ```
 ---
 ##### to convert typescript files install:
