@@ -21,9 +21,20 @@
         "compatibility": "*"
     },
     "js": {
-        "ecma": 2020,
+        "mangle": false,
+        "mangleClassNames": false,
+        "removeUnusedVariables": false,
+        "removeConsole": true,
+        "removeUselessSpread": false,
+        "ecma": 2015,
         "format": {
-            "ascii_only": true
+            "ascii_only": true,
+            "beautify": true,
+            "width": 300,
+            "max_line_len": 300,
+            "indent_level": 2,
+            "wrap_iife": true,
+            "preamble": "// autor: Michał Anioł"
         }
     },
     "img": {
