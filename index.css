@@ -1,0 +1,2717 @@
+@font-face {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./font/Rubik-Regular.eot');
+    src: local('open sans extralight'), local('open-sans-extralight'), url('./font/Rubik-Regular.eot?#iefix') format('embedded-opentype'), url('./font/Rubik-Regular.woff2') format('woff2'), url('./font/Rubik-Regular.woff') format('woff'), url('./font/Rubik-Regular.ttf') format('truetype'), url('./font/Rubik-Regular.svg#Barlow') format('svg');
+}
+
+:root {
+    --color_1: #006600;
+    --color_1h: #009c00;
+    --color_2: #001600;
+    --color_2h: #002e00;
+    --color_3: #000800;
+    --color_back: black;
+    --color_shadow: rgba(0, 0, 0, 0.75);
+    --font: 'Rubik', sans-serif;
+    --anim_col: #085c08;
+}
+
+body {
+    position: relative;
+    margin: 15px 50px 0 50px;
+    padding: 0;
+    background-color: var(--color_back);
+    color: var(--color_1);
+    font-family: var(--font);
+    font-size: 16px;
+    /* color: #032703; */
+}
+
+.popup {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0px;
+    height: 0px;
+}
+
+.open_popup {
+    cursor: pointer;
+    border: 1px solid var(--color_1);
+    padding: 0 3px;
+    margin: 2px 0 0 0;
+}
+
+@keyframes curtain {
+    0% {
+        opacity: 1;
+        width: 100%;
+        height: 100%;
+    }
+    25% {
+        opacity: 1;
+        width: 100%;
+        height: 100%;
+    }
+    99% {
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+    }
+    100% {
+        width: 0px;
+        height: 0px;
+    }
+}
+
+#curtain {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0px;
+    height: 0px;
+    background-color: var(--color_back);
+    animation-name: curtain;
+    animation-duration: .3s;
+    animation-iteration-count: 1;
+    opacity: 0;
+}
+
+#hidden {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0px;
+    height: 0px;
+    background-color: var(--color_back);
+}
+
+.section {
+    /* max-width: 1750px; */
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+
+#celestialAnimation {
+    position: relative;
+    margin: 14px 10px 10px 0;
+}
+
+.worldCanvas {
+    position: relative;
+    /* border: 2px solid var(--color_2); */
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -webkit-crisp-edges;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+}
+
+.moonCanvas {
+    position: absolute;
+    /* border: 2px solid var(--color_2); */
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -webkit-crisp-edges;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+}
+
+.rowCelestial {
+    display: flex;
+    flex-direction: row;
+}
+
+.celestialData {
+    margin-bottom: 3px;
+}
+
+.sunTimes {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: flex-end;
+    top: 0;
+}
+
+.sunData {
+    margin-bottom: 3px;
+    width: min-content;
+}
+
+.celestialIcon {
+    filter: drop-shadow(0px 0px 4px rgb(0 0 0 / 1));
+}
+
+.celestialTime {
+    color: var(--anim_col);
+    font-size: 20px;
+    margin: 5px 7px 0 7px;
+    text-shadow: 0px 0px 4px #000;
+}
+
+#moonRiseBox, #moonSetBox {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+
+.timer {
+    position: absolute;
+    color: var(--anim_col);
+    text-shadow: 0px 0px 4px #000;
+}
+
+.part {
+    display: flex;
+    flex-direction: column;
+    margin: 0 5px 10px 0;
+    background-color: var(--color_3);
+    height: max-content;
+    min-width: 100px;
+}
+
+.part .part {
+    margin: 5px 5px 10px 0;
+}
+
+.part .part:last-of-type {
+    margin: 5px 0 10px 0;
+}
+
+
+/* .part .part a:not(.img) {
+    display: inline;
+    text-align: center;
+} */
+
+.part>h1 {
+    margin: 0;
+    padding: 0;
+    /* padding: 2px 0; */
+    text-align: center;
+    font-size: 1em;
+    width: 100%;
+    background-color: var(--color_2);
+    cursor: pointer;
+    height: 23px;
+    user-select: none;
+    -webkit-transition: all .15s;
+    transition: all .15s;
+}
+
+.part>h1:hover {
+    transform: scale(1, 1.3) translate(0, -4px);
+    z-index: 100;
+    -webkit-box-shadow: 0px 0px 16px 8px var(--color_shadow);
+    -moz-box-shadow: 0px 0px 16px 8px var(--color_shadow);
+    box-shadow: 0px 0px 16px 8px var(--color_shadow);
+    color: var(--color_1h);
+    background-color: var(--color_2h);
+}
+
+.part>.fold {
+    position: relative;
+    height: auto;
+    border: none;
+    margin: 0;
+}
+
+.part a,
+#finder a {
+    display: inherit;
+    margin: 3px 0 0 0;
+    color: var(--color_1);
+    text-decoration: none;
+}
+
+.part img,
+.part svg,
+.part .base,
+.part .prog,
+.part a div,
+.part a,
+.part smallinfo,
+.part .smallpseudoicon,
+#finder img,
+#finder svg,
+#finder .base,
+#finder .prog,
+#finder a div,
+#finder a,
+#finder smallinfo,
+#finder .smallpseudoicon {
+    -webkit-transition: all .15s;
+    transition: all .15s;
+}
+
+.column {
+    position: relative;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    position: relative;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.row>.column {
+    margin-right: 3px;
+}
+
+.row>a {
+    margin: 3px 3px 0 0;
+}
+
+@media screen and (max-width:620px) {
+    #whole {
+        width: 600px;
+    }
+    #mycanvas {
+        order: 0;
+    }
+    #part1 {
+        order: 1;
+    }
+    #part2 {
+        order: 2;
+    }
+    #part3 {
+        order: 3;
+    }
+}
+
+#cssNeumorphism {
+    width: 35px;
+    height: 35px;
+    border-radius: 12px;
+    background: #1f1f1f;
+    box-shadow: inset 3px 3px 7px #1c1c1c, inset -3px -3px 7px #222222;
+}
+
+#zapodaj {
+    color: #fff;
+    border: 1px #718d1e solid;
+    background-color: #a3ca2d;
+    font-weight: 700;
+    text-align: center;
+    width: 120px;
+}
+
+.btn-copy {
+    width: 120px;
+    height: 24px;
+    background-color: var(--color_3);
+    border: 1px solid var(--color_2h);
+    color: var(--color_1);
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.btn-copy:hover {
+    background-color: var(--color_1);
+    color: var(--color_3);
+}
+
+.smallpseudoicon {
+    padding: 0 6px;
+    height: 20px;
+    background-color: var(--color_2h);
+    display: initial !important;
+    text-align: center;
+    -webkit-transition: all .15s;
+    transition: all .15s;
+}
+
+.smallinfo {
+    padding: 2px;
+    background-color: var(--color_2h);
+    width: max-content;
+    font-size: 12px;
+    -webkit-transition: all .15s;
+    transition: all .15s;
+}
+
+.consolas {
+    font-family: Consolas;
+    letter-spacing: 5px;
+}
+
+.chatGPT {
+    font-family: 'Söhne', 'ui-sans-serif', 'system-ui', '-apple-system', 'Segoe UI', Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, Helvetica Neue, Arial, Apple 'Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 32px;
+    color: rgb(142, 142, 154);
+    padding: 0 8px;
+    background-color: rgb(21, 21, 21);
+}
+
+.times {
+    font-family: 'Times New Roman';
+    font-size: 20px;
+    letter-spacing: 1px;
+    height: 26px;
+}
+
+.sans {
+    font-family: 'Open Sans';
+    font-size: 20px;
+    letter-spacing: 1px;
+    height: 26px;
+}
+
+.polls {
+    background: linear-gradient(90deg, rgba(192, 0, 255, 1) 0%, rgba(255, 0, 0, 1) 44%, rgba(241, 255, 0, 1) 100%);
+    color: #fff !important;
+}
+
+.lorem-ipsum {
+    font-family: 'Georgia';
+    background-color: #313131;
+    color: #ddd !important;
+    font-size: 22px;
+    height: 28px;
+}
+
+.code_notes .fonts_sizes {
+    margin-right: 20px;
+}
+
+.code_notes .sites {
+    border: solid 1px var(--color_2h);
+    padding: 0 10px 4px 10px;
+}
+
+.code_notes a {
+    transition: all .3s;
+}
+
+.code_notes a:hover {
+    background-color: var(--color_2h);
+}
+
+.breacker {
+    background-color: var(--color_2h);
+    width: 100%;
+    height: 1px;
+    margin: 4px 0 2px;
+}
+
+.js a {
+    margin: 0 auto;
+}
+
+#playbackRate {
+    font-size: 15px;
+}
+
+.ml {
+    margin-left: 8px !important;
+}
+
+.ml4 {
+    margin-left: 4px !important;
+}
+
+.part img:hover,
+.part svg:hover,
+.part .base:hover,
+.part .prog:hover,
+.part a div:hover,
+.part a:hover,
+.part smallinfo:hover,
+.part .smallpseudoicon:hover,
+#finder img:hover,
+#finder svg:hover,
+#finder .base:hover,
+#finder .prog:hover,
+#finder a div:hover,
+#finder a:hover,
+#finder smallinfo:hover,
+#finder .smallpseudoicon:hover {
+    transform: scale(1.08);
+    /* border: 2px solid var(--color_back); */
+    z-index: 100;
+    -webkit-box-shadow: 0px 0px 16px 8px var(--color_shadow);
+    -moz-box-shadow: 0px 0px 16px 8px var(--color_shadow);
+    box-shadow: 0px 0px 16px 8px var(--color_shadow);
+}
+
+.part .static svg:hover,
+.part .static div:hover,
+#finder .static svg:hover,
+#finder .static div:hover {
+    transform: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+svg {
+    position: relative;
+    left: 0;
+    top: 0;
+}
+
+.tanstackquery {
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    font-size: 24px;
+    font-weight: 700;
+    background-image: -webkit-linear-gradient(45deg, rgb(159, 14, 14), rgb(195, 126, 8) 80%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-fill-color: transparent;
+    line-height: 24px;
+    position: relative;
+    top: -3px;
+}
+
+.turfjs {
+    background-color: rgb(37, 163, 90);
+    color: #fff;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 6.4px;
+    line-height: 24px;
+    text-align: center;
+    padding: 0 0 0 5px;
+}
+
+.appium {
+    background-color: var(--color_2h);
+    color: rgb(147, 198, 111);
+    font-family: "GothamBold", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 24px;
+    padding: 0 5px;
+}
+
+.paperjs {
+    border-bottom-color: rgb(0, 123, 184);
+    color: rgb(39, 183, 255);
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 36px;
+}
+
+.rainbow-text {
+    background: linear-gradient(90deg, #0029ff 0, #ff008a);
+    color: #fff;
+    padding: 2px 4px;
+    font-weight: 600;
+}
+
+.text {
+    font-size: 22px;
+    margin: 0 10px 0 0;
+    color: var(--color_1h);
+}
+
+.searcher {
+    z-index: 1000;
+}
+
+input {
+    background-color: var(--color_2h);
+    border: var(--color_1) solid 2px;
+    margin: 0 0 5px 0;
+    text-align: left;
+    padding: 0 15px;
+    color: var(--color_1h);
+    font-size: 1.1em;
+    width: 150px;
+    font-family: var(--font);
+    height: 24px;
+}
+
+#finder {
+    position: absolute;
+    left: 280px;
+    top: 0;
+    border: var(--color_1h) solid 2px;
+    border-radius: 12px;
+    background-color: var(--color_back);
+    padding: 12px;
+    min-width: 300px;
+    /* min-height: 50px; */
+    max-height: 400px;
+    z-index: 1000;
+}
+
+.found-sites {
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+#close-finder {
+    position: absolute;
+    right: 12px;
+    top: 2px;
+    font-size: 30px;
+    cursor: pointer;
+    color: var(--color_1h);
+}
+
+#finder-output {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 370px;
+}
+
+#finder-output a {
+    margin: 5px;
+}
+
+.ml5 {
+    margin-left: 5px;
+}
+.ml12 {
+    margin-left: 12px;
+}
+
+#waiting-room {
+    display: flex;
+    flex-direction: row;
+}
+
+.waiting-room-colum {
+    margin-right: 3px;
+    display: flex;
+    flex-direction: column;
+}
+/* ------------------zwykłe ikony----------------------- */
+
+
+/* #region [ rgba( 0, 0, 200, 0.05 ) ] --->  */
+
+.base {
+    background-image: url(./img/base2.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+
+.base-10minutemail {
+    width: 100px;
+    height: 12px;
+    background-position: 0 0;
+}
+
+.base-3dmdb {
+    width: 88px;
+    height: 36px;
+    background-position: -100px 0;
+}
+
+.base-AstroNET {
+    width: 41px;
+    height: 40px;
+    background-position: -188px 0;
+}
+
+.base-after-me {
+    width: 110px;
+    height: 28px;
+    background-position: -229px 0;
+}
+
+.base-ahrefs {
+    width: 76px;
+    height: 23px;
+    background-position: -339px 0;
+}
+
+.base-airpl {
+    width: 38px;
+    height: 37px;
+    background-position: -415px 0;
+}
+
+.base-allegro {
+    width: 102px;
+    height: 42px;
+    background-position: -453px 0;
+}
+
+.base-amazon {
+    width: 95px;
+    height: 27px;
+    background-position: -555px 0;
+}
+
+.base-amway {
+    width: 82px;
+    height: 34px;
+    background-position: -650px 0;
+}
+
+.base-animatedknots {
+    width: 61px;
+    height: 30px;
+    background-position: 0 -34px;
+}
+
+.base-aps {
+    width: 75px;
+    height: 21px;
+    background-position: -229px -34px;
+}
+
+.base-artstation {
+    width: 128px;
+    height: 28px;
+    background-position: -555px -34px;
+}
+
+.base-asciicker {
+    width: 64px;
+    height: 47px;
+    background-position: -304px -34px;
+}
+
+.base-ask {
+    width: 55px;
+    height: 40px;
+    background-position: -683px -34px;
+}
+
+.base-astronew {
+    width: 89px;
+    height: 29px;
+    background-position: -61px -62px;
+}
+
+.base-atari {
+    width: 105px;
+    height: 33px;
+    background-position: -150px -62px;
+}
+
+.base-bankier {
+    width: 64px;
+    height: 41px;
+    background-position: -368px -74px;
+}
+
+.base-bedeker {
+    width: 42px;
+    height: 35px;
+    background-position: 0 -74px;
+}
+
+.base-bibcyf {
+    width: 41px;
+    height: 48px;
+    background-position: -255px -74px;
+}
+
+.base-blackhole {
+    width: 32px;
+    height: 32px;
+    background-position: -368px -34px;
+}
+
+.base-blender {
+    width: 44px;
+    height: 58px;
+    background-position: -432px -74px;
+}
+
+.base-blenderguru {
+    width: 108px;
+    height: 27px;
+    background-position: -476px -62px;
+}
+
+.base-bloginews {
+    width: 95px;
+    height: 44px;
+    background-position: -584px -62px;
+}
+
+.base-c-64_scene {
+    width: 36px;
+    height: 30px;
+    background-position: -679px -74px;
+}
+
+.base-c64portal {
+    width: 146px;
+    height: 27px;
+    background-position: -42px -106px;
+}
+
+.base-c64sets {
+    width: 42px;
+    height: 34px;
+    background-position: -188px -104px;
+}
+
+.base-calendar {
+    width: 100px;
+    height: 31px;
+    background-position: -476px -106px;
+}
+
+.base-cams {
+    width: 70px;
+    height: 33px;
+    background-position: -296px -104px;
+}
+
+.base-cda {
+    width: 86px;
+    height: 26px;
+    background-position: -576px -106px;
+}
+
+.base-ceidg {
+    width: 104px;
+    height: 27px;
+    background-position: -366px -132px;
+}
+
+.base-ciekawostkihist {
+    width: 85px;
+    height: 33px;
+    background-position: -662px -106px;
+}
+
+.base-colossal {
+    width: 123px;
+    height: 25px;
+    background-position: 0 -139px;
+}
+
+.base-commodore {
+    width: 100px;
+    height: 32px;
+    background-position: -123px -139px;
+}
+
+.base-commodore_c64_books {
+    width: 50px;
+    height: 36px;
+    background-position: -223px -139px;
+}
+
+.base-conwerter {
+    width: 50px;
+    height: 21px;
+    background-position: -273px -139px;
+}
+
+.base-coub {
+    width: 43px;
+    height: 43px;
+    background-position: -323px -139px;
+}
+
+.base-cqcounter {
+    width: 89px;
+    height: 30px;
+    background-position: -470px -139px;
+}
+
+.base-crazynauka {
+    width: 160px;
+    height: 20px;
+    background-position: -559px -139px;
+}
+
+.base-darmprog {
+    width: 202px;
+    height: 24px;
+    background-position: -366px -169px;
+}
+
+.base-dawnygdansk {
+    width: 110px;
+    height: 17px;
+    background-position: -568px -159px;
+}
+
+.base-delta {
+    width: 80px;
+    height: 33px;
+    background-position: 0 -176px;
+}
+
+.base-demagog {
+    width: 132px;
+    height: 23px;
+    background-position: -80px -176px;
+}
+
+.base-duo {
+    width: 36px;
+    height: 36px;
+    background-position: -719px -139px;
+}
+
+.base-ebuy {
+    width: 90px;
+    height: 40px;
+    background-position: -212px -176px;
+}
+
+.base-ecudo {
+    width: 105px;
+    height: 47px;
+    background-position: -568px -176px;
+}
+
+.base-eioba {
+    width: 74px;
+    height: 26px;
+    background-position: -678px -175px;
+}
+
+.base-elektroda {
+    width: 110px;
+    height: 20px;
+    background-position: 0 -223px;
+}
+
+.base-elektroonline {
+    width: 160px;
+    height: 24px;
+    background-position: -302px -201px;
+}
+
+.base-elportal {
+    width: 160px;
+    height: 20px;
+    background-position: -110px -223px;
+}
+
+.base-epuap2 {
+    width: 145px;
+    height: 27px;
+    background-position: -462px -223px;
+}
+
+.base-exbl {
+    width: 160px;
+    height: 21px;
+    background-position: 0 -250px;
+}
+
+.base-facebook {
+    width: 103px;
+    height: 35px;
+    background-position: -607px -223px;
+}
+
+.base-fake {
+    width: 68px;
+    height: 32px;
+    background-position: -160px -258px;
+}
+
+.base-fakty {
+    width: 107px;
+    height: 27px;
+    background-position: -228px -258px;
+}
+
+.base-filmon {
+    width: 123px;
+    height: 31px;
+    background-position: -335px -258px;
+}
+
+.base-finviz {
+    width: 37px;
+    height: 44px;
+    background-position: -710px -201px;
+}
+
+.base-forbot {
+    width: 110px;
+    height: 17px;
+    background-position: -458px -258px;
+}
+
+.base-forsa {
+    width: 102px;
+    height: 30px;
+    background-position: -568px -258px;
+}
+
+.base-fosshub {
+    width: 97px;
+    height: 20px;
+    background-position: 0 -288px;
+}
+
+.base-fotogdansk {
+    width: 30px;
+    height: 35px;
+    background-position: -710px -245px;
+}
+
+.base-freemusicarchive {
+    width: 51px;
+    height: 25px;
+    background-position: -97px -280px;
+}
+
+.base-freesound {
+    width: 110px;
+    height: 31px;
+    background-position: -458px -280px;
+}
+
+.base-gameplay {
+    width: 130px;
+    height: 23px;
+    background-position: -568px -288px;
+}
+
+.base-gb64b {
+    width: 147px;
+    height: 21px;
+    background-position: 0 -311px;
+}
+
+.base-geargenerator {
+    width: 85px;
+    height: 30px;
+    background-position: -147px -311px;
+}
+
+.base-geekaresexy {
+    width: 124px;
+    height: 38px;
+    background-position: -232px -311px;
+}
+
+.base-geooo {
+    width: 46px;
+    height: 46px;
+    background-position: -698px -280px;
+}
+
+.base-getionary {
+    width: 40px;
+    height: 40px;
+    background-position: -356px -326px;
+}
+
+.base-github {
+    width: 30px;
+    height: 30px;
+    background-position: -715px -74px;
+}
+
+.base-gmail {
+    width: 30px;
+    height: 30px;
+    background-position: -396px -326px;
+}
+
+.base-gnew {
+    width: 97px;
+    height: 50px;
+    background-position: -426px -311px;
+}
+
+.base-goodhomedesign {
+    width: 110px;
+    height: 44px;
+    background-position: -523px -311px;
+}
+
+.base-google {
+    width: 128px;
+    height: 54px;
+    background-position: 0 -355px;
+}
+
+.base-grypl {
+    width: 107px;
+    height: 47px;
+    background-position: -633px -326px;
+}
+
+.base-guerrillamail {
+    width: 207px;
+    height: 26px;
+    background-position: -128px -355px;
+}
+
+.base-hevensabo {
+    width: 78px;
+    height: 30px;
+    background-position: -335px -373px;
+}
+
+.base-history {
+    width: 146px;
+    height: 21px;
+    background-position: -413px -373px;
+}
+
+.base-inhabit {
+    width: 100px;
+    height: 32px;
+    background-position: -559px -373px;
+}
+
+.base-inkscape {
+    width: 44px;
+    height: 44px;
+    background-position: -659px -373px;
+}
+
+.base-instalki {
+    width: 105px;
+    height: 32px;
+    background-position: 0 -417px;
+}
+
+.base-jakdojade {
+    width: 97px;
+    height: 22px;
+    background-position: -228px -288px;
+}
+
+.base-jayisgames {
+    width: 150px;
+    height: 36px;
+    background-position: -105px -417px;
+}
+
+.base-jpg2png {
+    width: 45px;
+    height: 35px;
+    background-position: -703px -373px;
+}
+
+.base-justgeek {
+    width: 140px;
+    height: 35px;
+    background-position: -255px -417px;
+}
+
+.base-kalbi {
+    width: 40px;
+    height: 41px;
+    background-position: -395px -408px;
+}
+
+.base-komputerswiat {
+    width: 95px;
+    height: 40px;
+    background-position: -435px -408px;
+}
+
+.base-kopalniawiedzy {
+    width: 86px;
+    height: 39px;
+    background-position: -530px -408px;
+}
+
+.base-kosmonauta {
+    width: 144px;
+    height: 24px;
+    background-position: -530px -447px;
+}
+
+.base-kostka {
+    width: 42px;
+    height: 43px;
+    background-position: -703px -408px;
+}
+
+.base-krytykapolityczna {
+    width: 113px;
+    height: 44px;
+    background-position: -395px -451px;
+}
+
+.base-kurnik {
+    width: 120px;
+    height: 11px;
+    background-position: -80px -201px;
+}
+
+.base-kwarantanna {
+    width: 60px;
+    height: 38px;
+    background-position: 0 -451px;
+}
+
+.base-linkedin {
+    width: 30px;
+    height: 30px;
+    background-position: -616px -408px;
+}
+
+.base-linkedin {
+    width: 38px;
+    height: 38px;
+    background-position: -60px -451px;
+}
+
+.base-madeon {
+    width: 110px;
+    height: 26px;
+    background-position: -98px -471px;
+}
+
+.base-make {
+    width: 84px;
+    height: 32px;
+    background-position: -208px -471px;
+}
+
+.base-malawielkafirma {
+    width: 80px;
+    height: 38px;
+    background-position: -674px -451px;
+}
+
+.base-mapa {
+    width: 42px;
+    height: 22px;
+    background-position: -462px -201px;
+}
+
+.base-mapa_turystyczna {
+    width: 89px;
+    height: 30px;
+    background-position: -292px -471px;
+}
+
+.base-mapbox {
+    width: 142px;
+    height: 34px;
+    background-position: -508px -471px;
+}
+
+.base-math {
+    width: 118px;
+    height: 24px;
+    background-position: 0 -505px;
+}
+
+.base-metadata2go {
+    width: 127px;
+    height: 23px;
+    background-position: -118px -505px;
+}
+
+.base-meteo {
+    width: 74px;
+    height: 24px;
+    background-position: -650px -489px;
+}
+
+.base-meteo2 {
+    width: 86px;
+    height: 28px;
+    background-position: -245px -513px;
+}
+
+.base-millennium {
+    width: 157px;
+    height: 36px;
+    background-position: -331px -505px;
+}
+
+.base-mojemiasto {
+    width: 90px;
+    height: 46px;
+    background-position: -488px -513px;
+}
+
+.base-ms {
+    width: 120px;
+    height: 32px;
+    background-position: -578px -513px;
+}
+
+.base-mtechnik {
+    width: 105px;
+    height: 28px;
+    background-position: 0 -545px;
+}
+
+.base-myabandonware {
+    width: 150px;
+    height: 46px;
+    background-position: -105px -545px;
+}
+
+.base-myminifactory {
+    width: 85px;
+    height: 33px;
+    background-position: -255px -545px;
+}
+
+.base-mynoise {
+    width: 190px;
+    height: 20px;
+    background-position: -340px -559px;
+}
+
+.base-naszgdansk {
+    width: 36px;
+    height: 46px;
+    background-position: -698px -513px;
+}
+
+.base-natemat {
+    width: 133px;
+    height: 24px;
+    background-position: -530px -559px;
+}
+
+.base-naukaoklimacie {
+    width: 115px;
+    height: 17px;
+    background-position: -255px -583px;
+}
+
+.base-netoog {
+    width: 77px;
+    height: 39px;
+    background-position: -663px -559px;
+}
+
+.base-newyorktimes {
+    width: 230px;
+    height: 32px;
+    background-position: -370px -583px;
+}
+
+.base-ninateka {
+    width: 109px;
+    height: 23px;
+    background-position: 0 -598px;
+}
+
+.base-ninateka_logo {
+    width: 190px;
+    height: 41px;
+    background-position: -109px -615px;
+}
+
+.base-noizz {
+    width: 87px;
+    height: 28px;
+    background-position: -600px -598px;
+}
+
+.base-nosil {
+    width: 83px;
+    height: 29px;
+    background-position: 0 -626px;
+}
+
+.base-obiektywizm {
+    width: 133px;
+    height: 24px;
+    background-position: -299px -626px;
+}
+
+.base-odysee {
+    width: 52px;
+    height: 52px;
+    background-position: -687px -598px;
+}
+
+.base-okopress {
+    width: 50px;
+    height: 60px;
+    background-position: -299px -650px;
+}
+
+.base-oldversion {
+    width: 110px;
+    height: 15px;
+    background-position: -109px -598px;
+}
+
+.base-onet {
+    width: 92px;
+    height: 34px;
+    background-position: -349px -650px;
+}
+
+.base-onetimesecret {
+    width: 45px;
+    height: 45px;
+    background-position: -441px -650px;
+}
+
+.base-osm {
+    width: 140px;
+    height: 21px;
+    background-position: -486px -650px;
+}
+
+.base-otranscribe {
+    width: 110px;
+    height: 17px;
+    background-position: -626px -650px;
+}
+
+.base-panel {
+    width: 114px;
+    height: 21px;
+    background-position: 0 -667px;
+}
+
+.base-pap {
+    width: 49px;
+    height: 30px;
+    background-position: -114px -667px;
+}
+
+.base-pazyl {
+    width: 100px;
+    height: 18px;
+    background-position: -163px -667px;
+}
+
+.base-pi-hole {
+    width: 44px;
+    height: 63px;
+    background-position: -626px -667px;
+}
+
+.base-pimeyes {
+    width: 110px;
+    height: 34px;
+    background-position: -732px 0;
+}
+
+.base-pinterest {
+    width: 111px;
+    height: 35px;
+    background-position: -738px -34px;
+}
+
+.base-playgl {
+    width: 149px;
+    height: 39px;
+    background-position: -670px -667px;
+}
+
+.base-pocket {
+    width: 105px;
+    height: 25px;
+    background-position: -745px -69px;
+}
+
+.base-podroznik {
+    width: 110px;
+    height: 23px;
+    background-position: -747px -94px;
+}
+
+.base-poliblogi {
+    width: 40px;
+    height: 25px;
+    background-position: -755px -117px;
+}
+
+.base-policjagda {
+    width: 48px;
+    height: 50px;
+    background-position: -795px -117px;
+}
+
+.base-polityka {
+    width: 131px;
+    height: 36px;
+    background-position: -734px -489px;
+}
+
+.base-polyhaven {
+    width: 44px;
+    height: 62px;
+    background-position: -755px -167px;
+}
+
+.base-programy {
+    width: 110px;
+    height: 19px;
+    background-position: -270px -229px;
+}
+
+.base-protonmail {
+    width: 109px;
+    height: 24px;
+    background-position: -747px -229px;
+}
+
+.base-pulsbiznesu {
+    width: 84px;
+    height: 35px;
+    background-position: -744px -253px;
+}
+
+.base-qwant {
+    width: 38px;
+    height: 40px;
+    background-position: -799px -167px;
+}
+
+.base-racjonalista {
+    width: 110px;
+    height: 21px;
+    background-position: -744px -288px;
+}
+
+.base-radio {
+    width: 49px;
+    height: 30px;
+    background-position: -744px -309px;
+}
+
+.base-rainymood {
+    width: 168px;
+    height: 26px;
+    background-position: 0 -706px;
+}
+
+.base-raspberrypi {
+    width: 36px;
+    height: 44px;
+    background-position: -793px -309px;
+}
+
+.base-resetobywatelski {
+    width: 130px;
+    height: 41px;
+    background-position: -168px -706px;
+}
+
+.base-retrogamer {
+    width: 148px;
+    height: 21px;
+    background-position: -349px -706px;
+}
+
+.base-reverso {
+    width: 40px;
+    height: 40px;
+    background-position: -748px -353px;
+}
+
+.base-rzygacz {
+    width: 50px;
+    height: 38px;
+    background-position: -788px -353px;
+}
+
+.base-schemat {
+    width: 25px;
+    height: 18px;
+    background-position: -61px -34px;
+}
+
+.base-scope {
+    width: 88px;
+    height: 27px;
+    background-position: -748px -393px;
+}
+
+.base-sejmometr {
+    width: 63px;
+    height: 38px;
+    background-position: -754px -420px;
+}
+
+.base-skiplagged {
+    width: 90px;
+    height: 20px;
+    background-position: -128px -391px;
+}
+
+.base-sklepy24 {
+    width: 120px;
+    height: 32px;
+    background-position: -734px -525px;
+}
+
+.base-sms4sats {
+    width: 44px;
+    height: 43px;
+    background-position: -817px -420px;
+}
+
+.base-softwareok {
+    width: 213px;
+    height: 24px;
+    background-position: -298px -730px;
+}
+
+.base-spacelabeu {
+    width: 140px;
+    height: 16px;
+    background-position: -670px -706px;
+}
+
+.base-stackoverflow {
+    width: 30px;
+    height: 30px;
+    background-position: -828px -253px;
+}
+
+.base-staregrynet {
+    width: 147px;
+    height: 25px;
+    background-position: -670px -722px;
+}
+
+.base-strongpasswordgenerator {
+    width: 110px;
+    height: 20px;
+    background-position: -218px -391px;
+}
+
+.base-supercook {
+    width: 100px;
+    height: 26px;
+    background-position: -754px -463px;
+}
+
+.base-svg {
+    width: 71px;
+    height: 27px;
+    background-position: -740px -557px;
+}
+
+.base-tajemniceatari8 {
+    width: 120px;
+    height: 25px;
+    background-position: -740px -584px;
+}
+
+.base-taxeon {
+    width: 146px;
+    height: 26px;
+    background-position: 0 -747px;
+}
+
+.base-teatrtelewizji {
+    width: 50px;
+    height: 42px;
+    background-position: -739px -609px;
+}
+
+.base-theguardian {
+    width: 160px;
+    height: 23px;
+    background-position: -511px -747px;
+}
+
+.base-thewest {
+    width: 149px;
+    height: 35px;
+    background-position: -146px -747px;
+}
+
+.base-thingiverse {
+    width: 125px;
+    height: 25px;
+    background-position: -671px -747px;
+}
+
+.base-timeanddate {
+    width: 45px;
+    height: 25px;
+    background-position: -646px -420px;
+}
+
+.base-tnyt_pol {
+    width: 60px;
+    height: 32px;
+    background-position: -789px -609px;
+}
+
+.base-tokfm {
+    width: 95px;
+    height: 55px;
+    background-position: -849px 0;
+}
+
+.base-tp-link {
+    width: 90px;
+    height: 13px;
+    background-position: -849px -55px;
+}
+
+.base-translator {
+    width: 35px;
+    height: 35px;
+    background-position: -857px -68px;
+}
+
+.base-tumblr {
+    width: 30px;
+    height: 30px;
+    background-position: -892px -68px;
+}
+
+.base-tvn {
+    width: 38px;
+    height: 38px;
+    background-position: -922px -68px;
+}
+
+.base-twitter {
+    width: 30px;
+    height: 30px;
+    background-position: -857px -106px;
+}
+
+.base-twojahistoria {
+    width: 125px;
+    height: 33px;
+    background-position: -829px -309px;
+}
+
+.base-urszula {
+    width: 105px;
+    height: 24px;
+    background-position: -843px -136px;
+}
+
+.base-usdebt {
+    width: 110px;
+    height: 36px;
+    background-position: -843px -160px;
+}
+
+.base-useme {
+    width: 99px;
+    height: 38px;
+    background-position: -856px -196px;
+}
+
+.base-vectra {
+    width: 120px;
+    height: 25px;
+    background-position: -838px -342px;
+}
+
+.base-vimeo {
+    width: 116px;
+    height: 38px;
+    background-position: -838px -367px;
+}
+
+.base-voice {
+    width: 42px;
+    height: 45px;
+    background-position: -858px -234px;
+}
+
+.base-wei {
+    width: 90px;
+    height: 34px;
+    background-position: -861px -405px;
+}
+
+.base-wiedzoholik {
+    width: 67px;
+    height: 44px;
+    background-position: -861px -439px;
+}
+
+.base-wikimap {
+    width: 127px;
+    height: 28px;
+    background-position: -819px -641px;
+}
+
+.base-windy {
+    width: 38px;
+    height: 38px;
+    background-position: -900px -234px;
+}
+
+.base-wirtualneszlaki {
+    width: 47px;
+    height: 46px;
+    background-position: -865px -483px;
+}
+
+.base-wp {
+    width: 33px;
+    height: 31px;
+    background-position: -900px -272px;
+}
+
+.base-wtz {
+    width: 140px;
+    height: 18px;
+    background-position: -811px -557px;
+}
+
+.base-wu {
+    width: 64px;
+    height: 40px;
+    background-position: -860px -575px;
+}
+
+.base-yahoo {
+    width: 110px;
+    height: 28px;
+    background-position: -432px -615px;
+}
+
+.base-yandex {
+    width: 94px;
+    height: 27px;
+    background-position: -854px -529px;
+}
+
+.base-yeggi {
+    width: 62px;
+    height: 24px;
+    background-position: -887px -106px;
+}
+
+.base-yt {
+    width: 109px;
+    height: 46px;
+    background-position: -819px -669px;
+}
+
+.base-zama {
+    width: 40px;
+    height: 40px;
+    background-position: -912px -483px;
+}
+
+.base-zegaratomowy {
+    width: 40px;
+    height: 39px;
+    background-position: -817px -715px;
+}
+
+.base-ziemianarozdrozu {
+    width: 105px;
+    height: 36px;
+    background-position: -295px -754px;
+}
+
+.base-ztmg {
+    width: 50px;
+    height: 27px;
+    background-position: -504px -196px;
+}
+
+.base-zumi {
+    width: 84px;
+    height: 36px;
+    background-position: -857px -715px;
+}
+
+
+/* #endregion */
+
+
+/* ------------------programowanie----------------------- */
+
+
+/* #region [ rgba( 255, 0, 0, 0.05 ) ] */
+
+.prog {
+    background-image: url(./img/prog2.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.prog-W3 {
+    width: 73px;
+    height: 40px;
+    background-position: 0 0;
+}
+
+.prog-adobe {
+    width: 114px;
+    height: 21px;
+    background-position: -73px 0;
+}
+
+.prog-aftermarket {
+    width: 160px;
+    height: 27px;
+    background-position: -187px 0;
+}
+
+.prog-ahrefs {
+    width: 79px;
+    height: 25px;
+    background-position: -347px 0;
+}
+
+.prog-alicevision {
+    width: 58px;
+    height: 50px;
+    background-position: -426px 0;
+}
+
+.prog-angular {
+    width: 50px;
+    height: 49px;
+    background-position: -484px 0;
+}
+
+.prog-animacje {
+    width: 103px;
+    height: 27px;
+    background-position: 0 -49px;
+}
+
+.prog-anime {
+    width: 112px;
+    height: 22px;
+    background-position: -103px -49px;
+}
+
+.prog-animista {
+    width: 42px;
+    height: 42px;
+    background-position: -534px 0;
+}
+
+.prog-antyweb {
+    width: 52px;
+    height: 45px;
+    background-position: -576px 0;
+}
+
+.prog-apollographql {
+    width: 113px;
+    height: 36px;
+    background-position: -215px -45px;
+}
+
+.prog-asciigenerator {
+    width: 110px;
+    height: 45px;
+    background-position: -484px -49px;
+}
+
+.prog-awesome {
+    width: 45px;
+    height: 45px;
+    background-position: -328px -45px;
+}
+
+.prog-babel {
+    width: 66px;
+    height: 32px;
+    background-position: 0 -94px;
+}
+
+.prog-befonts {
+    width: 105px;
+    height: 36px;
+    background-position: -66px -94px;
+}
+
+.prog-bezier {
+    width: 125px;
+    height: 18px;
+    background-position: -171px -94px;
+}
+
+.prog-bionicReading {
+    width: 75px;
+    height: 35px;
+    background-position: -296px -94px;
+}
+
+.prog-caniuse {
+    width: 110px;
+    height: 25px;
+    background-position: -371px -94px;
+}
+
+.prog-canvas {
+    width: 113px;
+    height: 25px;
+    background-position: -481px -94px;
+}
+
+.prog-codewars {
+    width: 45px;
+    height: 45px;
+    background-position: -373px -45px;
+}
+
+.prog-colorbox {
+    width: 120px;
+    height: 31px;
+    background-position: -171px -119px;
+}
+
+.prog-colorhunt {
+    width: 120px;
+    height: 30px;
+    background-position: -371px -119px;
+}
+
+.prog-colors_picker {
+    width: 120px;
+    height: 34px;
+    background-position: -491px -119px;
+}
+
+.prog-compresor {
+    width: 93px;
+    height: 27px;
+    background-position: 0 -153px;
+}
+
+.prog-compressor {
+    width: 90px;
+    height: 22px;
+    background-position: -93px -153px;
+}
+
+.prog-cursor {
+    width: 72px;
+    height: 18px;
+    background-position: -183px -153px;
+}
+
+.prog-d3 {
+    width: 36px;
+    height: 34px;
+    background-position: -594px -45px;
+}
+
+.prog-davinci17 {
+    width: 214px;
+    height: 22px;
+    background-position: -255px -153px;
+}
+
+.prog-dbdiagram {
+    width: 100px;
+    height: 24px;
+    background-position: -469px -153px;
+}
+
+.prog-docs-w3cub {
+    width: 137px;
+    height: 25px;
+    background-position: -93px -177px;
+}
+
+.prog-dojotoolkit {
+    width: 73px;
+    height: 36px;
+    background-position: -230px -177px;
+}
+
+.prog-dragonbones {
+    width: 34px;
+    height: 34px;
+    background-position: -594px -79px;
+}
+
+.prog-draw {
+    width: 40px;
+    height: 40px;
+    background-position: -569px -153px;
+}
+
+.prog-droidcon {
+    width: 120px;
+    height: 26px;
+    background-position: -303px -193px;
+}
+
+.prog-electronjs {
+    width: 156px;
+    height: 32px;
+    background-position: -423px -193px;
+}
+
+.prog-essaybot {
+    width: 130px;
+    height: 33px;
+    background-position: 0 -225px;
+}
+
+.prog-ezgif {
+    width: 120px;
+    height: 23px;
+    background-position: -130px -225px;
+}
+
+.prog-fbflipper {
+    width: 30px;
+    height: 30px;
+    background-position: 0 -193px;
+}
+
+.prog-feathericons {
+    width: 39px;
+    height: 37px;
+    background-position: -579px -193px;
+}
+
+.prog-figma {
+    width: 40px;
+    height: 57px;
+    background-position: -250px -230px;
+}
+
+.prog-flaticon {
+    width: 121px;
+    height: 25px;
+    background-position: -290px -225px;
+}
+
+.prog-flex {
+    width: 100px;
+    height: 25px;
+    background-position: -411px -225px;
+}
+
+.prog-font-converter {
+    width: 120px;
+    height: 25px;
+    background-position: -511px -230px;
+}
+
+.prog-fontsgoogle {
+    width: 135px;
+    height: 29px;
+    background-position: -290px -255px;
+}
+
+.prog-formatjson {
+    width: 145px;
+    height: 21px;
+    background-position: -425px -255px;
+}
+
+.prog-getmdl {
+    width: 41px;
+    height: 41px;
+    background-position: -130px -255px;
+}
+
+.prog-gigantic {
+    width: 36px;
+    height: 27px;
+    background-position: -30px -193px;
+}
+
+.prog-github {
+    width: 36px;
+    height: 36px;
+    background-position: -171px -255px;
+}
+
+.prog-gitlab {
+    width: 41px;
+    height: 40px;
+    background-position: -207px -255px;
+}
+
+.prog-glyphicons {
+    width: 135px;
+    height: 19px;
+    background-position: -425px -276px;
+}
+
+.prog-googlecloud {
+    width: 45px;
+    height: 36px;
+    background-position: -570px -255px;
+}
+
+.prog-graphql {
+    width: 88px;
+    height: 28px;
+    background-position: 0 -295px;
+}
+
+.prog-gravityAI {
+    width: 76px;
+    height: 40px;
+    background-position: -171px -295px;
+}
+
+.prog-grid {
+    width: 100px;
+    height: 25px;
+    background-position: -247px -295px;
+}
+
+.prog-gtmetrix {
+    width: 110px;
+    height: 33px;
+    background-position: -347px -295px;
+}
+
+.prog-h5p {
+    width: 60px;
+    height: 43px;
+    background-position: -560px -291px;
+}
+
+.prog-html5 {
+    width: 154px;
+    height: 34px;
+    background-position: 0 -334px;
+}
+
+.prog-htmlemail {
+    width: 69px;
+    height: 25px;
+    background-position: -247px -334px;
+}
+
+.prog-icomoon {
+    width: 41px;
+    height: 41px;
+    background-position: -88px -291px;
+}
+
+.prog-icons {
+    width: 120px;
+    height: 30px;
+    background-position: -316px -334px;
+}
+
+.prog-immutable {
+    width: 116px;
+    height: 20px;
+    background-position: -436px -334px;
+}
+
+.prog-js-tutorial {
+    width: 43px;
+    height: 48px;
+    background-position: -552px -334px;
+}
+
+.prog-jsnice {
+    width: 67px;
+    height: 27px;
+    background-position: 0 -382px;
+}
+
+.prog-json {
+    width: 99px;
+    height: 31px;
+    background-position: -457px -295px;
+}
+
+.prog-knowledgehut {
+    width: 135px;
+    height: 61px;
+    background-position: -67px -382px;
+}
+
+.prog-kurshtml {
+    width: 120px;
+    height: 28px;
+    background-position: -202px -382px;
+}
+
+.prog-kurshtmlcss {
+    width: 154px;
+    height: 25px;
+    background-position: -322px -382px;
+}
+
+.prog-lawsofux {
+    width: 36px;
+    height: 36px;
+    background-position: -595px -334px;
+}
+
+.prog-leetcode {
+    width: 110px;
+    height: 27px;
+    background-position: -436px -354px;
+}
+
+.prog-loader {
+    width: 40px;
+    height: 40px;
+    background-position: -476px -382px;
+}
+
+.prog-localforage {
+    width: 75px;
+    height: 28px;
+    background-position: -516px -382px;
+}
+
+.prog-markdown_preview {
+    width: 34px;
+    height: 45px;
+    background-position: -595px -370px;
+}
+
+.prog-material {
+    width: 120px;
+    height: 28px;
+    background-position: -202px -415px;
+}
+
+.prog-materialize {
+    width: 50px;
+    height: 28px;
+    background-position: 0 -410px;
+}
+
+.prog-materialuicolors {
+    width: 120px;
+    height: 18px;
+    background-position: -322px -415px;
+}
+
+.prog-matic {
+    width: 118px;
+    height: 26px;
+    background-position: -442px -422px;
+}
+
+.prog-meyerweb {
+    width: 35px;
+    height: 36px;
+    background-position: -560px -415px;
+}
+
+.prog-minifier {
+    width: 50px;
+    height: 27px;
+    background-position: 0 -451px;
+}
+
+.prog-nafrontendzie {
+    width: 125px;
+    height: 22px;
+    background-position: -50px -451px;
+}
+
+.prog-nask {
+    width: 96px;
+    height: 18px;
+    background-position: -175px -448px;
+}
+
+.prog-netlify {
+    width: 38px;
+    height: 38px;
+    background-position: -271px -451px;
+}
+
+.prog-next {
+    width: 64px;
+    height: 35px;
+    background-position: -309px -451px;
+}
+
+.prog-normalize {
+    width: 36px;
+    height: 36px;
+    background-position: -595px -415px;
+}
+
+.prog-npm {
+    width: 108px;
+    height: 49px;
+    background-position: -373px -448px;
+}
+
+.prog-obfuscator {
+    width: 120px;
+    height: 21px;
+    background-position: -481px -451px;
+}
+
+.prog-obfuscator2 {
+    width: 120px;
+    height: 35px;
+    background-position: -481px -472px;
+}
+
+.prog-obliczeniowo {
+    width: 127px;
+    height: 32px;
+    background-position: 0 -507px;
+}
+
+.prog-ocks {
+    width: 35px;
+    height: 87px;
+    background-position: -127px -507px;
+}
+
+.prog-outliner {
+    width: 110px;
+    height: 31px;
+    background-position: -162px -507px;
+}
+
+.prog-pagespeed2 {
+    width: 161px;
+    height: 22px;
+    background-position: -272px -507px;
+}
+
+.prog-paletton {
+    width: 120px;
+    height: 27px;
+    background-position: -433px -507px;
+}
+
+.prog-paperjs {
+    width: 69px;
+    height: 25px;
+    background-position: -553px -507px;
+}
+
+.prog-parcel {
+    width: 102px;
+    height: 28px;
+    background-position: -272px -534px;
+}
+
+.prog-paths {
+    width: 73px;
+    height: 25px;
+    background-position: -553px -532px;
+}
+
+.prog-phaser {
+    width: 104px;
+    height: 29px;
+    background-position: -374px -534px;
+}
+
+.prog-pinterest {
+    width: 35px;
+    height: 87px;
+    background-position: -630px 0;
+}
+
+.prog-pixijs {
+    width: 80px;
+    height: 27px;
+    background-position: 0 -557px;
+}
+
+.prog-polskifrontend {
+    width: 130px;
+    height: 41px;
+    background-position: -478px -557px;
+}
+
+.prog-popmotion {
+    width: 110px;
+    height: 23px;
+    background-position: -162px -557px;
+}
+
+.prog-pose {
+    width: 80px;
+    height: 28px;
+    background-position: 0 -598px;
+}
+
+.prog-primefaces {
+    width: 43px;
+    height: 46px;
+    background-position: -611px -113px;
+}
+
+.prog-puppeteer {
+    width: 110px;
+    height: 25px;
+    background-position: -80px -598px;
+}
+
+.prog-puppeteer2 {
+    width: 40px;
+    height: 60px;
+    background-position: -618px -159px;
+}
+
+.prog-ranking {
+    width: 100px;
+    height: 22px;
+    background-position: -190px -598px;
+}
+
+.prog-reacthooks {
+    width: 88px;
+    height: 24px;
+    background-position: -290px -598px;
+}
+
+.prog-reactjs {
+    width: 120px;
+    height: 39px;
+    background-position: -378px -598px;
+}
+
+.prog-reactnative {
+    width: 75px;
+    height: 36px;
+    background-position: -498px -598px;
+}
+
+.prog-reacttypa {
+    width: 132px;
+    height: 31px;
+    background-position: 0 -634px;
+}
+
+.prog-reset {
+    width: 36px;
+    height: 36px;
+    background-position: -631px -219px;
+}
+
+.prog-reverieai {
+    width: 130px;
+    height: 34px;
+    background-position: -132px -634px;
+}
+
+.prog-rockstar {
+    width: 110px;
+    height: 20px;
+    background-position: -262px -634px;
+}
+
+.prog-s_prites {
+    width: 90px;
+    height: 25px;
+    background-position: -573px -598px;
+}
+
+.prog-sandbox {
+    width: 42px;
+    height: 46px;
+    background-position: -620px -255px;
+}
+
+.prog-sass {
+    width: 36px;
+    height: 36px;
+    background-position: -631px -301px;
+}
+
+.prog-serverless {
+    width: 146px;
+    height: 28px;
+    background-position: -498px -634px;
+}
+
+.prog-slides {
+    width: 41px;
+    height: 40px;
+    background-position: -601px -451px;
+}
+
+.prog-sortable {
+    width: 45px;
+    height: 47px;
+    background-position: -262px -662px;
+}
+
+.prog-special {
+    width: 100px;
+    height: 23px;
+    background-position: -307px -662px;
+}
+
+.prog-sullygnome {
+    width: 45px;
+    height: 53px;
+    background-position: -407px -662px;
+}
+
+.prog-svg {
+    width: 75px;
+    height: 34px;
+    background-position: -452px -662px;
+}
+
+.prog-svg-js {
+    width: 41px;
+    height: 41px;
+    background-position: -622px -491px;
+}
+
+.prog-svgomg {
+    width: 41px;
+    height: 41px;
+    background-position: -626px -532px;
+}
+
+.prog-svgsilh {
+    width: 120px;
+    height: 25px;
+    background-position: -527px -662px;
+}
+
+.prog-swift {
+    width: 45px;
+    height: 45px;
+    background-position: -665px 0;
+}
+
+.prog-swr {
+    width: 132px;
+    height: 23px;
+    background-position: 0 -687px;
+}
+
+.prog-syntax {
+    width: 52px;
+    height: 45px;
+    background-position: -654px -87px;
+}
+
+.prog-textfancy {
+    width: 124px;
+    height: 31px;
+    background-position: -132px -687px;
+}
+
+.prog-textshadow {
+    width: 120px;
+    height: 25px;
+    background-position: -527px -687px;
+}
+
+.prog-theme-ui {
+    width: 102px;
+    height: 23px;
+    background-position: -272px -573px;
+}
+
+.prog-threejs {
+    width: 66px;
+    height: 22px;
+    background-position: -154px -337px;
+}
+
+.prog-tinypng {
+    width: 120px;
+    height: 38px;
+    background-position: 0 -712px;
+}
+
+.prog-typeorm {
+    width: 86px;
+    height: 20px;
+    background-position: 0 -132px;
+}
+
+.prog-unminify {
+    width: 120px;
+    height: 22px;
+    background-position: -256px -712px;
+}
+
+.prog-vectorizer {
+    width: 134px;
+    height: 28px;
+    background-position: -452px -712px;
+}
+
+.prog-vived {
+    width: 114px;
+    height: 37px;
+    background-position: -586px -712px;
+}
+
+.prog-vscode {
+    width: 45px;
+    height: 46px;
+    background-position: -658px -132px;
+}
+
+.prog-vuejs {
+    width: 50px;
+    height: 45px;
+    background-position: -662px -255px;
+}
+
+.prog-w3schools {
+    width: 130px;
+    height: 16px;
+    background-position: 0 -491px;
+}
+
+.prog-workspace {
+    width: 108px;
+    height: 43px;
+    background-position: -710px 0;
+}
+
+.prog-wroc {
+    width: 44px;
+    height: 43px;
+    background-position: -710px -43px;
+}
+
+.prog-xenko {
+    width: 110px;
+    height: 22px;
+    background-position: -706px -86px;
+}
+
+.prog-yarn {
+    width: 46px;
+    height: 46px;
+    background-position: -706px -108px;
+}
+
+.prog-zoho-people {
+    width: 180px;
+    height: 33px;
+    background-position: -631px -337px;
+}
+
+.prog-zoho-projects {
+    width: 197px;
+    height: 34px;
+    background-position: -120px -749px;
+}
+
+.prog-zufana {
+    width: 230px;
+    height: 18px;
+    background-position: -317px -749px;
+}
+
+
+/* #endregion */
