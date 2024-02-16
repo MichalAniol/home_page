@@ -73,7 +73,7 @@ const start = () => {
             const elementType = element.attribs.type
 
             if (elementType === 'text/css' && href) {
-                const file = oof.load(`${href}`)
+                const file = oof.load(`_html//${href}`)
                 if (file) {
                     const splitted = href.split('/')
                     splitted.pop()
@@ -91,6 +91,7 @@ const start = () => {
         })
 
         const styleCss = `<style>\n${minify(css)}\n</style>`
+        console.log('styleCss: ', styleCss)
         $('head').append(styleCss)
 
         oof.save('index.css', css)
