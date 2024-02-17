@@ -50,16 +50,19 @@ body {
         width: 100%;
         height: 100%;
     }
+
     25% {
         opacity: 1;
         width: 100%;
         height: 100%;
     }
+
     99% {
         opacity: 0;
         width: 100%;
         height: 100%;
     }
+
     100% {
         width: 0px;
         height: 0px;
@@ -235,7 +238,7 @@ body {
 .part .prog,
 .part a div,
 .part a,
-.part smallinfo,
+.part .smallInfo,
 .part .smallpseudoicon,
 #finder img,
 #finder svg,
@@ -243,7 +246,7 @@ body {
 #finder .prog,
 #finder a div,
 #finder a,
-#finder smallinfo,
+#finder .smallInfo,
 #finder .smallpseudoicon {
     -webkit-transition: all .15s;
     transition: all .15s;
@@ -276,15 +279,19 @@ body {
     #whole {
         width: 600px;
     }
+
     #mycanvas {
         order: 0;
     }
+
     #part1 {
         order: 1;
     }
+
     #part2 {
         order: 2;
     }
+
     #part3 {
         order: 3;
     }
@@ -332,7 +339,7 @@ body {
     transition: all .15s;
 }
 
-.smallinfo {
+.smallInfo {
     padding: 2px;
     background-color: var(--color_2h);
     width: max-content;
@@ -429,7 +436,7 @@ body {
 .part .prog:hover,
 .part a div:hover,
 .part a:hover,
-.part smallinfo:hover,
+.part smallInfo:hover,
 .part .smallpseudoicon:hover,
 #finder img:hover,
 #finder svg:hover,
@@ -437,7 +444,7 @@ body {
 #finder .prog:hover,
 #finder a div:hover,
 #finder a:hover,
-#finder smallinfo:hover,
+#finder smallInfo:hover,
 #finder .smallpseudoicon:hover {
     transform: scale(1.08);
     /* border: 2px solid var(--color_back); */
@@ -578,6 +585,7 @@ input {
 .ml5 {
     margin-left: 5px;
 }
+
 .ml12 {
     margin-left: 12px;
 }
@@ -591,8 +599,7 @@ input {
     margin-right: 3px;
     display: flex;
     flex-direction: column;
-}
-/* ------------------zwykłe ikony----------------------- */
+}/* ------------------zwykłe ikony----------------------- */
 
 
 /* #region [ rgba( 0, 0, 200, 0.05 ) ] --->  */

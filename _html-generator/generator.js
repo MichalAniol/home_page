@@ -58,7 +58,7 @@ const start = () => {
                     console.error(`Brakuje "src" w pliku: ${path}\\${src}`)
                 }
             })
-            console.log('-----------------------')
+            // console.log('-----------------------')
         }
 
         return $
@@ -86,12 +86,11 @@ const start = () => {
                     css += file.toString()
                     $(element).replaceWith('')
                 } 
-                console.log(`  >> added file: ${href.replace(/\//g, '\\')}`, index + 1, fileElement.length)
+                console.log(`  >> added file: _html\\${href.replace(/\//g, '\\')}`, index + 1, fileElement.length)
             } 
         })
 
         const styleCss = `<style>\n${minify(css)}\n</style>`
-        console.log('styleCss: ', styleCss)
         $('head').append(styleCss)
 
         oof.save('index.css', css)
@@ -143,7 +142,7 @@ const start = () => {
     const code = ($.html())
 
     oof.save('index.html', minify(code))
-    console.log(`Saved!!! file: ${pathFile}`)
+    console.log(`>>>> Saved!!! file: ${pathFile}`)
 }
 
 module.exports = { start }

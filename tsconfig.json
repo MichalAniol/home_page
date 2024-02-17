@@ -1,4 +1,9 @@
 {
+  "ts-node": {
+    "require": [
+      "tsconfig-paths/register"
+    ]
+  },
   "compilerOptions": {
     "target": "ES2020",
     "module": "AMD",
@@ -7,9 +12,11 @@
     "preserveConstEnums": false,
     "sourceMap": false,
     "downlevelIteration": false,
+    "moduleResolution": "node",
     "outFile": "index.js"
   },
   "files": [
+    "ts/0_console.ts",
     "ts/1_waitingRoom.ts",
     "ts/2_index.ts",
     "ts/7_worldData.ts",

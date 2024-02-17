@@ -13,7 +13,7 @@ const htmlPath = `${globalPath}_html\\`;
 
 const load = name => {
     filePath = globalPath + name;
-    console.log('%c filePath:', 'background: #ffcc00; color: #003300', filePath)
+    // console.log('%c filePath:', 'background: #ffcc00; color: #003300', filePath)
     let data = null;
 
     try {
