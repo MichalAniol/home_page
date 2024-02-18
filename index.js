@@ -74,6 +74,10 @@ const waitingRoomFoo = () => {
             name: 'qubes-os',
             href: 'https://www.qubes-os.org/intro/',
             title: 'system do bezpiecznego otwierania aplikacji',
+        }, {
+            name: 'PiPot',
+            href: 'https://github.com/PiPot/PiPot',
+            title: 'PiPot (Micro Honeypot for RPi) - Main repository',
         },
     ];
     let column;

@@ -1,0 +1,798 @@
+.prog {
+    background-image: url(./img/prog.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.prog-adobe {
+    width: 114px;
+    height: 21px;
+    background-position: -0px -529px;
+}
+
+.prog-aftermarket {
+    width: 160px;
+    height: 27px;
+    background-position: -0px -285px;
+}
+
+.prog-ahrefs {
+    width: 79px;
+    height: 25px;
+    background-position: -320px -285px;
+}
+
+.prog-alicevision {
+    width: 58px;
+    height: 50px;
+    background-position: -404px -269px;
+}
+
+.prog-animacje {
+    width: 103px;
+    height: 27px;
+    background-position: -512px -26px;
+}
+
+.prog-anime {
+    width: 112px;
+    height: 22px;
+    background-position: -512px -405px;
+}
+
+.prog-animista {
+    width: 42px;
+    height: 42px;
+    background-position: -678px -583px;
+}
+
+.prog-antyweb {
+    width: 52px;
+    height: 45px;
+    background-position: -91px -553px;
+}
+
+.prog-apollographql {
+    width: 113px;
+    height: 36px;
+    background-position: -271px -187px;
+}
+
+.prog-asciigenerator {
+    width: 110px;
+    height: 45px;
+    background-position: -138px -44px;
+}
+
+.prog-awesome {
+    width: 45px;
+    height: 45px;
+    background-position: -678px -247px;
+}
+
+.prog-babel {
+    width: 66px;
+    height: 32px;
+    background-position: -0px -678px;
+}
+
+.prog-befonts {
+    width: 105px;
+    height: 36px;
+    background-position: -404px -0px;
+}
+
+.prog-bezier {
+    width: 125px;
+    height: 18px;
+    background-position: -233px -264px;
+}
+
+.prog-bionicReading {
+    width: 75px;
+    height: 35px;
+    background-position: -512px -109px;
+}
+
+.prog-caniuse {
+    width: 110px;
+    height: 25px;
+    background-position: -512px -56px;
+}
+
+.prog-canvas {
+    width: 113px;
+    height: 25px;
+    background-position: -286px -315px;
+}
+
+.prog-codewars {
+    width: 45px;
+    height: 45px;
+    background-position: -678px -295px;
+}
+
+.prog-colorbox {
+    width: 120px;
+    height: 31px;
+    background-position: -0px -380px;
+}
+
+.prog-colorhunt {
+    width: 120px;
+    height: 30px;
+    background-position: -0px -414px;
+}
+
+.prog-colors_picker {
+    width: 120px;
+    height: 34px;
+    background-position: -271px -115px;
+}
+
+.prog-compresor {
+    width: 93px;
+    height: 27px;
+    background-position: -512px -375px;
+}
+
+.prog-compressor {
+    width: 90px;
+    height: 22px;
+    background-position: -397px -553px;
+}
+
+.prog-cursor {
+    width: 72px;
+    height: 18px;
+    background-position: -435px -380px;
+}
+
+.prog-d3 {
+    width: 36px;
+    height: 34px;
+    background-position: -731px -580px;
+}
+
+.prog-davinci17 {
+    width: 214px;
+    height: 22px;
+    background-position: -0px -193px;
+}
+
+.prog-dbdiagram {
+    width: 100px;
+    height: 24px;
+    background-position: -404px -322px;
+}
+
+.prog-docs-w3cub {
+    width: 137px;
+    height: 25px;
+    background-position: -246px -414px;
+}
+
+.prog-dojotoolkit {
+    width: 73px;
+    height: 36px;
+    background-position: -512px -147px;
+}
+
+.prog-dragonbones {
+    width: 34px;
+    height: 34px;
+    background-position: -731px -617px;
+}
+
+.prog-draw {
+    width: 40px;
+    height: 40px;
+    background-position: -731px -131px;
+}
+
+.prog-droidcon {
+    width: 120px;
+    height: 26px;
+    background-position: -138px -92px;
+}
+
+.prog-electronjs {
+    width: 156px;
+    height: 32px;
+    background-position: -0px -158px;
+}
+
+.prog-ezgif {
+    width: 120px;
+    height: 23px;
+    background-position: -512px -0px;
+}
+
+.prog-fbflipper {
+    width: 30px;
+    height: 30px;
+    background-position: -731px -654px;
+}
+
+.prog-feathericons {
+    width: 39px;
+    height: 37px;
+    background-position: -731px -306px;
+}
+
+.prog-figma {
+    width: 40px;
+    height: 57px;
+    background-position: -635px -0px;
+}
+
+.prog-flaticon {
+    width: 121px;
+    height: 25px;
+    background-position: -386px -414px;
+}
+
+.prog-flex {
+    width: 100px;
+    height: 25px;
+    background-position: -512px -319px;
+}
+
+.prog-font-converter {
+    width: 120px;
+    height: 25px;
+    background-position: -121px -478px;
+}
+
+.prog-fontsgoogle {
+    width: 135px;
+    height: 29px;
+    background-position: -135px -346px;
+}
+
+.prog-formatjson {
+    width: 145px;
+    height: 21px;
+    background-position: -287px -380px;
+}
+
+.prog-getmdl {
+    width: 41px;
+    height: 41px;
+    background-position: -575px -236px;
+}
+
+.prog-github {
+    width: 36px;
+    height: 36px;
+    background-position: -731px -346px;
+}
+
+.prog-glyphicons {
+    width: 135px;
+    height: 19px;
+    background-position: -0px -507px;
+}
+
+.prog-googlecloud {
+    width: 45px;
+    height: 36px;
+    background-position: -0px -713px;
+}
+
+.prog-graphql {
+    width: 88px;
+    height: 28px;
+    background-position: -512px -455px;
+}
+
+.prog-grid {
+    width: 100px;
+    height: 25px;
+    background-position: -512px -347px;
+}
+
+.prog-gtmetrix {
+    width: 110px;
+    height: 33px;
+    background-position: -157px -121px;
+}
+
+.prog-h5p {
+    width: 60px;
+    height: 43px;
+    background-position: -512px -236px;
+}
+
+.prog-html5 {
+    width: 154px;
+    height: 34px;
+    background-position: -0px -121px;
+}
+
+.prog-htmlemail {
+    width: 69px;
+    height: 25px;
+    background-position: -242px -616px;
+}
+
+.prog-icomoon {
+    width: 41px;
+    height: 41px;
+    background-position: -465px -269px;
+}
+
+.prog-icons {
+    width: 120px;
+    height: 30px;
+    background-position: -123px -414px;
+}
+
+.prog-immutable {
+    width: 116px;
+    height: 20px;
+    background-position: -117px -529px;
+}
+
+.prog-js-tutorial {
+    width: 43px;
+    height: 48px;
+    background-position: -678px -196px;
+}
+
+.prog-jsnice {
+    width: 67px;
+    height: 27px;
+    background-position: -78px -647px;
+}
+
+.prog-json {
+    width: 99px;
+    height: 31px;
+    background-position: -404px -39px;
+}
+
+.prog-knowledgehut {
+    width: 135px;
+    height: 61px;
+    background-position: -0px -0px;
+}
+
+.prog-kurshtml {
+    width: 120px;
+    height: 28px;
+    background-position: -273px -346px;
+}
+
+.prog-kurshtmlcss {
+    width: 154px;
+    height: 25px;
+    background-position: -163px -285px;
+}
+
+.prog-lawsofux {
+    width: 36px;
+    height: 36px;
+    background-position: -731px -385px;
+}
+
+.prog-loader {
+    width: 40px;
+    height: 40px;
+    background-position: -731px -174px;
+}
+
+.prog-localforage {
+    width: 75px;
+    height: 28px;
+    background-position: -0px -647px;
+}
+
+.prog-markdown_preview {
+    width: 34px;
+    height: 45px;
+    background-position: -731px -217px;
+}
+
+.prog-material {
+    width: 120px;
+    height: 28px;
+    background-position: -0px -447px;
+}
+
+.prog-materialize {
+    width: 50px;
+    height: 28px;
+    background-position: -69px -678px;
+}
+
+.prog-materialuicolors {
+    width: 120px;
+    height: 18px;
+    background-position: -512px -486px;
+}
+
+.prog-matic {
+    width: 118px;
+    height: 26px;
+    background-position: -0px -478px;
+}
+
+.prog-meyerweb {
+    width: 35px;
+    height: 36px;
+    background-position: -731px -541px;
+}
+
+.prog-minifier {
+    width: 50px;
+    height: 27px;
+    background-position: -148px -647px;
+}
+
+.prog-nafrontendzie {
+    width: 125px;
+    height: 22px;
+    background-position: -381px -447px;
+}
+
+.prog-nask {
+    width: 96px;
+    height: 18px;
+    background-position: -349px -529px;
+}
+
+.prog-netlify {
+    width: 38px;
+    height: 38px;
+    background-position: -731px -265px;
+}
+
+.prog-normalize {
+    width: 36px;
+    height: 36px;
+    background-position: -731px -424px;
+}
+
+.prog-obfuscator {
+    width: 120px;
+    height: 21px;
+    background-position: -512px -186px;
+}
+
+.prog-obfuscator2 {
+    width: 120px;
+    height: 35px;
+    background-position: -271px -77px;
+}
+
+.prog-obliczeniowo {
+    width: 127px;
+    height: 32px;
+    background-position: -271px -152px;
+}
+
+.prog-ocks {
+    width: 35px;
+    height: 87px;
+    background-position: -404px -105px;
+}
+
+.prog-pagespeed2 {
+    width: 161px;
+    height: 22px;
+    background-position: -123px -380px;
+}
+
+.prog-paletton {
+    width: 120px;
+    height: 27px;
+    background-position: -123px -447px;
+}
+
+.prog-paperjs {
+    width: 69px;
+    height: 25px;
+    background-position: -314px -616px;
+}
+
+.prog-parcel {
+    width: 102px;
+    height: 28px;
+    background-position: -404px -238px;
+}
+
+.prog-paths {
+    width: 73px;
+    height: 25px;
+    background-position: -166px -616px;
+}
+
+.prog-phaser {
+    width: 104px;
+    height: 29px;
+    background-position: -404px -73px;
+}
+
+.prog-pinterest {
+    width: 35px;
+    height: 87px;
+    background-position: -442px -105px;
+}
+
+.prog-pixijs {
+    width: 80px;
+    height: 27px;
+    background-position: -83px -616px;
+}
+
+.prog-polskifrontend {
+    width: 130px;
+    height: 41px;
+    background-position: -138px -0px;
+}
+
+.prog-popmotion {
+    width: 110px;
+    height: 23px;
+    background-position: -512px -210px;
+}
+
+.prog-pose {
+    width: 80px;
+    height: 28px;
+    background-position: -0px -616px;
+}
+
+.prog-primefaces {
+    width: 43px;
+    height: 46px;
+    background-position: -678px -439px;
+}
+
+.prog-puppeteer2 {
+    width: 40px;
+    height: 60px;
+    background-position: -0px -553px;
+}
+
+.prog-ranking {
+    width: 100px;
+    height: 22px;
+    background-position: -294px -553px;
+}
+
+.prog-reacttypa {
+    width: 132px;
+    height: 31px;
+    background-position: -0px -346px;
+}
+
+.prog-reset {
+    width: 36px;
+    height: 36px;
+    background-position: -731px -463px;
+}
+
+.prog-reverieai {
+    width: 130px;
+    height: 34px;
+    background-position: -271px -0px;
+}
+
+.prog-rockstar {
+    width: 110px;
+    height: 20px;
+    background-position: -236px -529px;
+}
+
+.prog-sandbox {
+    width: 42px;
+    height: 46px;
+    background-position: -678px -488px;
+}
+
+.prog-sass {
+    width: 36px;
+    height: 36px;
+    background-position: -731px -502px;
+}
+
+.prog-serverless {
+    width: 146px;
+    height: 28px;
+    background-position: -0px -315px;
+}
+
+.prog-slides {
+    width: 41px;
+    height: 40px;
+    background-position: -731px -88px;
+}
+
+.prog-sortable {
+    width: 45px;
+    height: 47px;
+    background-position: -678px -97px;
+}
+
+.prog-special {
+    width: 100px;
+    height: 23px;
+    background-position: -159px -158px;
+}
+
+.prog-sullygnome {
+    width: 45px;
+    height: 53px;
+    background-position: -43px -553px;
+}
+
+.prog-svg-js {
+    width: 41px;
+    height: 41px;
+    background-position: -731px -0px;
+}
+
+.prog-svg {
+    width: 75px;
+    height: 34px;
+    background-position: -512px -282px;
+}
+
+.prog-svgomg {
+    width: 41px;
+    height: 41px;
+    background-position: -731px -44px;
+}
+
+.prog-svgsilh {
+    width: 120px;
+    height: 25px;
+    background-position: -244px -478px;
+}
+
+.prog-swr {
+    width: 132px;
+    height: 23px;
+    background-position: -246px -447px;
+}
+
+.prog-syntax {
+    width: 52px;
+    height: 45px;
+    background-position: -146px -553px;
+}
+
+.prog-s_prites {
+    width: 90px;
+    height: 25px;
+    background-position: -201px -553px;
+}
+
+.prog-textfancy {
+    width: 124px;
+    height: 31px;
+    background-position: -271px -226px;
+}
+
+.prog-textshadow {
+    width: 120px;
+    height: 25px;
+    background-position: -367px -478px;
+}
+
+.prog-theme-ui {
+    width: 102px;
+    height: 23px;
+    background-position: -404px -349px;
+}
+
+.prog-threejs {
+    width: 66px;
+    height: 22px;
+    background-position: -386px -616px;
+}
+
+.prog-tinypng {
+    width: 120px;
+    height: 38px;
+    background-position: -111px -218px;
+}
+
+.prog-typeorm {
+    width: 86px;
+    height: 20px;
+    background-position: -490px -553px;
+}
+
+.prog-unminify {
+    width: 120px;
+    height: 22px;
+    background-position: -512px -84px;
+}
+
+.prog-vectorizer {
+    width: 134px;
+    height: 28px;
+    background-position: -149px -315px;
+}
+
+.prog-vived {
+    width: 114px;
+    height: 37px;
+    background-position: -271px -37px;
+}
+
+.prog-vscode {
+    width: 45px;
+    height: 46px;
+    background-position: -678px -147px;
+}
+
+.prog-vuejs {
+    width: 50px;
+    height: 45px;
+    background-position: -678px -0px;
+}
+
+.prog-W3 {
+    width: 73px;
+    height: 40px;
+    background-position: -404px -195px;
+}
+
+.prog-w3schools {
+    width: 130px;
+    height: 16px;
+    background-position: -138px -507px;
+}
+
+.prog-workspace {
+    width: 108px;
+    height: 43px;
+    background-position: -0px -218px;
+}
+
+.prog-wroc {
+    width: 44px;
+    height: 43px;
+    background-position: -678px -537px;
+}
+
+.prog-xenko {
+    width: 110px;
+    height: 22px;
+    background-position: -512px -430px;
+}
+
+.prog-yarn {
+    width: 46px;
+    height: 46px;
+    background-position: -678px -48px;
+}
+
+.prog-zufana {
+    width: 230px;
+    height: 18px;
+    background-position: -0px -264px;
+}
+
+.prog-holepunch {
+    width: 110px;
+    height: 54px;
+    background-position: -0px -64px;
+}
+
+.prog-npm_trends {
+    width: 45px;
+    height: 45px;
+    background-position: -678px -343px;
+}
+
+.prog-wasp {
+    width: 45px;
+    height: 45px;
+    background-position: -678px -391px;
+}
+

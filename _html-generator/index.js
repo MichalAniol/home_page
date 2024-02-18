@@ -1,25 +1,35 @@
-// const express = require('express')
+const express = require('express')
 const { watch } = require('gulp')
-const browserSync = require('browser-sync').create()
+const browserSync = require('browser-sync')
 // const path = require('path')
 const oof = require('./operationsOnFiles')
 const generator = require('./generator')
+const sprites = require('./sprites')
 
 const getZero = num => num < 10 ? '0' + num : num
 
 const PORT = 2024
 const PROXY_PORT = 2025
 
-browserSync.init({
-    server: {
-        baseDir: "./",
-    },
-    ui: {
-        port: PROXY_PORT
-    },
-    port: PORT,
-    open: false
-});
+const myServer = browserSync.create('myServer')
+
+myServer.init({
+        server: {
+            baseDir: "./",
+        },
+        ui: {
+            port: PROXY_PORT
+        },
+        port: PORT,
+        open: false
+    })
+
+const server = browserSync.get('myServer')
+
+// const app = express()
+// app.listen(2030, () => console.log(`Listening Web on ------->>>>>`))
+
+// sprites.cerate()
 
 const info = (name) => {
     const time = new Date()
@@ -32,7 +42,7 @@ const info = (name) => {
 
 const watchChanges = () => {
     info('watch changes');
-    const watchFiles = oof.getAllHtmlFiles('_html', [])
+    const watchFiles = oof.getAllHtmlFiles('_html', []).concat(oof.getAllHtmlFiles('img', []))
     // console.log('%c watchFiles.watch:', 'background: #ffcc00; color: #003300', watchFiles)
     watch(
         watchFiles,
@@ -41,7 +51,7 @@ const watchChanges = () => {
                 info('watch changes')
                 generator.start()
                 watchChanges()
-                browserSync.reload()
+                server.reload()
             }, 1000)
         });
 }
