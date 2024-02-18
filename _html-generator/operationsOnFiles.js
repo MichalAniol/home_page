@@ -74,15 +74,45 @@ const getAllHtmlFiles = (folder, exceptions) => {
                 const forbidden = exceptions.some(f => f === e)
                 if (forbidden) return
 
-                const indexDot = e.indexOf('.')
-                const indexHtml = e.indexOf('.html')
-                const indexJs = e.indexOf('.css')
+                const hasDot = e.indexOf('.') === -1
+                const isHtml = e.indexOf('.html') > -1
+                const isJs = e.indexOf('.css') > -1
+                const isSvg = e.indexOf('.svg') > -1
 
-                if (indexHtml > -1 || indexJs > -1) {
+                if (isHtml || isJs || isSvg) {
                     result.push(`${suffix}\\${e}`)
                     return
                 }
-                if (indexDot === -1) getDir(`${path}\\${e}`, `${suffix}\\${e}`)
+                if (hasDot) getDir(`${path}\\${e}`, `${suffix}\\${e}`)
+            })
+        }
+    }
+
+    const filePath = globalPath + folder
+    getDir(filePath, folder)
+
+    return result
+}
+
+const getAllPngFiles = (folder, exceptions) => {
+    let result = []
+
+    const getDir = (path, suffix) => {
+        const files = fs.readdirSync(path);
+
+        if (files.length > 0) {
+            files.forEach(e => {
+                const forbidden = exceptions.some(f => f === e)
+                if (forbidden) return
+
+                const hasDot = e.indexOf('.') === -1
+                const isPng = e.indexOf('.png') > -1
+
+                if (isPng) {
+                    result.push(`${suffix}\\${e}`)
+                    return
+                }
+                if (hasDot) getDir(`${path}\\${e}`, `${suffix}\\${e}`)
             })
         }
     }
@@ -106,5 +136,6 @@ module.exports = {
     loadSvg,
     loadJson,
     getAllHtmlFiles,
+    getAllPngFiles,
     save
 }

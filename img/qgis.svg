@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" viewBox="0 0 256 256">
+    <defs id="defs15">
+        <linearGradient id="qgis_1" gradientUnits="userSpaceOnUse" x1="200.79" y1="249.01" x2="197.17" y2="11.23">
+            <stop offset="0" stop-color="#589632" id="stop5"/>
+            <stop offset="1" stop-color="#93B023" id="stop7"/>
+        </linearGradient>
+        <linearGradient id="qgis_2" gradientUnits="userSpaceOnUse" x1="129.94" y1="252.72" x2="126.35" y2="16.93">
+            <stop offset="0" stop-color="#589632" id="stop10"/>
+            <stop offset="1" stop-color="#93B023" id="stop12"/>
+        </linearGradient>
+    </defs>
+    <g id="Layer_1">
+        <path d="M137.6 136.9h34.44l-29.14-28.82h-35.71v34.31l30.42 30.32z" fill="#EE7913" id="polygon3"/>
+        <path d="M248.06 212.05l-61.44-60.74H152v35.76l58.88 58.68h37.17z" fill="url(#qgis_1)" id="polygon10"/>
+        <path d="M152.01 151.3h34.6l-14.57-14.4h-34.43v35.8l14.4 14.37z" fill="#F0E64A" id="polygon12"/>
+        <path d="M144.83 199.3a72.21 72.21 0 0 1-16.24 1.85c-40.03 0-74.07-32.91-74.07-75.59 0-42.67 33.66-74.87 74.07-74.87 40.4 0 72.57 32.2 72.57 74.87 0 6.94-.87 13.62-2.46 19.95l37.04 37.04c9.56-16.74 14.9-36.2 14.9-57.27 0-65.78-52.5-115.03-122.8-115.03-70 0-122.48 48.93-122.48 115.03 0 66.42 52.49 116.32 122.48 116.32 18.06 0 34.95-3.32 50.08-9.37l-33.1-32.93z" fill="url(#qgis_2)" id="path19"/>
+        <path d="M107.19 108.08l140.87 137.67v-33.7l-61.44-60.74-14.58-14.41-29.14-28.82z" fill="#FFF" fill-opacity=".17" id="polygon4153"/>
+    </g>
+    <script id="bw-fido2-page-script"/>
+</svg>

@@ -1,0 +1,8 @@
+<svg height="47" viewBox="0 0 256 256">
+    <path d="M40 54L0 94l61 61-61 61 39 40 62-62 61 62 40-40z" fill="#53b9ff"/>
+    <path d="M141 155l-40 39 61 62 40-40z" fill="#119eff"/>
+    <path d="M141 155l-40 39 15 16z" fill-opacity=".2"/>
+    <path d="M195 101l61-62-40-39-61 61L94 0 54 40l162 162 40-40z" fill="#53b9ff"/>
+    <path d="M115 101l40-40L94 0 54 40z" fill="#119eff"/>
+    <path d="M115 101l40-40-15-15z" fill-opacity=".2"/>
+</svg>

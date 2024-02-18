@@ -2,7 +2,7 @@ const oof = require('./operationsOnFiles')
 const cheerio = require('cheerio')
 
 const start = () => {
-    const CHANGE_PATHS_IMAGES_AT_CSS_CLASS = false;
+    const CHANGE_PATHS_IMAGES_AT_CSS_CLASS = true
     const MINIFY = true
 
     const minify = (code) => {
@@ -85,9 +85,9 @@ const start = () => {
 
                     css += file.toString()
                     $(element).replaceWith('')
-                } 
+                }
                 console.log(`  >> added file: _html\\${href.replace(/\//g, '\\')}`, index + 1, fileElement.length)
-            } 
+            }
         })
 
         const styleCss = `<style>\n${minify(css)}\n</style>`
@@ -124,13 +124,12 @@ const start = () => {
                 const isProg = nameSplitted[nameSplitted.length - 2] === 'prog';
                 const cssFile = isProg ? 'prog' : 'base';
                 const cssImage = '<i class="' + cssFile + ' ' + cssFile + '-' + name + '"></i>'
+                // console.log('%c cssImage:', 'background: #ffcc00; color: #003300', cssImage)
 
                 $(element).replaceWith(cssImage)
             }
         })
     }
-
-
 
     const pathFile = '_html\\_index.html'
     const file = oof.load(pathFile)
