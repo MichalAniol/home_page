@@ -1,0 +1,26 @@
+{
+  "ts-node": {
+    "require": [
+      "tsconfig-paths/register"
+    ]
+  },
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "AMD",
+    "noImplicitAny": true,
+    "removeComments": true,
+    "preserveConstEnums": false,
+    "sourceMap": false,
+    "downlevelIteration": false,
+    "moduleResolution": "node",
+    "outFile": "index.js"
+  },
+  "files": [
+    "generator.ts",
+    "operationsOnFiles.ts",
+    "init.ts",
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

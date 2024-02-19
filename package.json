@@ -1,7 +1,7 @@
 {
     "name": "home_page",
     "author": "Michał Janusz Anioł",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "description": "",
     "license": "ISC",
     "scripts": {
@@ -10,15 +10,11 @@
         "test": "node test/test.js"
     },
     "devDependencies": {
-        "browser-sync": "^3.0.2",
         "cheerio": "^1.0.0-rc.12",
-        "dotenv": "^16.3.1",
+        "cors": "^2.8.5",
         "express": "^4.18.2",
-        "fs": "^0.0.1-security",
-        "gulp": "^4.0.2",
-        "node-sprite-generator": "^0.10.2",
-        "path": "^0.12.7",
-        "puppeteer": "^20.4.0",
-        "spritesmith": "^3.4.1"
+        "http": "^0.0.1-security",
+        "spritesmith": "^3.4.1",
+        "ws": "^8.16.0"
     }
 }
