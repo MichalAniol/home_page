@@ -1,7 +1,5 @@
 const generator = (function () {
 
-
-
     const start = () => {
         const CHANGE_PATHS_IMAGES_AT_CSS_CLASS = true
         const MINIFY = true

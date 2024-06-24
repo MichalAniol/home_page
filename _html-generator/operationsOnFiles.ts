@@ -1,11 +1,11 @@
 const oof = (function () {
-    const path = require('path')
+    // const path = require('path')
 
     // const path_in = path.join(__dirname, 'splittedHtml')
 
     let splitted = __dirname.split('\\')
     let path_out = '';
-    splitted.forEach((e, i) => i < splitted.length - 1 ? path_out += e + '/' : null);
+    splitted.forEach((e: string, i: number) => i < splitted.length - 1 ? path_out += e + '/' : null);
 
     const globalPath = __dirname.replace('_html-generator', '')
     // const htmlPath = `${globalPath}_html\\`

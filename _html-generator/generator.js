@@ -1,115 +1,118 @@
-define("operationsOnFiles", ["require", "exports"], function (require, exports) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
-    exports.oof = void 0;
-    exports.oof = (function () {
-        let splitted = __dirname.split('\\');
-        let path_out = '';
-        splitted.forEach((e, i) => i < splitted.length - 1 ? path_out += e + '/' : null);
-        const globalPath = __dirname.replace('_html-generator', '');
-        const load = (name) => {
-            const filePath = globalPath + name;
-            let data = null;
-            try {
-                if (fs.existsSync(filePath)) {
-                    data = fs.readFileSync(filePath);
-                }
+"use strict";
+const express = require('express');
+const fs = require('fs');
+const websocket = require('ws');
+const http = require('http');
+const cors = require('cors');
+const cheerio = require('cheerio');
+const Spritesmith = require('spritesmith');
+const oof = (function () {
+    let splitted = __dirname.split('\\');
+    let path_out = '';
+    splitted.forEach((e, i) => i < splitted.length - 1 ? path_out += e + '/' : null);
+    const globalPath = __dirname.replace('_html-generator', '');
+    const load = (name) => {
+        const filePath = globalPath + name;
+        let data = null;
+        try {
+            if (fs.existsSync(filePath)) {
+                data = fs.readFileSync(filePath);
             }
-            catch (err) {
-                console.error(err);
+        }
+        catch (err) {
+            console.error(err);
+        }
+        return data;
+    };
+    const loadSvg = (name) => {
+        const filePath = globalPath + name;
+        let data = null;
+        try {
+            if (fs.existsSync(filePath)) {
+                data = fs.readFileSync(filePath);
             }
-            return data;
-        };
-        const loadSvg = (name) => {
-            const filePath = globalPath + name;
-            let data = null;
-            try {
-                if (fs.existsSync(filePath)) {
-                    data = fs.readFileSync(filePath);
-                }
+        }
+        catch (err) {
+            console.error(err);
+        }
+        return data;
+    };
+    const loadJson = (name) => {
+        const filePath = globalPath + name;
+        let data = null;
+        try {
+            if (fs.existsSync(filePath)) {
+                data = JSON.parse(fs.readFileSync(filePath));
             }
-            catch (err) {
-                console.error(err);
+        }
+        catch (err) {
+            console.error(err);
+        }
+        return data;
+    };
+    const getAllHtmlFiles = (folder, exceptions) => {
+        let result = [];
+        const getDir = (path, suffix) => {
+            const files = fs.readdirSync(path);
+            if (files.length > 0) {
+                files.forEach((e) => {
+                    const forbidden = exceptions.some(f => f === e);
+                    if (forbidden)
+                        return;
+                    const hasDot = e.indexOf('.') === -1;
+                    const isHtml = e.indexOf('.html') > -1;
+                    const isJs = e.indexOf('.css') > -1;
+                    const isSvg = e.indexOf('.svg') > -1;
+                    if (isHtml || isJs || isSvg) {
+                        result.push(`${suffix}\\${e}`);
+                        return;
+                    }
+                    if (hasDot)
+                        getDir(`${path}\\${e}`, `${suffix}\\${e}`);
+                });
             }
-            return data;
         };
-        const loadJson = (name) => {
-            const filePath = globalPath + name;
-            let data = null;
-            try {
-                if (fs.existsSync(filePath)) {
-                    data = JSON.parse(fs.readFileSync(filePath));
-                }
+        const filePath = globalPath + folder;
+        getDir(filePath, folder);
+        return result;
+    };
+    const getAllPngFiles = (folder, exceptions) => {
+        let result = [];
+        const getDir = (path, suffix) => {
+            const files = fs.readdirSync(path);
+            if (files.length > 0) {
+                files.forEach((e) => {
+                    const forbidden = exceptions.some(f => f === e);
+                    if (forbidden)
+                        return;
+                    const hasDot = e.indexOf('.') === -1;
+                    const isPng = e.indexOf('.png') > -1;
+                    if (isPng) {
+                        result.push(`${suffix}\\${e}`);
+                        return;
+                    }
+                    if (hasDot)
+                        getDir(`${path}\\${e}`, `${suffix}\\${e}`);
+                });
             }
-            catch (err) {
-                console.error(err);
-            }
-            return data;
         };
-        const getAllHtmlFiles = (folder, exceptions) => {
-            let result = [];
-            const getDir = (path, suffix) => {
-                const files = fs.readdirSync(path);
-                if (files.length > 0) {
-                    files.forEach((e) => {
-                        const forbidden = exceptions.some(f => f === e);
-                        if (forbidden)
-                            return;
-                        const hasDot = e.indexOf('.') === -1;
-                        const isHtml = e.indexOf('.html') > -1;
-                        const isJs = e.indexOf('.css') > -1;
-                        const isSvg = e.indexOf('.svg') > -1;
-                        if (isHtml || isJs || isSvg) {
-                            result.push(`${suffix}\\${e}`);
-                            return;
-                        }
-                        if (hasDot)
-                            getDir(`${path}\\${e}`, `${suffix}\\${e}`);
-                    });
-                }
-            };
-            const filePath = globalPath + folder;
-            getDir(filePath, folder);
-            return result;
-        };
-        const getAllPngFiles = (folder, exceptions) => {
-            let result = [];
-            const getDir = (path, suffix) => {
-                const files = fs.readdirSync(path);
-                if (files.length > 0) {
-                    files.forEach((e) => {
-                        const forbidden = exceptions.some(f => f === e);
-                        if (forbidden)
-                            return;
-                        const hasDot = e.indexOf('.') === -1;
-                        const isPng = e.indexOf('.png') > -1;
-                        if (isPng) {
-                            result.push(`${suffix}\\${e}`);
-                            return;
-                        }
-                        if (hasDot)
-                            getDir(`${path}\\${e}`, `${suffix}\\${e}`);
-                    });
-                }
-            };
-            const filePath = globalPath + folder;
-            getDir(filePath, folder);
-            return result;
-        };
-        const save = (name, data) => {
-            const filePath = path_out.replace('__interface/', '') + name;
-            fs.writeFileSync(filePath, data);
-        };
-        return {
-            load,
-            loadSvg,
-            loadJson,
-            getAllHtmlFiles,
-            getAllPngFiles,
-            save
-        };
-    }());
-});
+        const filePath = globalPath + folder;
+        getDir(filePath, folder);
+        return result;
+    };
+    const save = (name, data) => {
+        const filePath = path_out.replace('__interface/', '') + name;
+        fs.writeFileSync(filePath, data);
+    };
+    return {
+        load,
+        loadSvg,
+        loadJson,
+        getAllHtmlFiles,
+        getAllPngFiles,
+        save
+    };
+}());
 const generator = (function () {
     const start = () => {
         const CHANGE_PATHS_IMAGES_AT_CSS_CLASS = true;
@@ -235,12 +238,6 @@ const generator = (function () {
     };
     return { start };
 }());
-const express = require('express');
-const fs = require('fs');
-const websocket = require('ws');
-const http = require('http');
-const cors = require('cors');
-const cheerio = require('cheerio');
 const getZero = (num) => num < 10 ? '0' + num : num;
 const PORT = 2024;
 const WS_PORT = 2025;

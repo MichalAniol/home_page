@@ -7,17 +7,21 @@
   "compilerOptions": {
     "target": "ES2020",
     "module": "AMD",
+    "moduleResolution": "node",
     "noImplicitAny": true,
     "removeComments": true,
     "preserveConstEnums": false,
     "sourceMap": false,
     "downlevelIteration": false,
-    "moduleResolution": "node",
-    "outFile": "index.js"
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "outFile": "./generator.js"
   },
   "files": [
-    "generator.ts",
+    "libraries.ts",
     "operationsOnFiles.ts",
+    "generator.ts",
     "init.ts",
   ],
   "exclude": [
