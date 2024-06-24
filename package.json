@@ -5,16 +5,23 @@
     "description": "",
     "license": "ISC",
     "scripts": {
-        "g": "node ./_html-generator/index.js",
+        "g": "node ./_html-generator/generator.js",
         "s": "node ./_html-generator/sprites.js",
+        "ts-g": "tsc-watch --noClear -p ./_html-generator/tsconfig-g.json",
         "test": "node test/test.js"
     },
     "devDependencies": {
+        "@types/cheerio": "^0.22.35",
+        "@types/cors": "^2.8.17",
+        "@types/express": "^4.17.21",
+        "@types/node": "^20.14.8",
+        "@types/ws": "^8.5.10",
         "cheerio": "^1.0.0-rc.12",
         "cors": "^2.8.5",
         "express": "^4.19.2",
         "http": "^0.0.1-security",
         "spritesmith": "^3.4.1",
-        "ws": "^8.16.0"
+        "tsc-watch": "^6.2.0",
+        "ws": "^8.17.1"
     }
 }
