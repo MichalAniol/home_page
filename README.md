@@ -1,6 +1,13 @@
 ## Page:
 https://michalaniol.github.io/home_page/
 
+## Usage
+
+```npm run g``` - składa stronę html
+```npm run s``` - składa poszczególne ikony w jeden obraz tworzy css
+
+## Other
+
 ```npm install uglify-js -g```
 code for make:
 ```
