@@ -114,7 +114,15 @@ const generator = (function () {
                         svgFile = oof.loadSvg(src)
                     }
 
-                    $(element).replaceWith(minify(svgFile.toString()))
+                    const svg = svgFile.toString()
+                    svg.replace('xmlns="http://www.w3.org/2000/svg"', '')
+                    svg.replace('xmlns:xlink="http://www.w3.org/1999/xlink"', '')
+
+                    // const indexLink = svg.indexOf('xmlns:xlink="http://www.w3.org/1999/xlink"')
+                    // if (indexLink > -1) {
+                    //     console.log(indexLink)
+                    // }
+                    $(element).replaceWith(minify(svg))
                 }
 
                 if (CHANGE_PATHS_IMAGES_AT_CSS_CLASS && isPng) {
