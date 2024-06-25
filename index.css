@@ -605,6 +605,12 @@ input {
     display: block;
 }
 
+.base-c64fun {
+    width: 150px;
+    height: 26px;
+    background-position: -416px -435px;
+}
+
 .base-csdb {
     width: 109px;
     height: 55px;
@@ -614,7 +620,7 @@ input {
 .base-datasheetspdf {
     width: 160px;
     height: 23px;
-    background-position: -262px -476px;
+    background-position: -276px -476px;
 }
 
 .base-datasheetspdf1 {
@@ -641,6 +647,12 @@ input {
     background-position: -0px -40px;
 }
 
+.base-pico8 {
+    width: 120px;
+    height: 29px;
+    background-position: -0px -616px;
+}
+
 .base-reallusion {
     width: 172px;
     height: 28px;
@@ -650,31 +662,31 @@ input {
 .base-10minutemail {
     width: 100px;
     height: 12px;
-    background-position: -616px -589px;
+    background-position: -617px -560px;
 }
 
 .base-3dmdb {
     width: 88px;
     height: 36px;
-    background-position: -617px -150px;
+    background-position: -617px -301px;
 }
 
 .base-after-me {
     width: 110px;
     height: 28px;
-    background-position: -723px -0px;
+    background-position: -503px -544px;
 }
 
 .base-ahrefs {
     width: 76px;
     height: 23px;
-    background-position: -637px -687px;
+    background-position: -855px -801px;
 }
 
 .base-airpl {
     width: 38px;
     height: 37px;
-    background-position: -164px -906px;
+    background-position: -941px -475px;
 }
 
 .base-allegro {
@@ -686,91 +698,91 @@ input {
 .base-amway {
     width: 82px;
     height: 34px;
-    background-position: -723px -598px;
+    background-position: -725px -405px;
 }
 
 .base-animatedknots {
     width: 61px;
     height: 30px;
-    background-position: -836px -579px;
+    background-position: -855px -768px;
 }
 
 .base-aps {
     width: 75px;
     height: 21px;
-    background-position: -166px -804px;
+    background-position: -635px -648px;
 }
 
 .base-artstation {
     width: 128px;
     height: 28px;
-    background-position: -221px -550px;
+    background-position: -372px -544px;
 }
 
 .base-asciicker {
     width: 64px;
     height: 47px;
-    background-position: -723px -288px;
+    background-position: -725px -68px;
 }
 
 .base-ask {
     width: 55px;
     height: 40px;
-    background-position: -836px -77px;
+    background-position: -855px -236px;
 }
 
 .base-AstroNET {
     width: 41px;
     height: 40px;
-    background-position: -836px -746px;
+    background-position: -0px -866px;
 }
 
 .base-astronew {
     width: 89px;
     height: 29px;
-    background-position: -617px -454px;
+    background-position: -524px -77px;
 }
 
 .base-atari {
     width: 105px;
     height: 33px;
-    background-position: -0px -616px;
+    background-position: -617px -118px;
 }
 
 .base-bankier {
     width: 64px;
     height: 41px;
-    background-position: -617px -410px;
+    background-position: -780px -609px;
 }
 
 .base-bedeker {
     width: 42px;
     height: 35px;
-    background-position: -172px -863px;
+    background-position: -53px -827px;
 }
 
 .base-bibcyf {
     width: 41px;
     height: 48px;
-    background-position: -836px -346px;
+    background-position: -855px -505px;
 }
 
 .base-blender {
     width: 44px;
     height: 58px;
-    background-position: -0px -743px;
+    background-position: -0px -766px;
 }
 
 .base-blenderguru {
     width: 108px;
     height: 27px;
-    background-position: -723px -369px;
+    background-position: -725px -149px;
 }
 
 .base-c-64_scene {
     width: 36px;
     height: 30px;
-    background-position: -909px -171px;
+    background-position: -941px -592px;
 }
 
 .base-c64portal {
@@ -782,79 +794,79 @@ input {
 .base-c64sets {
     width: 42px;
     height: 34px;
-    background-position: -217px -863px;
+    background-position: -810px -405px;
 }
 
 .base-calendar {
     width: 100px;
     height: 31px;
-    background-position: -723px -62px;
+    background-position: -617px -340px;
 }
 
 .base-cams {
     width: 70px;
     height: 33px;
-    background-position: -836px -0px;
+    background-position: -855px -159px;
 }
 
 .base-cda {
     width: 86px;
     height: 26px;
-    background-position: -0px -804px;
+    background-position: -228px -766px;
 }
 
 .base-ceidg {
     width: 104px;
     height: 27px;
-    background-position: -723px -496px;
+    background-position: -725px -303px;
 }
 
 .base-ciekawostkihist {
     width: 85px;
     height: 33px;
-    background-position: -723px -526px;
+    background-position: -725px -333px;
 }
 
 .base-colossal {
     width: 123px;
     height: 25px;
-    background-position: -0px -687px;
+    background-position: -241px -648px;
 }
 
 .base-commodore {
     width: 100px;
     height: 32px;
-    background-position: -617px -80px;
+    background-position: -617px -231px;
 }
 
 .base-commodore_c64_books {
     width: 50px;
     height: 36px;
-    background-position: -836px -658px;
+    background-position: -0px -827px;
 }
 
 .base-conwerter {
     width: 50px;
     height: 21px;
-    background-position: -658px -616px;
+    background-position: -189px -797px;
 }
 
 .base-coub {
     width: 43px;
     height: 43px;
-    background-position: -836px -533px;
+    background-position: -855px -722px;
 }
 
 .base-cqcounter {
     width: 89px;
     height: 30px;
-    background-position: -617px -224px;
+    background-position: -725px -543px;
 }
 
 .base-crazynauka {
     width: 160px;
     height: 20px;
-    background-position: -147px -589px;
+    background-position: -446px -515px;
 }
 
 .base-darmprog {
@@ -866,25 +878,25 @@ input {
 .base-dawnygdansk {
     width: 110px;
     height: 17px;
-    background-position: -472px -743px;
+    background-position: -569px -713px;
 }
 
 .base-delta {
     width: 80px;
     height: 33px;
-    background-position: -617px -345px;
+    background-position: -617px -524px;
 }
 
 .base-demagog {
     width: 132px;
     height: 23px;
-    background-position: -126px -687px;
+    background-position: -367px -648px;
 }
 
 .base-duo {
     width: 36px;
     height: 36px;
-    background-position: -909px -94px;
+    background-position: -941px -515px;
 }
 
 .base-ecudo {
@@ -902,13 +914,13 @@ input {
 .base-elektroonline {
     width: 160px;
     height: 24px;
-    background-position: -416px -435px;
+    background-position: -113px -476px;
 }
 
 .base-elportal {
     width: 160px;
     height: 20px;
-    background-position: -310px -589px;
+    background-position: -243px -579px;
 }
 
 .base-epuap2 {
@@ -920,91 +932,91 @@ input {
 .base-exbl {
     width: 160px;
     height: 21px;
-    background-position: -425px -476px;
+    background-position: -439px -476px;
 }
 
 .base-facebook {
     width: 103px;
     height: 35px;
-    background-position: -617px -0px;
+    background-position: -617px -80px;
 }
 
 .base-fake {
     width: 68px;
     height: 32px;
-    background-position: -836px -120px;
+    background-position: -855px -279px;
 }
 
 .base-fakty {
     width: 107px;
     height: 27px;
-    background-position: -723px -437px;
+    background-position: -725px -217px;
 }
 
 .base-filmon {
     width: 123px;
     height: 31px;
-    background-position: -246px -515px;
+    background-position: -246px -544px;
 }
 
 .base-finviz {
     width: 37px;
     height: 44px;
-    background-position: -909px -0px;
+    background-position: -941px -44px;
 }
 
 .base-forbot {
     width: 110px;
     height: 17px;
-    background-position: -585px -743px;
+    background-position: -682px -713px;
 }
 
 .base-forsa {
     width: 102px;
     height: 30px;
-    background-position: -723px -96px;
+    background-position: -617px -374px;
 }
 
 .base-fosshub {
     width: 97px;
     height: 20px;
-    background-position: -147px -776px;
+    background-position: -619px -682px;
 }
 
 .base-fotogdansk {
     width: 30px;
     height: 35px;
-    background-position: -909px -204px;
+    background-position: -941px -625px;
 }
 
 .base-freemusicarchive {
     width: 51px;
     height: 25px;
-    background-position: -315px -863px;
+    background-position: -98px -827px;
 }
 
 .base-freesound {
     width: 110px;
     height: 31px;
-    background-position: -108px -616px;
+    background-position: -0px -648px;
 }
 
 .base-gameplay {
     width: 130px;
     height: 23px;
-    background-position: -261px -687px;
+    background-position: -502px -648px;
 }
 
 .base-gb64b {
     width: 147px;
     height: 21px;
-    background-position: -508px -616px;
+    background-position: -410px -616px;
 }
 
 .base-geargenerator {
     width: 85px;
     height: 30px;
-    background-position: -617px -516px;
+    background-position: -528px -126px;
 }
 
 .base-geekaresexy {
@@ -1016,13 +1028,13 @@ input {
 .base-geooo {
     width: 46px;
     height: 46px;
-    background-position: -836px -204px;
+    background-position: -855px -363px;
 }
 
 .base-getionary {
     width: 40px;
     height: 40px;
-    background-position: -0px -863px;
+    background-position: -941px -91px;
 }
 
 .base-gnew {
@@ -1058,37 +1070,37 @@ input {
 .base-hevensabo {
     width: 78px;
     height: 30px;
-    background-position: -47px -743px;
+    background-position: -855px -126px;
 }
 
 .base-history {
     width: 146px;
     height: 21px;
-    background-position: -108px -652px;
+    background-position: -560px -616px;
 }
 
 .base-inhabit {
     width: 100px;
     height: 32px;
-    background-position: -617px -115px;
+    background-position: -617px -266px;
 }
 
 .base-inkscape {
     width: 44px;
     height: 44px;
-    background-position: -836px -397px;
+    background-position: -855px -586px;
 }
 
 .base-instalki {
     width: 105px;
     height: 32px;
-    background-position: -0px -652px;
+    background-position: -617px -154px;
 }
 
 .base-jakdojade {
     width: 97px;
     height: 22px;
-    background-position: -47px -776px;
+    background-position: -108px -739px;
 }
 
 .base-jayisgames {
@@ -1100,7 +1112,7 @@ input {
 .base-jpg2png {
     width: 45px;
     height: 35px;
-    background-position: -555px -173px;
+    background-position: -805px -26px;
 }
 
 .base-justgeek {
@@ -1112,7 +1124,7 @@ input {
 .base-kalbi {
     width: 40px;
     height: 41px;
-    background-position: -790px -288px;
+    background-position: -941px -0px;
 }
 
 .base-komputerswiat {
@@ -1124,19 +1136,19 @@ input {
 .base-kopalniawiedzy {
     width: 86px;
     height: 39px;
-    background-position: -617px -38px;
+    background-position: -617px -189px;
 }
 
 .base-kosmonauta {
     width: 144px;
     height: 24px;
-    background-position: -0px -589px;
+    background-position: -299px -515px;
 }
 
 .base-kostka {
     width: 42px;
     height: 43px;
-    background-position: -836px -612px;
+    background-position: -792px -68px;
 }
 
 .base-krytykapolityczna {
@@ -1154,43 +1166,43 @@ input {
 .base-kwarantanna {
     width: 60px;
     height: 38px;
-    background-position: -836px -36px;
+    background-position: -855px -195px;
 }
 
 .base-linkedin {
     width: 38px;
     height: 38px;
-    background-position: -41px -906px;
+    background-position: -941px -352px;
 }
 
 .base-madeon {
     width: 110px;
     height: 26px;
-    background-position: -723px -467px;
+    background-position: -725px -247px;
 }
 
 .base-make {
     width: 84px;
     height: 32px;
-    background-position: -617px -189px;
+    background-position: -725px -508px;
 }
 
 .base-malawielkafirma {
     width: 80px;
     height: 38px;
-    background-position: -723px -166px;
+    background-position: -617px -444px;
 }
 
 .base-mapa {
     width: 42px;
     height: 22px;
-    background-position: -139px -833px;
+    background-position: -152px -827px;
 }
 
 .base-mapa_turystyczna {
     width: 89px;
     height: 30px;
-    background-position: -617px -257px;
+    background-position: -725px -576px;
 }
 
 .base-mapbox {
@@ -1202,25 +1214,25 @@ input {
 .base-math {
     width: 118px;
     height: 24px;
-    background-position: -246px -715px;
+    background-position: -725px -276px;
 }
 
 .base-metadata2go {
     width: 127px;
     height: 23px;
-    background-position: -394px -687px;
+    background-position: -725px -0px;
 }
 
 .base-meteo {
     width: 74px;
     height: 24px;
-    background-position: -89px -804px;
+    background-position: -47px -797px;
 }
 
 .base-meteo2 {
     width: 86px;
     height: 28px;
-    background-position: -528px -126px;
+    background-position: -211px -82px;
 }
 
 .base-millennium {
@@ -1238,13 +1250,13 @@ input {
 .base-ms {
     width: 120px;
     height: 32px;
-    background-position: -0px -515px;
+    background-position: -0px -544px;
 }
 
 .base-mtechnik {
     width: 105px;
     height: 28px;
-    background-position: -723px -338px;
+    background-position: -725px -118px;
 }
 
 .base-myabandonware {
@@ -1256,7 +1268,7 @@ input {
 .base-myminifactory {
     width: 85px;
     height: 33px;
-    background-position: -723px -562px;
+    background-position: -725px -369px;
 }
 
 .base-mynoise {
@@ -1268,31 +1280,31 @@ input {
 .base-naszgdansk {
     width: 36px;
     height: 46px;
-    background-position: -836px -697px;
+    background-position: -899px -505px;
 }
 
 .base-natemat {
     width: 133px;
     height: 24px;
-    background-position: -221px -616px;
+    background-position: -123px -616px;
 }
 
 .base-naukaoklimacie {
     width: 115px;
     height: 17px;
-    background-position: -354px -743px;
+    background-position: -451px -713px;
 }
 
 .base-netoog {
     width: 77px;
     height: 39px;
-    background-position: -723px -246px;
+    background-position: -725px -26px;
 }
 
 .base-ninateka {
     width: 109px;
     height: 23px;
-    background-position: -587px -715px;
+    background-position: -113px -713px;
 }
 
 .base-ninateka_logo {
@@ -1304,19 +1316,19 @@ input {
 .base-noizz {
     width: 87px;
     height: 28px;
-    background-position: -617px -549px;
+    background-position: -47px -766px;
 }
 
 .base-nosil {
     width: 83px;
     height: 29px;
-    background-position: -520px -242px;
+    background-position: -855px -0px;
 }
 
 .base-odysee {
     width: 52px;
     height: 52px;
-    background-position: -617px -290px;
+    background-position: -725px -609px;
 }
 
 .base-oldversion {
@@ -1328,25 +1340,25 @@ input {
 .base-onetimesecret {
     width: 45px;
     height: 45px;
-    background-position: -836px -298px;
+    background-position: -855px -457px;
 }
 
 .base-osm {
     width: 140px;
     height: 21px;
-    background-position: -257px -652px;
+    background-position: -359px -682px;
 }
 
 .base-otranscribe {
     width: 110px;
     height: 17px;
-    background-position: -698px -743px;
+    background-position: -208px -739px;
 }
 
 .base-panel {
     width: 114px;
     height: 21px;
-    background-position: -400px -652px;
+    background-position: -502px -682px;
 }
 
 .base-pazyl {
@@ -1358,13 +1370,13 @@ input {
 .base-pi-hole {
     width: 44px;
     height: 63px;
-    background-position: -723px -635px;
+    background-position: -725px -442px;
 }
 
 .base-pimeyes {
     width: 110px;
     height: 34px;
-    background-position: -108px -550px;
+    background-position: -0px -579px;
 }
 
 .base-pinterest {
@@ -1382,55 +1394,55 @@ input {
 .base-podroznik {
     width: 110px;
     height: 23px;
-    background-position: -524px -687px;
+    background-position: -0px -713px;
 }
 
 .base-policjagda {
     width: 48px;
     height: 50px;
-    background-position: -672px -290px;
+    background-position: -855px -73px;
 }
 
 .base-polyhaven {
     width: 44px;
     height: 62px;
-    background-position: -770px -635px;
+    background-position: -772px -442px;
 }
 
 .base-programy {
     width: 110px;
     height: 19px;
-    background-position: -241px -743px;
+    background-position: -725px -691px;
 }
 
 .base-protonmail {
     width: 109px;
     height: 24px;
-    background-position: -367px -715px;
+    background-position: -725px -664px;
 }
 
 .base-pulsbiznesu {
     width: 84px;
     height: 35px;
-    background-position: -723px -399px;
+    background-position: -725px -179px;
 }
 
 .base-qwant {
     width: 38px;
     height: 40px;
-    background-position: -0px -906px;
+    background-position: -941px -309px;
 }
 
 .base-racjonalista {
     width: 110px;
     height: 21px;
-    background-position: -699px -715px;
+    background-position: -225px -713px;
 }
 
 .base-radio {
     width: 49px;
     height: 30px;
-    background-position: -557px -292px;
+    background-position: -555px -173px;
 }
 
 .base-rainymood {
@@ -1442,7 +1454,7 @@ input {
 .base-raspberrypi {
     width: 36px;
     height: 44px;
-    background-position: -909px -47px;
+    background-position: -941px -220px;
 }
 
 .base-resetobywatelski {
@@ -1454,49 +1466,49 @@ input {
 .base-retrogamer {
     width: 148px;
     height: 21px;
-    background-position: -357px -616px;
+    background-position: -259px -616px;
 }
 
 .base-reverso {
     width: 40px;
     height: 40px;
-    background-position: -43px -863px;
+    background-position: -941px -134px;
 }
 
 .base-rzygacz {
     width: 50px;
     height: 38px;
-    background-position: -836px -444px;
+    background-position: -855px -633px;
 }
 
 .base-schemat {
     width: 25px;
     height: 18px;
-    background-position: -909px -242px;
+    background-position: -941px -663px;
 }
 
 .base-scope {
     width: 88px;
     height: 27px;
-    background-position: -525px -329px;
+    background-position: -137px -766px;
 }
 
 .base-sejmometr {
     width: 63px;
     height: 38px;
-    background-position: -211px -82px;
+    background-position: -855px -32px;
 }
 
 .base-skiplagged {
     width: 90px;
     height: 20px;
-    background-position: -522px -515px;
+    background-position: -317px -766px;
 }
 
 .base-sklepy24 {
     width: 120px;
     height: 32px;
-    background-position: -123px -515px;
+    background-position: -123px -544px;
 }
 
 .base-softwareok {
@@ -1508,49 +1520,49 @@ input {
 .base-spacelabeu {
     width: 140px;
     height: 16px;
-    background-position: -517px -652px;
+    background-position: -549px -579px;
 }
 
 .base-staregrynet {
     width: 147px;
     height: 25px;
-    background-position: -372px -515px;
+    background-position: -149px -515px;
 }
 
 .base-strongpasswordgenerator {
     width: 110px;
     height: 20px;
-    background-position: -128px -743px;
+    background-position: -338px -713px;
 }
 
 .base-supercook {
     width: 100px;
     height: 26px;
-    background-position: -617px -381px;
+    background-position: -193px -128px;
 }
 
 .base-svg {
     width: 71px;
     height: 27px;
-    background-position: -0px -833px;
+    background-position: -855px -556px;
 }
 
 .base-tajemniceatari8 {
     width: 120px;
     height: 25px;
-    background-position: -0px -715px;
+    background-position: -113px -682px;
 }
 
 .base-taxeon {
     width: 146px;
     height: 26px;
-    background-position: -113px -476px;
+    background-position: -0px -515px;
 }
 
 .base-teatrtelewizji {
     width: 50px;
     height: 42px;
-    background-position: -836px -253px;
+    background-position: -855px -412px;
 }
 
 .base-thewest {
@@ -1562,13 +1574,13 @@ input {
 .base-thingiverse {
     width: 125px;
     height: 25px;
-    background-position: -482px -550px;
+    background-position: -113px -648px;
 }
 
 .base-timeanddate {
     width: 45px;
     height: 25px;
-    background-position: -369px -863px;
+    background-position: -569px -435px;
 }
 
 .base-tokfm {
@@ -1580,25 +1592,25 @@ input {
 .base-tp-link {
     width: 90px;
     height: 13px;
-    background-position: -520px -274px;
+    background-position: -524px -109px;
 }
 
 .base-translator {
     width: 35px;
     height: 35px;
-    background-position: -909px -133px;
+    background-position: -941px -554px;
 }
 
 .base-tvn {
     width: 38px;
     height: 38px;
-    background-position: -82px -906px;
+    background-position: -941px -393px;
 }
 
 .base-urszula {
     width: 105px;
     height: 24px;
-    background-position: -479px -715px;
+    background-position: -0px -739px;
 }
 
 .base-usdebt {
@@ -1610,13 +1622,13 @@ input {
 .base-useme {
     width: 99px;
     height: 38px;
-    background-position: -193px -128px;
+    background-position: -617px -39px;
 }
 
 .base-vectra {
     width: 120px;
     height: 25px;
-    background-position: -123px -715px;
+    background-position: -236px -682px;
 }
 
 .base-vimeo {
@@ -1628,61 +1640,61 @@ input {
 .base-voice {
     width: 42px;
     height: 45px;
-    background-position: -836px -485px;
+    background-position: -855px -674px;
 }
 
 .base-wei {
     width: 90px;
     height: 34px;
-    background-position: -723px -129px;
+    background-position: -617px -407px;
 }
 
 .base-wikimap {
     width: 127px;
     height: 28px;
-    background-position: -352px -550px;
+    background-position: -113px -579px;
 }
 
 .base-windy {
     width: 38px;
     height: 38px;
-    background-position: -123px -906px;
+    background-position: -941px -434px;
 }
 
 .base-wirtualneszlaki {
     width: 47px;
     height: 46px;
-    background-position: -836px -155px;
+    background-position: -855px -314px;
 }
 
 .base-wtz {
     width: 140px;
     height: 18px;
-    background-position: -473px -589px;
+    background-position: -406px -579px;
 }
 
 .base-wu {
     width: 64px;
     height: 40px;
-    background-position: -524px -77px;
+    background-position: -525px -329px;
 }
 
 .base-yahoo {
     width: 110px;
     height: 28px;
-    background-position: -723px -31px;
+    background-position: -0px -682px;
 }
 
 .base-yandex {
     width: 94px;
     height: 27px;
-    background-position: -617px -486px;
+    background-position: -520px -242px;
 }
 
 .base-yeggi {
     width: 62px;
     height: 24px;
-    background-position: -74px -833px;
+    background-position: -124px -797px;
 }
 
 .base-yt {
@@ -1694,31 +1706,31 @@ input {
 .base-zama {
     width: 40px;
     height: 40px;
-    background-position: -86px -863px;
+    background-position: -941px -177px;
 }
 
 .base-zegaratomowy {
     width: 40px;
     height: 39px;
-    background-position: -129px -863px;
+    background-position: -941px -267px;
 }
 
 .base-ziemianarozdrozu {
     width: 105px;
     height: 36px;
-    background-position: -0px -550px;
+    background-position: -617px -0px;
 }
 
 .base-ztmg {
     width: 50px;
     height: 27px;
-    background-position: -262px -863px;
+    background-position: -557px -292px;
 }
 
 .base-zumi {
     width: 84px;
     height: 36px;
-    background-position: -723px -207px;
+    background-position: -617px -485px;
 }
 
 .prog {
@@ -1730,349 +1742,349 @@ input {
 .prog-adobe {
     width: 114px;
     height: 21px;
-    background-position: -332px -510px;
+    background-position: -246px -544px;
 }
 
 .prog-aftermarket {
     width: 160px;
     height: 27px;
-    background-position: -0px -289px;
+    background-position: -256px -281px;
 }
 
 .prog-ahrefs {
     width: 79px;
     height: 25px;
-    background-position: -652px -566px;
+    background-position: -93px -595px;
 }
 
 .prog-alicevision {
     width: 58px;
     height: 50px;
-    background-position: -138px -44px;
+    background-position: -427px -114px;
 }
 
 .prog-animacje {
     width: 103px;
     height: 27px;
-    background-position: -0px -510px;
+    background-position: -427px -167px;
 }
 
 .prog-anime {
     width: 112px;
     height: 22px;
-    background-position: -217px -202px;
+    background-position: -0px -570px;
 }
 
 .prog-animista {
     width: 42px;
     height: 42px;
-    background-position: -0px -629px;
+    background-position: -719px -570px;
 }
 
 .prog-antyweb {
     width: 52px;
     height: 45px;
-    background-position: -576px -204px;
+    background-position: -488px -114px;
 }
 
 .prog-apollographql {
     width: 113px;
     height: 36px;
-    background-position: -336px -40px;
+    background-position: -427px -0px;
 }
 
 .prog-asciigenerator {
     width: 110px;
     height: 45px;
-    background-position: -203px -44px;
+    background-position: -203px -57px;
 }
 
 .prog-awesome {
     width: 45px;
     height: 45px;
-    background-position: -652px -374px;
+    background-position: -719px -234px;
 }
 
 .prog-babel {
     width: 66px;
     height: 32px;
-    background-position: -652px -140px;
+    background-position: -719px -0px;
 }
 
 .prog-befonts {
     width: 105px;
     height: 36px;
-    background-position: -336px -79px;
+    background-position: -427px -39px;
 }
 
 .prog-bezier {
     width: 125px;
     height: 18px;
-    background-position: -426px -428px;
+    background-position: -233px -322px;
 }
 
 .prog-bionicReading {
     width: 75px;
     height: 35px;
-    background-position: -113px -108px;
+    background-position: -427px -225px;
 }
 
 .prog-caniuse {
     width: 110px;
     height: 25px;
-    background-position: -363px -482px;
+    background-position: -427px -197px;
 }
 
 .prog-canvas {
     width: 113px;
     height: 25px;
-    background-position: -247px -482px;
+    background-position: -543px -476px;
 }
 
 .prog-codewars {
     width: 45px;
     height: 45px;
-    background-position: -652px -422px;
+    background-position: -719px -282px;
 }
 
 .prog-colorbox {
     width: 120px;
     height: 31px;
-    background-position: -453px -0px;
+    background-position: -0px -482px;
 }
 
 .prog-colorhunt {
     width: 120px;
     height: 30px;
-    background-position: -453px -70px;
+    background-position: -123px -482px;
 }
 
 .prog-colors_picker {
     width: 120px;
     height: 34px;
-    background-position: -0px -391px;
+    background-position: -0px -383px;
 }
 
 .prog-compresor {
     width: 93px;
     height: 27px;
-    background-position: -0px -568px;
+    background-position: -316px -102px;
 }
 
 .prog-compressor {
     width: 90px;
     height: 22px;
-    background-position: -194px -598px;
+    background-position: -217px -256px;
 }
 
 .prog-cursor {
     width: 72px;
     height: 18px;
-    background-position: -376px -598px;
+    background-position: -350px -595px;
 }
 
 .prog-d3 {
     width: 36px;
     height: 34px;
-    background-position: -735px -449px;
+    background-position: -666px -616px;
 }
 
 .prog-davinci17 {
     width: 214px;
     height: 22px;
-    background-position: -0px -202px;
+    background-position: -0px -256px;
 }
 
 .prog-dbdiagram {
     width: 100px;
     height: 24px;
-    background-position: -206px -540px;
+    background-position: -316px -163px;
 }
 
 .prog-docs-w3cub {
     width: 137px;
     height: 25px;
-    background-position: -0px -428px;
+    background-position: -264px -448px;
 }
 
 .prog-dojotoolkit {
     width: 73px;
     height: 36px;
-    background-position: -576px -0px;
+    background-position: -427px -263px;
 }
 
 .prog-dragonbones {
     width: 34px;
     height: 34px;
-    background-position: -735px -486px;
+    background-position: -505px -225px;
 }
 
 .prog-draw {
     width: 40px;
     height: 40px;
-    background-position: -735px -0px;
+    background-position: -666px -262px;
 }
 
 .prog-droidcon {
     width: 120px;
     height: 26px;
-    background-position: -453px -271px;
+    background-position: -543px -104px;
 }
 
 .prog-electronjs {
     width: 156px;
     height: 32px;
-    background-position: -157px -165px;
+    background-position: -0px -221px;
 }
 
 .prog-ezgif {
     width: 120px;
     height: 23px;
-    background-position: -135px -456px;
+    background-position: -0px -544px;
 }
 
 .prog-fbflipper {
     width: 30px;
     height: 30px;
-    background-position: -735px -523px;
+    background-position: -505px -374px;
 }
 
 .prog-feathericons {
     width: 39px;
     height: 37px;
-    background-position: -735px -175px;
+    background-position: -666px -437px;
 }
 
 .prog-figma {
     width: 40px;
     height: 57px;
-    background-position: -576px -300px;
+    background-position: -138px -44px;
 }
 
 .prog-flaticon {
     width: 121px;
     height: 25px;
-    background-position: -0px -482px;
+    background-position: -0px -516px;
 }
 
 .prog-flex {
     width: 100px;
     height: 25px;
-    background-position: -0px -540px;
+    background-position: -316px -46px;
 }
 
 .prog-font-converter {
     width: 120px;
     height: 25px;
-    background-position: -453px -363px;
+    background-position: -543px -196px;
 }
 
 .prog-fontsgoogle {
     width: 135px;
     height: 29px;
-    background-position: -135px -357px;
+    background-position: -253px -383px;
 }
 
 .prog-formatjson {
     width: 145px;
     height: 21px;
-    background-position: -140px -428px;
+    background-position: -321px -420px;
 }
 
 .prog-getmdl {
     width: 41px;
     height: 41px;
-    background-position: -0px -674px;
+    background-position: -719px -615px;
 }
 
 .prog-github {
     width: 36px;
     height: 36px;
-    background-position: -735px -215px;
+    background-position: -666px -538px;
 }
 
 .prog-glyphicons {
     width: 135px;
     height: 19px;
-    background-position: -288px -428px;
+    background-position: -375px -516px;
 }
 
 .prog-googlecloud {
     width: 45px;
     height: 36px;
-    background-position: -220px -674px;
+    background-position: -666px -223px;
 }
 
 .prog-graphql {
     width: 88px;
     height: 28px;
-    background-position: -0px -598px;
+    background-position: -316px -132px;
 }
 
 .prog-grid {
     width: 100px;
     height: 25px;
-    background-position: -103px -540px;
+    background-position: -316px -74px;
 }
 
 .prog-gtmetrix {
     width: 110px;
     height: 33px;
-    background-position: -453px -34px;
+    background-position: -427px -78px;
 }
 
 .prog-h5p {
     width: 60px;
     height: 43px;
-    background-position: -576px -39px;
+    background-position: -427px -328px;
 }
 
 .prog-html5 {
     width: 154px;
     height: 34px;
-    background-position: -0px -165px;
+    background-position: -133px -149px;
 }
 
 .prog-htmlemail {
     width: 69px;
     height: 25px;
-    background-position: -380px -391px;
+    background-position: -78px -654px;
 }
 
 .prog-icomoon {
     width: 41px;
     height: 41px;
-    background-position: -44px -674px;
+    background-position: -666px -48px;
 }
 
 .prog-icons {
     width: 120px;
     height: 30px;
-    background-position: -453px -103px;
+    background-position: -246px -482px;
 }
 
 .prog-immutable {
     width: 116px;
     height: 20px;
-    background-position: -449px -510px;
+    background-position: -363px -544px;
 }
 
 .prog-js-tutorial {
     width: 43px;
     height: 48px;
-    background-position: -652px -323px;
+    background-position: -719px -183px;
 }
 
 .prog-jsnice {
     width: 67px;
     height: 27px;
-    background-position: -576px -504px;
+    background-position: -166px -623px;
 }
 
 .prog-json {
     width: 99px;
     height: 31px;
-    background-position: -453px -329px;
+    background-position: -543px -162px;
 }
 
 .prog-knowledgehut {
@@ -2084,427 +2096,433 @@ input {
 .prog-kurshtml {
     width: 120px;
     height: 28px;
-    background-position: -453px -136px;
+    background-position: -369px -482px;
 }
 
 .prog-kurshtmlcss {
     width: 154px;
     height: 25px;
-    background-position: -163px -289px;
+    background-position: -0px -420px;
 }
 
 .prog-lawsofux {
     width: 36px;
     height: 36px;
-    background-position: -735px -254px;
+    background-position: -666px -577px;
 }
 
 .prog-loader {
     width: 40px;
     height: 40px;
-    background-position: -735px -43px;
+    background-position: -666px -305px;
 }
 
 .prog-localforage {
     width: 75px;
     height: 28px;
-    background-position: -652px -109px;
+    background-position: -0px -654px;
 }
 
 .prog-markdown_preview {
     width: 34px;
     height: 45px;
-    background-position: -735px -86px;
+    background-position: -666px -348px;
 }
 
 .prog-material {
     width: 120px;
     height: 28px;
-    background-position: -453px -167px;
+    background-position: -543px -0px;
 }
 
 .prog-materialize {
     width: 50px;
     height: 28px;
-    background-position: -268px -674px;
+    background-position: -666px -477px;
 }
 
 .prog-materialuicolors {
     width: 120px;
     height: 18px;
-    background-position: -96px -568px;
+    background-position: -513px -516px;
 }
 
 .prog-matic {
     width: 118px;
     height: 26px;
-    background-position: -453px -300px;
+    background-position: -543px -133px;
 }
 
 .prog-meyerweb {
     width: 35px;
     height: 36px;
-    background-position: -735px -410px;
+    background-position: -490px -328px;
 }
 
 .prog-minifier {
     width: 50px;
     height: 27px;
-    background-position: -321px -674px;
+    background-position: -666px -508px;
 }
 
 .prog-nafrontendzie {
     width: 125px;
     height: 22px;
-    background-position: -203px -138px;
+    background-position: -124px -516px;
 }
 
 .prog-nask {
     width: 96px;
     height: 18px;
-    background-position: -233px -268px;
+    background-position: -251px -595px;
 }
 
 .prog-netlify {
     width: 38px;
     height: 38px;
-    background-position: -735px -134px;
+    background-position: -666px -396px;
 }
 
 .prog-normalize {
     width: 36px;
     height: 36px;
-    background-position: -735px -293px;
+    background-position: -627px -61px;
 }
 
 .prog-obfuscator {
     width: 120px;
     height: 21px;
-    background-position: -381px -456px;
+    background-position: -123px -544px;
 }
 
 .prog-obfuscator2 {
     width: 120px;
     height: 35px;
-    background-position: -0px -319px;
+    background-position: -117px -343px;
 }
 
 .prog-obliczeniowo {
     width: 127px;
     height: 32px;
-    background-position: -123px -391px;
+    background-position: -123px -383px;
 }
 
 .prog-ocks {
     width: 35px;
     height: 87px;
-    background-position: -336px -150px;
+    background-position: -543px -312px;
 }
 
 .prog-pagespeed2 {
     width: 161px;
     height: 22px;
-    background-position: -273px -357px;
+    background-position: -157px -420px;
 }
 
 .prog-paletton {
     width: 120px;
     height: 27px;
-    background-position: -453px -198px;
+    background-position: -543px -31px;
 }
 
 .prog-paperjs {
     width: 69px;
     height: 25px;
-    background-position: -45px -629px;
+    background-position: -150px -654px;
 }
 
 .prog-parcel {
     width: 102px;
     height: 28px;
-    background-position: -336px -283px;
+    background-position: -543px -445px;
 }
 
 .prog-paths {
     width: 73px;
     height: 25px;
-    background-position: -652px -594px;
+    background-position: -175px -595px;
 }
 
 .prog-phaser {
     width: 104px;
     height: 29px;
-    background-position: -336px -118px;
+    background-position: -543px -280px;
 }
 
 .prog-pinterest {
     width: 35px;
     height: 87px;
-    background-position: -374px -150px;
+    background-position: -581px -312px;
 }
 
 .prog-pixijs {
     width: 80px;
     height: 27px;
-    background-position: -652px -79px;
+    background-position: -83px -623px;
 }
 
 .prog-polskifrontend {
     width: 130px;
     height: 41px;
-    background-position: -203px -0px;
+    background-position: -0px -149px;
 }
 
 .prog-popmotion {
     width: 110px;
     height: 23px;
-    background-position: -106px -510px;
+    background-position: -427px -302px;
 }
 
 .prog-pose {
     width: 80px;
     height: 28px;
-    background-position: -652px -0px;
+    background-position: -0px -623px;
 }
 
 .prog-primefaces {
     width: 43px;
     height: 46px;
-    background-position: -576px -360px;
+    background-position: -719px -426px;
 }
 
 .prog-puppeteer2 {
     width: 40px;
     height: 60px;
-    background-position: -576px -85px;
+    background-position: -619px -312px;
 }
 
 .prog-ranking {
     width: 100px;
     height: 22px;
-    background-position: -91px -598px;
+    background-position: -115px -570px;
 }
 
 .prog-reacttypa {
     width: 132px;
     height: 31px;
-    background-position: -0px -357px;
+    background-position: -240px -343px;
 }
 
 .prog-reset {
     width: 36px;
     height: 36px;
-    background-position: -735px -332px;
+    background-position: -619px -402px;
 }
 
 .prog-reverieai {
     width: 130px;
     height: 34px;
-    background-position: -123px -227px;
+    background-position: -123px -281px;
 }
 
 .prog-rockstar {
     width: 110px;
     height: 20px;
-    background-position: -517px -540px;
+    background-position: -482px -544px;
 }
 
 .prog-sandbox {
     width: 42px;
     height: 46px;
-    background-position: -576px -409px;
+    background-position: -719px -475px;
 }
 
 .prog-sass {
     width: 36px;
     height: 36px;
-    background-position: -735px -371px;
+    background-position: -503px -263px;
 }
 
 .prog-serverless {
     width: 146px;
     height: 28px;
-    background-position: -123px -319px;
+    background-position: -159px -221px;
 }
 
 .prog-slides {
     width: 41px;
     height: 40px;
-    background-position: -176px -674px;
+    background-position: -666px -180px;
 }
 
 .prog-sortable {
     width: 45px;
     height: 47px;
-    background-position: -652px -224px;
+    background-position: -719px -84px;
 }
 
 .prog-special {
     width: 100px;
     height: 23px;
-    background-position: -414px -540px;
+    background-position: -203px -193px;
 }
 
 .prog-sullygnome {
     width: 45px;
     height: 53px;
-    background-position: -576px -148px;
+    background-position: -316px -216px;
 }
 
 .prog-svg-js {
     width: 41px;
     height: 41px;
-    background-position: -88px -674px;
+    background-position: -666px -92px;
 }
 
 .prog-svg {
     width: 75px;
     height: 34px;
-    background-position: -256px -227px;
+    background-position: -427px -374px;
 }
 
 .prog-svgomg {
     width: 41px;
     height: 41px;
-    background-position: -132px -674px;
+    background-position: -666px -136px;
 }
 
 .prog-svgsilh {
     width: 120px;
     height: 25px;
-    background-position: -453px -391px;
+    background-position: -543px -224px;
 }
 
 .prog-swr {
     width: 132px;
     height: 23px;
-    background-position: -0px -456px;
+    background-position: -404px -448px;
 }
 
 .prog-syntax {
     width: 52px;
     height: 45px;
-    background-position: -576px -252px;
+    background-position: -364px -216px;
 }
 
 .prog-s_prites {
     width: 90px;
     height: 25px;
-    background-position: -476px -482px;
+    background-position: -0px -595px;
 }
 
 .prog-textfancy {
     width: 124px;
     height: 31px;
-    background-position: -253px -391px;
+    background-position: -0px -448px;
 }
 
 .prog-textshadow {
     width: 120px;
     height: 25px;
-    background-position: -124px -482px;
+    background-position: -543px -252px;
 }
 
 .prog-theme-ui {
     width: 102px;
     height: 23px;
-    background-position: -309px -540px;
+    background-position: -316px -190px;
 }
 
 .prog-threejs {
     width: 66px;
     height: 22px;
-    background-position: -117px -629px;
+    background-position: -719px -659px;
 }
 
 .prog-tinypng {
     width: 120px;
     height: 38px;
-    background-position: -0px -227px;
+    background-position: -0px -281px;
 }
 
 .prog-typeorm {
     width: 86px;
     height: 20px;
-    background-position: -287px -598px;
+    background-position: -236px -623px;
 }
 
 .prog-unminify {
     width: 120px;
     height: 22px;
-    background-position: -258px -456px;
+    background-position: -252px -516px;
 }
 
 .prog-vectorizer {
     width: 134px;
     height: 28px;
-    background-position: -272px -319px;
+    background-position: -127px -448px;
 }
 
 .prog-vived {
     width: 114px;
     height: 37px;
-    background-position: -336px -0px;
+    background-position: -0px -343px;
 }
 
 .prog-vscode {
     width: 45px;
     height: 46px;
-    background-position: -652px -274px;
+    background-position: -719px -134px;
 }
 
 .prog-vuejs {
     width: 50px;
     height: 45px;
-    background-position: -652px -31px;
+    background-position: -666px -0px;
 }
 
 .prog-W3 {
     width: 73px;
     height: 40px;
-    background-position: -336px -240px;
+    background-position: -543px -402px;
 }
 
 .prog-w3schools {
     width: 130px;
     height: 16px;
-    background-position: -219px -568px;
+    background-position: -218px -570px;
 }
 
 .prog-workspace {
     width: 108px;
     height: 43px;
-    background-position: -203px -92px;
+    background-position: -316px -0px;
 }
 
 .prog-wroc {
     width: 44px;
     height: 43px;
-    background-position: -576px -458px;
+    background-position: -719px -524px;
 }
 
 .prog-xenko {
     width: 110px;
     height: 22px;
-    background-position: -219px -510px;
+    background-position: -203px -105px;
 }
 
 .prog-yarn {
     width: 46px;
     height: 46px;
-    background-position: -652px -175px;
+    background-position: -719px -35px;
 }
 
 .prog-zufana {
     width: 230px;
     height: 18px;
-    background-position: -0px -268px;
+    background-position: -0px -322px;
+}
+
+.prog-ajordison {
+    width: 200px;
+    height: 38px;
+    background-position: -0px -108px;
 }
 
 .prog-holepunch {
     width: 110px;
     height: 54px;
-    background-position: -0px -108px;
+    background-position: -203px -0px;
 }
 
 .prog-lipsum {
@@ -2516,18 +2534,24 @@ input {
 .prog-nch {
     width: 81px;
     height: 40px;
-    background-position: -453px -228px;
+    background-position: -543px -61px;
 }
 
 .prog-npm_trends {
     width: 45px;
     height: 45px;
-    background-position: -652px -470px;
+    background-position: -719px -330px;
+}
+
+.prog-oldskoolcoder {
+    width: 200px;
+    height: 25px;
+    background-position: -0px -193px;
 }
 
 .prog-wasp {
     width: 45px;
     height: 45px;
-    background-position: -652px -518px;
+    background-position: -719px -378px;
 }
 
