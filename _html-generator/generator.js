@@ -214,7 +214,10 @@ const generator = (function () {
                     else {
                         svgFile = oof.loadSvg(src);
                     }
-                    $(element).replaceWith(minify(svgFile.toString()));
+                    const svg = svgFile.toString();
+                    svg.replace('xmlns="http://www.w3.org/2000/svg"', '');
+                    svg.replace('xmlns:xlink="http://www.w3.org/1999/xlink"', '');
+                    $(element).replaceWith(minify(svg));
                 }
                 if (CHANGE_PATHS_IMAGES_AT_CSS_CLASS && isPng) {
                     const nameSplitted = src.split('/');
