@@ -22,6 +22,8 @@
         "http": "^0.0.1-security",
         "spritesmith": "^3.4.1",
         "tsc-watch": "^6.2.0",
-        "ws": "^8.17.1"
+        "ws": "^8.17.1",
+        "tough-cookie": "4.1.4",
+        "request": "2.88.2"
     }
 }
