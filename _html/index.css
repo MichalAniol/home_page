@@ -583,11 +583,11 @@ input {
 }
 
 .ml5 {
-    margin-left: 5px;
+    margin-left: 5px !important;
 }
 
 .ml12 {
-    margin-left: 12px;
+    margin-left: 12px !important;
 }
 
 #waiting-room {

@@ -40,6 +40,12 @@
     background-position: -152px -356px;
 }
 
+.base-imgw {
+    width: 50px;
+    height: 49px;
+    background-position: -855px -0px;
+}
+
 .base-miloszbrzezinski {
     width: 260px;
     height: 39px;
@@ -79,13 +85,13 @@
 .base-ahrefs {
     width: 76px;
     height: 23px;
-    background-position: -855px -801px;
+    background-position: -635px -648px;
 }
 
 .base-airpl {
     width: 38px;
     height: 37px;
-    background-position: -941px -475px;
+    background-position: -855px -635px;
 }
 
 .base-allegro {
@@ -103,13 +109,13 @@
 .base-animatedknots {
     width: 61px;
     height: 30px;
-    background-position: -855px -768px;
+    background-position: -908px -579px;
 }
 
 .base-aps {
     width: 75px;
     height: 21px;
-    background-position: -635px -648px;
+    background-position: -198px -797px;
 }
 
 .base-artstation {
@@ -127,13 +133,13 @@
 .base-ask {
     width: 55px;
     height: 40px;
-    background-position: -855px -236px;
+    background-position: -908px -77px;
 }
 
 .base-AstroNET {
     width: 41px;
     height: 40px;
-    background-position: -0px -866px;
+    background-position: -908px -746px;
 }
 
 .base-astronew {
@@ -157,13 +163,13 @@
 .base-bedeker {
     width: 42px;
     height: 35px;
-    background-position: -53px -827px;
+    background-position: -855px -437px;
 }
 
 .base-bibcyf {
     width: 41px;
     height: 48px;
-    background-position: -855px -505px;
+    background-position: -908px -346px;
 }
 
 .base-blender {
@@ -181,7 +187,7 @@
 .base-c-64_scene {
     width: 36px;
     height: 30px;
-    background-position: -941px -592px;
+    background-position: -805px -26px;
 }
 
 .base-c64portal {
@@ -193,7 +199,7 @@
 .base-c64sets {
     width: 42px;
     height: 34px;
-    background-position: -810px -405px;
+    background-position: -855px -598px;
 }
 
 .base-calendar {
@@ -205,7 +211,7 @@
 .base-cams {
     width: 70px;
     height: 33px;
-    background-position: -855px -159px;
+    background-position: -908px -0px;
 }
 
 .base-cda {
@@ -241,19 +247,19 @@
 .base-commodore_c64_books {
     width: 50px;
     height: 36px;
-    background-position: -0px -827px;
+    background-position: -908px -658px;
 }
 
 .base-conwerter {
     width: 50px;
     height: 21px;
-    background-position: -189px -797px;
+    background-position: -555px -173px;
 }
 
 .base-coub {
     width: 43px;
     height: 43px;
-    background-position: -855px -722px;
+    background-position: -908px -533px;
 }
 
 .base-cqcounter {
@@ -295,7 +301,7 @@
 .base-duo {
     width: 36px;
     height: 36px;
-    background-position: -941px -515px;
+    background-position: -855px -705px;
 }
 
 .base-ecudo {
@@ -343,7 +349,7 @@
 .base-fake {
     width: 68px;
     height: 32px;
-    background-position: -855px -279px;
+    background-position: -908px -120px;
 }
 
 .base-fakty {
@@ -361,7 +367,7 @@
 .base-finviz {
     width: 37px;
     height: 44px;
-    background-position: -941px -44px;
+    background-position: -908px -833px;
 }
 
 .base-forbot {
@@ -385,13 +391,13 @@
 .base-fotogdansk {
     width: 30px;
     height: 35px;
-    background-position: -941px -625px;
+    background-position: -947px -697px;
 }
 
 .base-freemusicarchive {
     width: 51px;
     height: 25px;
-    background-position: -98px -827px;
+    background-position: -792px -68px;
 }
 
 .base-freesound {
@@ -427,13 +433,13 @@
 .base-geooo {
     width: 46px;
     height: 46px;
-    background-position: -855px -363px;
+    background-position: -908px -204px;
 }
 
 .base-getionary {
     width: 40px;
     height: 40px;
-    background-position: -941px -91px;
+    background-position: -855px -105px;
 }
 
 .base-gnew {
@@ -469,7 +475,7 @@
 .base-hevensabo {
     width: 78px;
     height: 30px;
-    background-position: -855px -126px;
+    background-position: -66px -859px;
 }
 
 .base-history {
@@ -487,7 +493,7 @@
 .base-inkscape {
     width: 44px;
     height: 44px;
-    background-position: -855px -586px;
+    background-position: -908px -397px;
 }
 
 .base-instalki {
@@ -511,7 +517,7 @@
 .base-jpg2png {
     width: 45px;
     height: 35px;
-    background-position: -805px -26px;
+    background-position: -855px -281px;
 }
 
 .base-justgeek {
@@ -523,7 +529,7 @@
 .base-kalbi {
     width: 40px;
     height: 41px;
-    background-position: -941px -0px;
+    background-position: -908px -789px;
 }
 
 .base-komputerswiat {
@@ -547,7 +553,7 @@
 .base-kostka {
     width: 42px;
     height: 43px;
-    background-position: -792px -68px;
+    background-position: -908px -612px;
 }
 
 .base-krytykapolityczna {
@@ -565,13 +571,13 @@
 .base-kwarantanna {
     width: 60px;
     height: 38px;
-    background-position: -855px -195px;
+    background-position: -908px -36px;
 }
 
 .base-linkedin {
     width: 38px;
     height: 38px;
-    background-position: -941px -352px;
+    background-position: -855px -475px;
 }
 
 .base-madeon {
@@ -595,7 +601,7 @@
 .base-mapa {
     width: 42px;
     height: 22px;
-    background-position: -152px -827px;
+    background-position: -810px -405px;
 }
 
 .base-mapa_turystyczna {
@@ -625,7 +631,7 @@
 .base-meteo {
     width: 74px;
     height: 24px;
-    background-position: -47px -797px;
+    background-position: -121px -797px;
 }
 
 .base-meteo2 {
@@ -679,7 +685,7 @@
 .base-naszgdansk {
     width: 36px;
     height: 46px;
-    background-position: -899px -505px;
+    background-position: -908px -697px;
 }
 
 .base-natemat {
@@ -721,7 +727,7 @@
 .base-nosil {
     width: 83px;
     height: 29px;
-    background-position: -855px -0px;
+    background-position: -0px -827px;
 }
 
 .base-odysee {
@@ -739,7 +745,7 @@
 .base-onetimesecret {
     width: 45px;
     height: 45px;
-    background-position: -855px -457px;
+    background-position: -908px -298px;
 }
 
 .base-osm {
@@ -799,7 +805,7 @@
 .base-policjagda {
     width: 48px;
     height: 50px;
-    background-position: -855px -73px;
+    background-position: -855px -52px;
 }
 
 .base-polyhaven {
@@ -829,7 +835,7 @@
 .base-qwant {
     width: 38px;
     height: 40px;
-    background-position: -941px -309px;
+    background-position: -855px -361px;
 }
 
 .base-racjonalista {
@@ -841,7 +847,7 @@
 .base-radio {
     width: 49px;
     height: 30px;
-    background-position: -555px -173px;
+    background-position: -855px -404px;
 }
 
 .base-rainymood {
@@ -853,7 +859,7 @@
 .base-raspberrypi {
     width: 36px;
     height: 44px;
-    background-position: -941px -220px;
+    background-position: -855px -234px;
 }
 
 .base-resetobywatelski {
@@ -871,19 +877,19 @@
 .base-reverso {
     width: 40px;
     height: 40px;
-    background-position: -941px -134px;
+    background-position: -855px -148px;
 }
 
 .base-rzygacz {
     width: 50px;
     height: 38px;
-    background-position: -855px -633px;
+    background-position: -908px -444px;
 }
 
 .base-schemat {
     width: 25px;
     height: 18px;
-    background-position: -941px -663px;
+    background-position: -952px -346px;
 }
 
 .base-scope {
@@ -895,7 +901,7 @@
 .base-sejmometr {
     width: 63px;
     height: 38px;
-    background-position: -855px -32px;
+    background-position: -0px -859px;
 }
 
 .base-skiplagged {
@@ -943,7 +949,7 @@
 .base-svg {
     width: 71px;
     height: 27px;
-    background-position: -855px -556px;
+    background-position: -47px -797px;
 }
 
 .base-tajemniceatari8 {
@@ -961,7 +967,7 @@
 .base-teatrtelewizji {
     width: 50px;
     height: 42px;
-    background-position: -855px -412px;
+    background-position: -908px -253px;
 }
 
 .base-thewest {
@@ -979,7 +985,7 @@
 .base-timeanddate {
     width: 45px;
     height: 25px;
-    background-position: -569px -435px;
+    background-position: -855px -782px;
 }
 
 .base-tokfm {
@@ -997,13 +1003,13 @@
 .base-translator {
     width: 35px;
     height: 35px;
-    background-position: -941px -554px;
+    background-position: -855px -744px;
 }
 
 .base-tvn {
     width: 38px;
     height: 38px;
-    background-position: -941px -393px;
+    background-position: -855px -516px;
 }
 
 .base-urszula {
@@ -1039,7 +1045,7 @@
 .base-voice {
     width: 42px;
     height: 45px;
-    background-position: -855px -674px;
+    background-position: -908px -485px;
 }
 
 .base-wei {
@@ -1057,13 +1063,13 @@
 .base-windy {
     width: 38px;
     height: 38px;
-    background-position: -941px -434px;
+    background-position: -855px -557px;
 }
 
 .base-wirtualneszlaki {
     width: 47px;
     height: 46px;
-    background-position: -855px -314px;
+    background-position: -908px -155px;
 }
 
 .base-wtz {
@@ -1093,7 +1099,7 @@
 .base-yeggi {
     width: 62px;
     height: 24px;
-    background-position: -124px -797px;
+    background-position: -86px -827px;
 }
 
 .base-yt {
@@ -1105,13 +1111,13 @@
 .base-zama {
     width: 40px;
     height: 40px;
-    background-position: -941px -177px;
+    background-position: -855px -191px;
 }
 
 .base-zegaratomowy {
     width: 40px;
     height: 39px;
-    background-position: -941px -267px;
+    background-position: -855px -319px;
 }
 
 .base-ziemianarozdrozu {
@@ -1123,7 +1129,7 @@
 .base-ztmg {
     width: 50px;
     height: 27px;
-    background-position: -557px -292px;
+    background-position: -855px -675px;
 }
 
 .base-zumi {
