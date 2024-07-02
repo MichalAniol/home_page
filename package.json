@@ -7,7 +7,7 @@
     "scripts": {
         "g": "node ./_html-generator/generator.js",
         "s": "node ./_html-generator/sprites.js",
-        "ts-g": "tsc-watch --noClear -p ./_html-generator/tsconfig-g.json",
+        "tsw": "tsc-watch --noClear -p ./_html-generator/tsconfig-g.json",
         "test": "node test/test.js"
     },
     "devDependencies": {
