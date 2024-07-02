@@ -605,66 +605,6 @@ input {
     display: block;
 }
 
-.base-c64fun {
-    width: 150px;
-    height: 26px;
-    background-position: -416px -435px;
-}
-
-.base-csdb {
-    width: 109px;
-    height: 55px;
-    background-position: -300px -0px;
-}
-
-.base-datasheetspdf {
-    width: 160px;
-    height: 23px;
-    background-position: -276px -476px;
-}
-
-.base-datasheetspdf1 {
-    width: 297px;
-    height: 37px;
-    background-position: -0px -0px;
-}
-
-.base-extensionsblender {
-    width: 208px;
-    height: 43px;
-    background-position: -0px -82px;
-}
-
-.base-forumogadka {
-    width: 143px;
-    height: 35px;
-    background-position: -152px -356px;
-}
-
-.base-imgw {
-    width: 50px;
-    height: 49px;
-    background-position: -855px -0px;
-}
-
-.base-miloszbrzezinski {
-    width: 260px;
-    height: 39px;
-    background-position: -0px -40px;
-}
-
-.base-pico8 {
-    width: 120px;
-    height: 29px;
-    background-position: -0px -616px;
-}
-
-.base-reallusion {
-    width: 172px;
-    height: 28px;
-    background-position: -412px -211px;
-}
-
 .base-10minutemail {
     width: 100px;
     height: 12px;
@@ -716,7 +656,7 @@ input {
 .base-aps {
     width: 75px;
     height: 21px;
-    background-position: -198px -797px;
+    background-position: -394px -766px;
 }
 
 .base-artstation {
@@ -789,6 +729,12 @@ input {
     width: 36px;
     height: 30px;
     background-position: -805px -26px;
+}
+
+.base-c64fun {
+    width: 150px;
+    height: 26px;
+    background-position: -416px -435px;
 }
 
 .base-c64portal {
@@ -875,16 +821,34 @@ input {
     background-position: -446px -515px;
 }
 
+.base-csdb {
+    width: 109px;
+    height: 55px;
+    background-position: -300px -0px;
+}
+
 .base-darmprog {
     width: 202px;
     height: 24px;
     background-position: -412px -0px;
 }
 
+.base-datasheetspdf {
+    width: 160px;
+    height: 23px;
+    background-position: -276px -476px;
+}
+
+.base-datasheetspdf1 {
+    width: 297px;
+    height: 37px;
+    background-position: -0px -0px;
+}
+
 .base-dawnygdansk {
     width: 110px;
     height: 17px;
-    background-position: -569px -713px;
+    background-position: -456px -713px;
 }
 
 .base-delta {
@@ -941,6 +905,12 @@ input {
     background-position: -439px -476px;
 }
 
+.base-extensionsblender {
+    width: 208px;
+    height: 43px;
+    background-position: -0px -82px;
+}
+
 .base-facebook {
     width: 103px;
     height: 35px;
@@ -974,13 +944,19 @@ input {
 .base-forbot {
     width: 110px;
     height: 17px;
-    background-position: -682px -713px;
+    background-position: -569px -713px;
 }
 
 .base-forsa {
     width: 102px;
     height: 30px;
     background-position: -617px -374px;
+}
+
+.base-forumogadka {
+    width: 143px;
+    height: 35px;
+    background-position: -152px -356px;
 }
 
 .base-fosshub {
@@ -1083,6 +1059,12 @@ input {
     width: 146px;
     height: 21px;
     background-position: -560px -616px;
+}
+
+.base-imgw {
+    width: 50px;
+    height: 49px;
+    background-position: -855px -0px;
 }
 
 .base-inhabit {
@@ -1232,7 +1214,7 @@ input {
 .base-meteo {
     width: 74px;
     height: 24px;
-    background-position: -121px -797px;
+    background-position: -317px -766px;
 }
 
 .base-meteo2 {
@@ -1245,6 +1227,12 @@ input {
     width: 157px;
     height: 36px;
     background-position: -0px -278px;
+}
+
+.base-miloszbrzezinski {
+    width: 260px;
+    height: 39px;
+    background-position: -0px -40px;
 }
 
 .base-mojemiasto {
@@ -1298,7 +1286,7 @@ input {
 .base-naukaoklimacie {
     width: 115px;
     height: 17px;
-    background-position: -451px -713px;
+    background-position: -338px -713px;
 }
 
 .base-netoog {
@@ -1358,7 +1346,7 @@ input {
 .base-otranscribe {
     width: 110px;
     height: 17px;
-    background-position: -208px -739px;
+    background-position: -682px -713px;
 }
 
 .base-panel {
@@ -1377,6 +1365,12 @@ input {
     width: 44px;
     height: 63px;
     background-position: -725px -442px;
+}
+
+.base-pico8 {
+    width: 120px;
+    height: 29px;
+    background-position: -0px -616px;
 }
 
 .base-pimeyes {
@@ -1463,6 +1457,12 @@ input {
     background-position: -855px -234px;
 }
 
+.base-reallusion {
+    width: 172px;
+    height: 28px;
+    background-position: -412px -211px;
+}
+
 .base-resetobywatelski {
     width: 130px;
     height: 41px;
@@ -1508,7 +1508,7 @@ input {
 .base-skiplagged {
     width: 90px;
     height: 20px;
-    background-position: -317px -766px;
+    background-position: -208px -739px;
 }
 
 .base-sklepy24 {
@@ -1533,12 +1533,6 @@ input {
     width: 147px;
     height: 25px;
     background-position: -149px -515px;
-}
-
-.base-strongpasswordgenerator {
-    width: 110px;
-    height: 20px;
-    background-position: -338px -713px;
 }
 
 .base-supercook {
@@ -1700,7 +1694,7 @@ input {
 .base-yeggi {
     width: 62px;
     height: 24px;
-    background-position: -86px -827px;
+    background-position: -121px -797px;
 }
 
 .base-yt {
@@ -1748,19 +1742,25 @@ input {
 .prog-adobe {
     width: 114px;
     height: 21px;
-    background-position: -439px -530px;
+    background-position: -465px -494px;
 }
 
 .prog-aftermarket {
     width: 160px;
     height: 27px;
-    background-position: -159px -221px;
+    background-position: -133px -273px;
 }
 
 .prog-ahrefs {
     width: 79px;
     height: 25px;
-    background-position: -676px -487px;
+    background-position: -678px -566px;
+}
+
+.prog-ajordison {
+    width: 200px;
+    height: 38px;
+    background-position: -0px -108px;
 }
 
 .prog-alicevision {
@@ -1772,325 +1772,337 @@ input {
 .prog-animacje {
     width: 103px;
     height: 27px;
-    background-position: -105px -530px;
+    background-position: -0px -522px;
 }
 
 .prog-anime {
     width: 112px;
     height: 22px;
-    background-position: -211px -530px;
+    background-position: -217px -248px;
 }
 
 .prog-animista {
     width: 42px;
     height: 42px;
-    background-position: -600px -484px;
+    background-position: -602px -513px;
 }
 
 .prog-antyweb {
     width: 52px;
     height: 45px;
-    background-position: -600px -204px;
+    background-position: -602px -204px;
 }
 
 .prog-apollographql {
     width: 113px;
     height: 36px;
-    background-position: -360px -40px;
+    background-position: -336px -217px;
 }
 
 .prog-asciigenerator {
     width: 110px;
     height: 45px;
-    background-position: -203px -37px;
+    background-position: -203px -44px;
 }
 
 .prog-awesome {
     width: 45px;
     height: 45px;
-    background-position: -676px -295px;
+    background-position: -678px -374px;
 }
 
 .prog-babel {
     width: 66px;
     height: 32px;
-    background-position: -676px -61px;
+    background-position: -678px -140px;
 }
 
 .prog-befonts {
     width: 105px;
     height: 36px;
-    background-position: -360px -79px;
+    background-position: -0px -393px;
 }
 
 .prog-bezier {
     width: 125px;
     height: 18px;
-    background-position: -203px -172px;
+    background-position: -371px -552px;
 }
 
 .prog-bionicReading {
     width: 75px;
     height: 35px;
-    background-position: -0px -561px;
+    background-position: -0px -552px;
 }
 
 .prog-caniuse {
     width: 110px;
     height: 25px;
-    background-position: -240px -502px;
+    background-position: -106px -522px;
 }
 
 .prog-canvas {
     width: 113px;
     height: 25px;
-    background-position: -124px -502px;
+    background-position: -0px -494px;
 }
 
 .prog-codewars {
     width: 45px;
     height: 45px;
-    background-position: -676px -343px;
+    background-position: -678px -422px;
 }
 
 .prog-colorbox {
     width: 120px;
     height: 31px;
-    background-position: -477px -0px;
+    background-position: -108px -393px;
 }
 
 .prog-colorhunt {
     width: 120px;
     height: 30px;
-    background-position: -477px -70px;
+    background-position: -231px -393px;
 }
 
 .prog-colors_picker {
     width: 120px;
     height: 34px;
-    background-position: -0px -411px;
+    background-position: -336px -145px;
 }
 
 .prog-compresor {
     width: 93px;
     height: 27px;
-    background-position: -380px -411px;
+    background-position: -156px -552px;
 }
 
 .prog-compressor {
     width: 90px;
     height: 22px;
-    background-position: -414px -599px;
+    background-position: -299px -621px;
 }
 
 .prog-cursor {
     width: 72px;
     height: 18px;
-    background-position: -162px -625px;
+    background-position: -524px -468px;
 }
 
 .prog-d3 {
     width: 36px;
     height: 34px;
-    background-position: -206px -697px;
+    background-position: -761px -449px;
 }
 
 .prog-davinci17 {
     width: 214px;
     height: 22px;
-    background-position: -0px -256px;
+    background-position: -0px -248px;
 }
 
 .prog-dbdiagram {
     width: 100px;
     height: 24px;
-    background-position: -247px -561px;
+    background-position: -425px -522px;
 }
 
 .prog-docs-w3cub {
     width: 137px;
     height: 25px;
-    background-position: -0px -448px;
+    background-position: -137px -362px;
 }
 
 .prog-dojotoolkit {
     width: 73px;
     height: 36px;
-    background-position: -600px -0px;
+    background-position: -602px -0px;
 }
 
 .prog-dragonbones {
     width: 34px;
     height: 34px;
-    background-position: -722px -515px;
+    background-position: -761px -486px;
 }
 
 .prog-draw {
     width: 40px;
     height: 40px;
-    background-position: -0px -697px;
+    background-position: -761px -0px;
 }
 
 .prog-droidcon {
     width: 120px;
     height: 26px;
-    background-position: -477px -271px;
+    background-position: -479px -73px;
 }
 
 .prog-electronjs {
     width: 156px;
     height: 32px;
-    background-position: -0px -221px;
+    background-position: -157px -183px;
 }
 
 .prog-ezgif {
     width: 120px;
     height: 23px;
-    background-position: -135px -476px;
+    background-position: -116px -494px;
 }
 
 .prog-fbflipper {
     width: 30px;
     height: 30px;
-    background-position: -725px -96px;
+    background-position: -761px -523px;
 }
 
 .prog-feathericons {
     width: 39px;
     height: 37px;
-    background-position: -86px -697px;
+    background-position: -761px -175px;
 }
 
 .prog-figma {
     width: 40px;
     height: 57px;
-    background-position: -600px -300px;
+    background-position: -602px -300px;
 }
 
 .prog-flaticon {
     width: 121px;
     height: 25px;
-    background-position: -0px -502px;
+    background-position: -203px -220px;
 }
 
 .prog-flex {
     width: 100px;
     height: 25px;
-    background-position: -353px -502px;
+    background-position: -219px -522px;
 }
 
 .prog-font-converter {
     width: 120px;
     height: 25px;
-    background-position: -477px -363px;
+    background-position: -479px -165px;
 }
 
 .prog-fontsgoogle {
     width: 135px;
     height: 29px;
-    background-position: -135px -377px;
+    background-position: -336px -256px;
 }
 
 .prog-formatjson {
     width: 145px;
     height: 21px;
-    background-position: -140px -448px;
+    background-position: -277px -362px;
 }
 
 .prog-getmdl {
     width: 41px;
     height: 41px;
-    background-position: -316px -37px;
+    background-position: -555px -281px;
 }
 
 .prog-github {
     width: 36px;
     height: 36px;
-    background-position: -561px -228px;
+    background-position: -761px -215px;
 }
 
 .prog-glyphicons {
     width: 135px;
     height: 19px;
-    background-position: -288px -448px;
+    background-position: -386px -468px;
 }
 
 .prog-googlecloud {
     width: 45px;
     height: 36px;
-    background-position: -88px -653px;
+    background-position: -88px -677px;
 }
 
 .prog-graphql {
     width: 88px;
     height: 28px;
-    background-position: -156px -561px;
+    background-position: -0px -590px;
 }
 
 .prog-grid {
     width: 100px;
     height: 25px;
-    background-position: -456px -502px;
+    background-position: -322px -522px;
 }
 
 .prog-gtmetrix {
     width: 110px;
     height: 33px;
-    background-position: -477px -34px;
+    background-position: -0px -432px;
 }
 
 .prog-h5p {
     width: 60px;
     height: 43px;
-    background-position: -600px -39px;
+    background-position: -602px -39px;
+}
+
+.prog-holepunch {
+    width: 110px;
+    height: 27px;
+    background-position: -479px -371px;
 }
 
 .prog-html5 {
     width: 154px;
     height: 34px;
-    background-position: -203px -0px;
+    background-position: -0px -183px;
 }
 
 .prog-htmlemail {
     width: 69px;
     height: 25px;
-    background-position: -600px -529px;
+    background-position: -602px -558px;
 }
 
 .prog-icomoon {
     width: 41px;
     height: 41px;
-    background-position: -314px -85px;
+    background-position: -555px -325px;
 }
 
 .prog-icons {
     width: 120px;
     height: 30px;
-    background-position: -477px -103px;
+    background-position: -354px -393px;
 }
 
 .prog-immutable {
     width: 116px;
     height: 20px;
-    background-position: -350px -561px;
+    background-position: -252px -552px;
+}
+
+.prog-joinpeertube {
+    width: 100px;
+    height: 22px;
+    background-position: -93px -621px;
 }
 
 .prog-js-tutorial {
     width: 43px;
     height: 48px;
-    background-position: -676px -244px;
+    background-position: -678px -323px;
 }
 
 .prog-jsnice {
     width: 67px;
     height: 27px;
-    background-position: -600px -454px;
+    background-position: -602px -483px;
 }
 
 .prog-json {
     width: 99px;
     height: 31px;
-    background-position: -477px -329px;
+    background-position: -479px -131px;
 }
 
 .prog-knowledgehut {
@@ -2102,439 +2114,19 @@ input {
 .prog-kurshtml {
     width: 120px;
     height: 28px;
-    background-position: -477px -136px;
+    background-position: -113px -432px;
 }
 
 .prog-kurshtmlcss {
     width: 154px;
     height: 25px;
-    background-position: -203px -193px;
+    background-position: -149px -331px;
 }
 
 .prog-lawsofux {
     width: 36px;
     height: 36px;
-    background-position: -436px -191px;
-}
-
-.prog-loader {
-    width: 40px;
-    height: 40px;
-    background-position: -43px -697px;
-}
-
-.prog-localforage {
-    width: 75px;
-    height: 28px;
-    background-position: -676px -30px;
-}
-
-.prog-markdown_preview {
-    width: 34px;
-    height: 45px;
-    background-position: -722px -244px;
-}
-
-.prog-material {
-    width: 120px;
-    height: 28px;
-    background-position: -477px -167px;
-}
-
-.prog-materialize {
-    width: 50px;
-    height: 28px;
-    background-position: -409px -339px;
-}
-
-.prog-materialuicolors {
-    width: 120px;
-    height: 18px;
-    background-position: -233px -318px;
-}
-
-.prog-matic {
-    width: 118px;
-    height: 26px;
-    background-position: -477px -300px;
-}
-
-.prog-meyerweb {
-    width: 35px;
-    height: 36px;
-    background-position: -721px -564px;
-}
-
-.prog-minifier {
-    width: 50px;
-    height: 27px;
-    background-position: -136px -653px;
-}
-
-.prog-nafrontendzie {
-    width: 125px;
-    height: 22px;
-    background-position: -217px -256px;
-}
-
-.prog-nask {
-    width: 96px;
-    height: 18px;
-    background-position: -507px -599px;
-}
-
-.prog-netlify {
-    width: 38px;
-    height: 38px;
-    background-position: -436px -150px;
-}
-
-.prog-normalize {
-    width: 36px;
-    height: 36px;
-    background-position: -436px -270px;
-}
-
-.prog-obfuscator {
-    width: 120px;
-    height: 21px;
-    background-position: -381px -476px;
-}
-
-.prog-obfuscator2 {
-    width: 120px;
-    height: 35px;
-    background-position: -0px -339px;
-}
-
-.prog-obliczeniowo {
-    width: 127px;
-    height: 32px;
-    background-position: -123px -411px;
-}
-
-.prog-ocks {
-    width: 35px;
-    height: 87px;
-    background-position: -360px -150px;
-}
-
-.prog-pagespeed2 {
-    width: 161px;
-    height: 22px;
-    background-position: -273px -377px;
-}
-
-.prog-paletton {
-    width: 120px;
-    height: 27px;
-    background-position: -477px -198px;
-}
-
-.prog-paperjs {
-    width: 69px;
-    height: 25px;
-    background-position: -600px -557px;
-}
-
-.prog-parcel {
-    width: 102px;
-    height: 28px;
-    background-position: -0px -530px;
-}
-
-.prog-paths {
-    width: 73px;
-    height: 25px;
-    background-position: -676px -613px;
-}
-
-.prog-phaser {
-    width: 104px;
-    height: 29px;
-    background-position: -360px -118px;
-}
-
-.prog-pinterest {
-    width: 35px;
-    height: 87px;
-    background-position: -398px -150px;
-}
-
-.prog-pixijs {
-    width: 80px;
-    height: 27px;
-    background-position: -676px -0px;
-}
-
-.prog-polskifrontend {
-    width: 130px;
-    height: 41px;
-    background-position: -0px -149px;
-}
-
-.prog-popmotion {
-    width: 110px;
-    height: 23px;
-    background-position: -360px -313px;
-}
-
-.prog-pose {
-    width: 80px;
-    height: 28px;
-    background-position: -276px -281px;
-}
-
-.prog-primefaces {
-    width: 43px;
-    height: 46px;
-    background-position: -676px -515px;
-}
-
-.prog-puppeteer2 {
-    width: 40px;
-    height: 60px;
-    background-position: -600px -85px;
-}
-
-.prog-ranking {
-    width: 100px;
-    height: 22px;
-    background-position: -208px -599px;
-}
-
-.prog-reacttypa {
-    width: 132px;
-    height: 31px;
-    background-position: -0px -377px;
-}
-
-.prog-reset {
-    width: 36px;
-    height: 36px;
-    background-position: -128px -697px;
-}
-
-.prog-reverieai {
-    width: 130px;
-    height: 34px;
-    background-position: -0px -281px;
-}
-
-.prog-rockstar {
-    width: 110px;
-    height: 20px;
-    background-position: -469px -561px;
-}
-
-.prog-sandbox {
-    width: 42px;
-    height: 46px;
-    background-position: -676px -564px;
-}
-
-.prog-sass {
-    width: 36px;
-    height: 36px;
-    background-position: -167px -697px;
-}
-
-.prog-serverless {
-    width: 146px;
-    height: 28px;
-    background-position: -123px -339px;
-}
-
-.prog-slides {
-    width: 41px;
-    height: 40px;
-    background-position: -44px -653px;
-}
-
-.prog-sortable {
-    width: 45px;
-    height: 47px;
-    background-position: -676px -145px;
-}
-
-.prog-special {
-    width: 100px;
-    height: 23px;
-    background-position: -105px -599px;
-}
-
-.prog-sullygnome {
-    width: 45px;
-    height: 53px;
-    background-position: -600px -148px;
-}
-
-.prog-svg-js {
-    width: 41px;
-    height: 41px;
-    background-position: -133px -149px;
-}
-
-.prog-svg {
-    width: 75px;
-    height: 34px;
-    background-position: -78px -561px;
-}
-
-.prog-svgomg {
-    width: 41px;
-    height: 41px;
-    background-position: -0px -653px;
-}
-
-.prog-svgsilh {
-    width: 120px;
-    height: 25px;
-    background-position: -477px -391px;
-}
-
-.prog-swr {
-    width: 132px;
-    height: 23px;
-    background-position: -0px -476px;
-}
-
-.prog-syntax {
-    width: 52px;
-    height: 45px;
-    background-position: -600px -252px;
-}
-
-.prog-s_prites {
-    width: 90px;
-    height: 25px;
-    background-position: -0px -625px;
-}
-
-.prog-textfancy {
-    width: 124px;
-    height: 31px;
-    background-position: -253px -411px;
-}
-
-.prog-textshadow {
-    width: 120px;
-    height: 25px;
-    background-position: -477px -419px;
-}
-
-.prog-theme-ui {
-    width: 102px;
-    height: 23px;
-    background-position: -0px -599px;
-}
-
-.prog-threejs {
-    width: 66px;
-    height: 22px;
-    background-position: -93px -625px;
-}
-
-.prog-tinypng {
-    width: 120px;
-    height: 38px;
-    background-position: -203px -131px;
-}
-
-.prog-typeorm {
-    width: 86px;
-    height: 20px;
-    background-position: -504px -476px;
-}
-
-.prog-unminify {
-    width: 120px;
-    height: 22px;
-    background-position: -258px -476px;
-}
-
-.prog-vectorizer {
-    width: 134px;
-    height: 28px;
-    background-position: -272px -339px;
-}
-
-.prog-vived {
-    width: 114px;
-    height: 37px;
-    background-position: -360px -0px;
-}
-
-.prog-vscode {
-    width: 45px;
-    height: 46px;
-    background-position: -676px -195px;
-}
-
-.prog-vuejs {
-    width: 50px;
-    height: 45px;
-    background-position: -600px -360px;
-}
-
-.prog-W3 {
-    width: 73px;
-    height: 40px;
-    background-position: -360px -270px;
-}
-
-.prog-w3schools {
-    width: 130px;
-    height: 16px;
-    background-position: -426px -448px;
-}
-
-.prog-workspace {
-    width: 108px;
-    height: 43px;
-    background-position: -203px -85px;
-}
-
-.prog-wroc {
-    width: 44px;
-    height: 43px;
-    background-position: -600px -408px;
-}
-
-.prog-xenko {
-    width: 110px;
-    height: 22px;
-    background-position: -326px -530px;
-}
-
-.prog-yarn {
-    width: 46px;
-    height: 46px;
-    background-position: -676px -96px;
-}
-
-.prog-zufana {
-    width: 230px;
-    height: 18px;
-    background-position: -0px -318px;
-}
-
-.prog-ajordison {
-    width: 200px;
-    height: 38px;
-    background-position: -0px -108px;
-}
-
-.prog-holepunch {
-    width: 110px;
-    height: 27px;
-    background-position: -360px -240px;
-}
-
-.prog-joinpeertube {
-    width: 100px;
-    height: 22px;
-    background-position: -311px -599px;
+    background-position: -761px -254px;
 }
 
 .prog-lipsum {
@@ -2543,33 +2135,441 @@ input {
     background-position: -0px -0px;
 }
 
+.prog-loader {
+    width: 40px;
+    height: 40px;
+    background-position: -761px -43px;
+}
+
+.prog-localforage {
+    width: 75px;
+    height: 28px;
+    background-position: -678px -109px;
+}
+
+.prog-markdown_preview {
+    width: 34px;
+    height: 45px;
+    background-position: -761px -86px;
+}
+
+.prog-material {
+    width: 120px;
+    height: 28px;
+    background-position: -236px -432px;
+}
+
+.prog-materialize {
+    width: 50px;
+    height: 28px;
+    background-position: -136px -677px;
+}
+
+.prog-materialuicolors {
+    width: 120px;
+    height: 18px;
+    background-position: -412px -590px;
+}
+
+.prog-matic {
+    width: 118px;
+    height: 26px;
+    background-position: -479px -102px;
+}
+
+.prog-meyerweb {
+    width: 35px;
+    height: 36px;
+    background-position: -761px -410px;
+}
+
+.prog-minifier {
+    width: 50px;
+    height: 27px;
+    background-position: -189px -677px;
+}
+
+.prog-nafrontendzie {
+    width: 125px;
+    height: 22px;
+    background-position: -135px -468px;
+}
+
+.prog-nask {
+    width: 96px;
+    height: 18px;
+    background-position: -233px -310px;
+}
+
 .prog-nch {
     width: 81px;
     height: 40px;
-    background-position: -477px -228px;
+    background-position: -479px -30px;
+}
+
+.prog-netlify {
+    width: 38px;
+    height: 38px;
+    background-position: -761px -134px;
+}
+
+.prog-normalize {
+    width: 36px;
+    height: 36px;
+    background-position: -761px -293px;
 }
 
 .prog-npm_trends {
     width: 45px;
     height: 45px;
-    background-position: -676px -391px;
+    background-position: -678px -470px;
+}
+
+.prog-obfuscator {
+    width: 120px;
+    height: 21px;
+    background-position: -479px -444px;
+}
+
+.prog-obfuscator2 {
+    width: 120px;
+    height: 35px;
+    background-position: -336px -73px;
+}
+
+.prog-obliczeniowo {
+    width: 127px;
+    height: 32px;
+    background-position: -336px -182px;
+}
+
+.prog-ocks {
+    width: 35px;
+    height: 87px;
+    background-position: -479px -281px;
 }
 
 .prog-oldskoolcoder {
     width: 200px;
     height: 25px;
-    background-position: -0px -193px;
+    background-position: -0px -220px;
 }
 
 .prog-openscad {
     width: 140px;
     height: 30px;
-    background-position: -133px -281px;
+    background-position: -336px -0px;
+}
+
+.prog-pagespeed2 {
+    width: 161px;
+    height: 22px;
+    background-position: -306px -331px;
+}
+
+.prog-paletton {
+    width: 120px;
+    height: 27px;
+    background-position: -479px -0px;
+}
+
+.prog-paperjs {
+    width: 69px;
+    height: 25px;
+    background-position: -0px -649px;
+}
+
+.prog-parcel {
+    width: 102px;
+    height: 28px;
+    background-position: -359px -432px;
+}
+
+.prog-paths {
+    width: 73px;
+    height: 25px;
+    background-position: -602px -455px;
+}
+
+.prog-phaser {
+    width: 104px;
+    height: 29px;
+    background-position: -479px -249px;
+}
+
+.prog-pinterest {
+    width: 35px;
+    height: 87px;
+    background-position: -517px -281px;
+}
+
+.prog-pixijs {
+    width: 80px;
+    height: 27px;
+    background-position: -678px -79px;
+}
+
+.prog-polskifrontend {
+    width: 130px;
+    height: 41px;
+    background-position: -203px -0px;
+}
+
+.prog-popmotion {
+    width: 110px;
+    height: 23px;
+    background-position: -239px -494px;
+}
+
+.prog-pose {
+    width: 80px;
+    height: 28px;
+    background-position: -678px -0px;
+}
+
+.prog-primefaces {
+    width: 43px;
+    height: 46px;
+    background-position: -678px -594px;
+}
+
+.prog-puppeteer2 {
+    width: 40px;
+    height: 60px;
+    background-position: -602px -85px;
+}
+
+.prog-ranking {
+    width: 100px;
+    height: 22px;
+    background-position: -196px -621px;
+}
+
+.prog-reacttypa {
+    width: 132px;
+    height: 31px;
+    background-position: -336px -111px;
+}
+
+.prog-reset {
+    width: 36px;
+    height: 36px;
+    background-position: -761px -332px;
+}
+
+.prog-reverieai {
+    width: 130px;
+    height: 34px;
+    background-position: -0px -273px;
+}
+
+.prog-rockstar {
+    width: 110px;
+    height: 20px;
+    background-position: -299px -590px;
+}
+
+.prog-sandbox {
+    width: 42px;
+    height: 46px;
+    background-position: -602px -360px;
+}
+
+.prog-sass {
+    width: 36px;
+    height: 36px;
+    background-position: -761px -371px;
+}
+
+.prog-serverless {
+    width: 146px;
+    height: 28px;
+    background-position: -0px -331px;
+}
+
+.prog-slides {
+    width: 41px;
+    height: 40px;
+    background-position: -555px -401px;
+}
+
+.prog-sortable {
+    width: 45px;
+    height: 47px;
+    background-position: -678px -224px;
+}
+
+.prog-special {
+    width: 100px;
+    height: 23px;
+    background-position: -196px -590px;
+}
+
+.prog-sullygnome {
+    width: 45px;
+    height: 53px;
+    background-position: -602px -148px;
+}
+
+.prog-svg-js {
+    width: 41px;
+    height: 41px;
+    background-position: -0px -677px;
+}
+
+.prog-svg {
+    width: 75px;
+    height: 34px;
+    background-position: -78px -552px;
+}
+
+.prog-svgomg {
+    width: 41px;
+    height: 41px;
+    background-position: -44px -677px;
+}
+
+.prog-svgsilh {
+    width: 120px;
+    height: 25px;
+    background-position: -479px -193px;
+}
+
+.prog-swr {
+    width: 132px;
+    height: 23px;
+    background-position: -0px -468px;
+}
+
+.prog-syntax {
+    width: 52px;
+    height: 45px;
+    background-position: -602px -252px;
+}
+
+.prog-s_prites {
+    width: 90px;
+    height: 25px;
+    background-position: -0px -621px;
+}
+
+.prog-textfancy {
+    width: 124px;
+    height: 31px;
+    background-position: -336px -288px;
+}
+
+.prog-textshadow {
+    width: 120px;
+    height: 25px;
+    background-position: -479px -221px;
+}
+
+.prog-theme-ui {
+    width: 102px;
+    height: 23px;
+    background-position: -91px -590px;
+}
+
+.prog-threejs {
+    width: 66px;
+    height: 22px;
+    background-position: -528px -522px;
+}
+
+.prog-tinypng {
+    width: 120px;
+    height: 38px;
+    background-position: -203px -138px;
+}
+
+.prog-typeorm {
+    width: 86px;
+    height: 20px;
+    background-position: -392px -621px;
+}
+
+.prog-unminify {
+    width: 120px;
+    height: 22px;
+    background-position: -263px -468px;
+}
+
+.prog-vectorizer {
+    width: 134px;
+    height: 28px;
+    background-position: -0px -362px;
+}
+
+.prog-vived {
+    width: 114px;
+    height: 37px;
+    background-position: -336px -33px;
+}
+
+.prog-vscode {
+    width: 45px;
+    height: 46px;
+    background-position: -678px -274px;
+}
+
+.prog-vuejs {
+    width: 50px;
+    height: 45px;
+    background-position: -678px -31px;
+}
+
+.prog-W3 {
+    width: 73px;
+    height: 40px;
+    background-position: -479px -401px;
+}
+
+.prog-w3schools {
+    width: 130px;
+    height: 16px;
+    background-position: -535px -590px;
 }
 
 .prog-wasp {
     width: 45px;
     height: 45px;
-    background-position: -676px -439px;
+    background-position: -678px -518px;
+}
+
+.prog-workspace {
+    width: 108px;
+    height: 43px;
+    background-position: -203px -92px;
+}
+
+.prog-wroc {
+    width: 44px;
+    height: 43px;
+    background-position: -602px -409px;
+}
+
+.prog-xenko {
+    width: 110px;
+    height: 22px;
+    background-position: -352px -494px;
+}
+
+.prog-yarn {
+    width: 46px;
+    height: 46px;
+    background-position: -678px -175px;
+}
+
+.prog-zufana {
+    width: 230px;
+    height: 18px;
+    background-position: -0px -310px;
+}
+
+.prog-kickAssembler {
+    width: 175px;
+    height: 31px;
+    background-position: -0px -149px;
 }
 
