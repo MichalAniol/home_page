@@ -18,7 +18,7 @@
         "@types/ws": "^8.5.10",
         "cheerio": "^1.0.0-rc.12",
         "cors": "^2.8.5",
-        "express": "^4.19.2",
+        "express": "^4.21.0",
         "http": "^0.0.1-security",
         "spritesmith": "^3.4.1",
         "tsc-watch": "^6.2.0",
