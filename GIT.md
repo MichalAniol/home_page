@@ -32,7 +32,29 @@ np:
 ```docs(readme): add usage examples for new API methods```
 ps. polecam do dokumentacji dodatek: 'Markdown Preview Enhanced'
 
-## 6. łączenie poleceń
+### 6. refactor – zmiana kodu, która nie dodaje nowej funkcji ani nie naprawia błędu (np. poprawa struktury kodu, wydzielenie funkcji):
+```refactor([obszar]): opis``` np: ```refactor(auth): simplify token validation logic```
+
+### 7. test – dodanie lub zmiana testów jednostkowych/integracyjnych:
+```test([obszar]): opis``` np: ```test(auth): add tests for login with invalid credentials```
+
+### 8. style – zmiany dotyczące formatowania, nie wpływające na logikę (np. przecinki, spacje, linting):
+```style([obszar]): opis``` np: ```style(login): fix indentation and spacing```
+
+### 9. perf – zmiany poprawiające wydajność:
+```perf([obszar]): opis``` np: ```perf(image-loading): optimize image loading strategy```
+
+### 10. revert – cofnięcie poprzedniego commita:
+```revert: opis``` np: ```revert: remove Google login due to API issue```
+
+### 11. ci – zmiany dotyczące konfiguracji ciągłej integracji (CI/CD):
+```ci([narzędzie/system]): opis``` np: ```ci(github): add action to run tests on pull request```
+
+### 12. build – zmiany wpływające na system budowania lub zależności:
+```build([obszar]): opis``` np: ```build(deps): bump react version to 18.2.0```
+
+
+## 13. łączenie poleceń
 aby połączyć poszczególne polecenia każde musi się znajdować w nowej linii:
 ```
 feat(auth): add OAuth support
@@ -59,19 +81,3 @@ albo przez:
 ```git commit```
 i edytujemy w vimie
 wychodzimy przez ```[esp]:wq``` - zapis i wyjście z edycji
-
-
-feat(generator): new generator
-feat(generator.aggregateFiles): using cheerio
-chore(cheerio)
-feat(generator.minify)
-feat(generator.aggregateCss)
-feat(generator.putSvgToHtmlFile)
-feat(generator.changePathsImagesAtCssClass)
-feat(generator.start)
-chore(chokidar)
-feat(init): using chokidar
-feat(configuration): at ./gConfig.js
-Fixes #687
-
-git commit Fixes #687
