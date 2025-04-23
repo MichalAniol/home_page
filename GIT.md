@@ -81,9 +81,3 @@ albo przez:
 ```git commit```
 i edytujemy w vimie
 wychodzimy przez ```[esp]:wq``` - zapis i wyjście z edycji
-
-
-[#625 #626 #627]
-Fixes #625
-Fixes #626
-Fixes #627
