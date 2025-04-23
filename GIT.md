@@ -59,3 +59,19 @@ albo przez:
 ```git commit```
 i edytujemy w vimie
 wychodzimy przez ```[esp]:wq``` - zapis i wyjście z edycji
+
+
+feat(generator): new generator
+feat(generator.aggregateFiles): using cheerio
+chore(cheerio)
+feat(generator.minify)
+feat(generator.aggregateCss)
+feat(generator.putSvgToHtmlFile)
+feat(generator.changePathsImagesAtCssClass)
+feat(generator.start)
+chore(chokidar)
+feat(init): using chokidar
+feat(configuration): at ./gConfig.js
+Fixes #687
+
+git commit Fixes #687
