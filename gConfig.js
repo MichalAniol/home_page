@@ -8,5 +8,5 @@ module.exports = {
     ],
     minifyFiles: true,
     addSvgToHtml: true,
-    changePathsImagesAtCssClass: true,
+    changePathsImagesAtCssClass: false,
 }

@@ -6,9 +6,9 @@
     "license": "ISC",
     "scripts": {
         "g": "node ./_html-generator/generator.js",
-        "go": "node ./_html-generator-old/generator.js",
         "spr": "node ./_html-generator/sprites.js",
         "s": "node ./live-server.js",
+        "t": "tsc-watch --noClear -p ./tsconfig.json",
         "tsw": "tsc-watch --noClear -p ./_html-generator/tsconfig-g.json",
         "test": "node test/test.js"
     },
