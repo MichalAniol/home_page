@@ -53,7 +53,6 @@ git commit -m "feat(auth): add OAuth support" \
            -m "Implemented OAuth 2.0 authentication." \
            -m "Users can now sign in using Google and Facebook." \
            -m "Fixes #123"
-R
 ```
 albo przez:
 ```git add .``` - dodaje wszystkie pliki do commita

@@ -6,6 +6,7 @@
     "license": "ISC",
     "scripts": {
         "g": "node ./_html-generator/generator.js",
+        "go": "node ./_html-generator-old/generator.js",
         "s": "node ./_html-generator/sprites.js",
         "tsw": "tsc-watch --noClear -p ./_html-generator/tsconfig-g.json",
         "test": "node test/test.js"
@@ -24,6 +25,7 @@
         "tsc-watch": "^6.2.0",
         "ws": "^8.17.1",
         "tough-cookie": "4.1.4",
-        "request": "2.88.2"
+        "request": "2.88.2",
+        "chokidar": "^4.0.3"
     }
 }

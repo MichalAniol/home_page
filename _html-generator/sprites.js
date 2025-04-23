@@ -5,14 +5,24 @@ const websocket = require('ws');
 const http = require('http');
 const cors = require('cors');
 const cheerio = require('cheerio');
-const Spritesmith = require('spritesmith');
+const path = require('path');
+const chokidar = require('chokidar');
+const configuration = require('../gConfig.js');
+const globalPath = __dirname.replace('_html-generator', '');
+const getZero = (num) => num < 10 ? '0' + num : num;
+const info = (name) => {
+    const time = new Date();
+    const h = time.getHours();
+    const m = time.getMinutes();
+    const s = time.getSeconds();
+    const res = `>> ${getZero(h)}:${getZero(m)}:${getZero(s)} - ${name}`;
+    console.log(res);
+};
 const oof = (function () {
     let splitted = __dirname.split('\\');
     let path_out = '';
     splitted.forEach((e, i) => i < splitted.length - 1 ? path_out += e + '/' : null);
-    const globalPath = __dirname.replace('_html-generator', '');
-    const load = (name) => {
-        const filePath = globalPath + name;
+    const load = (filePath) => {
         let data = null;
         try {
             if (fs.existsSync(filePath)) {
@@ -60,10 +70,8 @@ const oof = (function () {
                     if (forbidden)
                         return;
                     const hasDot = e.indexOf('.') === -1;
-                    const isHtml = e.indexOf('.html') > -1;
-                    const isJs = e.indexOf('.css') > -1;
-                    const isSvg = e.indexOf('.svg') > -1;
-                    if (isHtml || isJs || isSvg) {
+                    const condition = configuration.watchedFilesTypes.some((f) => e.indexOf(f) > -1);
+                    if (condition) {
                         result.push(`${suffix}\\${e}`);
                         return;
                     }
@@ -100,9 +108,39 @@ const oof = (function () {
         getDir(filePath, folder);
         return result;
     };
-    const save = (name, data) => {
-        const filePath = path_out.replace('__interface/', '') + name;
+    const save = (filePath, data) => {
         fs.writeFileSync(filePath, data);
+    };
+    const ensureDir = (srcPath) => {
+        if (!fs.existsSync(srcPath)) {
+            fs.mkdirSync(srcPath, { recursive: true });
+            console.log(`Katalog utworzony w ./${configuration.folderPathOut}: ${srcPath}`);
+        }
+    };
+    const removeDir = (srcPath) => {
+        if (fs.existsSync(srcPath)) {
+            fs.rmSync(srcPath, { recursive: true, force: true });
+            console.log(`Katalog usunięty w ./${configuration.folderPathOut}: ${srcPath}`);
+        }
+    };
+    const removeFile = (srcPath) => {
+        if (fs.existsSync(srcPath)) {
+            fs.unlinkSync(srcPath);
+            console.log(`Plik usunięty w ./${configuration.folderPathOut}: ${srcPath}`);
+        }
+    };
+    const getSizeOfCreateFile = async (srcPath) => {
+        let result = null;
+        if (fs.existsSync(srcPath)) {
+            try {
+                const stats = fs.statSync(srcPath);
+                result = stats.size;
+            }
+            catch (err) {
+                console.error(err);
+            }
+        }
+        return result;
     };
     return {
         load,
@@ -110,7 +148,11 @@ const oof = (function () {
         loadJson,
         getAllHtmlFiles,
         getAllPngFiles,
-        save
+        save,
+        ensureDir,
+        removeDir,
+        removeFile,
+        getSizeOfCreateFile
     };
 }());
 const progFiles = oof.getAllPngFiles('img', ['base.png', 'base2.png', 'prog.png', 'prog2.png', 'old_base_img', 'base']);

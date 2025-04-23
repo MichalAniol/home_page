@@ -21,6 +21,7 @@
   "files": [
     "libraries.ts",
     "operationsOnFiles.ts",
+    "startFilesAnalyzer.ts",
     "generator.ts",
     "init.ts",
   ],

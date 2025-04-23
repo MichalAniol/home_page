@@ -7,12 +7,10 @@ const oof = (function () {
     let path_out = '';
     splitted.forEach((e: string, i: number) => i < splitted.length - 1 ? path_out += e + '/' : null);
 
-    const globalPath = __dirname.replace('_html-generator', '')
     // const htmlPath = `${globalPath}_html\\`
 
 
-    const load = (name: string) => {
-        const filePath = globalPath + name;
+    const load = (filePath: string) => {
         // console.log('%c filePath:', 'background: #ffcc00; color: #003300', filePath)
         let data = null
 
@@ -23,8 +21,6 @@ const oof = (function () {
         } catch (err) {
             console.error(err)
         }
-
-        // console.log(' loaded: ' + name);
 
         return data
     }
@@ -75,11 +71,9 @@ const oof = (function () {
                     if (forbidden) return
 
                     const hasDot = e.indexOf('.') === -1
-                    const isHtml = e.indexOf('.html') > -1
-                    const isJs = e.indexOf('.css') > -1
-                    const isSvg = e.indexOf('.svg') > -1
+                    const condition = configuration.watchedFilesTypes.some((f: string) => e.indexOf(f) > -1)
 
-                    if (isHtml || isJs || isSvg) {
+                    if (condition) {
                         result.push(`${suffix}\\${e}`)
                         return
                     }
@@ -123,12 +117,42 @@ const oof = (function () {
         return result
     }
 
-    const save = (name: string, data: string) => {
-        const filePath = path_out.replace('__interface/', '') + name;
-        // console.log('%c saved:', 'background: #ffcc00; color: #003300', filePath)
-        fs.writeFileSync(filePath, data);
+    const save = (filePath: string, data: string) => {
+        fs.writeFileSync(filePath, data)
+    }
 
-        // console.log(' saved file: ' + filePath);
+    const ensureDir = (srcPath: string) => {
+        if (!fs.existsSync(srcPath)) {
+            fs.mkdirSync(srcPath, { recursive: true })
+            console.log(`Katalog utworzony w ./${configuration.folderPathOut}: ${srcPath}`)
+        }
+    }
+
+    const removeDir = (srcPath: string) => {
+        if (fs.existsSync(srcPath)) {
+            fs.rmSync(srcPath, { recursive: true, force: true })
+            console.log(`Katalog usunięty w ./${configuration.folderPathOut}: ${srcPath}`)
+        }
+    }
+
+    const removeFile = (srcPath: string) => {
+        if (fs.existsSync(srcPath)) {
+            fs.unlinkSync(srcPath);
+            console.log(`Plik usunięty w ./${configuration.folderPathOut}: ${srcPath}`)
+        }
+    }
+
+    const getSizeOfCreateFile = async (srcPath: string) => {
+        let result = null
+        if (fs.existsSync(srcPath)) {
+            try {
+                const stats = fs.statSync(srcPath)
+                result = stats.size
+            } catch (err) {
+                console.error(err)
+            }
+        }
+        return result
     }
 
 
@@ -138,6 +162,10 @@ const oof = (function () {
         loadJson,
         getAllHtmlFiles,
         getAllPngFiles,
-        save
+        save,
+        ensureDir,
+        removeDir,
+        removeFile,
+        getSizeOfCreateFile
     }
 }())
