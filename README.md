@@ -15,6 +15,8 @@ uglifyjs index.js --output index.min.js
 css-minify --dir "./" --output "./"
 
 ```
+&
+```npm install -g live-server```
 ---
 ##### to convert typescript files install:
 ```

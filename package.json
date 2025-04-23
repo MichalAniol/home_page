@@ -7,7 +7,8 @@
     "scripts": {
         "g": "node ./_html-generator/generator.js",
         "go": "node ./_html-generator-old/generator.js",
-        "s": "node ./_html-generator/sprites.js",
+        "spr": "node ./_html-generator/sprites.js",
+        "s": "node ./live-server.js",
         "tsw": "tsc-watch --noClear -p ./_html-generator/tsconfig-g.json",
         "test": "node test/test.js"
     },
@@ -18,14 +19,15 @@
         "@types/node": "^20.14.8",
         "@types/ws": "^8.5.10",
         "cheerio": "^1.0.0-rc.12",
+        "chokidar": "^4.0.3",
         "cors": "^2.8.5",
         "express": "^4.21.1",
         "http": "^0.0.1-security",
+        "request": "2.88.2",
         "spritesmith": "^3.4.1",
+        "tough-cookie": "4.1.4",
         "tsc-watch": "^6.2.0",
         "ws": "^8.17.1",
-        "tough-cookie": "4.1.4",
-        "request": "2.88.2",
-        "chokidar": "^4.0.3"
+        "live-server": "^1.2.2"
     }
 }
