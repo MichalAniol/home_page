@@ -600,3 +600,34 @@ input {
     display: flex;
     flex-direction: column;
 }
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.tooltip .tooltip-text {
+    font-size: 12px;
+    visibility: hidden;
+    width: 600px;
+    background-color: #1b1b1b;
+    color: #fff;
+    text-align: left;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    white-space: pre-line;
+    /* <- Umożliwia łamanie linii */
+}
+
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
