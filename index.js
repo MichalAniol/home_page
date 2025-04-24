@@ -103,6 +103,7 @@ waitingRoomFoo();
 (function () {
     const fold = [];
     const title = document.querySelector('title').innerHTML;
+    console.log('%c title:', 'background: #ffcc00; color: #003300', title);
     const rememberFold = () => {
         localStorage.setItem('fold' + title, fold.toString());
     };
