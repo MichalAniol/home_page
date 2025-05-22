@@ -23,11 +23,14 @@
         "cors": "^2.8.5",
         "express": "^4.21.1",
         "http": "^0.0.1-security",
+        "live-server": "^1.2.2",
         "request": "2.88.2",
         "spritesmith": "^3.4.1",
         "tough-cookie": "4.1.4",
         "tsc-watch": "^6.2.0",
-        "ws": "^8.17.1",
-        "live-server": "^1.2.2"
+        "ws": "^8.17.1"
+    },
+    "dependencies": {
+        "axios": "^1.8.4"
     }
 }

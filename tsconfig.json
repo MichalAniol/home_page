@@ -16,13 +16,16 @@
     "outFile": "index.js"
   },
   "files": [
+    "ts/dom.ts",
     "ts/0_console.ts",
     "ts/1_waitingRoom.ts",
     "ts/2_index.ts",
+    "ts/axios.min.ts",    // Dodajemy axios.min.js tutaj
+    "ts/3_harmonogram-odbioru-odpadow.ts",
     "ts/7_worldData.ts",
     "ts/8_moonData.ts",
     "ts/9_animation.ts",
-    "ts/10_searcher.ts",
+    "ts/10_searcher.ts"
   ],
   "exclude": [
     "node_modules"
