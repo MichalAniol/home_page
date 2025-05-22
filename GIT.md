@@ -11,7 +11,7 @@ np:
 np:
 ```feat(logInViaGoogle): logowanie```
 
-### 3. fix - gdy robimy fixa: 
+### 3. fix - gdy robimy fixa:
 ```fix([nazwa funkcji]): opis```
 np:
 ```fix(logInViaGoogle): logowanie```
