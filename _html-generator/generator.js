@@ -430,76 +430,82 @@ const generator = (function () {
     return { start };
 }());
 const init = (function () {
-    const moveFile = (path) => {
-        const file = oof.load(`${globalPath}${path}`);
-        if (file) {
-            const pathWithoutFolderPathIn = path.replace(configuration.folderPathIn, '');
-            const newPath = `${globalPath}${configuration.folderPathOut}${pathWithoutFolderPathIn}`;
-            if (fs.existsSync(newPath)) {
-                oof.save(newPath, file);
+    const setWatcher = (myPath) => {
+        const moveFile = (path) => {
+            const file = oof.load(`${globalPath}${path}`);
+            if (file) {
+                const pathWithoutFolderPathIn = path.replace(myPath, '');
+                const newPath = `${globalPath}${configuration.folderPathOut}${pathWithoutFolderPathIn}`;
+                if (fs.existsSync(newPath)) {
+                    oof.save(newPath, file);
+                }
             }
-        }
-    };
-    const IGNORED = (configuration.addSvgToHtml ? ['.html', '.css', 'svg'] : ['.html', '.css']);
-    const watcherIn = chokidar.watch(`./${configuration.folderPathIn}`, {
-        ignored: (path, stats) => stats?.isFile() && path.endsWith('ts'),
-        persistent: true
-    });
-    const getPathOut = (srcPath) => {
-        const relativePath = path.relative(`./${configuration.folderPathIn}`, srcPath);
-        const tempPath = path.join(`./${configuration.folderPathOut}`, relativePath);
-        return tempPath;
-    };
-    const start = () => {
-        watcherIn
-            .on('add', (path) => {
-            if (IGNORED.some((elem) => path.endsWith(elem)))
-                return;
-            moveFile(path);
-            info(`Plik dodany: ${path}`);
-        })
-            .on('change', (path) => {
-            moveFile(path);
-            info(`Plik zmieniony: ${path}`);
-        })
-            .on('unlink', (path) => {
-            oof.removeFile(getPathOut(path));
-            info(`Plik usunięty: ${path}`);
-        })
-            .on('addDir', (path) => {
-            if (configuration.dirsToCopy.some((dir) => path.endsWith(dir))) {
-                oof.ensureDir(getPathOut(path));
-                info(`Katalog dodany: ${path}`);
-            }
-        })
-            .on('unlinkDir', (path) => {
-            oof.removeDir(getPathOut(path));
-            info(`Katalog usunięty: ${path}`);
-        })
-            .on('error', (error) => info(`Błąd: ${error}`))
-            .on('ready', async () => {
+        };
+        const IGNORED = (configuration.addSvgToHtml ? ['.html', '.css', 'svg'] : ['.html', '.css']);
+        const watcherIn = chokidar.watch(`./${myPath}`, {
+            ignored: (path, stats) => stats?.isFile() && path.endsWith('ts'),
+            persistent: true
+        });
+        const getPathOut = (srcPath) => {
+            const relativePath = path.relative(`./${myPath}`, srcPath);
+            const tempPath = path.join(`./${configuration.folderPathOut}`, relativePath);
+            return tempPath;
+        };
+        const start = () => {
             watcherIn
                 .on('add', (path) => {
-                if (path.endsWith('html') || path.endsWith('css')) {
-                    generator.start();
-                }
-                else {
-                    moveFile(path);
-                    info(`Plik dodany: ${path}`);
-                }
+                if (IGNORED.some((elem) => path.endsWith(elem)))
+                    return;
+                moveFile(path);
+                info(`Plik dodany: ${path}`);
             })
                 .on('change', (path) => {
-                if (path.endsWith('html') || path.endsWith('css')) {
-                    generator.start();
+                moveFile(path);
+                info(`Plik zmieniony: ${path}`);
+            })
+                .on('unlink', (path) => {
+                oof.removeFile(getPathOut(path));
+                info(`Plik usunięty: ${path}`);
+            })
+                .on('addDir', (path) => {
+                if (configuration.dirsToCopy.some((dir) => path.endsWith(dir))) {
+                    oof.ensureDir(getPathOut(path));
+                    info(`Katalog dodany: ${path}`);
                 }
-                else {
-                    moveFile(path);
-                    info(`Plik dodany: ${path}`);
-                }
+            })
+                .on('unlinkDir', (path) => {
+                oof.removeDir(getPathOut(path));
+                info(`Katalog usunięty: ${path}`);
+            })
+                .on('error', (error) => info(`Błąd: ${error}`))
+                .on('ready', async () => {
+                watcherIn
+                    .on('add', (path) => {
+                    if (path.endsWith('html') || path.endsWith('css') || path.endsWith('svg')) {
+                        generator.start();
+                    }
+                    else {
+                        moveFile(path);
+                        info(`Plik dodany: ${path}`);
+                    }
+                })
+                    .on('change', (path) => {
+                    if (path.endsWith('html') || path.endsWith('css') || path.endsWith('svg')) {
+                        generator.start();
+                    }
+                    else {
+                        moveFile(path);
+                        info(`Plik dodany: ${path}`);
+                    }
+                });
+                info(`✅ Wszystkie pliki i katalogi z ./${myPath} zostały załadowane!`);
             });
-            info(`✅ Wszystkie pliki i katalogi z ./${configuration.folderPathIn} zostały załadowane!`);
-        });
-        info(`Obserwowanie katalogu ./${configuration.folderPathIn}...`);
+            info(`Obserwowanie katalogu ./${myPath}...`);
+        };
+        start();
+    };
+    const start = () => {
+        configuration.watch.forEach((file) => setWatcher(file));
     };
     return {
         start

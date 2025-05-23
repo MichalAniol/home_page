@@ -9,7 +9,7 @@
         "spr": "node ./_html-generator/sprites.js",
         "s": "node ./live-server.js",
         "t": "tsc-watch --noClear -p ./tsconfig.json",
-        "tsw": "tsc-watch --noClear -p ./_html-generator/tsconfig-g.json",
+        "tsw": "tsc-watch --noClear -p ./_html-generator/tsconfig.json",
         "test": "node test/test.js"
     },
     "devDependencies": {
